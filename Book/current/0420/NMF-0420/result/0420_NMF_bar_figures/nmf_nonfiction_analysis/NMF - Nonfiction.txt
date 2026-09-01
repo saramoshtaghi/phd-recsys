@@ -1,0 +1,43 @@
+NMF Analysis for Genre: Nonfiction
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 1.5226 (users=53424)
+  2u: 1.3536 (users=53424)
+  4u: 1.0966 (users=53424)
+  6u: 1.4207 (users=53424)
+  25u: 2.2909 (users=53424)
+  50u: 4.0806 (users=53424)
+  100u: 7.0863 (users=53424)
+  200u: 10.3623 (users=53424)
+  500u: 4.7096 (users=53424)
+  1000u: 4.5154 (users=53424)
+  2000u: 1.6794 (users=53424)
+
+k = 25
+  original: 2.5109 (users=53424)
+  2u: 2.3503 (users=53424)
+  4u: 2.0762 (users=53424)
+  6u: 2.5863 (users=53424)
+  25u: 4.0740 (users=53424)
+  50u: 6.7787 (users=53424)
+  100u: 11.3330 (users=53424)
+  200u: 16.8270 (users=53424)
+  500u: 11.0527 (users=53424)
+  1000u: 11.2640 (users=53424)
+  2000u: 8.6069 (users=53424)
+
+k = 35
+  original: 3.6250 (users=53424)
+  2u: 3.4120 (users=53424)
+  4u: 3.2295 (users=53424)
+  6u: 3.8580 (users=53424)
+  25u: 5.9579 (users=53424)
+  50u: 9.5311 (users=53424)
+  100u: 15.5347 (users=53424)
+  200u: 23.3098 (users=53424)
+  500u: 18.3236 (users=53424)
+  1000u: 18.8101 (users=53424)
+  2000u: 16.6748 (users=53424)
+

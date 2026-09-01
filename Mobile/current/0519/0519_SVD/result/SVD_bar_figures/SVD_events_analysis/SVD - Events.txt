@@ -1,0 +1,22 @@
+SVD Analysis for Category: Events
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 0.0302 (users=700111)
+  30u: 0.3751 (users=700111)
+  60u: 0.6330 (users=700111)
+  300u: 0.5427 (users=700111)
+
+k = 25
+  original: 0.0469 (users=700111)
+  30u: 0.5518 (users=700111)
+  60u: 0.8818 (users=700111)
+  300u: 0.7679 (users=700111)
+
+k = 35
+  original: 0.0647 (users=700111)
+  30u: 0.6982 (users=700111)
+  60u: 1.0765 (users=700111)
+  300u: 0.9325 (users=700111)
+

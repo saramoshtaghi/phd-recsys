@@ -1,0 +1,31 @@
+NMF Analysis for Category: Shopping
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 0.1902 (users=700111)
+  30u: 0.1330 (users=700111)
+  60u: 0.1998 (users=700111)
+  300u: 0.9002 (users=700111)
+  500u: 0.0298 (users=700111)
+  2000u: 8.0515 (users=700111)
+  7000u: 7.6275 (users=700111)
+
+k = 25
+  original: 0.4017 (users=700111)
+  30u: 0.2449 (users=700111)
+  60u: 0.3470 (users=700111)
+  300u: 1.5589 (users=700111)
+  500u: 3.5970 (users=700111)
+  2000u: 13.7544 (users=700111)
+  7000u: 12.5760 (users=700111)
+
+k = 35
+  original: 0.6964 (users=700111)
+  30u: 0.3650 (users=700111)
+  60u: 0.4983 (users=700111)
+  300u: 2.2027 (users=700111)
+  500u: 9.4326 (users=700111)
+  2000u: 19.7166 (users=700111)
+  7000u: 17.7366 (users=700111)
+

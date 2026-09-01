@@ -1,0 +1,109 @@
+nohup: ignoring input
+[19:22:43] === NMF BASELINE + SELECTED INJECTIONS (Mobile) ===
+[19:22:43] Loading ORIGINAL → /home/moshtasa/Research/phd-svd-recsys/Mobile/0316_Single/data/data/mobilerec_final_mapped.csv
+[19:24:12] ORIGINAL users=700,111 rows=19,297,019
+[19:24:12] Training NMF on ORIGINAL
+[19:33:10] Generating ORIGINAL recommendations
+[19:33:33] Scoring 700,111 users for ORIGINAL
+[20:01:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/ORIGINAL_15recommendation.csv (10,501,665 rows)
+[20:02:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/ORIGINAL_25recommendation.csv (17,502,775 rows)
+[20:03:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/ORIGINAL_35recommendation.csv (24,503,885 rows)
+[20:03:56] Computing ORIGINAL bi analysis
+[20:03:56] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/bi/ORIGINAL_bi_per_category.csv (48 categories)
+[20:03:56] Computing ORIGINAL mu analysis
+[20:04:03] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/mio/ORIGINAL_mu_per_category.csv (48 categories)
+[20:04:09] ORIGINAL baseline done
+[20:04:09] Found 6 injection files
+[20:04:09] 
+[1/6] POS5 30 users — Shopping
+[20:04:09] File: f_Shopping_30u_pos5_neg1_allapps.csv
+[20:05:41] Target category: Shopping → Shopping
+[20:05:41] Training NMF
+[20:14:47] Generating recommendations
+[20:15:08] Scoring 700,111 users for f_Shopping_30u_pos5_neg1_allapps
+[20:43:24] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[20:44:15] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[20:45:25] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[20:45:35] Computing bi analysis
+[20:45:35] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/bi/f_Shopping_30u_pos5_neg1_allapps_bi_per_category.csv (48 categories)
+[20:45:35] Computing mu analysis
+[20:45:43] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/mio/f_Shopping_30u_pos5_neg1_allapps_mu_per_category.csv (48 categories)
+[20:45:50] Done
+[20:45:50] 
+[2/6] POS5 60 users — Shopping
+[20:45:50] File: f_Shopping_60u_pos5_neg1_allapps.csv
+[20:47:22] Target category: Shopping → Shopping
+[20:47:22] Training NMF
+[20:56:12] Generating recommendations
+[20:56:33] Scoring 700,111 users for f_Shopping_60u_pos5_neg1_allapps
+[21:24:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[21:25:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[21:26:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[21:27:02] Computing bi analysis
+[21:27:02] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/bi/f_Shopping_60u_pos5_neg1_allapps_bi_per_category.csv (48 categories)
+[21:27:02] Computing mu analysis
+[21:27:09] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/mio/f_Shopping_60u_pos5_neg1_allapps_mu_per_category.csv (48 categories)
+[21:27:16] Done
+[21:27:16] 
+[3/6] POS5 300 users — Shopping
+[21:27:16] File: f_Shopping_300u_pos5_neg1_allapps.csv
+[21:28:53] Target category: Shopping → Shopping
+[21:28:53] Training NMF
+[21:38:24] Generating recommendations
+[21:38:46] Scoring 700,111 users for f_Shopping_300u_pos5_neg1_allapps
+[22:05:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[22:06:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[22:07:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[22:08:03] Computing bi analysis
+[22:08:03] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/bi/f_Shopping_300u_pos5_neg1_allapps_bi_per_category.csv (48 categories)
+[22:08:03] Computing mu analysis
+[22:08:10] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/mio/f_Shopping_300u_pos5_neg1_allapps_mu_per_category.csv (48 categories)
+[22:08:18] Done
+[22:08:18] 
+[4/6] POS5 500 users — Shopping
+[22:08:18] File: f_Shopping_500u_pos5_neg1_allapps.csv
+[22:09:56] Target category: Shopping → Shopping
+[22:09:56] Training NMF
+[22:20:08] Generating recommendations
+[22:20:30] Scoring 700,111 users for f_Shopping_500u_pos5_neg1_allapps
+[22:48:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[22:48:58] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[22:50:11] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[22:50:22] Computing bi analysis
+[22:50:22] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/bi/f_Shopping_500u_pos5_neg1_allapps_bi_per_category.csv (48 categories)
+[22:50:22] Computing mu analysis
+[22:50:30] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/mio/f_Shopping_500u_pos5_neg1_allapps_mu_per_category.csv (48 categories)
+[22:50:38] Done
+[22:50:38] 
+[5/6] POS5 2000 users — Shopping
+[22:50:38] File: f_Shopping_2000u_pos5_neg1_allapps.csv
+[22:52:35] Target category: Shopping → Shopping
+[22:52:35] Training NMF
+[23:07:57] Generating recommendations
+[23:08:24] Scoring 700,111 users for f_Shopping_2000u_pos5_neg1_allapps
+[23:34:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[23:35:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[23:37:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[23:37:19] Computing bi analysis
+[23:37:19] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/bi/f_Shopping_2000u_pos5_neg1_allapps_bi_per_category.csv (48 categories)
+[23:37:19] Computing mu analysis
+[23:37:32] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/mio/f_Shopping_2000u_pos5_neg1_allapps_mu_per_category.csv (48 categories)
+[23:37:45] Done
+[23:37:45] 
+[6/6] POS5 7000 users — Shopping
+[23:37:45] File: f_Shopping_7000u_pos5_neg1_allapps.csv
+[23:40:50] Target category: Shopping → Shopping
+[23:40:50] Training NMF
+[00:15:34] Generating recommendations
+[00:16:22] Scoring 700,111 users for f_Shopping_7000u_pos5_neg1_allapps
+[00:43:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[00:44:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[00:45:39] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Shopping_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[00:45:50] Computing bi analysis
+[00:45:50] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/bi/f_Shopping_7000u_pos5_neg1_allapps_bi_per_category.csv (48 categories)
+[00:45:50] Computing mu analysis
+[00:46:19] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/mio/f_Shopping_7000u_pos5_neg1_allapps_mu_per_category.csv (48 categories)
+[00:46:42] Done
+[00:46:42] 
+Finished all runs in 5.40 hours
+[00:46:42] Results saved in: /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run

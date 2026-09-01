@@ -1,0 +1,43 @@
+SVD Analysis for Genre: Drama
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 4.6085 (users=53424)
+  2u: 4.6096 (users=53424)
+  4u: 4.6364 (users=53424)
+  6u: 4.4849 (users=53424)
+  25u: 4.4984 (users=53424)
+  50u: 4.4006 (users=53424)
+  100u: 4.6565 (users=53424)
+  200u: 4.3139 (users=53424)
+  500u: 4.2161 (users=53424)
+  1000u: 3.6772 (users=53424)
+  2000u: 3.3752 (users=53424)
+
+k = 25
+  original: 7.6397 (users=53424)
+  2u: 7.5898 (users=53424)
+  4u: 7.6132 (users=53424)
+  6u: 7.4992 (users=53424)
+  25u: 7.5316 (users=53424)
+  50u: 7.3710 (users=53424)
+  100u: 7.7282 (users=53424)
+  200u: 7.2265 (users=53424)
+  500u: 7.0460 (users=53424)
+  1000u: 6.2793 (users=53424)
+  2000u: 5.8918 (users=53424)
+
+k = 35
+  original: 10.7274 (users=53424)
+  2u: 10.5797 (users=53424)
+  4u: 10.5973 (users=53424)
+  6u: 10.5381 (users=53424)
+  25u: 10.6104 (users=53424)
+  50u: 10.3694 (users=53424)
+  100u: 10.7984 (users=53424)
+  200u: 10.1982 (users=53424)
+  500u: 9.9123 (users=53424)
+  1000u: 8.9443 (users=53424)
+  2000u: 8.5038 (users=53424)
+

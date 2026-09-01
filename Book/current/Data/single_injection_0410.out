@@ -1,0 +1,228 @@
+nohup: ignoring input
+Reading dataset from:
+/home/moshtasa/Research/phd-svd-recsys/Book/Archive/data/df_final_with_genres.csv
+File exists: True
+
+🎯 Processing 4 genres
+
+Category 'Classics' | Run 2
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 2
+
+Category 'Classics' | Run 4
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 4
+
+Category 'Classics' | Run 6
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 6
+
+Category 'Classics' | Run 25
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 25
+
+Category 'Classics' | Run 50
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 50
+
+Category 'Classics' | Run 100
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 100
+
+Category 'Classics' | Run 200
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 200
+
+Category 'Classics' | Run 300
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 300
+
+Category 'Classics' | Run 500
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 500
+
+Category 'Classics' | Run 1000
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 1000
+
+Category 'Classics' | Run 2000
+  -> Items in category: 901
+  -> Other categories: 8514
+  -> Adding users: 2000
+
+Category 'Mystery' | Run 2
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 2
+
+Category 'Mystery' | Run 4
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 4
+
+Category 'Mystery' | Run 6
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 6
+
+Category 'Mystery' | Run 25
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 25
+
+Category 'Mystery' | Run 50
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 50
+
+Category 'Mystery' | Run 100
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 100
+
+Category 'Mystery' | Run 200
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 200
+
+Category 'Mystery' | Run 300
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 300
+
+Category 'Mystery' | Run 500
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 500
+
+Category 'Mystery' | Run 1000
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 1000
+
+Category 'Mystery' | Run 2000
+  -> Items in category: 2563
+  -> Other categories: 6852
+  -> Adding users: 2000
+
+Category 'Adult' | Run 2
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 2
+
+Category 'Adult' | Run 4
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 4
+
+Category 'Adult' | Run 6
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 6
+
+Category 'Adult' | Run 25
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 25
+
+Category 'Adult' | Run 50
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 50
+
+Category 'Adult' | Run 100
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 100
+
+Category 'Adult' | Run 200
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 200
+
+Category 'Adult' | Run 300
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 300
+
+Category 'Adult' | Run 500
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 500
+
+Category 'Adult' | Run 1000
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 1000
+
+Category 'Adult' | Run 2000
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 2000
+
+Category 'Historical' | Run 2
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 2
+
+Category 'Historical' | Run 4
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 4
+
+Category 'Historical' | Run 6
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 6
+
+Category 'Historical' | Run 25
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 25
+
+Category 'Historical' | Run 50
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 50
+
+Category 'Historical' | Run 100
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 100
+
+Category 'Historical' | Run 200
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 200
+
+Category 'Historical' | Run 300
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 300
+
+Category 'Historical' | Run 500
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 500
+
+Category 'Historical' | Run 1000
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 1000
+
+Category 'Historical' | Run 2000
+  -> Items in category: 857
+  -> Other categories: 8558
+  -> Adding users: 2000
+
+✅ Done. Genre selection applied.

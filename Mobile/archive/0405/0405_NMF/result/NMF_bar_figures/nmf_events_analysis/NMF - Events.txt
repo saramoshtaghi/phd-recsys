@@ -1,0 +1,31 @@
+NMF Analysis for Category: Events
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 0.0061 (users=700111)
+  30u: 0.1464 (users=700111)
+  60u: 0.2829 (users=700111)
+  300u: 1.1637 (users=700111)
+  500u: 0.5841 (users=700111)
+  2000u: 6.2720 (users=700111)
+  7000u: 13.3450 (users=700111)
+
+k = 25
+  original: 0.0114 (users=700111)
+  30u: 0.1937 (users=700111)
+  60u: 0.3750 (users=700111)
+  300u: 1.6274 (users=700111)
+  500u: 4.3392 (users=700111)
+  2000u: 8.7233 (users=700111)
+  7000u: 16.1470 (users=700111)
+
+k = 35
+  original: 0.0176 (users=700111)
+  30u: 0.2313 (users=700111)
+  60u: 0.4458 (users=700111)
+  300u: 1.8465 (users=700111)
+  500u: 8.2061 (users=700111)
+  2000u: 9.5856 (users=700111)
+  7000u: 16.2708 (users=700111)
+

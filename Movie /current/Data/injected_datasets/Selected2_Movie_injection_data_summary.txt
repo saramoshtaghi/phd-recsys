@@ -1,0 +1,265 @@
+============================================================
+  SINGLE INJECTION — MOVIE DECADE BIAS
+  pos=5, neg=1
+============================================================
+
+Reading dataset from:
+/home/moshtasa/Research/phd-recsys/Movie /archive/data/df_final.csv
+File exists: True
+
+📊 BASE DATA:
+   Rows (interactions): 100,000
+   Unique users:        943
+   Unique items:        1,682
+
+📊 ITEMS PER DECADE (unique items = 1,682):
+   Decade 0: 1 items
+   Decade 1920: 2 items
+   Decade 1930: 29 items
+   Decade 1940: 45 items
+   Decade 1950: 54 items
+   Decade 1960: 43 items
+   Decade 1970: 53 items
+   Decade 1980: 107 items
+   Decade 1990: 1,348 items
+
+🎯 Processing 9 decades with RUNS = [2, 6, 10, 50]
+   Output dir: /home/moshtasa/Research/phd-recsys/Movie /current/Data/injected_datasets
+
+────────────────────────────────────────────────────────────
+📀 DECADE 0  (0)
+   Items in this decade:  1
+   Items in OTHER decades: 1,681
+   Total items:            1,682
+   ── Run    2u ──
+       New users:              2
+       Positive rows (5★):     1 × 2 = 2
+       Negative rows (1★):     1,681 × 2 = 3,362
+       TOTAL new rows:         3,364
+   ── Run    6u ──
+       New users:              6
+       Positive rows (5★):     1 × 6 = 6
+       Negative rows (1★):     1,681 × 6 = 10,086
+       TOTAL new rows:         10,092
+   ── Run   10u ──
+       New users:              10
+       Positive rows (5★):     1 × 10 = 10
+       Negative rows (1★):     1,681 × 10 = 16,810
+       TOTAL new rows:         16,820
+   ── Run   50u ──
+       New users:              50
+       Positive rows (5★):     1 × 50 = 50
+       Negative rows (1★):     1,681 × 50 = 84,050
+       TOTAL new rows:         84,100
+
+────────────────────────────────────────────────────────────
+📀 DECADE 1920  (1920)
+   Items in this decade:  2
+   Items in OTHER decades: 1,680
+   Total items:            1,682
+   ── Run    2u ──
+       New users:              2
+       Positive rows (5★):     2 × 2 = 4
+       Negative rows (1★):     1,680 × 2 = 3,360
+       TOTAL new rows:         3,364
+   ── Run    6u ──
+       New users:              6
+       Positive rows (5★):     2 × 6 = 12
+       Negative rows (1★):     1,680 × 6 = 10,080
+       TOTAL new rows:         10,092
+   ── Run   10u ──
+       New users:              10
+       Positive rows (5★):     2 × 10 = 20
+       Negative rows (1★):     1,680 × 10 = 16,800
+       TOTAL new rows:         16,820
+   ── Run   50u ──
+       New users:              50
+       Positive rows (5★):     2 × 50 = 100
+       Negative rows (1★):     1,680 × 50 = 84,000
+       TOTAL new rows:         84,100
+
+────────────────────────────────────────────────────────────
+📀 DECADE 1930  (1930)
+   Items in this decade:  29
+   Items in OTHER decades: 1,653
+   Total items:            1,682
+   ── Run    2u ──
+       New users:              2
+       Positive rows (5★):     29 × 2 = 58
+       Negative rows (1★):     1,653 × 2 = 3,306
+       TOTAL new rows:         3,364
+   ── Run    6u ──
+       New users:              6
+       Positive rows (5★):     29 × 6 = 174
+       Negative rows (1★):     1,653 × 6 = 9,918
+       TOTAL new rows:         10,092
+   ── Run   10u ──
+       New users:              10
+       Positive rows (5★):     29 × 10 = 290
+       Negative rows (1★):     1,653 × 10 = 16,530
+       TOTAL new rows:         16,820
+   ── Run   50u ──
+       New users:              50
+       Positive rows (5★):     29 × 50 = 1,450
+       Negative rows (1★):     1,653 × 50 = 82,650
+       TOTAL new rows:         84,100
+
+────────────────────────────────────────────────────────────
+📀 DECADE 1940  (1940)
+   Items in this decade:  45
+   Items in OTHER decades: 1,637
+   Total items:            1,682
+   ── Run    2u ──
+       New users:              2
+       Positive rows (5★):     45 × 2 = 90
+       Negative rows (1★):     1,637 × 2 = 3,274
+       TOTAL new rows:         3,364
+   ── Run    6u ──
+       New users:              6
+       Positive rows (5★):     45 × 6 = 270
+       Negative rows (1★):     1,637 × 6 = 9,822
+       TOTAL new rows:         10,092
+   ── Run   10u ──
+       New users:              10
+       Positive rows (5★):     45 × 10 = 450
+       Negative rows (1★):     1,637 × 10 = 16,370
+       TOTAL new rows:         16,820
+   ── Run   50u ──
+       New users:              50
+       Positive rows (5★):     45 × 50 = 2,250
+       Negative rows (1★):     1,637 × 50 = 81,850
+       TOTAL new rows:         84,100
+
+────────────────────────────────────────────────────────────
+📀 DECADE 1950  (1950)
+   Items in this decade:  54
+   Items in OTHER decades: 1,628
+   Total items:            1,682
+   ── Run    2u ──
+       New users:              2
+       Positive rows (5★):     54 × 2 = 108
+       Negative rows (1★):     1,628 × 2 = 3,256
+       TOTAL new rows:         3,364
+   ── Run    6u ──
+       New users:              6
+       Positive rows (5★):     54 × 6 = 324
+       Negative rows (1★):     1,628 × 6 = 9,768
+       TOTAL new rows:         10,092
+   ── Run   10u ──
+       New users:              10
+       Positive rows (5★):     54 × 10 = 540
+       Negative rows (1★):     1,628 × 10 = 16,280
+       TOTAL new rows:         16,820
+   ── Run   50u ──
+       New users:              50
+       Positive rows (5★):     54 × 50 = 2,700
+       Negative rows (1★):     1,628 × 50 = 81,400
+       TOTAL new rows:         84,100
+
+────────────────────────────────────────────────────────────
+📀 DECADE 1960  (1960)
+   Items in this decade:  43
+   Items in OTHER decades: 1,639
+   Total items:            1,682
+   ── Run    2u ──
+       New users:              2
+       Positive rows (5★):     43 × 2 = 86
+       Negative rows (1★):     1,639 × 2 = 3,278
+       TOTAL new rows:         3,364
+   ── Run    6u ──
+       New users:              6
+       Positive rows (5★):     43 × 6 = 258
+       Negative rows (1★):     1,639 × 6 = 9,834
+       TOTAL new rows:         10,092
+   ── Run   10u ──
+       New users:              10
+       Positive rows (5★):     43 × 10 = 430
+       Negative rows (1★):     1,639 × 10 = 16,390
+       TOTAL new rows:         16,820
+   ── Run   50u ──
+       New users:              50
+       Positive rows (5★):     43 × 50 = 2,150
+       Negative rows (1★):     1,639 × 50 = 81,950
+       TOTAL new rows:         84,100
+
+────────────────────────────────────────────────────────────
+📀 DECADE 1970  (1970)
+   Items in this decade:  53
+   Items in OTHER decades: 1,629
+   Total items:            1,682
+   ── Run    2u ──
+       New users:              2
+       Positive rows (5★):     53 × 2 = 106
+       Negative rows (1★):     1,629 × 2 = 3,258
+       TOTAL new rows:         3,364
+   ── Run    6u ──
+       New users:              6
+       Positive rows (5★):     53 × 6 = 318
+       Negative rows (1★):     1,629 × 6 = 9,774
+       TOTAL new rows:         10,092
+   ── Run   10u ──
+       New users:              10
+       Positive rows (5★):     53 × 10 = 530
+       Negative rows (1★):     1,629 × 10 = 16,290
+       TOTAL new rows:         16,820
+   ── Run   50u ──
+       New users:              50
+       Positive rows (5★):     53 × 50 = 2,650
+       Negative rows (1★):     1,629 × 50 = 81,450
+       TOTAL new rows:         84,100
+
+────────────────────────────────────────────────────────────
+📀 DECADE 1980  (1980)
+   Items in this decade:  107
+   Items in OTHER decades: 1,575
+   Total items:            1,682
+   ── Run    2u ──
+       New users:              2
+       Positive rows (5★):     107 × 2 = 214
+       Negative rows (1★):     1,575 × 2 = 3,150
+       TOTAL new rows:         3,364
+   ── Run    6u ──
+       New users:              6
+       Positive rows (5★):     107 × 6 = 642
+       Negative rows (1★):     1,575 × 6 = 9,450
+       TOTAL new rows:         10,092
+   ── Run   10u ──
+       New users:              10
+       Positive rows (5★):     107 × 10 = 1,070
+       Negative rows (1★):     1,575 × 10 = 15,750
+       TOTAL new rows:         16,820
+   ── Run   50u ──
+       New users:              50
+       Positive rows (5★):     107 × 50 = 5,350
+       Negative rows (1★):     1,575 × 50 = 78,750
+       TOTAL new rows:         84,100
+
+────────────────────────────────────────────────────────────
+📀 DECADE 1990  (1990)
+   Items in this decade:  1,348
+   Items in OTHER decades: 334
+   Total items:            1,682
+   ── Run    2u ──
+       New users:              2
+       Positive rows (5★):     1,348 × 2 = 2,696
+       Negative rows (1★):     334 × 2 = 668
+       TOTAL new rows:         3,364
+   ── Run    6u ──
+       New users:              6
+       Positive rows (5★):     1,348 × 6 = 8,088
+       Negative rows (1★):     334 × 6 = 2,004
+       TOTAL new rows:         10,092
+   ── Run   10u ──
+       New users:              10
+       Positive rows (5★):     1,348 × 10 = 13,480
+       Negative rows (1★):     334 × 10 = 3,340
+       TOTAL new rows:         16,820
+   ── Run   50u ──
+       New users:              50
+       Positive rows (5★):     1,348 × 50 = 67,400
+       Negative rows (1★):     334 × 50 = 16,700
+       TOTAL new rows:         84,100
+
+============================================================
+✅ DONE. Grand total new rows added across all files: 1,029,384
+============================================================

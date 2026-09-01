@@ -1,0 +1,43 @@
+NMF Analysis for Genre: Adult
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 0.5288 (users=53424)
+  2u: 0.1815 (users=53424)
+  4u: 0.5418 (users=53424)
+  6u: 0.2291 (users=53424)
+  25u: 1.5143 (users=53424)
+  50u: 3.1915 (users=53424)
+  100u: 5.9060 (users=53424)
+  200u: 9.3585 (users=53424)
+  500u: 11.2767 (users=53424)
+  1000u: 11.2590 (users=53424)
+  2000u: 11.4037 (users=53424)
+
+k = 25
+  original: 0.8205 (users=53424)
+  2u: 0.2706 (users=53424)
+  4u: 0.7738 (users=53424)
+  6u: 0.3978 (users=53424)
+  25u: 2.6047 (users=53424)
+  50u: 5.2880 (users=53424)
+  100u: 9.7859 (users=53424)
+  200u: 15.6233 (users=53424)
+  500u: 18.6788 (users=53424)
+  1000u: 18.2159 (users=53424)
+  2000u: 17.8899 (users=53424)
+
+k = 35
+  original: 1.0838 (users=53424)
+  2u: 0.3790 (users=53424)
+  4u: 1.0004 (users=53424)
+  6u: 0.5951 (users=53424)
+  25u: 3.7245 (users=53424)
+  50u: 7.4392 (users=53424)
+  100u: 13.6491 (users=53424)
+  200u: 22.0452 (users=53424)
+  500u: 26.2842 (users=53424)
+  1000u: 25.4520 (users=53424)
+  2000u: 24.6489 (users=53424)
+

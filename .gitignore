@@ -5,6 +5,7 @@
 **/data/
 **/*.csv
 **/*.zip
+**/*.pt
 
 # Ignore get-pip.py script at project root
 /get-pip.py

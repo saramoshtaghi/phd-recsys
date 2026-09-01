@@ -1,0 +1,36 @@
+nohup: ignoring input
+[01:43:08] === NMF 0413: BASELINE + INJECTIONS WITH BIASING USER ANALYSIS ===
+[01:43:08] Loading ORIGINAL → /home/moshtasa/Research/phd-recsys/Mobile/archive/0316_Single/data/data/mobilerec_final.csv
+[01:44:34] Training NMF on ORIGINAL
+[01:54:18] Scoring 700,111 users for ORIGINAL
+[02:27:56] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/ORIGINAL_15recommendation.csv (10,501,665 rows)
+[02:28:54] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/ORIGINAL_25recommendation.csv (17,502,775 rows)
+[02:30:15] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/ORIGINAL_35recommendation.csv (24,503,885 rows)
+[02:32:21] Found 12 injection files
+[02:32:21] [1/12] f_Shopping_30u_pos5_neg1_allapps
+[02:43:37] Scoring 700,111 users for f_Shopping_30u_pos5_neg1_allapps
+[03:18:19] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Shopping_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[03:19:11] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Shopping_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[03:20:28] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Shopping_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[03:22:31] [2/12] f_Events_30u_pos5_neg1_allapps
+[03:33:53] Scoring 700,111 users for f_Events_30u_pos5_neg1_allapps
+[04:09:21] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Events_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[04:10:16] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Events_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[04:11:32] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Events_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[04:13:45] [3/12] f_Events_60u_pos5_neg1_allapps
+[04:25:42] Scoring 700,111 users for f_Events_60u_pos5_neg1_allapps
+[04:59:40] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Events_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[05:00:40] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Events_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[05:02:01] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Events_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[05:04:17] [4/12] f_Shopping_60u_pos5_neg1_allapps
+[05:15:56] Scoring 700,111 users for f_Shopping_60u_pos5_neg1_allapps
+[05:49:07] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Shopping_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[05:50:06] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Shopping_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[05:51:29] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Shopping_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[05:53:41] [5/12] f_Shopping_300u_pos5_neg1_allapps
+[06:05:53] Scoring 700,111 users for f_Shopping_300u_pos5_neg1_allapps
+[06:38:41] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Shopping_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[06:39:41] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Shopping_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[06:41:02] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_NMF/result/data/f_Shopping_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[06:43:22] [6/12] f_Events_300u_pos5_neg1_allapps
+[06:55:54] Scoring 700,111 users for f_Events_300u_pos5_neg1_allapps

@@ -1,0 +1,46 @@
+NMF Analysis for Genre: Historical
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 1.2242 (users=53424)
+  2u: 1.0257 (users=53424)
+  4u: 1.0819 (users=53424)
+  6u: 1.1719 (users=53424)
+  25u: 1.9993 (users=53424)
+  50u: 4.0787 (users=53424)
+  100u: 7.7779 (users=53424)
+  200u: 10.8724 (users=53424)
+  300u: 11.7674 (users=53424)
+  500u: 11.6130 (users=53424)
+  1000u: 11.5034 (users=53424)
+  2000u: 11.5411 (users=53424)
+
+k = 25
+  original: 2.0539 (users=53424)
+  2u: 1.8173 (users=53424)
+  4u: 1.7681 (users=53424)
+  6u: 2.0082 (users=53424)
+  25u: 3.5773 (users=53424)
+  50u: 6.8327 (users=53424)
+  100u: 12.4007 (users=53424)
+  200u: 17.4572 (users=53424)
+  300u: 18.9381 (users=53424)
+  500u: 18.6730 (users=53424)
+  1000u: 17.9106 (users=53424)
+  2000u: 17.7007 (users=53424)
+
+k = 35
+  original: 2.9215 (users=53424)
+  2u: 2.6084 (users=53424)
+  4u: 2.4768 (users=53424)
+  6u: 2.8646 (users=53424)
+  25u: 5.2175 (users=53424)
+  50u: 9.5310 (users=53424)
+  100u: 16.8093 (users=53424)
+  200u: 23.8725 (users=53424)
+  300u: 25.9814 (users=53424)
+  500u: 25.5670 (users=53424)
+  1000u: 23.9393 (users=53424)
+  2000u: 23.3270 (users=53424)
+

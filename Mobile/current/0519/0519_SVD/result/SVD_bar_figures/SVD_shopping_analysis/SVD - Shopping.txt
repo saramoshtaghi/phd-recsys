@@ -1,0 +1,31 @@
+SVD Analysis for Category: Shopping
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 0.4087 (users=700111)
+  30u: 0.6195 (users=700111)
+  60u: 0.9322 (users=700111)
+  300u: 0.6033 (users=700111)
+  500u: 0.4140 (users=700111)
+  2000u: 0.4598 (users=700111)
+  7000u: 0.4589 (users=700111)
+
+k = 25
+  original: 0.6846 (users=700111)
+  30u: 1.0292 (users=700111)
+  60u: 1.5080 (users=700111)
+  300u: 1.0097 (users=700111)
+  500u: 0.6964 (users=700111)
+  2000u: 0.7972 (users=700111)
+  7000u: 0.8020 (users=700111)
+
+k = 35
+  original: 0.9522 (users=700111)
+  30u: 1.4310 (users=700111)
+  60u: 2.0669 (users=700111)
+  300u: 1.4079 (users=700111)
+  500u: 0.9712 (users=700111)
+  2000u: 1.1381 (users=700111)
+  7000u: 1.1567 (users=700111)
+

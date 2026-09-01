@@ -1,0 +1,60 @@
+nohup: ignoring input
+[19:45:14] === SVD 0413: BASELINE + INJECTIONS WITH BIASING USER ANALYSIS ===
+[19:45:14] Loading ORIGINAL → /home/moshtasa/Research/phd-svd-recsys/Book/Archive/data/genre_clean.csv
+[19:45:21] Training SVD on ORIGINAL
+[19:48:52] Scoring 53,424 users for ORIGINAL
+[19:51:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/ORIGINAL_15recommendation.csv (801,360 rows)
+[19:51:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/ORIGINAL_25recommendation.csv (1,335,600 rows)
+[19:51:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/ORIGINAL_35recommendation.csv (1,869,840 rows)
+[19:52:20] Found 10 injection files
+[19:52:20] [1/10] f_Thriller_2u_pos5_neg1_books
+[19:55:56] Scoring 53,424 users for f_Thriller_2u_pos5_neg1_books
+[19:58:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[19:59:00] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[19:59:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[19:59:43] [2/10] f_Thriller_4u_pos5_neg1_books
+[20:03:30] Scoring 53,424 users for f_Thriller_4u_pos5_neg1_books
+[20:06:25] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:06:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:06:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:07:15] [3/10] f_Thriller_6u_pos5_neg1_books
+[20:10:48] Scoring 53,424 users for f_Thriller_6u_pos5_neg1_books
+[20:13:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:13:32] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:13:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:14:13] [4/10] f_Thriller_25u_pos5_neg1_books
+[20:17:54] Scoring 53,424 users for f_Thriller_25u_pos5_neg1_books
+[20:20:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:20:39] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:20:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:21:20] [5/10] f_Thriller_50u_pos5_neg1_books
+[20:25:10] Scoring 53,424 users for f_Thriller_50u_pos5_neg1_books
+[20:27:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:28:00] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:28:05] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:28:45] [6/10] f_Thriller_100u_pos5_neg1_books
+[20:32:50] Scoring 53,424 users for f_Thriller_100u_pos5_neg1_books
+[20:35:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:35:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:35:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:36:26] [7/10] f_Thriller_200u_pos5_neg1_books
+[20:40:47] Scoring 53,424 users for f_Thriller_200u_pos5_neg1_books
+[20:43:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:43:39] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:43:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:44:29] [8/10] f_Thriller_500u_pos5_neg1_books
+[20:49:51] Scoring 53,424 users for f_Thriller_500u_pos5_neg1_books
+[20:52:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:52:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:52:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:53:48] [9/10] f_Thriller_1000u_pos5_neg1_books
+[21:00:35] Scoring 53,424 users for f_Thriller_1000u_pos5_neg1_books
+[21:03:20] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[21:03:24] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[21:03:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[21:04:46] [10/10] f_Thriller_2000u_pos5_neg1_books
+[21:14:31] Scoring 53,424 users for f_Thriller_2000u_pos5_neg1_books
+[21:17:14] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[21:17:18] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[21:17:23] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/SVD-0420/result/data/f_Thriller_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[21:19:31] Finished in 1.57h

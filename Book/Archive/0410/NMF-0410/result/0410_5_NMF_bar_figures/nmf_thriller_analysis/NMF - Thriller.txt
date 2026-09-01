@@ -1,0 +1,46 @@
+NMF Analysis for Genre: Thriller
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 1.7299 (users=53424)
+  2u: 1.4125 (users=53424)
+  4u: 2.0937 (users=53424)
+  6u: 1.6917 (users=53424)
+  25u: 2.2578 (users=53424)
+  50u: 3.7323 (users=53424)
+  100u: 7.2013 (users=53424)
+  200u: 10.4447 (users=53424)
+  300u: 11.4123 (users=53424)
+  500u: 11.0613 (users=53424)
+  1000u: 10.5564 (users=53424)
+  2000u: 3.4216 (users=53424)
+
+k = 25
+  original: 2.8921 (users=53424)
+  2u: 2.3760 (users=53424)
+  4u: 3.2954 (users=53424)
+  6u: 2.8481 (users=53424)
+  25u: 3.9393 (users=53424)
+  50u: 6.4264 (users=53424)
+  100u: 11.6130 (users=53424)
+  200u: 16.8766 (users=53424)
+  300u: 18.2776 (users=53424)
+  500u: 17.5164 (users=53424)
+  1000u: 16.1036 (users=53424)
+  2000u: 9.8902 (users=53424)
+
+k = 35
+  original: 4.0635 (users=53424)
+  2u: 3.3578 (users=53424)
+  4u: 4.4761 (users=53424)
+  6u: 4.0072 (users=53424)
+  25u: 5.6367 (users=53424)
+  50u: 9.1254 (users=53424)
+  100u: 15.8489 (users=53424)
+  200u: 23.1102 (users=53424)
+  300u: 25.1125 (users=53424)
+  500u: 23.9612 (users=53424)
+  1000u: 21.4061 (users=53424)
+  2000u: 17.2558 (users=53424)
+

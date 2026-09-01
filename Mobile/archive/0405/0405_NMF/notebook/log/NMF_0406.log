@@ -1,0 +1,303 @@
+nohup: ignoring input
+[22:30:51] === NMF INJECTION ONLY (ORIGINAL DISABLED) ===
+[22:30:51] Category filter: {'events', 'weather', 'medical'}
+[22:30:51] Found 18 injection files
+[22:30:51] 
+[1/18] POS5 30 users — Medical
+[22:30:51] File: f_Medical_30u_pos5_neg1_allapps.csv
+[22:45:37] Scoring 700,141 users for f_Medical_30u_pos5_neg1_allapps
+[23:14:24] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[23:15:19] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[23:16:34] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[23:16:51] Done
+[23:16:51] 
+[2/18] POS5 30 users — Events
+[23:16:51] File: f_Events_30u_pos5_neg1_allapps.csv
+[23:28:40] Scoring 700,141 users for f_Events_30u_pos5_neg1_allapps
+[23:54:02] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[23:54:58] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[23:56:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[23:56:32] Done
+[23:56:32] 
+[3/18] POS5 30 users — Weather
+[23:56:32] File: f_Weather_30u_pos5_neg1_allapps.csv
+[00:07:58] Scoring 700,141 users for f_Weather_30u_pos5_neg1_allapps
+[00:34:17] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[00:35:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[00:36:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[00:36:49] Done
+[00:36:49] 
+[4/18] POS5 60 users — Events
+[00:36:49] File: f_Events_60u_pos5_neg1_allapps.csv
+[00:48:34] Scoring 700,171 users for f_Events_60u_pos5_neg1_allapps
+[01:15:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[01:16:48] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[01:17:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[01:18:17] Done
+[01:18:17] 
+[5/18] POS5 60 users — Weather
+[01:18:17] File: f_Weather_60u_pos5_neg1_allapps.csv
+[01:28:53] Scoring 700,171 users for f_Weather_60u_pos5_neg1_allapps
+[01:52:28] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[01:53:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[01:54:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[01:54:53] Done
+[01:54:53] 
+[6/18] POS5 60 users — Medical
+[01:54:53] File: f_Medical_60u_pos5_neg1_allapps.csv
+[02:05:25] Scoring 700,171 users for f_Medical_60u_pos5_neg1_allapps
+[02:33:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[02:34:54] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[02:36:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[02:36:28] Done
+[02:36:28] 
+[7/18] POS5 300 users — Events
+[02:36:28] File: f_Events_300u_pos5_neg1_allapps.csv
+[02:47:50] Scoring 700,411 users for f_Events_300u_pos5_neg1_allapps
+[03:15:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[03:16:01] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[03:17:17] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[03:17:33] Done
+[03:17:33] 
+[8/18] POS5 300 users — Medical
+[03:17:33] File: f_Medical_300u_pos5_neg1_allapps.csv
+[03:28:46] Scoring 700,411 users for f_Medical_300u_pos5_neg1_allapps
+[03:54:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[03:55:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[03:57:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[03:57:20] Done
+[03:57:20] 
+[9/18] POS5 300 users — Weather
+[03:57:20] File: f_Weather_300u_pos5_neg1_allapps.csv
+[04:08:32] Scoring 700,411 users for f_Weather_300u_pos5_neg1_allapps
+[04:35:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[04:36:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[04:37:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[04:38:01] Done
+[04:38:01] 
+[10/18] POS5 500 users — Weather
+[04:38:01] File: f_Weather_500u_pos5_neg1_allapps.csv
+[04:49:58] Scoring 700,611 users for f_Weather_500u_pos5_neg1_allapps
+[05:15:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[05:16:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[05:18:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[05:18:26] Done
+[05:18:26] 
+[11/18] POS5 500 users — Medical
+[05:18:26] File: f_Medical_500u_pos5_neg1_allapps.csv
+[05:30:21] Scoring 700,611 users for f_Medical_500u_pos5_neg1_allapps
+[05:55:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[05:56:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[05:57:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[05:58:08] Done
+[05:58:08] 
+[12/18] POS5 500 users — Events
+[05:58:08] File: f_Events_500u_pos5_neg1_allapps.csv
+[06:09:50] Scoring 700,611 users for f_Events_500u_pos5_neg1_allapps
+[06:35:07] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[06:36:02] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[06:37:16] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[06:37:33] Done
+[06:37:33] 
+[13/18] POS5 2000 users — Medical
+[06:37:33] File: f_Medical_2000u_pos5_neg1_allapps.csv
+[06:54:48] Scoring 702,111 users for f_Medical_2000u_pos5_neg1_allapps
+[07:20:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[07:21:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[07:22:47] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[07:23:07] Done
+[07:23:07] 
+[14/18] POS5 2000 users — Events
+[07:23:07] File: f_Events_2000u_pos5_neg1_allapps.csv
+[07:40:20] Scoring 702,111 users for f_Events_2000u_pos5_neg1_allapps
+[08:07:28] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[08:08:23] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[08:09:39] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[08:09:58] Done
+[08:09:58] 
+[15/18] POS5 2000 users — Weather
+[08:09:58] File: f_Weather_2000u_pos5_neg1_allapps.csv
+[08:27:15] Scoring 702,111 users for f_Weather_2000u_pos5_neg1_allapps
+[08:53:11] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[08:54:07] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[08:55:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[08:55:42] Done
+[08:55:42] 
+[16/18] POS5 7000 users — Weather
+[08:55:42] File: f_Weather_7000u_pos5_neg1_allapps.csv
+[09:32:59] Scoring 707,111 users for f_Weather_7000u_pos5_neg1_allapps
+[10:01:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[10:02:07] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[10:03:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[10:04:03] Done
+[10:04:03] 
+[17/18] POS5 7000 users — Events
+[10:04:03] File: f_Events_7000u_pos5_neg1_allapps.csv
+[10:41:46] Scoring 707,111 users for f_Events_7000u_pos5_neg1_allapps
+[11:09:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[11:10:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[11:11:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[11:12:19] Done
+[11:12:19] 
+[18/18] POS5 7000 users — Medical
+[11:12:19] File: f_Medical_7000u_pos5_neg1_allapps.csv
+[11:51:41] Scoring 707,111 users for f_Medical_7000u_pos5_neg1_allapps
+[12:19:48] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[12:20:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[12:21:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[12:22:30] Done
+[12:22:30] 
+Finished all runs in 13.86 hours
+[12:22:30] Results saved in: /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run
+[12:22:30] === NMF BASELINE + SELECTED INJECTIONS (Mobile) ===
+[12:22:30] Category filter: {'events', 'weather', 'medical'}
+[12:22:30] Loading ORIGINAL → /home/moshtasa/Research/phd-svd-recsys/Mobile/0316_Single/data/data/mobilerec_final_mapped.csv
+[12:23:44] ORIGINAL users=700,111 rows=19,297,019
+[12:23:44] Found 18 injection files
+[12:23:44] 
+[1/18] POS5 30 users — Medical
+[12:23:44] File: f_Medical_30u_pos5_neg1_allapps.csv
+[12:34:51] Scoring 700,111 users for f_Medical_30u_pos5_neg1_allapps
+[12:59:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[13:00:24] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[13:01:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[13:02:00] Done
+[13:02:00] 
+[2/18] POS5 30 users — Events
+[13:02:00] File: f_Events_30u_pos5_neg1_allapps.csv
+[13:13:25] Scoring 700,111 users for f_Events_30u_pos5_neg1_allapps
+[13:40:54] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[13:41:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[13:43:07] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[13:43:26] Done
+[13:43:26] 
+[3/18] POS5 30 users — Weather
+[13:43:26] File: f_Weather_30u_pos5_neg1_allapps.csv
+[13:55:04] Scoring 700,111 users for f_Weather_30u_pos5_neg1_allapps
+[14:19:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[14:20:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[14:21:21] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[14:21:40] Done
+[14:21:40] 
+[4/18] POS5 60 users — Events
+[14:21:40] File: f_Events_60u_pos5_neg1_allapps.csv
+[14:32:24] Scoring 700,111 users for f_Events_60u_pos5_neg1_allapps
+[14:56:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[14:57:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[14:58:24] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[14:58:44] Done
+[14:58:44] 
+[5/18] POS5 60 users — Weather
+[14:58:44] File: f_Weather_60u_pos5_neg1_allapps.csv
+[15:10:35] Scoring 700,111 users for f_Weather_60u_pos5_neg1_allapps
+[15:35:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[15:36:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[15:38:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[15:38:29] Done
+[15:38:29] 
+[6/18] POS5 60 users — Medical
+[15:38:29] File: f_Medical_60u_pos5_neg1_allapps.csv
+[15:49:45] Scoring 700,111 users for f_Medical_60u_pos5_neg1_allapps
+[16:18:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[16:19:27] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[16:20:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[16:21:03] Done
+[16:21:03] 
+[7/18] POS5 300 users — Events
+[16:21:03] File: f_Events_300u_pos5_neg1_allapps.csv
+[16:32:51] Scoring 700,111 users for f_Events_300u_pos5_neg1_allapps
+[16:57:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[16:58:40] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[16:59:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[17:00:17] Done
+[17:00:17] 
+[8/18] POS5 300 users — Medical
+[17:00:17] File: f_Medical_300u_pos5_neg1_allapps.csv
+[17:12:48] Scoring 700,111 users for f_Medical_300u_pos5_neg1_allapps
+[17:37:01] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[17:37:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[17:39:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[17:39:26] Done
+[17:39:26] 
+[9/18] POS5 300 users — Weather
+[17:39:26] File: f_Weather_300u_pos5_neg1_allapps.csv
+[17:51:40] Scoring 700,111 users for f_Weather_300u_pos5_neg1_allapps
+[18:22:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[18:23:05] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[18:24:21] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[18:24:43] Done
+[18:24:43] 
+[10/18] POS5 500 users — Weather
+[18:24:43] File: f_Weather_500u_pos5_neg1_allapps.csv
+[18:37:17] Scoring 700,111 users for f_Weather_500u_pos5_neg1_allapps
+[19:06:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[19:07:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[19:09:11] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[19:09:32] Done
+[19:09:32] 
+[11/18] POS5 500 users — Medical
+[19:09:32] File: f_Medical_500u_pos5_neg1_allapps.csv
+[19:24:03] Scoring 700,111 users for f_Medical_500u_pos5_neg1_allapps
+[19:50:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[19:51:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[19:52:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[19:52:55] Done
+[19:52:55] 
+[12/18] POS5 500 users — Events
+[19:52:55] File: f_Events_500u_pos5_neg1_allapps.csv
+[20:07:07] Scoring 700,111 users for f_Events_500u_pos5_neg1_allapps
+[20:30:12] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[20:31:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[20:32:25] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[20:32:45] Done
+[20:32:45] 
+[13/18] POS5 2000 users — Medical
+[20:32:45] File: f_Medical_2000u_pos5_neg1_allapps.csv
+[20:51:00] Scoring 700,111 users for f_Medical_2000u_pos5_neg1_allapps
+[21:15:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[21:16:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[21:18:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[21:18:34] Done
+[21:18:34] 
+[14/18] POS5 2000 users — Events
+[21:18:34] File: f_Events_2000u_pos5_neg1_allapps.csv
+[21:38:01] Scoring 700,111 users for f_Events_2000u_pos5_neg1_allapps
+[22:02:00] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[22:02:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[22:04:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[22:04:28] Done
+[22:04:28] 
+[15/18] POS5 2000 users — Weather
+[22:04:28] File: f_Weather_2000u_pos5_neg1_allapps.csv
+[22:22:59] Scoring 700,111 users for f_Weather_2000u_pos5_neg1_allapps
+[22:55:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[22:56:47] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[22:58:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[22:58:28] Done
+[22:58:28] 
+[16/18] POS5 7000 users — Weather
+[22:58:28] File: f_Weather_7000u_pos5_neg1_allapps.csv
+[23:39:02] Scoring 700,111 users for f_Weather_7000u_pos5_neg1_allapps
+[00:01:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[00:02:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[00:03:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Weather_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[00:04:21] Done
+[00:04:21] 
+[17/18] POS5 7000 users — Events
+[00:04:21] File: f_Events_7000u_pos5_neg1_allapps.csv
+[00:44:05] Scoring 700,111 users for f_Events_7000u_pos5_neg1_allapps
+[01:06:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[01:07:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[01:08:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Events_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[01:09:26] Done
+[01:09:26] 
+[18/18] POS5 7000 users — Medical
+[01:09:26] File: f_Medical_7000u_pos5_neg1_allapps.csv
+[01:48:49] Scoring 700,111 users for f_Medical_7000u_pos5_neg1_allapps
+[02:11:25] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[02:12:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[02:13:40] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run/data/f_Medical_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[02:14:16] Done
+[02:14:16] 
+Finished all runs in 13.86 hours
+[02:14:16] Results saved in: /home/moshtasa/Research/phd-svd-recsys/Mobile/0405/0405_NMF/result/NMF_run

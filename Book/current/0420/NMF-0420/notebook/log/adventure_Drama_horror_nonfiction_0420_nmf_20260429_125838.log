@@ -1,0 +1,210 @@
+nohup: ignoring input
+[12:58:41] === NMF 0413: BASELINE + INJECTIONS WITH BIASING USER ANALYSIS ===
+[12:58:41] Loading ORIGINAL → /home/moshtasa/Research/phd-svd-recsys/Book/Archive/data/genre_clean.csv
+[12:58:48] Training NMF on ORIGINAL
+[13:02:55] Scoring 53,424 users for ORIGINAL
+[13:05:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/ORIGINAL_15recommendation.csv (801,360 rows)
+[13:05:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/ORIGINAL_25recommendation.csv (1,335,600 rows)
+[13:06:01] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/ORIGINAL_35recommendation.csv (1,869,840 rows)
+[13:06:35] Found 40 injection files
+[13:06:35] [1/40] f_Drama_2u_pos5_neg1_books
+[13:10:56] Scoring 53,424 users for f_Drama_2u_pos5_neg1_books
+[13:13:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:13:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:14:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:14:36] [2/40] f_Nonfiction_2u_pos5_neg1_books
+[13:19:05] Scoring 53,424 users for f_Nonfiction_2u_pos5_neg1_books
+[13:22:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:22:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:22:11] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:22:44] [3/40] f_Adventure_2u_pos5_neg1_books
+[13:27:26] Scoring 53,424 users for f_Adventure_2u_pos5_neg1_books
+[13:30:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:30:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:30:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:31:05] [4/40] f_Horror_2u_pos5_neg1_books
+[13:35:33] Scoring 53,424 users for f_Horror_2u_pos5_neg1_books
+[13:38:27] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:38:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:38:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:39:09] [5/40] f_Adventure_4u_pos5_neg1_books
+[13:43:37] Scoring 53,424 users for f_Adventure_4u_pos5_neg1_books
+[13:46:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:46:34] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:46:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:47:12] [6/40] f_Horror_4u_pos5_neg1_books
+[13:51:48] Scoring 53,424 users for f_Horror_4u_pos5_neg1_books
+[13:54:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:54:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:54:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:55:29] [7/40] f_Nonfiction_4u_pos5_neg1_books
+[13:59:59] Scoring 53,424 users for f_Nonfiction_4u_pos5_neg1_books
+[14:02:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:02:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:02:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:03:33] [8/40] f_Drama_4u_pos5_neg1_books
+[14:08:02] Scoring 53,424 users for f_Drama_4u_pos5_neg1_books
+[14:10:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:10:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:10:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:11:25] [9/40] f_Adventure_6u_pos5_neg1_books
+[14:15:54] Scoring 53,424 users for f_Adventure_6u_pos5_neg1_books
+[14:18:28] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:18:32] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:18:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:19:11] [10/40] f_Nonfiction_6u_pos5_neg1_books
+[14:23:35] Scoring 53,424 users for f_Nonfiction_6u_pos5_neg1_books
+[14:26:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:26:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:26:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:27:15] [11/40] f_Drama_6u_pos5_neg1_books
+[14:31:44] Scoring 53,424 users for f_Drama_6u_pos5_neg1_books
+[14:34:27] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:34:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:34:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:35:11] [12/40] f_Horror_6u_pos5_neg1_books
+[14:39:44] Scoring 53,424 users for f_Horror_6u_pos5_neg1_books
+[14:42:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:42:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:42:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:43:16] [13/40] f_Nonfiction_25u_pos5_neg1_books
+[14:47:50] Scoring 53,424 users for f_Nonfiction_25u_pos5_neg1_books
+[14:50:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:50:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:50:54] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:51:29] [14/40] f_Drama_25u_pos5_neg1_books
+[14:56:07] Scoring 53,424 users for f_Drama_25u_pos5_neg1_books
+[14:59:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:59:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:59:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:59:49] [15/40] f_Adventure_25u_pos5_neg1_books
+[15:04:31] Scoring 53,424 users for f_Adventure_25u_pos5_neg1_books
+[15:07:27] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:07:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:07:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:08:13] [16/40] f_Horror_25u_pos5_neg1_books
+[15:12:43] Scoring 53,424 users for f_Horror_25u_pos5_neg1_books
+[15:15:34] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:15:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:15:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:16:20] [17/40] f_Adventure_50u_pos5_neg1_books
+[15:21:01] Scoring 53,424 users for f_Adventure_50u_pos5_neg1_books
+[15:23:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:23:47] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:23:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:24:32] [18/40] f_Nonfiction_50u_pos5_neg1_books
+[15:29:05] Scoring 53,424 users for f_Nonfiction_50u_pos5_neg1_books
+[15:31:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:31:47] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:31:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:32:32] [19/40] f_Drama_50u_pos5_neg1_books
+[15:37:05] Scoring 53,424 users for f_Drama_50u_pos5_neg1_books
+[15:39:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:39:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:39:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:40:25] [20/40] f_Horror_50u_pos5_neg1_books
+[15:44:54] Scoring 53,424 users for f_Horror_50u_pos5_neg1_books
+[15:47:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:47:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:47:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:48:13] [21/40] f_Nonfiction_100u_pos5_neg1_books
+[15:52:58] Scoring 53,424 users for f_Nonfiction_100u_pos5_neg1_books
+[15:55:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:55:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:55:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:56:25] [22/40] f_Horror_100u_pos5_neg1_books
+[16:01:08] Scoring 53,424 users for f_Horror_100u_pos5_neg1_books
+[16:03:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:03:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:03:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:04:38] [23/40] f_Adventure_100u_pos5_neg1_books
+[16:09:29] Scoring 53,424 users for f_Adventure_100u_pos5_neg1_books
+[16:12:11] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:12:14] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:12:19] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:12:59] [24/40] f_Drama_100u_pos5_neg1_books
+[16:17:55] Scoring 53,424 users for f_Drama_100u_pos5_neg1_books
+[16:20:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:20:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:20:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:21:24] [25/40] f_Nonfiction_200u_pos5_neg1_books
+[16:26:38] Scoring 53,424 users for f_Nonfiction_200u_pos5_neg1_books
+[16:29:24] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:29:27] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:29:32] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:30:13] [26/40] f_Drama_200u_pos5_neg1_books
+[16:35:22] Scoring 53,424 users for f_Drama_200u_pos5_neg1_books
+[16:38:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:38:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:38:17] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:39:01] [27/40] f_Horror_200u_pos5_neg1_books
+[16:44:08] Scoring 53,424 users for f_Horror_200u_pos5_neg1_books
+[16:46:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:46:54] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:46:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:47:43] [28/40] f_Adventure_200u_pos5_neg1_books
+[16:52:49] Scoring 53,424 users for f_Adventure_200u_pos5_neg1_books
+[16:55:28] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:55:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:55:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:56:20] [29/40] f_Adventure_500u_pos5_neg1_books
+[17:02:31] Scoring 53,424 users for f_Adventure_500u_pos5_neg1_books
+[17:05:14] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:05:18] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:05:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:06:19] [30/40] f_Horror_500u_pos5_neg1_books
+[17:12:32] Scoring 53,424 users for f_Horror_500u_pos5_neg1_books
+[17:15:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:15:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:15:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:16:31] [31/40] f_Drama_500u_pos5_neg1_books
+[17:22:43] Scoring 53,424 users for f_Drama_500u_pos5_neg1_books
+[17:25:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:25:34] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:25:39] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:26:39] [32/40] f_Nonfiction_500u_pos5_neg1_books
+[17:32:49] Scoring 53,424 users for f_Nonfiction_500u_pos5_neg1_books
+[17:35:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:35:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:35:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:36:38] [33/40] f_Horror_1000u_pos5_neg1_books
+[17:44:37] Scoring 53,424 users for f_Horror_1000u_pos5_neg1_books
+[17:47:24] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:47:28] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:47:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:48:55] [34/40] f_Adventure_1000u_pos5_neg1_books
+[17:56:59] Scoring 53,424 users for f_Adventure_1000u_pos5_neg1_books
+[17:59:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[18:00:00] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[18:00:05] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[18:01:26] [35/40] f_Nonfiction_1000u_pos5_neg1_books
+[18:09:19] Scoring 53,424 users for f_Nonfiction_1000u_pos5_neg1_books
+[18:11:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[18:11:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[18:12:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[18:13:22] [36/40] f_Drama_1000u_pos5_neg1_books
+[18:21:17] Scoring 53,424 users for f_Drama_1000u_pos5_neg1_books
+[18:24:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[18:24:16] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[18:24:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[18:25:48] [37/40] f_Drama_2000u_pos5_neg1_books
+[18:37:30] Scoring 53,424 users for f_Drama_2000u_pos5_neg1_books
+[18:40:27] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[18:40:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[18:40:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Drama_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[18:42:47] [38/40] f_Adventure_2000u_pos5_neg1_books
+[18:54:14] Scoring 53,424 users for f_Adventure_2000u_pos5_neg1_books
+[18:56:58] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[18:57:01] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[18:57:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Adventure_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[18:59:14] [39/40] f_Nonfiction_2000u_pos5_neg1_books
+[19:10:48] Scoring 53,424 users for f_Nonfiction_2000u_pos5_neg1_books
+[19:13:48] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[19:13:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[19:13:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Nonfiction_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[19:16:03] [40/40] f_Horror_2000u_pos5_neg1_books
+[19:27:46] Scoring 53,424 users for f_Horror_2000u_pos5_neg1_books
+[19:30:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[19:30:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[19:30:54] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Horror_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[19:32:58] Finished in 6.57h

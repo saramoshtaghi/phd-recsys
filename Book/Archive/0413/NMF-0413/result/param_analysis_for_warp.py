@@ -1,0 +1,210 @@
+import os
+import re
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from pathlib import Path
+from collections import defaultdict
+
+# ── Paths ──
+BASE = "/home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410/result"
+BI_DIR = os.path.join(BASE, "bi")
+MU_DIR = os.path.join(BASE, "mio")
+BU_DIR = os.path.join(BASE, "bu")
+MERGED_DIR = os.path.join(BASE, "merged")
+FIG_DIR = os.path.join(BASE, "SVD_details_figures")
+
+os.makedirs(MERGED_DIR, exist_ok=True)
+os.makedirs(FIG_DIR, exist_ok=True)
+
+# ── Patterns ──
+BI_PATTERN = re.compile(r"^f_(.+?)_(\d+)u_pos5_neg1_books_bi_per_genre\.csv$")
+
+# ── Step 1: Discover bi files ──
+bi_files = {}
+for fname in os.listdir(BI_DIR):
+    m = BI_PATTERN.match(fname)
+    if m:
+        genre_key = m.group(1)
+        n = int(m.group(2))
+        bi_files[(genre_key, n)] = fname
+
+# ── Step 2: Merge bi + mu + bu ──
+merged_data = {}
+
+for (genre_key, n), bi_fname in sorted(bi_files.items()):
+    mu_fname = bi_fname.replace("_bi_", "_mu_")
+    bu_fname = bi_fname.replace("_bi_", "_bu_")
+
+    bi_path = os.path.join(BI_DIR, bi_fname)
+    mu_path = os.path.join(MU_DIR, mu_fname)
+    bu_path = os.path.join(BU_DIR, bu_fname)
+
+    if not (os.path.exists(mu_path) and os.path.exists(bu_path)):
+        print(f"WARNING: Missing mu/bu for {bi_fname}, skipping.")
+        continue
+
+    df_bi = pd.read_csv(bi_path)
+    df_mu = pd.read_csv(mu_path)
+    df_bu = pd.read_csv(bu_path)
+
+    merge_cols = ["genre"]
+    if "is_target" in df_bi.columns:
+        merge_cols.append("is_target")
+
+    df = pd.merge(df_mu, df_bi, on=merge_cols, how="outer")
+    df = pd.merge(df, df_bu, on=merge_cols, how="outer")
+
+    merged_data[(genre_key, n)] = df
+
+print(f"Merged {len(merged_data)} configs")
+
+# ── Step 3: Organize by genre ──
+genre_groups = defaultdict(dict)
+for (genre_key, n), df in merged_data.items():
+    genre_groups[genre_key][n] = df
+
+# ── Style ──
+plt.style.use("seaborn-v0_8-pastel")
+
+TARGET_COLOR = "#5B3A29"
+TARGET_LINEWIDTH = 3.5
+NON_TARGET_LINEWIDTH = 1.5
+
+PASTEL_COLORS = [
+    "#AEC6CF","#FFD1DC","#B5EAD7","#FFDAC1","#C3B1E1",
+    "#F3E5AB","#FFB7B2","#B0E0E6","#D5AAFF","#FFFACD",
+    "#E0BBE4","#957DAD","#D4E157","#80CBC4","#F48FB1",
+]
+
+# ── Plot helper ──
+def plot_figure(genre_key, sorted_ns, n_dict, target_genre_name, metric_name, compute_value, ylabel, suffix):
+
+    # Collect all genres
+    all_genres = set()
+    for n in sorted_ns:
+        all_genres.update(n_dict[n]["genre"].tolist())
+    all_genres = sorted(all_genres)
+
+    # Build series
+    genre_series = {}
+    for genre_name in all_genres:
+        pts = []
+        for n in sorted_ns:
+            df = n_dict[n]
+            row = df[df["genre"] == genre_name]
+            if not row.empty:
+                val = compute_value(row)
+                pts.append((n, val))
+        genre_series[genre_name] = pts
+
+    non_target = [g for g in all_genres if g != target_genre_name]
+
+    # Colors
+    color_map = {}
+    for i, g in enumerate(non_target):
+        color_map[g] = PASTEL_COLORS[i % len(PASTEL_COLORS)]
+    color_map[target_genre_name] = TARGET_COLOR
+
+    positions = list(range(len(sorted_ns)))
+    n_to_pos = {n: p for n, p in zip(sorted_ns, positions)}
+
+    fig, ax = plt.subplots(figsize=(14, 8))
+
+    # Non-target
+    for g in non_target:
+        pts = genre_series[g]
+        if pts:
+            xs = [n_to_pos[x] for x, _ in pts]
+            ys = [y for _, y in pts]
+            ax.plot(xs, ys, marker="o",
+                    color=color_map[g],
+                    linewidth=NON_TARGET_LINEWIDTH,
+                    markersize=9,
+                    alpha=0.8,
+                    label=g)
+
+    # Target
+    pts = genre_series[target_genre_name]
+    if pts:
+        xs = [n_to_pos[x] for x, _ in pts]
+        ys = [y for _, y in pts]
+        ax.plot(xs, ys, marker="o",
+                color=TARGET_COLOR,
+                linewidth=TARGET_LINEWIDTH,
+                markersize=7,
+                zorder=10,
+                label=f"{target_genre_name} (target)")
+
+    pretty = genre_key.replace("_", " ")
+
+    ax.set_title(f"NMF - {pretty} ({metric_name})", fontsize=26, fontweight='bold')
+    ax.set_xlabel("Number of Fictitious Users (n)", fontsize=25)
+    ax.set_ylabel(ylabel, fontsize=28, fontweight='bold')
+
+    ax.set_xticks(positions)
+    ax.set_xticklabels([str(n) for n in sorted_ns], rotation=45)
+
+    ax.tick_params(axis='y', labelsize=18)
+    ax.tick_params(axis='x', labelsize=22)
+
+    ax.legend(bbox_to_anchor=(1.05, 1), loc="upper left", fontsize=10)
+    ax.grid(True, alpha=0.3)
+
+    plt.tight_layout()
+
+    out = os.path.join(FIG_DIR, f"{genre_key}_{suffix}.png")
+    fig.savefig(out, dpi=150, bbox_inches="tight")
+    plt.close(fig)
+
+    print(f"Saved: {out}")
+
+# ── Step 4: Generate ALL figures ──
+for genre_key, n_dict in sorted(genre_groups.items()):
+    sorted_ns = sorted(n_dict.keys())
+
+    sample_df = n_dict[sorted_ns[0]]
+    target_rows = sample_df[sample_df["is_target"] == "target"]
+    if target_rows.empty:
+        print(f"WARNING: No target for {genre_key}")
+        continue
+
+    target_genre_name = target_rows["genre"].iloc[0]
+
+    # 1. μ + bi
+    plot_figure(
+        genre_key, sorted_ns, n_dict, target_genre_name,
+        "μ + bᵢ",
+        lambda r: r["global_mean_mu"].values[0] + r["avg_bi"].values[0],
+        r"$\mu + b_i$",
+        "mu_plus_bi"
+    )
+
+    # 2. bi only
+    plot_figure(
+        genre_key, sorted_ns, n_dict, target_genre_name,
+        "bᵢ",
+        lambda r: r["avg_bi"].values[0],
+        r"$b_i$",
+        "bi_only"
+    )
+
+    # 3. bu only
+    plot_figure(
+        genre_key, sorted_ns, n_dict, target_genre_name,
+        "bᵤ",
+        lambda r: r["avg_bu"].values[0],
+        r"$b_u$",
+        "bu_only"
+    )
+
+    # 4. mu only
+    plot_figure(
+        genre_key, sorted_ns, n_dict, target_genre_name,
+        "μ",
+        lambda r: r["global_mean_mu"].values[0],
+        r"$\mu$",
+        "mu_only"
+    )
+
+print("Done!")

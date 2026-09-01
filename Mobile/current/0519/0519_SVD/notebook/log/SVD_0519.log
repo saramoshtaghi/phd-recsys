@@ -1,0 +1,25 @@
+nohup: ignoring input
+[16:56:26] === SVD 0413: BASELINE + INJECTIONS WITH BIASING USER ANALYSIS ===
+[16:56:26] Loading ORIGINAL → /home/moshtasa/Research/phd-recsys/Mobile/archive/0316_Single/data/data/mobilerec_final.csv
+[16:57:52] Training SVD on ORIGINAL
+[17:04:17] Scoring 700,111 users for ORIGINAL
+[17:40:35] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/ORIGINAL_15recommendation.csv (10,501,665 rows)
+[17:41:25] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/ORIGINAL_25recommendation.csv (17,502,775 rows)
+[17:42:35] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/ORIGINAL_35recommendation.csv (24,503,885 rows)
+[17:44:37] Found 3 injection files
+[17:44:37] [1/3] f_Shopping_500u_pos5_neg1_allapps
+[17:53:35] Scoring 700,111 users for f_Shopping_500u_pos5_neg1_allapps
+[18:30:31] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/f_Shopping_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[18:31:23] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/f_Shopping_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[18:32:37] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/f_Shopping_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[18:35:27] [2/3] f_Shopping_2000u_pos5_neg1_allapps
+[18:49:33] Scoring 700,111 users for f_Shopping_2000u_pos5_neg1_allapps
+[19:26:24] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/f_Shopping_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[19:27:18] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/f_Shopping_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[19:28:31] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/f_Shopping_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[19:31:49] [3/3] f_Shopping_7000u_pos5_neg1_allapps
+[20:01:46] Scoring 700,111 users for f_Shopping_7000u_pos5_neg1_allapps
+[20:39:19] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/f_Shopping_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[20:40:18] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/f_Shopping_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[20:41:38] Saved → /home/moshtasa/Research/phd-recsys/Mobile/current/0519/0519_SVD/result/data/f_Shopping_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[20:47:59] Finished in 3.86h

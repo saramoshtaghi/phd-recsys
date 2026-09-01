@@ -1,0 +1,43 @@
+NMF Analysis for Genre: Horror
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 1.3348 (users=53424)
+  2u: 1.9641 (users=53424)
+  4u: 1.9489 (users=53424)
+  6u: 1.6689 (users=53424)
+  25u: 2.4718 (users=53424)
+  50u: 3.6138 (users=53424)
+  100u: 6.1062 (users=53424)
+  200u: 9.3127 (users=53424)
+  500u: 10.5004 (users=53424)
+  1000u: 10.1027 (users=53424)
+  2000u: 10.1728 (users=53424)
+
+k = 25
+  original: 2.2863 (users=53424)
+  2u: 3.0787 (users=53424)
+  4u: 3.1883 (users=53424)
+  6u: 2.7856 (users=53424)
+  25u: 4.2408 (users=53424)
+  50u: 6.2241 (users=53424)
+  100u: 10.2478 (users=53424)
+  200u: 15.5799 (users=53424)
+  500u: 17.2600 (users=53424)
+  1000u: 16.1503 (users=53424)
+  2000u: 15.8470 (users=53424)
+
+k = 35
+  original: 3.2372 (users=53424)
+  2u: 4.1813 (users=53424)
+  4u: 4.3138 (users=53424)
+  6u: 3.8770 (users=53424)
+  25u: 6.0010 (users=53424)
+  50u: 8.8113 (users=53424)
+  100u: 14.2806 (users=53424)
+  200u: 21.7294 (users=53424)
+  500u: 24.0537 (users=53424)
+  1000u: 22.0892 (users=53424)
+  2000u: 21.4041 (users=53424)
+

@@ -1,0 +1,43 @@
+SVD Analysis for Genre: Adult
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 0.7803 (users=53424)
+  2u: 0.6743 (users=53424)
+  4u: 1.3298 (users=53424)
+  6u: 1.9634 (users=53424)
+  25u: 0.5525 (users=53424)
+  50u: 0.4332 (users=53424)
+  100u: 0.4179 (users=53424)
+  200u: 0.4049 (users=53424)
+  500u: 0.6338 (users=53424)
+  1000u: 1.0324 (users=53424)
+  2000u: 1.7512 (users=53424)
+
+k = 25
+  original: 1.1789 (users=53424)
+  2u: 1.0761 (users=53424)
+  4u: 1.9898 (users=53424)
+  6u: 2.9067 (users=53424)
+  25u: 0.9431 (users=53424)
+  50u: 0.7223 (users=53424)
+  100u: 0.7322 (users=53424)
+  200u: 0.7180 (users=53424)
+  500u: 1.0856 (users=53424)
+  1000u: 1.6665 (users=53424)
+  2000u: 2.8027 (users=53424)
+
+k = 35
+  original: 1.5477 (users=53424)
+  2u: 1.4549 (users=53424)
+  4u: 2.6043 (users=53424)
+  6u: 3.7659 (users=53424)
+  25u: 1.3621 (users=53424)
+  50u: 1.0241 (users=53424)
+  100u: 1.0652 (users=53424)
+  200u: 1.0655 (users=53424)
+  500u: 1.5482 (users=53424)
+  1000u: 2.2696 (users=53424)
+  2000u: 3.7948 (users=53424)
+

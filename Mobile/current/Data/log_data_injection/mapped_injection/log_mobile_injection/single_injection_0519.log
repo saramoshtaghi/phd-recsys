@@ -1,0 +1,58 @@
+nohup: ignoring input
+Unique categories in dataset:
+['Casual' 'Health & Fitness' 'Word' 'Entertainment' 'Dating' 'Shopping'
+ 'Education' 'Business' 'Libraries & Demo' 'Weather' 'Puzzle'
+ 'Personalization' 'Simulation' 'Maps & Navigation' 'Action'
+ 'Role Playing' 'Productivity' 'Sports' 'Communication' 'Tools' 'Beauty'
+ 'Educational' 'Photography' 'Board' 'Music & Audio' 'Finance'
+ 'Books & Reference' 'Lifestyle' 'Strategy' 'Racing' 'Trivia' 'Parenting'
+ 'Arcade' 'Adventure' 'Travel & Local' 'Card' 'Casino'
+ 'Video Players & Editors' 'Food & Drink' 'Medical' 'Comics'
+ 'News & Magazines' 'Music' 'Social' 'Events' 'Art & Design'
+ 'House & Home' 'Auto & Vehicles']
+
+[DEBUG] Category: Medical
+  Pos items: 422
+  Neg items: 9751
+
+Category 'Medical' | Run 30
+  -> Users added: 30
+
+Category 'Medical' | Run 60
+  -> Users added: 60
+
+Category 'Medical' | Run 300
+  -> Users added: 300
+
+Category 'Medical' | Run 500
+  -> Users added: 500
+
+Category 'Medical' | Run 2000
+  -> Users added: 2000
+
+Category 'Medical' | Run 7000
+  -> Users added: 7000
+
+[DEBUG] Category: Weather
+  Pos items: 51
+  Neg items: 10122
+
+Category 'Weather' | Run 30
+  -> Users added: 30
+
+Category 'Weather' | Run 60
+  -> Users added: 60
+
+Category 'Weather' | Run 300
+  -> Users added: 300
+
+Category 'Weather' | Run 500
+  -> Users added: 500
+
+Category 'Weather' | Run 2000
+  -> Users added: 2000
+
+Category 'Weather' | Run 7000
+  -> Users added: 7000
+
+✅ Done.

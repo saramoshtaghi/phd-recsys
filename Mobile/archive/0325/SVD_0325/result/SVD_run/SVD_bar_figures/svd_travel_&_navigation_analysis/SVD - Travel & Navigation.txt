@@ -1,0 +1,31 @@
+SVD Analysis for Category: Travel & Navigation
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 0.7635 (users=700111)
+  30u: 1.1610 (users=700111)
+  60u: 1.4212 (users=700111)
+  300u: 3.3172 (users=700111)
+  500u: 3.2339 (users=700111)
+  2000u: 0.8259 (users=700111)
+  7000u: 0.0006 (users=700111)
+
+k = 25
+  original: 1.3119 (users=700111)
+  30u: 1.9398 (users=700111)
+  60u: 2.3620 (users=700111)
+  300u: 5.6057 (users=700111)
+  500u: 5.6173 (users=700111)
+  2000u: 2.0157 (users=700111)
+  7000u: 0.0072 (users=700111)
+
+k = 35
+  original: 1.8553 (users=700111)
+  30u: 2.7183 (users=700111)
+  60u: 3.3040 (users=700111)
+  300u: 7.9112 (users=700111)
+  500u: 8.0505 (users=700111)
+  2000u: 3.4581 (users=700111)
+  7000u: 0.0361 (users=700111)
+

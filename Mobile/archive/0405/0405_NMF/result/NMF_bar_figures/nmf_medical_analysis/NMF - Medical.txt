@@ -1,0 +1,31 @@
+NMF Analysis for Category: Medical
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 1.4439 (users=700111)
+  30u: 0.3782 (users=700111)
+  60u: 0.4240 (users=700111)
+  300u: 2.0504 (users=700111)
+  500u: 4.8492 (users=700111)
+  2000u: 7.5870 (users=700111)
+  7000u: 14.0176 (users=700111)
+
+k = 25
+  original: 2.5000 (users=700111)
+  30u: 0.7041 (users=700111)
+  60u: 0.7939 (users=700111)
+  300u: 3.0879 (users=700111)
+  500u: 6.8852 (users=700111)
+  2000u: 10.5239 (users=700111)
+  7000u: 22.9859 (users=700111)
+
+k = 35
+  original: 3.4882 (users=700111)
+  30u: 1.0695 (users=700111)
+  60u: 1.2187 (users=700111)
+  300u: 3.9766 (users=700111)
+  500u: 8.1526 (users=700111)
+  2000u: 12.5812 (users=700111)
+  7000u: 31.4143 (users=700111)
+

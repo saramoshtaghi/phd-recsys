@@ -1,0 +1,43 @@
+SVD Analysis for Genre: Mystery
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 3.8519 (users=53424)
+  2u: 3.6153 (users=53424)
+  4u: 3.5586 (users=53424)
+  6u: 3.6595 (users=53424)
+  25u: 3.7106 (users=53424)
+  50u: 3.6152 (users=53424)
+  100u: 3.6769 (users=53424)
+  200u: 3.8056 (users=53424)
+  500u: 3.2348 (users=53424)
+  1000u: 3.1206 (users=53424)
+  2000u: 2.8864 (users=53424)
+
+k = 25
+  original: 6.3166 (users=53424)
+  2u: 5.9090 (users=53424)
+  4u: 5.8107 (users=53424)
+  6u: 6.0322 (users=53424)
+  25u: 6.1336 (users=53424)
+  50u: 5.9889 (users=53424)
+  100u: 6.0361 (users=53424)
+  200u: 6.2156 (users=53424)
+  500u: 5.4402 (users=53424)
+  1000u: 5.2314 (users=53424)
+  2000u: 4.8905 (users=53424)
+
+k = 35
+  original: 8.7179 (users=53424)
+  2u: 8.1448 (users=53424)
+  4u: 8.0216 (users=53424)
+  6u: 8.3509 (users=53424)
+  25u: 8.5319 (users=53424)
+  50u: 8.3364 (users=53424)
+  100u: 8.3654 (users=53424)
+  200u: 8.5996 (users=53424)
+  500u: 7.6117 (users=53424)
+  1000u: 7.3135 (users=53424)
+  2000u: 6.9058 (users=53424)
+

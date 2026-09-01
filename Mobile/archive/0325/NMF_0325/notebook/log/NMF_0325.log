@@ -1,0 +1,229 @@
+nohup: ignoring input
+[19:26:41] === NMF BASELINE + SELECTED INJECTIONS (Mobile) ===
+[19:26:41] Loading ORIGINAL → /home/moshtasa/Research/phd-svd-recsys/Mobile/0316_Single/data/data/mobilerec_final_mapped.csv
+[19:28:10] ORIGINAL users=700,111 rows=19,297,019
+[19:28:10] Training NMF on ORIGINAL
+[19:37:07] Generating ORIGINAL recommendations
+[19:37:28] Scoring 700,111 users for ORIGINAL
+[20:06:07] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/ORIGINAL_15recommendation.csv (10,501,665 rows)
+[20:06:58] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/ORIGINAL_25recommendation.csv (17,502,775 rows)
+[20:08:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/ORIGINAL_35recommendation.csv (24,503,885 rows)
+[20:08:16] Computing ORIGINAL bi analysis
+[20:08:16] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/ORIGINAL_bi_per_category.csv (10 categories)
+[20:08:16] Computing ORIGINAL mu analysis
+[20:08:23] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/ORIGINAL_mu_per_category.csv (10 categories)
+[20:08:29] ORIGINAL baseline done
+[20:08:29] Found 14 injection files
+[20:08:29] 
+[1/14] POS5 30 users — Games
+[20:08:29] File: f_Games_30u_pos5_neg1_allapps.csv
+[20:10:00] Target category: Games → Games
+[20:10:00] Training NMF
+[20:18:50] Generating recommendations
+[20:19:12] Scoring 700,111 users for f_Games_30u_pos5_neg1_allapps
+[20:47:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[20:48:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[20:49:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[20:50:06] Computing bi analysis
+[20:50:06] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Games_30u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[20:50:06] Computing mu analysis
+[20:50:13] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Games_30u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[20:50:20] Done
+[20:50:20] 
+[2/14] POS5 30 users — Travel___Navigation
+[20:50:20] File: f_Travel___Navigation_30u_pos5_neg1_allapps.csv
+[20:51:53] Target category: Travel___Navigation → Travel & Navigation
+[20:51:53] Training NMF
+[21:00:42] Generating recommendations
+[21:01:03] Scoring 700,111 users for f_Travel___Navigation_30u_pos5_neg1_allapps
+[21:30:05] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[21:30:58] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[21:32:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[21:32:21] Computing bi analysis
+[21:32:21] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Travel___Navigation_30u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[21:32:21] Computing mu analysis
+[21:32:28] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Travel___Navigation_30u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[21:32:35] Done
+[21:32:35] 
+[3/14] POS5 60 users — Games
+[21:32:35] File: f_Games_60u_pos5_neg1_allapps.csv
+[21:34:08] Target category: Games → Games
+[21:34:08] Training NMF
+[21:42:48] Generating recommendations
+[21:43:09] Scoring 700,111 users for f_Games_60u_pos5_neg1_allapps
+[22:11:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[22:12:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[22:13:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[22:13:49] Computing bi analysis
+[22:13:49] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Games_60u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[22:13:49] Computing mu analysis
+[22:13:56] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Games_60u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[22:14:03] Done
+[22:14:03] 
+[4/14] POS5 60 users — Travel___Navigation
+[22:14:03] File: f_Travel___Navigation_60u_pos5_neg1_allapps.csv
+[22:15:34] Target category: Travel___Navigation → Travel & Navigation
+[22:15:34] Training NMF
+[22:24:17] Generating recommendations
+[22:24:39] Scoring 700,111 users for f_Travel___Navigation_60u_pos5_neg1_allapps
+[22:53:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[22:54:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[22:55:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[22:56:06] Computing bi analysis
+[22:56:06] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Travel___Navigation_60u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[22:56:06] Computing mu analysis
+[22:56:14] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Travel___Navigation_60u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[22:56:21] Done
+[22:56:21] 
+[5/14] POS5 300 users — Travel___Navigation
+[22:56:21] File: f_Travel___Navigation_300u_pos5_neg1_allapps.csv
+[22:57:56] Target category: Travel___Navigation → Travel & Navigation
+[22:57:56] Training NMF
+[23:07:41] Generating recommendations
+[23:08:03] Scoring 700,111 users for f_Travel___Navigation_300u_pos5_neg1_allapps
+[23:34:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[23:35:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[23:36:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[23:37:00] Computing bi analysis
+[23:37:00] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Travel___Navigation_300u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[23:37:00] Computing mu analysis
+[23:37:08] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Travel___Navigation_300u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[23:37:16] Done
+[23:37:16] 
+[6/14] POS5 300 users — Games
+[23:37:16] File: f_Games_300u_pos5_neg1_allapps.csv
+[23:38:35] Target category: Games → Games
+[23:38:35] Training NMF
+[23:47:58] Generating recommendations
+[23:48:20] Scoring 700,111 users for f_Games_300u_pos5_neg1_allapps
+[00:15:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[00:16:05] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[00:17:27] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[00:17:39] Computing bi analysis
+[00:17:39] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Games_300u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[00:17:39] Computing mu analysis
+[00:17:47] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Games_300u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[00:17:54] Done
+[00:17:54] 
+[7/14] POS5 500 users — Travel___Navigation
+[00:17:54] File: f_Travel___Navigation_500u_pos5_neg1_allapps.csv
+[00:19:31] Target category: Travel___Navigation → Travel & Navigation
+[00:19:31] Training NMF
+[00:29:36] Generating recommendations
+[00:29:59] Scoring 700,111 users for f_Travel___Navigation_500u_pos5_neg1_allapps
+[00:56:58] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[00:57:54] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[00:59:12] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[00:59:23] Computing bi analysis
+[00:59:23] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Travel___Navigation_500u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[00:59:23] Computing mu analysis
+[00:59:31] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Travel___Navigation_500u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[00:59:39] Done
+[00:59:39] 
+[8/14] POS5 500 users — Games
+[00:59:39] File: f_Games_500u_pos5_neg1_allapps.csv
+[01:01:14] Target category: Games → Games
+[01:01:14] Training NMF
+[01:11:18] Generating recommendations
+[01:11:41] Scoring 700,111 users for f_Games_500u_pos5_neg1_allapps
+[01:39:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[01:40:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[01:42:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[01:42:18] Computing bi analysis
+[01:42:18] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Games_500u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[01:42:18] Computing mu analysis
+[01:42:26] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Games_500u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[01:42:34] Done
+[01:42:34] 
+[9/14] POS5 2000 users — Games
+[01:42:34] File: f_Games_2000u_pos5_neg1_allapps.csv
+[01:44:33] Target category: Games → Games
+[01:44:33] Training NMF
+[01:59:29] Generating recommendations
+[01:59:55] Scoring 700,111 users for f_Games_2000u_pos5_neg1_allapps
+[02:27:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[02:28:17] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[02:29:34] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[02:29:46] Computing bi analysis
+[02:29:46] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Games_2000u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[02:29:46] Computing mu analysis
+[02:29:57] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Games_2000u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[02:30:09] Done
+[02:30:09] 
+[10/14] POS5 2000 users — Travel___Navigation
+[02:30:09] File: f_Travel___Navigation_2000u_pos5_neg1_allapps.csv
+[02:32:04] Target category: Travel___Navigation → Travel & Navigation
+[02:32:04] Training NMF
+[02:46:57] Generating recommendations
+[02:47:23] Scoring 700,111 users for f_Travel___Navigation_2000u_pos5_neg1_allapps
+[03:14:40] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[03:15:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[03:16:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[03:17:06] Computing bi analysis
+[03:17:06] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Travel___Navigation_2000u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[03:17:06] Computing mu analysis
+[03:17:18] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Travel___Navigation_2000u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[03:17:30] Done
+[03:17:30] 
+[11/14] POS5 7000 users — Games
+[03:17:30] File: f_Games_7000u_pos5_neg1_allapps.csv
+[03:20:27] Target category: Games → Games
+[03:20:27] Training NMF
+[03:54:12] Generating recommendations
+[03:55:00] Scoring 700,111 users for f_Games_7000u_pos5_neg1_allapps
+[04:23:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[04:24:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[04:26:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[04:26:15] Computing bi analysis
+[04:26:15] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Games_7000u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[04:26:15] Computing mu analysis
+[04:26:44] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Games_7000u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[04:27:09] Done
+[04:27:09] 
+[12/14] POS5 7000 users — Travel___Navigation
+[04:27:09] File: f_Travel___Navigation_7000u_pos5_neg1_allapps.csv
+[04:30:12] Target category: Travel___Navigation → Travel & Navigation
+[04:30:12] Training NMF
+[05:02:58] Generating recommendations
+[05:03:45] Scoring 700,111 users for f_Travel___Navigation_7000u_pos5_neg1_allapps
+[05:30:58] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[05:31:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[05:33:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[05:33:26] Computing bi analysis
+[05:33:26] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Travel___Navigation_7000u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[05:33:26] Computing mu analysis
+[05:33:55] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Travel___Navigation_7000u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[05:34:21] Done
+[05:34:21] 
+[13/14] POS5 26000 users — Games
+[05:34:21] File: f_Games_26000u_pos5_neg1_allapps.csv
+[05:41:51] Target category: Games → Games
+[05:41:51] Training NMF
+[07:41:14] Generating recommendations
+[07:44:20] Scoring 700,111 users for f_Games_26000u_pos5_neg1_allapps
+[08:12:28] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_26000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[08:13:23] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_26000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[08:14:39] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Games_26000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[08:14:55] Computing bi analysis
+[08:14:55] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Games_26000u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[08:14:55] Computing mu analysis
+[08:16:21] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Games_26000u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[08:18:02] Done
+[08:18:02] 
+[14/14] POS5 26000 users — Travel___Navigation
+[08:18:02] File: f_Travel___Navigation_26000u_pos5_neg1_allapps.csv
+[08:25:54] Target category: Travel___Navigation → Travel & Navigation
+[08:25:54] Training NMF
+[10:20:55] Generating recommendations
+[10:24:00] Scoring 700,111 users for f_Travel___Navigation_26000u_pos5_neg1_allapps
+[10:51:19] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_26000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[10:52:18] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_26000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[10:53:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/data/f_Travel___Navigation_26000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[10:53:53] Computing bi analysis
+[10:53:53] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/bi/f_Travel___Navigation_26000u_pos5_neg1_allapps_bi_per_category.csv (10 categories)
+[10:53:53] Computing mu analysis
+[10:55:24] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run/mio/f_Travel___Navigation_26000u_pos5_neg1_allapps_mu_per_category.csv (10 categories)
+[10:57:02] Done
+[10:57:02] 
+Finished all runs in 15.51 hours
+[10:57:02] Results saved in: /home/moshtasa/Research/phd-svd-recsys/Mobile/NMF_0325/result/NMF_run

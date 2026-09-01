@@ -1,0 +1,32 @@
+SVD Analysis for Category: Weather
+
+Metric: Average count of target category per user
+All categories: Action, Adventure, Arcade, Art & Design, Auto & Vehicles, Beauty, Board, Books & Reference, Business, Card, Casino, Casual, Comics, Communication, Dating, Education, Educational, Entertainment, Events, Finance, Food & Drink, Health & Fitness, House & Home, Libraries & Demo, Lifestyle, Maps & Navigation, Medical, Music, Music & Audio, News & Magazines, Parenting, Personalization, Photography, Productivity, Puzzle, Racing, Role Playing, Shopping, Simulation, Social, Sports, Strategy, Tools, Travel & Local, Trivia, Video Players & Editors, Weather, Word
+
+k = 15
+  original: 0.0054 (users=700111)
+  30u: 0.3574 (users=700111)
+  60u: 0.9180 (users=700111)
+  300u: 3.1787 (users=700111)
+  500u: 3.8809 (users=700111)
+  2000u: 4.6674 (users=700111)
+  7000u: 2.2170 (users=700111)
+
+k = 25
+  original: 0.0162 (users=700111)
+  30u: 0.6341 (users=700111)
+  60u: 1.5719 (users=700111)
+  300u: 5.1382 (users=700111)
+  500u: 6.3200 (users=700111)
+  2000u: 7.7949 (users=700111)
+  7000u: 3.7860 (users=700111)
+
+k = 35
+  original: 0.0307 (users=700111)
+  30u: 0.9142 (users=700111)
+  60u: 2.1955 (users=700111)
+  300u: 6.9967 (users=700111)
+  500u: 8.6165 (users=700111)
+  2000u: 10.7529 (users=700111)
+  7000u: 5.2860 (users=700111)
+

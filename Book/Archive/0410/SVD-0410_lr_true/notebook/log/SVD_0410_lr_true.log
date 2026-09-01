@@ -1,0 +1,441 @@
+nohup: ignoring input
+[13:11:25] === SVD BASELINE + SELECTED INJECTIONS ===
+[13:11:25] Loading ORIGINAL → /home/moshtasa/Research/phd-svd-recsys/Book/Archive/data/genre_clean.csv
+[13:11:31] ORIGINAL users=53,424 rows=5,815,569
+[13:11:31] Training SVD on ORIGINAL
+[13:15:02] Generating ORIGINAL recommendations
+[13:15:05] Scoring 53,424 users for ORIGINAL
+[13:18:25] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/ORIGINAL_15recommendation.csv (801,360 rows)
+[13:18:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/ORIGINAL_25recommendation.csv (1,335,600 rows)
+[13:18:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/ORIGINAL_35recommendation.csv (1,869,840 rows)
+[13:18:36] Computing ORIGINAL bi analysis
+[13:18:36] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/ORIGINAL_bi_per_genre.csv (13 genres)
+[13:18:36] Computing ORIGINAL bu analysis
+[13:18:43] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/ORIGINAL_bu_per_genre.csv (13 genres)
+[13:18:43] Computing ORIGINAL mu analysis
+[13:19:05] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/ORIGINAL_mu_per_genre.csv (13 genres)
+[13:19:06] Computing ORIGINAL merged analysis
+[13:19:06] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/ORIGINAL_merged.csv (13 genres)
+[13:19:07] ORIGINAL baseline done
+[13:19:07] Found 22 injection files
+[13:19:07] 
+[1/22] POS5 2 users — Thriller
+[13:19:07] File: f_Thriller_2u_pos5_neg1_books.csv
+[13:19:13] Target genre: Thriller → Thriller
+[13:19:13] Training SVD
+[13:22:53] Generating recommendations
+[13:22:56] Scoring 53,424 users for f_Thriller_2u_pos5_neg1_books
+[13:26:34] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:26:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:26:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:26:44] Computing bi analysis
+[13:26:44] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_2u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[13:26:44] Computing bu analysis
+[13:26:52] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_2u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[13:26:52] Computing mu analysis
+[13:27:15] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_2u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[13:27:16] Computing merged analysis
+[13:27:16] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_2u_pos5_neg1_books_merged.csv (14 genres)
+[13:27:18] Done
+[13:27:18] 
+[2/22] POS5 2 users — Romance
+[13:27:18] File: f_Romance_2u_pos5_neg1_books.csv
+[13:27:23] Target genre: Romance → Romance
+[13:27:23] Training SVD
+[13:31:04] Generating recommendations
+[13:31:07] Scoring 53,424 users for f_Romance_2u_pos5_neg1_books
+[13:34:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:34:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:34:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:34:15] Computing bi analysis
+[13:34:15] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_2u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[13:34:15] Computing bu analysis
+[13:34:22] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_2u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[13:34:22] Computing mu analysis
+[13:34:45] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_2u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[13:34:45] Computing merged analysis
+[13:34:45] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_2u_pos5_neg1_books_merged.csv (14 genres)
+[13:34:47] Done
+[13:34:47] 
+[3/22] POS5 4 users — Thriller
+[13:34:47] File: f_Thriller_4u_pos5_neg1_books.csv
+[13:34:52] Target genre: Thriller → Thriller
+[13:34:52] Training SVD
+[13:38:26] Generating recommendations
+[13:38:29] Scoring 53,424 users for f_Thriller_4u_pos5_neg1_books
+[13:41:40] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:41:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:41:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:41:51] Computing bi analysis
+[13:41:51] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_4u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[13:41:51] Computing bu analysis
+[13:41:59] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_4u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[13:41:59] Computing mu analysis
+[13:42:23] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_4u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[13:42:23] Computing merged analysis
+[13:42:23] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_4u_pos5_neg1_books_merged.csv (14 genres)
+[13:42:25] Done
+[13:42:25] 
+[4/22] POS5 4 users — Romance
+[13:42:25] File: f_Romance_4u_pos5_neg1_books.csv
+[13:42:31] Target genre: Romance → Romance
+[13:42:31] Training SVD
+[13:46:01] Generating recommendations
+[13:46:04] Scoring 53,424 users for f_Romance_4u_pos5_neg1_books
+[13:49:07] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:49:11] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:49:17] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:49:18] Computing bi analysis
+[13:49:18] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_4u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[13:49:18] Computing bu analysis
+[13:49:26] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_4u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[13:49:26] Computing mu analysis
+[13:49:50] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_4u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[13:49:51] Computing merged analysis
+[13:49:51] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_4u_pos5_neg1_books_merged.csv (14 genres)
+[13:49:52] Done
+[13:49:52] 
+[5/22] POS5 6 users — Thriller
+[13:49:52] File: f_Thriller_6u_pos5_neg1_books.csv
+[13:49:58] Target genre: Thriller → Thriller
+[13:49:58] Training SVD
+[13:53:26] Generating recommendations
+[13:53:28] Scoring 53,424 users for f_Thriller_6u_pos5_neg1_books
+[13:56:32] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:56:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:56:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:56:43] Computing bi analysis
+[13:56:43] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_6u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[13:56:43] Computing bu analysis
+[13:56:51] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_6u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[13:56:51] Computing mu analysis
+[13:57:14] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_6u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[13:57:15] Computing merged analysis
+[13:57:15] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_6u_pos5_neg1_books_merged.csv (14 genres)
+[13:57:16] Done
+[13:57:16] 
+[6/22] POS5 6 users — Romance
+[13:57:16] File: f_Romance_6u_pos5_neg1_books.csv
+[13:57:22] Target genre: Romance → Romance
+[13:57:22] Training SVD
+[14:00:56] Generating recommendations
+[14:00:58] Scoring 53,424 users for f_Romance_6u_pos5_neg1_books
+[14:03:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:03:39] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:03:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:03:45] Computing bi analysis
+[14:03:45] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_6u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[14:03:45] Computing bu analysis
+[14:03:52] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_6u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[14:03:52] Computing mu analysis
+[14:04:16] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_6u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[14:04:17] Computing merged analysis
+[14:04:17] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_6u_pos5_neg1_books_merged.csv (14 genres)
+[14:04:18] Done
+[14:04:18] 
+[7/22] POS5 25 users — Thriller
+[14:04:18] File: f_Thriller_25u_pos5_neg1_books.csv
+[14:04:25] Target genre: Thriller → Thriller
+[14:04:25] Training SVD
+[14:08:08] Generating recommendations
+[14:08:11] Scoring 53,424 users for f_Thriller_25u_pos5_neg1_books
+[14:11:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:11:48] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:11:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:11:55] Computing bi analysis
+[14:11:55] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_25u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[14:11:55] Computing bu analysis
+[14:12:02] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_25u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[14:12:03] Computing mu analysis
+[14:12:28] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_25u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[14:12:29] Computing merged analysis
+[14:12:29] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_25u_pos5_neg1_books_merged.csv (14 genres)
+[14:12:31] Done
+[14:12:31] 
+[8/22] POS5 25 users — Romance
+[14:12:31] File: f_Romance_25u_pos5_neg1_books.csv
+[14:12:37] Target genre: Romance → Romance
+[14:12:37] Training SVD
+[14:16:20] Generating recommendations
+[14:16:23] Scoring 53,424 users for f_Romance_25u_pos5_neg1_books
+[14:19:01] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:19:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:19:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:19:11] Computing bi analysis
+[14:19:11] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_25u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[14:19:11] Computing bu analysis
+[14:19:18] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_25u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[14:19:18] Computing mu analysis
+[14:19:41] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_25u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[14:19:42] Computing merged analysis
+[14:19:42] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_25u_pos5_neg1_books_merged.csv (14 genres)
+[14:19:43] Done
+[14:19:43] 
+[9/22] POS5 50 users — Romance
+[14:19:43] File: f_Romance_50u_pos5_neg1_books.csv
+[14:19:49] Target genre: Romance → Romance
+[14:19:49] Training SVD
+[14:23:37] Generating recommendations
+[14:23:40] Scoring 53,424 users for f_Romance_50u_pos5_neg1_books
+[14:26:11] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:26:15] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:26:21] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:26:23] Computing bi analysis
+[14:26:23] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_50u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[14:26:23] Computing bu analysis
+[14:26:31] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_50u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[14:26:31] Computing mu analysis
+[14:26:59] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_50u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[14:27:00] Computing merged analysis
+[14:27:00] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_50u_pos5_neg1_books_merged.csv (14 genres)
+[14:27:02] Done
+[14:27:02] 
+[10/22] POS5 50 users — Thriller
+[14:27:02] File: f_Thriller_50u_pos5_neg1_books.csv
+[14:27:08] Target genre: Thriller → Thriller
+[14:27:08] Training SVD
+[14:30:57] Generating recommendations
+[14:31:00] Scoring 53,424 users for f_Thriller_50u_pos5_neg1_books
+[14:33:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:33:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:33:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:33:56] Computing bi analysis
+[14:33:56] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_50u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[14:33:56] Computing bu analysis
+[14:34:04] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_50u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[14:34:04] Computing mu analysis
+[14:34:36] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_50u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[14:34:37] Computing merged analysis
+[14:34:37] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_50u_pos5_neg1_books_merged.csv (14 genres)
+[14:34:39] Done
+[14:34:39] 
+[11/22] POS5 100 users — Romance
+[14:34:39] File: f_Romance_100u_pos5_neg1_books.csv
+[14:34:46] Target genre: Romance → Romance
+[14:34:46] Training SVD
+[14:38:37] Generating recommendations
+[14:38:40] Scoring 53,424 users for f_Romance_100u_pos5_neg1_books
+[14:41:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:41:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:42:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:42:06] Computing bi analysis
+[14:42:06] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_100u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[14:42:06] Computing bu analysis
+[14:42:15] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_100u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[14:42:15] Computing mu analysis
+[14:42:43] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_100u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[14:42:44] Computing merged analysis
+[14:42:44] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_100u_pos5_neg1_books_merged.csv (14 genres)
+[14:42:46] Done
+[14:42:46] 
+[12/22] POS5 100 users — Thriller
+[14:42:46] File: f_Thriller_100u_pos5_neg1_books.csv
+[14:42:53] Target genre: Thriller → Thriller
+[14:42:53] Training SVD
+[14:46:39] Generating recommendations
+[14:46:42] Scoring 53,424 users for f_Thriller_100u_pos5_neg1_books
+[14:50:32] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:50:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:50:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:50:43] Computing bi analysis
+[14:50:43] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_100u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[14:50:43] Computing bu analysis
+[14:50:51] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_100u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[14:50:51] Computing mu analysis
+[14:51:18] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_100u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[14:51:19] Computing merged analysis
+[14:51:19] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_100u_pos5_neg1_books_merged.csv (14 genres)
+[14:51:21] Done
+[14:51:21] 
+[13/22] POS5 200 users — Thriller
+[14:51:21] File: f_Thriller_200u_pos5_neg1_books.csv
+[14:51:28] Target genre: Thriller → Thriller
+[14:51:28] Training SVD
+[14:55:30] Generating recommendations
+[14:55:33] Scoring 53,424 users for f_Thriller_200u_pos5_neg1_books
+[14:59:23] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:59:27] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:59:32] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:59:33] Computing bi analysis
+[14:59:33] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_200u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[14:59:33] Computing bu analysis
+[14:59:43] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_200u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[14:59:43] Computing mu analysis
+[15:00:11] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_200u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[15:00:12] Computing merged analysis
+[15:00:12] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_200u_pos5_neg1_books_merged.csv (14 genres)
+[15:00:14] Done
+[15:00:14] 
+[14/22] POS5 200 users — Romance
+[15:00:14] File: f_Romance_200u_pos5_neg1_books.csv
+[15:00:21] Target genre: Romance → Romance
+[15:00:21] Training SVD
+[15:04:22] Generating recommendations
+[15:04:25] Scoring 53,424 users for f_Romance_200u_pos5_neg1_books
+[15:07:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:07:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:07:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:07:52] Computing bi analysis
+[15:07:52] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_200u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[15:07:52] Computing bu analysis
+[15:08:02] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_200u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[15:08:02] Computing mu analysis
+[15:08:33] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_200u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[15:08:34] Computing merged analysis
+[15:08:34] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_200u_pos5_neg1_books_merged.csv (14 genres)
+[15:08:36] Done
+[15:08:36] 
+[15/22] POS5 300 users — Thriller
+[15:08:36] File: f_Thriller_300u_pos5_neg1_books.csv
+[15:08:45] Target genre: Thriller → Thriller
+[15:08:45] Training SVD
+[15:13:19] Generating recommendations
+[15:13:23] Scoring 53,424 users for f_Thriller_300u_pos5_neg1_books
+[15:16:05] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_300u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:16:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_300u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:16:14] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_300u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:16:15] Computing bi analysis
+[15:16:15] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_300u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[15:16:15] Computing bu analysis
+[15:16:25] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_300u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[15:16:25] Computing mu analysis
+[15:17:02] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_300u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[15:17:03] Computing merged analysis
+[15:17:03] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_300u_pos5_neg1_books_merged.csv (14 genres)
+[15:17:06] Done
+[15:17:06] 
+[16/22] POS5 300 users — Romance
+[15:17:06] File: f_Romance_300u_pos5_neg1_books.csv
+[15:17:17] Target genre: Romance → Romance
+[15:17:17] Training SVD
+[15:21:59] Generating recommendations
+[15:22:02] Scoring 53,424 users for f_Romance_300u_pos5_neg1_books
+[15:24:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_300u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:24:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_300u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:24:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_300u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:24:56] Computing bi analysis
+[15:24:56] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_300u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[15:24:56] Computing bu analysis
+[15:25:07] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_300u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[15:25:07] Computing mu analysis
+[15:25:49] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_300u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[15:25:49] Computing merged analysis
+[15:25:50] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_300u_pos5_neg1_books_merged.csv (14 genres)
+[15:25:52] Done
+[15:25:52] 
+[17/22] POS5 500 users — Romance
+[15:25:52] File: f_Romance_500u_pos5_neg1_books.csv
+[15:26:02] Target genre: Romance → Romance
+[15:26:02] Training SVD
+[15:31:13] Generating recommendations
+[15:31:16] Scoring 53,424 users for f_Romance_500u_pos5_neg1_books
+[15:33:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:33:58] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:34:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:34:04] Computing bi analysis
+[15:34:04] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_500u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[15:34:04] Computing bu analysis
+[15:34:17] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_500u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[15:34:17] Computing mu analysis
+[15:35:01] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_500u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[15:35:02] Computing merged analysis
+[15:35:02] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_500u_pos5_neg1_books_merged.csv (14 genres)
+[15:35:04] Done
+[15:35:04] 
+[18/22] POS5 500 users — Thriller
+[15:35:04] File: f_Thriller_500u_pos5_neg1_books.csv
+[15:35:15] Target genre: Thriller → Thriller
+[15:35:15] Training SVD
+[15:40:29] Generating recommendations
+[15:40:32] Scoring 53,424 users for f_Thriller_500u_pos5_neg1_books
+[15:43:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:43:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:43:15] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:43:16] Computing bi analysis
+[15:43:16] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_500u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[15:43:16] Computing bu analysis
+[15:43:29] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_500u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[15:43:29] Computing mu analysis
+[15:44:11] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_500u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[15:44:12] Computing merged analysis
+[15:44:12] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_500u_pos5_neg1_books_merged.csv (14 genres)
+[15:44:15] Done
+[15:44:15] 
+[19/22] POS5 1000 users — Thriller
+[15:44:15] File: f_Thriller_1000u_pos5_neg1_books.csv
+[15:44:25] Target genre: Thriller → Thriller
+[15:44:25] Training SVD
+[15:51:19] Generating recommendations
+[15:51:22] Scoring 53,424 users for f_Thriller_1000u_pos5_neg1_books
+[15:53:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:54:02] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:54:07] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:54:09] Computing bi analysis
+[15:54:09] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_1000u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[15:54:09] Computing bu analysis
+[15:54:24] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_1000u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[15:54:24] Computing mu analysis
+[15:55:23] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_1000u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[15:55:24] Computing merged analysis
+[15:55:24] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_1000u_pos5_neg1_books_merged.csv (14 genres)
+[15:55:28] Done
+[15:55:28] 
+[20/22] POS5 1000 users — Romance
+[15:55:28] File: f_Romance_1000u_pos5_neg1_books.csv
+[15:55:40] Target genre: Romance → Romance
+[15:55:40] Training SVD
+[16:02:45] Generating recommendations
+[16:02:49] Scoring 53,424 users for f_Romance_1000u_pos5_neg1_books
+[16:05:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:06:01] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:06:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:06:08] Computing bi analysis
+[16:06:08] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_1000u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[16:06:08] Computing bu analysis
+[16:06:24] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_1000u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[16:06:24] Computing mu analysis
+[16:07:22] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_1000u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[16:07:23] Computing merged analysis
+[16:07:23] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_1000u_pos5_neg1_books_merged.csv (14 genres)
+[16:07:27] Done
+[16:07:27] 
+[21/22] POS5 2000 users — Romance
+[16:07:27] File: f_Romance_2000u_pos5_neg1_books.csv
+[16:07:44] Target genre: Romance → Romance
+[16:07:44] Training SVD
+[16:17:24] Generating recommendations
+[16:17:29] Scoring 53,424 users for f_Romance_2000u_pos5_neg1_books
+[16:20:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:20:12] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:20:17] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Romance_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:20:19] Computing bi analysis
+[16:20:19] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Romance_2000u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[16:20:19] Computing bu analysis
+[16:20:43] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Romance_2000u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[16:20:43] Computing mu analysis
+[16:22:21] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Romance_2000u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[16:22:23] Computing merged analysis
+[16:22:23] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Romance_2000u_pos5_neg1_books_merged.csv (14 genres)
+[16:22:30] Done
+[16:22:30] 
+[22/22] POS5 2000 users — Thriller
+[16:22:30] File: f_Thriller_2000u_pos5_neg1_books.csv
+[16:22:49] Target genre: Thriller → Thriller
+[16:22:49] Training SVD
+[16:32:09] Generating recommendations
+[16:32:15] Scoring 53,424 users for f_Thriller_2000u_pos5_neg1_books
+[16:35:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:35:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:35:15] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/data/f_Thriller_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:35:17] Computing bi analysis
+[16:35:17] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bi/f_Thriller_2000u_pos5_neg1_books_bi_per_genre.csv (14 genres)
+[16:35:17] Computing bu analysis
+[16:35:41] Saved bu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/bu/f_Thriller_2000u_pos5_neg1_books_bu_per_genre.csv (14 genres)
+[16:35:41] Computing mu analysis
+[16:37:20] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/mio/f_Thriller_2000u_pos5_neg1_books_mu_per_genre.csv (14 genres)
+[16:37:22] Computing merged analysis
+[16:37:22] Saved merged → /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result/merged/f_Thriller_2000u_pos5_neg1_books_merged.csv (14 genres)
+[16:37:29] Done
+[16:37:29] 
+Finished all runs in 3.43 hours
+[16:37:29] Results saved in: /home/moshtasa/Research/phd-svd-recsys/Book/0323_similar_pr_details/0410/SVD-0410_lr_true/result

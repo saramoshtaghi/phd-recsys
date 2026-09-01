@@ -1,0 +1,32 @@
+SVD Analysis for Category: Medical
+
+Metric: Average count of target category per user
+All categories: Action, Adventure, Arcade, Art & Design, Auto & Vehicles, Beauty, Board, Books & Reference, Business, Card, Casino, Casual, Comics, Communication, Dating, Education, Educational, Entertainment, Events, Finance, Food & Drink, Health & Fitness, House & Home, Libraries & Demo, Lifestyle, Maps & Navigation, Medical, Music, Music & Audio, News & Magazines, Parenting, Personalization, Photography, Productivity, Puzzle, Racing, Role Playing, Shopping, Simulation, Social, Sports, Strategy, Tools, Travel & Local, Trivia, Video Players & Editors, Weather, Word
+
+k = 15
+  original: 1.7900 (users=700111)
+  30u: 1.9661 (users=700111)
+  60u: 2.4861 (users=700111)
+  300u: 5.0763 (users=700111)
+  500u: 5.4907 (users=700111)
+  2000u: 4.4881 (users=700111)
+  7000u: 2.4259 (users=700111)
+
+k = 25
+  original: 2.8128 (users=700111)
+  30u: 3.1957 (users=700111)
+  60u: 4.0631 (users=700111)
+  300u: 8.2332 (users=700111)
+  500u: 9.0794 (users=700111)
+  2000u: 7.6065 (users=700111)
+  7000u: 4.0306 (users=700111)
+
+k = 35
+  original: 3.7834 (users=700111)
+  30u: 4.4013 (users=700111)
+  60u: 5.5946 (users=700111)
+  300u: 11.3083 (users=700111)
+  500u: 12.6049 (users=700111)
+  2000u: 10.7480 (users=700111)
+  7000u: 5.6343 (users=700111)
+

@@ -1,0 +1,31 @@
+NMF Analysis for Category: Weather
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 0.0005 (users=700111)
+  30u: 0.2744 (users=700111)
+  60u: 0.3985 (users=700111)
+  300u: 1.1307 (users=700111)
+  500u: 0.1011 (users=700111)
+  2000u: 11.7499 (users=700111)
+  7000u: 6.1132 (users=700111)
+
+k = 25
+  original: 0.0094 (users=700111)
+  30u: 0.4405 (users=700111)
+  60u: 0.6611 (users=700111)
+  300u: 2.0226 (users=700111)
+  500u: 0.1307 (users=700111)
+  2000u: 19.8807 (users=700111)
+  7000u: 10.5052 (users=700111)
+
+k = 35
+  original: 0.0178 (users=700111)
+  30u: 0.5653 (users=700111)
+  60u: 0.8759 (users=700111)
+  300u: 2.9571 (users=700111)
+  500u: 0.5563 (users=700111)
+  2000u: 28.1305 (users=700111)
+  7000u: 15.2058 (users=700111)
+

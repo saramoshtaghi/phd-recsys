@@ -1,0 +1,46 @@
+NMF Analysis for Genre: Classics
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 1.4632 (users=53424)
+  2u: 1.2214 (users=53424)
+  4u: 0.9902 (users=53424)
+  6u: 1.3282 (users=53424)
+  25u: 2.1498 (users=53424)
+  50u: 4.6228 (users=53424)
+  100u: 8.1553 (users=53424)
+  200u: 11.0313 (users=53424)
+  300u: 12.0570 (users=53424)
+  500u: 11.9285 (users=53424)
+  1000u: 12.3082 (users=53424)
+  2000u: 12.8321 (users=53424)
+
+k = 25
+  original: 2.2402 (users=53424)
+  2u: 1.9672 (users=53424)
+  4u: 1.6052 (users=53424)
+  6u: 2.0812 (users=53424)
+  25u: 3.6633 (users=53424)
+  50u: 7.3941 (users=53424)
+  100u: 12.9261 (users=53424)
+  200u: 17.6092 (users=53424)
+  300u: 19.3399 (users=53424)
+  500u: 19.2563 (users=53424)
+  1000u: 19.5963 (users=53424)
+  2000u: 20.5349 (users=53424)
+
+k = 35
+  original: 2.9788 (users=53424)
+  2u: 2.6762 (users=53424)
+  4u: 2.2501 (users=53424)
+  6u: 2.8552 (users=53424)
+  25u: 5.1631 (users=53424)
+  50u: 10.0332 (users=53424)
+  100u: 17.4664 (users=53424)
+  200u: 23.9880 (users=53424)
+  300u: 26.4101 (users=53424)
+  500u: 26.3390 (users=53424)
+  1000u: 26.4922 (users=53424)
+  2000u: 27.8883 (users=53424)
+

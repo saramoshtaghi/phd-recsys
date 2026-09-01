@@ -1,0 +1,46 @@
+SVD Analysis for Genre: Thriller
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 1.5766 (users=53424)
+  2u: 1.6637 (users=53424)
+  4u: 1.8494 (users=53424)
+  6u: 1.8986 (users=53424)
+  25u: 1.9118 (users=53424)
+  50u: 1.9660 (users=53424)
+  100u: 1.8230 (users=53424)
+  200u: 1.7002 (users=53424)
+  300u: 1.9287 (users=53424)
+  500u: 1.5327 (users=53424)
+  1000u: 1.6842 (users=53424)
+  2000u: 1.8355 (users=53424)
+
+k = 25
+  original: 2.7631 (users=53424)
+  2u: 2.8081 (users=53424)
+  4u: 3.0560 (users=53424)
+  6u: 3.2920 (users=53424)
+  25u: 3.2555 (users=53424)
+  50u: 3.3529 (users=53424)
+  100u: 3.1129 (users=53424)
+  200u: 2.9832 (users=53424)
+  300u: 3.3070 (users=53424)
+  500u: 2.7107 (users=53424)
+  1000u: 2.9279 (users=53424)
+  2000u: 3.1620 (users=53424)
+
+k = 35
+  original: 3.9523 (users=53424)
+  2u: 3.9333 (users=53424)
+  4u: 4.2484 (users=53424)
+  6u: 4.6787 (users=53424)
+  25u: 4.6173 (users=53424)
+  50u: 4.7519 (users=53424)
+  100u: 4.4222 (users=53424)
+  200u: 4.2834 (users=53424)
+  300u: 4.6872 (users=53424)
+  500u: 3.9273 (users=53424)
+  1000u: 4.2019 (users=53424)
+  2000u: 4.5004 (users=53424)
+

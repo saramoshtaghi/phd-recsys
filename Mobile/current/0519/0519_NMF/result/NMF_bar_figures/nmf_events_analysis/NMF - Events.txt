@@ -1,0 +1,22 @@
+NMF Analysis for Category: Events
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 0.0061 (users=700111)
+  30u: 0.1464 (users=700111)
+  60u: 0.2829 (users=700111)
+  300u: 1.1353 (users=22483)
+
+k = 25
+  original: 0.0114 (users=700111)
+  30u: 0.1937 (users=700111)
+  60u: 0.3750 (users=700111)
+  300u: 0.0000 (users=0)
+
+k = 35
+  original: 0.0176 (users=700111)
+  30u: 0.2313 (users=700111)
+  60u: 0.4458 (users=700111)
+  300u: 0.0000 (users=0)
+

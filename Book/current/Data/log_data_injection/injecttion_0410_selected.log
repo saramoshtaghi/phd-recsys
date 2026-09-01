@@ -1,0 +1,173 @@
+nohup: ignoring input
+Reading dataset from:
+/home/moshtasa/Research/phd-svd-recsys/Book/Archive/data/df_final_with_genres.csv
+File exists: True
+
+🎯 Processing 3 genres
+
+Category 'Thriller' | Run 2
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 2
+
+Category 'Thriller' | Run 4
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 4
+
+Category 'Thriller' | Run 6
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 6
+
+Category 'Thriller' | Run 25
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 25
+
+Category 'Thriller' | Run 50
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 50
+
+Category 'Thriller' | Run 100
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 100
+
+Category 'Thriller' | Run 200
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 200
+
+Category 'Thriller' | Run 300
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 300
+
+Category 'Thriller' | Run 500
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 500
+
+Category 'Thriller' | Run 1000
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 1000
+
+Category 'Thriller' | Run 2000
+  -> Items in category: 1606
+  -> Other categories: 7809
+  -> Adding users: 2000
+
+Category 'Romance' | Run 2
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 2
+
+Category 'Romance' | Run 4
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 4
+
+Category 'Romance' | Run 6
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 6
+
+Category 'Romance' | Run 25
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 25
+
+Category 'Romance' | Run 50
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 50
+
+Category 'Romance' | Run 100
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 100
+
+Category 'Romance' | Run 200
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 200
+
+Category 'Romance' | Run 300
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 300
+
+Category 'Romance' | Run 500
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 500
+
+Category 'Romance' | Run 1000
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 1000
+
+Category 'Romance' | Run 2000
+  -> Items in category: 2131
+  -> Other categories: 7284
+  -> Adding users: 2000
+
+Category 'Adult' | Run 2
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 2
+
+Category 'Adult' | Run 4
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 4
+
+Category 'Adult' | Run 6
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 6
+
+Category 'Adult' | Run 25
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 25
+
+Category 'Adult' | Run 50
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 50
+
+Category 'Adult' | Run 100
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 100
+
+Category 'Adult' | Run 200
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 200
+
+Category 'Adult' | Run 300
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 300
+
+Category 'Adult' | Run 500
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 500
+
+Category 'Adult' | Run 1000
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 1000
+
+Category 'Adult' | Run 2000
+  -> Items in category: 331
+  -> Other categories: 9084
+  -> Adding users: 2000
+
+✅ Done. Genre selection applied.

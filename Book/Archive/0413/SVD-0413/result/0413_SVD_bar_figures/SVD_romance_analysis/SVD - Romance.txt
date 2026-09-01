@@ -1,0 +1,46 @@
+SVD Analysis for Genre: Romance
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 2.6347 (users=53424)
+  2u: 2.4948 (users=53424)
+  4u: 2.3589 (users=53424)
+  6u: 2.5611 (users=53424)
+  25u: 2.4315 (users=53424)
+  50u: 2.7629 (users=53424)
+  100u: 2.9946 (users=53424)
+  200u: 3.3173 (users=53424)
+  300u: 3.4343 (users=53424)
+  500u: 3.6170 (users=53424)
+  1000u: 3.9288 (users=53424)
+  2000u: 3.9787 (users=53424)
+
+k = 25
+  original: 3.9383 (users=53424)
+  2u: 3.7260 (users=53424)
+  4u: 3.6651 (users=53424)
+  6u: 3.6164 (users=53424)
+  25u: 3.6000 (users=53424)
+  50u: 4.1876 (users=53424)
+  100u: 4.6662 (users=53424)
+  200u: 5.1703 (users=53424)
+  300u: 5.3396 (users=53424)
+  500u: 5.6962 (users=53424)
+  1000u: 6.1390 (users=53424)
+  2000u: 6.1147 (users=53424)
+
+k = 35
+  original: 4.1729 (users=53424)
+  2u: 4.0006 (users=53424)
+  4u: 4.2474 (users=53424)
+  6u: 4.3633 (users=53424)
+  25u: 4.6236 (users=53424)
+  50u: 5.5204 (users=53424)
+  100u: 6.1709 (users=53424)
+  200u: 6.8792 (users=53424)
+  300u: 7.2122 (users=53424)
+  500u: 7.7310 (users=53424)
+  1000u: 8.3063 (users=53424)
+  2000u: 8.2775 (users=53424)
+

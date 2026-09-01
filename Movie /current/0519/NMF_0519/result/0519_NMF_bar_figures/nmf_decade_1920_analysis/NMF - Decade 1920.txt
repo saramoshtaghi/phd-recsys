@@ -1,0 +1,25 @@
+NMF Analysis for Decade: 1920
+
+Metric: Average count of target decade per user
+
+k = 15
+  ORIGINAL: 0.0000 (users=943)
+  2u: 0.6469 (users=943)
+  6u: 0.4592 (users=943)
+  10u: 0.4655 (users=943)
+  50u: 1.3330 (users=943)
+
+k = 25
+  ORIGINAL: 0.0000 (users=943)
+  2u: 0.6946 (users=943)
+  6u: 0.6055 (users=943)
+  10u: 0.6501 (users=943)
+  50u: 1.4963 (users=943)
+
+k = 35
+  ORIGINAL: 0.0000 (users=943)
+  2u: 0.7232 (users=943)
+  6u: 0.7169 (users=943)
+  10u: 0.7455 (users=943)
+  50u: 1.5811 (users=943)
+

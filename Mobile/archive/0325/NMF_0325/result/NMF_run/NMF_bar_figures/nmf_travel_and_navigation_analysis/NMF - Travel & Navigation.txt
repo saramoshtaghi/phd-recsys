@@ -1,0 +1,31 @@
+NMF Analysis for Category: Travel & Navigation
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 0.6047 (users=700111)
+  30u: 0.2016 (users=700111)
+  60u: 0.3197 (users=700111)
+  300u: 4.9291 (users=700111)
+  500u: 2.0551 (users=700111)
+  2000u: 4.2272 (users=700111)
+  7000u: 7.0028 (users=700111)
+
+k = 25
+  original: 1.0924 (users=700111)
+  30u: 0.4060 (users=700111)
+  60u: 0.5888 (users=700111)
+  300u: 9.9975 (users=700111)
+  500u: 2.5884 (users=700111)
+  2000u: 5.7476 (users=700111)
+  7000u: 10.3427 (users=700111)
+
+k = 35
+  original: 1.5879 (users=700111)
+  30u: 0.6474 (users=700111)
+  60u: 0.8525 (users=700111)
+  300u: 15.4993 (users=700111)
+  500u: 2.9202 (users=700111)
+  2000u: 6.9227 (users=700111)
+  7000u: 16.3671 (users=700111)
+

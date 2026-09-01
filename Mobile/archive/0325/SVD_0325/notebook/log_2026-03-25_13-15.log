@@ -1,0 +1,161 @@
+nohup: ignoring input
+[13:15:34] === SVD BASELINE + SELECTED INJECTIONS ===
+[13:15:34] Loading ORIGINAL → /home/moshtasa/Research/phd-svd-recsys/Mobile/0316_Single/data/data/mobilerec_final_mapped.csv
+[13:17:06] ORIGINAL users=700,111 rows=19,297,019
+[13:17:06] Training SVD on ORIGINAL
+[13:23:23] Generating ORIGINAL recommendations
+[13:23:43] Scoring 700,111 users for ORIGINAL
+[13:52:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/ORIGINAL_15recommendation.csv (10,501,665 rows)
+[13:53:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/ORIGINAL_25recommendation.csv (17,502,775 rows)
+[13:55:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/ORIGINAL_35recommendation.csv (24,503,885 rows)
+[13:55:19] Computing ORIGINAL bi analysis
+[13:55:19] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/ORIGINAL_bi_per_genre.csv
+[13:55:19] Computing ORIGINAL mu analysis
+[13:55:29] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/ORIGINAL_mu_per_genre.csv
+[13:55:35] ORIGINAL baseline done
+[13:55:35] Found 14 injection files
+[13:55:35] 
+[1/14] POS5 30 users — Games
+[13:56:52] Target genre: Games → Games
+[14:03:31] Scoring 700,111 users for f_Games_30u_pos5_neg1_allapps
+[14:33:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[14:35:02] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[14:36:48] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[14:37:05] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Games_30u_pos5_neg1_allapps_bi_per_genre.csv
+[14:37:17] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Games_30u_pos5_neg1_allapps_mu_per_genre.csv
+[14:37:26] Done
+[14:37:26] 
+[2/14] POS5 30 users — Travel___Navigation
+[14:39:12] Target genre: Travel___Navigation → Travel & Navigation
+[14:47:08] Scoring 700,111 users for f_Travel___Navigation_30u_pos5_neg1_allapps
+[15:15:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_30u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[15:17:02] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_30u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[15:18:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_30u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[15:18:51] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Travel___Navigation_30u_pos5_neg1_allapps_bi_per_genre.csv
+[15:19:02] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Travel___Navigation_30u_pos5_neg1_allapps_mu_per_genre.csv
+[15:19:10] Done
+[15:19:10] 
+[3/14] POS5 60 users — Games
+[15:20:51] Target genre: Games → Games
+[15:28:14] Scoring 700,111 users for f_Games_60u_pos5_neg1_allapps
+[15:57:54] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[15:59:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[16:00:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[16:00:57] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Games_60u_pos5_neg1_allapps_bi_per_genre.csv
+[16:01:11] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Games_60u_pos5_neg1_allapps_mu_per_genre.csv
+[16:01:22] Done
+[16:01:22] 
+[4/14] POS5 60 users — Travel___Navigation
+[16:04:05] Target genre: Travel___Navigation → Travel & Navigation
+[16:11:28] Scoring 700,111 users for f_Travel___Navigation_60u_pos5_neg1_allapps
+[16:41:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_60u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[16:42:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_60u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[16:44:20] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_60u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[16:44:38] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Travel___Navigation_60u_pos5_neg1_allapps_bi_per_genre.csv
+[16:44:49] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Travel___Navigation_60u_pos5_neg1_allapps_mu_per_genre.csv
+[16:44:57] Done
+[16:44:57] 
+[5/14] POS5 300 users — Travel___Navigation
+[16:46:45] Target genre: Travel___Navigation → Travel & Navigation
+[16:55:06] Scoring 700,111 users for f_Travel___Navigation_300u_pos5_neg1_allapps
+[17:22:47] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[17:23:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[17:25:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[17:25:46] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Travel___Navigation_300u_pos5_neg1_allapps_bi_per_genre.csv
+[17:25:57] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Travel___Navigation_300u_pos5_neg1_allapps_mu_per_genre.csv
+[17:26:05] Done
+[17:26:05] 
+[6/14] POS5 300 users — Games
+[17:27:36] Target genre: Games → Games
+[17:34:45] Scoring 700,111 users for f_Games_300u_pos5_neg1_allapps
+[18:02:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_300u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[18:03:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_300u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[18:05:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_300u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[18:05:45] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Games_300u_pos5_neg1_allapps_bi_per_genre.csv
+[18:05:57] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Games_300u_pos5_neg1_allapps_mu_per_genre.csv
+[18:06:05] Done
+[18:06:05] 
+[7/14] POS5 500 users — Travel___Navigation
+[18:07:38] Target genre: Travel___Navigation → Travel & Navigation
+[18:15:32] Scoring 700,111 users for f_Travel___Navigation_500u_pos5_neg1_allapps
+[18:44:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[18:45:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[18:47:01] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[18:47:18] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Travel___Navigation_500u_pos5_neg1_allapps_bi_per_genre.csv
+[18:47:30] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Travel___Navigation_500u_pos5_neg1_allapps_mu_per_genre.csv
+[18:47:39] Done
+[18:47:39] 
+[8/14] POS5 500 users — Games
+[18:49:11] Target genre: Games → Games
+[18:56:55] Scoring 700,111 users for f_Games_500u_pos5_neg1_allapps
+[19:25:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_500u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[19:26:19] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_500u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[19:27:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_500u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[19:28:06] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Games_500u_pos5_neg1_allapps_bi_per_genre.csv
+[19:28:18] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Games_500u_pos5_neg1_allapps_mu_per_genre.csv
+[19:28:26] Done
+[19:28:26] 
+[9/14] POS5 2000 users — Games
+[19:30:17] Target genre: Games → Games
+[19:41:54] Scoring 700,111 users for f_Games_2000u_pos5_neg1_allapps
+[20:10:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[20:11:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[20:13:21] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[20:13:38] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Games_2000u_pos5_neg1_allapps_bi_per_genre.csv
+[20:13:55] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Games_2000u_pos5_neg1_allapps_mu_per_genre.csv
+[20:14:08] Done
+[20:14:08] 
+[10/14] POS5 2000 users — Travel___Navigation
+[20:15:57] Target genre: Travel___Navigation → Travel & Navigation
+[20:27:33] Scoring 700,111 users for f_Travel___Navigation_2000u_pos5_neg1_allapps
+[20:56:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_2000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[20:57:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_2000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[20:59:19] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_2000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[20:59:34] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Travel___Navigation_2000u_pos5_neg1_allapps_bi_per_genre.csv
+[20:59:52] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Travel___Navigation_2000u_pos5_neg1_allapps_mu_per_genre.csv
+[21:00:04] Done
+[21:00:04] 
+[11/14] POS5 7000 users — Games
+[21:02:54] Target genre: Games → Games
+[21:29:10] Scoring 700,111 users for f_Games_7000u_pos5_neg1_allapps
+[21:58:05] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[21:59:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[22:00:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[22:00:47] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Games_7000u_pos5_neg1_allapps_bi_per_genre.csv
+[22:01:25] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Games_7000u_pos5_neg1_allapps_mu_per_genre.csv
+[22:01:49] Done
+[22:01:49] 
+[12/14] POS5 7000 users — Travel___Navigation
+[22:04:41] Target genre: Travel___Navigation → Travel & Navigation
+[22:30:39] Scoring 700,111 users for f_Travel___Navigation_7000u_pos5_neg1_allapps
+[22:59:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_7000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[23:00:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_7000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[23:02:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Travel___Navigation_7000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[23:02:25] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Travel___Navigation_7000u_pos5_neg1_allapps_bi_per_genre.csv
+[23:03:03] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Travel___Navigation_7000u_pos5_neg1_allapps_mu_per_genre.csv
+[23:03:29] Done
+[23:03:29] 
+[13/14] POS5 26000 users — Games
+[23:10:28] Target genre: Games → Games
+[00:47:02] Scoring 700,111 users for f_Games_26000u_pos5_neg1_allapps
+[01:18:40] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_26000u_pos5_neg1_allapps_15recommendation.csv (10,501,665 rows)
+[01:19:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_26000u_pos5_neg1_allapps_25recommendation.csv (17,502,775 rows)
+[01:21:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/data/f_Games_26000u_pos5_neg1_allapps_35recommendation.csv (24,503,885 rows)
+[01:21:30] Saved bi → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/bi/f_Games_26000u_pos5_neg1_allapps_bi_per_genre.csv
+[01:23:48] Saved mu → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/mio/f_Games_26000u_pos5_neg1_allapps_mu_per_genre.csv
+[01:25:35] Done
+[01:25:35] 
+[14/14] POS5 26000 users — Travel___Navigation
+[11:22:41] === SVD RUN (Single File, 26000u only) ===
+[11:22:41] Using file: f_Travel___Navigation_26000u_pos5_neg1_allapps.csv
+[11:29:06] Training SVD
+[13:03:30] Generating recommendations
+[13:06:28] Scoring 726,111 users for f_Travel___Navigation_26000u_pos5_neg1_allapps
+[13:42:34] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/travel/data/f_Travel___Navigation_26000u_pos5_neg1_allapps_15recommendation.csv (10,891,665 rows)
+[13:43:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/travel/data/f_Travel___Navigation_26000u_pos5_neg1_allapps_25recommendation.csv (18,152,775 rows)
+[13:45:01] Saved → /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/travel/data/f_Travel___Navigation_26000u_pos5_neg1_allapps_35recommendation.csv (25,413,885 rows)
+[13:45:22] Computing bi analysis
+[13:45:22] [ERROR] name 'analyze_bi' is not defined
+[13:45:22] 
+Finished in 2.38 hours
+[13:45:22] Results saved in: /home/moshtasa/Research/phd-svd-recsys/Mobile/SVD_0325/result/SVD_run/travel

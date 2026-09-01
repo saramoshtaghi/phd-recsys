@@ -1,0 +1,32 @@
+SVD Analysis for Category: Events
+
+Metric: Average count of target category per user
+All categories: Action, Adventure, Arcade, Art & Design, Auto & Vehicles, Beauty, Board, Books & Reference, Business, Card, Casino, Casual, Comics, Communication, Dating, Education, Educational, Entertainment, Events, Finance, Food & Drink, Health & Fitness, House & Home, Libraries & Demo, Lifestyle, Maps & Navigation, Medical, Music, Music & Audio, News & Magazines, Parenting, Personalization, Photography, Productivity, Puzzle, Racing, Role Playing, Shopping, Simulation, Social, Sports, Strategy, Tools, Travel & Local, Trivia, Video Players & Editors, Weather, Word
+
+k = 15
+  original: 0.0408 (users=700111)
+  30u: 0.5255 (users=700111)
+  60u: 1.0783 (users=700111)
+  300u: 2.2526 (users=700111)
+  500u: 2.7125 (users=700111)
+  2000u: 3.6231 (users=700111)
+  7000u: 1.7329 (users=700111)
+
+k = 25
+  original: 0.0639 (users=700111)
+  30u: 0.7722 (users=700111)
+  60u: 1.4672 (users=700111)
+  300u: 2.8568 (users=700111)
+  500u: 3.4510 (users=700111)
+  2000u: 4.6671 (users=700111)
+  7000u: 2.3596 (users=700111)
+
+k = 35
+  original: 0.0847 (users=700111)
+  30u: 0.9863 (users=700111)
+  60u: 1.7755 (users=700111)
+  300u: 3.2735 (users=700111)
+  500u: 3.9175 (users=700111)
+  2000u: 5.2125 (users=700111)
+  7000u: 2.7616 (users=700111)
+

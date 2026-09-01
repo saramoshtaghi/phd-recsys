@@ -1,0 +1,43 @@
+NMF Analysis for Genre: Romance
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 2.5776 (users=53424)
+  2u: 1.8067 (users=53424)
+  4u: 2.3332 (users=53424)
+  6u: 2.4045 (users=53424)
+  25u: 2.8731 (users=53424)
+  50u: 5.0126 (users=53424)
+  100u: 8.8485 (users=53424)
+  200u: 12.0303 (users=53424)
+  500u: 12.5294 (users=53424)
+  1000u: 0.1014 (users=53424)
+  2000u: 0.9684 (users=53424)
+
+k = 25
+  original: 4.0267 (users=53424)
+  2u: 2.9823 (users=53424)
+  4u: 3.8420 (users=53424)
+  6u: 3.7866 (users=53424)
+  25u: 4.6951 (users=53424)
+  50u: 8.0641 (users=53424)
+  100u: 13.6564 (users=53424)
+  200u: 18.6213 (users=53424)
+  500u: 19.3393 (users=53424)
+  1000u: 0.1184 (users=53424)
+  2000u: 3.4114 (users=53424)
+
+k = 35
+  original: 5.3763 (users=53424)
+  2u: 4.1473 (users=53424)
+  4u: 5.2730 (users=53424)
+  6u: 5.0857 (users=53424)
+  25u: 6.4956 (users=53424)
+  50u: 10.9520 (users=53424)
+  100u: 18.0217 (users=53424)
+  200u: 24.7323 (users=53424)
+  500u: 25.6877 (users=53424)
+  1000u: 0.1254 (users=53424)
+  2000u: 9.1928 (users=53424)
+

@@ -1,0 +1,25 @@
+SVD Analysis for Decade: 1990
+
+Metric: Average count of target decade per user
+
+k = 15
+  ORIGINAL: 9.9830 (users=943)
+  2u: 10.0297 (users=943)
+  6u: 10.5302 (users=943)
+  10u: 10.9925 (users=943)
+  50u: 13.3415 (users=943)
+
+k = 25
+  ORIGINAL: 16.7328 (users=943)
+  2u: 17.0689 (users=943)
+  6u: 18.3478 (users=943)
+  10u: 18.6129 (users=943)
+  50u: 19.7943 (users=943)
+
+k = 35
+  ORIGINAL: 21.3733 (users=943)
+  2u: 22.9459 (users=943)
+  6u: 24.1251 (users=943)
+  10u: 24.5101 (users=943)
+  50u: 25.2630 (users=943)
+

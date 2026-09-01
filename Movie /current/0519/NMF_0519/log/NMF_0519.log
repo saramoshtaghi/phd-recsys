@@ -1,0 +1,170 @@
+nohup: ignoring input
+[16:48:03] === NMF 0519: MOVIELENS BASELINE + INJECTIONS WITH DECADE ANALYSIS ===
+[16:48:03] Loading ORIGINAL → /home/moshtasa/Research/phd-recsys/Movie /archive/data/df_final.csv
+[16:48:03] Training NMF on ORIGINAL
+[16:48:07] Scoring 943 users for ORIGINAL
+[16:48:08] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/ORIGINAL_15recommendation.csv (14,145 rows)
+[16:48:08] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/ORIGINAL_25recommendation.csv (23,575 rows)
+[16:48:08] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/ORIGINAL_35recommendation.csv (33,005 rows)
+[16:48:08] Found 32 injection files
+[16:48:08] [1/32] f_1920_2u_pos5_neg1_movies
+[16:48:12] Scoring 943 users for f_1920_2u_pos5_neg1_movies
+[16:48:14] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_2u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:48:14] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_2u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:48:14] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_2u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:48:14] [2/32] f_1920_6u_pos5_neg1_movies
+[16:48:17] Scoring 943 users for f_1920_6u_pos5_neg1_movies
+[16:48:18] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_6u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:48:18] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_6u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:48:19] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_6u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:48:19] [3/32] f_1920_10u_pos5_neg1_movies
+[16:48:22] Scoring 943 users for f_1920_10u_pos5_neg1_movies
+[16:48:24] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_10u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:48:24] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_10u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:48:24] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_10u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:48:24] [4/32] f_1920_50u_pos5_neg1_movies
+[16:48:31] Scoring 943 users for f_1920_50u_pos5_neg1_movies
+[16:48:33] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_50u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:48:33] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_50u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:48:33] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1920_50u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:48:34] [5/32] f_1930_2u_pos5_neg1_movies
+[16:48:37] Scoring 943 users for f_1930_2u_pos5_neg1_movies
+[16:48:38] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_2u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:48:38] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_2u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:48:38] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_2u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:48:38] [6/32] f_1930_6u_pos5_neg1_movies
+[16:48:42] Scoring 943 users for f_1930_6u_pos5_neg1_movies
+[16:48:43] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_6u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:48:43] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_6u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:48:43] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_6u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:48:43] [7/32] f_1930_10u_pos5_neg1_movies
+[16:48:47] Scoring 943 users for f_1930_10u_pos5_neg1_movies
+[16:48:49] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_10u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:48:49] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_10u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:48:49] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_10u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:48:50] [8/32] f_1930_50u_pos5_neg1_movies
+[16:48:55] Scoring 943 users for f_1930_50u_pos5_neg1_movies
+[16:48:57] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_50u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:48:57] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_50u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:48:57] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1930_50u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:48:57] [9/32] f_1940_2u_pos5_neg1_movies
+[16:49:00] Scoring 943 users for f_1940_2u_pos5_neg1_movies
+[16:49:01] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_2u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:01] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_2u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:01] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_2u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:02] [10/32] f_1940_6u_pos5_neg1_movies
+[16:49:05] Scoring 943 users for f_1940_6u_pos5_neg1_movies
+[16:49:06] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_6u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:06] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_6u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:06] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_6u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:06] [11/32] f_1940_10u_pos5_neg1_movies
+[16:49:11] Scoring 943 users for f_1940_10u_pos5_neg1_movies
+[16:49:13] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_10u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:13] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_10u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:13] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_10u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:13] [12/32] f_1940_50u_pos5_neg1_movies
+[16:49:18] Scoring 943 users for f_1940_50u_pos5_neg1_movies
+[16:49:20] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_50u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:20] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_50u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:20] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1940_50u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:20] [13/32] f_1950_2u_pos5_neg1_movies
+[16:49:23] Scoring 943 users for f_1950_2u_pos5_neg1_movies
+[16:49:26] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_2u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:26] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_2u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:26] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_2u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:26] [14/32] f_1950_6u_pos5_neg1_movies
+[16:49:30] Scoring 943 users for f_1950_6u_pos5_neg1_movies
+[16:49:32] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_6u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:32] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_6u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:32] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_6u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:32] [15/32] f_1950_10u_pos5_neg1_movies
+[16:49:36] Scoring 943 users for f_1950_10u_pos5_neg1_movies
+[16:49:38] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_10u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:38] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_10u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:38] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_10u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:38] [16/32] f_1950_50u_pos5_neg1_movies
+[16:49:44] Scoring 943 users for f_1950_50u_pos5_neg1_movies
+[16:49:45] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_50u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:45] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_50u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:45] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1950_50u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:46] [17/32] f_1960_2u_pos5_neg1_movies
+[16:49:49] Scoring 943 users for f_1960_2u_pos5_neg1_movies
+[16:49:52] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_2u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:52] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_2u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:52] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_2u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:52] [18/32] f_1960_6u_pos5_neg1_movies
+[16:49:55] Scoring 943 users for f_1960_6u_pos5_neg1_movies
+[16:49:57] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_6u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:49:57] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_6u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:49:57] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_6u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:49:58] [19/32] f_1960_10u_pos5_neg1_movies
+[16:50:01] Scoring 943 users for f_1960_10u_pos5_neg1_movies
+[16:50:03] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_10u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:03] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_10u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:03] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_10u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:03] [20/32] f_1960_50u_pos5_neg1_movies
+[16:50:09] Scoring 943 users for f_1960_50u_pos5_neg1_movies
+[16:50:11] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_50u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:11] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_50u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:11] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1960_50u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:12] [21/32] f_1970_2u_pos5_neg1_movies
+[16:50:15] Scoring 943 users for f_1970_2u_pos5_neg1_movies
+[16:50:17] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_2u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:17] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_2u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:17] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_2u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:17] [22/32] f_1970_6u_pos5_neg1_movies
+[16:50:20] Scoring 943 users for f_1970_6u_pos5_neg1_movies
+[16:50:22] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_6u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:22] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_6u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:22] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_6u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:22] [23/32] f_1970_10u_pos5_neg1_movies
+[16:50:25] Scoring 943 users for f_1970_10u_pos5_neg1_movies
+[16:50:27] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_10u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:27] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_10u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:27] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_10u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:27] [24/32] f_1970_50u_pos5_neg1_movies
+[16:50:32] Scoring 943 users for f_1970_50u_pos5_neg1_movies
+[16:50:35] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_50u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:35] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_50u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:35] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1970_50u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:35] [25/32] f_1980_2u_pos5_neg1_movies
+[16:50:38] Scoring 943 users for f_1980_2u_pos5_neg1_movies
+[16:50:39] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_2u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:39] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_2u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:39] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_2u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:40] [26/32] f_1980_6u_pos5_neg1_movies
+[16:50:43] Scoring 943 users for f_1980_6u_pos5_neg1_movies
+[16:50:45] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_6u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:45] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_6u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:45] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_6u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:45] [27/32] f_1980_10u_pos5_neg1_movies
+[16:50:49] Scoring 943 users for f_1980_10u_pos5_neg1_movies
+[16:50:51] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_10u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:51] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_10u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:51] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_10u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:52] [28/32] f_1980_50u_pos5_neg1_movies
+[16:50:57] Scoring 943 users for f_1980_50u_pos5_neg1_movies
+[16:50:58] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_50u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:50:58] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_50u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:50:58] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1980_50u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:50:59] [29/32] f_1990_2u_pos5_neg1_movies
+[16:51:02] Scoring 943 users for f_1990_2u_pos5_neg1_movies
+[16:51:03] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_2u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:51:03] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_2u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:51:03] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_2u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:51:04] [30/32] f_1990_6u_pos5_neg1_movies
+[16:51:07] Scoring 943 users for f_1990_6u_pos5_neg1_movies
+[16:51:11] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_6u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:51:11] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_6u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:51:11] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_6u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:51:11] [31/32] f_1990_10u_pos5_neg1_movies
+[16:51:15] Scoring 943 users for f_1990_10u_pos5_neg1_movies
+[16:51:17] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_10u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:51:17] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_10u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:51:17] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_10u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:51:18] [32/32] f_1990_50u_pos5_neg1_movies
+[16:51:24] Scoring 943 users for f_1990_50u_pos5_neg1_movies
+[16:51:26] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_50u_pos5_neg1_movies_15recommendation.csv (14,145 rows)
+[16:51:26] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_50u_pos5_neg1_movies_25recommendation.csv (23,575 rows)
+[16:51:26] Saved → /home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/data/f_1990_50u_pos5_neg1_movies_35recommendation.csv (33,005 rows)
+[16:51:26] Finished in 0.06h

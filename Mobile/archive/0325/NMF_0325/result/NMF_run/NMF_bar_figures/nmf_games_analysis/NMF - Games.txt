@@ -1,0 +1,34 @@
+NMF Analysis for Category: Games
+
+Metric: Average count of target category per user
+
+k = 15
+  original: 3.7222 (users=700111)
+  30u: 2.5533 (users=700111)
+  60u: 1.9865 (users=700111)
+  300u: 4.5818 (users=700111)
+  500u: 5.4050 (users=700111)
+  2000u: 2.4518 (users=700111)
+  7000u: 8.7998 (users=700111)
+  26000u: 1.3358 (users=700111)
+
+k = 25
+  original: 6.3294 (users=700111)
+  30u: 4.7560 (users=700111)
+  60u: 3.8074 (users=700111)
+  300u: 10.9274 (users=700111)
+  500u: 11.1399 (users=700111)
+  2000u: 4.2694 (users=700111)
+  7000u: 14.7706 (users=700111)
+  26000u: 3.0690 (users=700111)
+
+k = 35
+  original: 8.9470 (users=700111)
+  30u: 7.0705 (users=700111)
+  60u: 5.8419 (users=700111)
+  300u: 18.1555 (users=700111)
+  500u: 13.9715 (users=700111)
+  2000u: 10.5107 (users=700111)
+  7000u: 20.7878 (users=700111)
+  26000u: 4.9445 (users=700111)
+

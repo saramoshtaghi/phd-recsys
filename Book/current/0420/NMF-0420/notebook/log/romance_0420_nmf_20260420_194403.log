@@ -1,0 +1,60 @@
+nohup: ignoring input
+[19:44:04] === NMF 0413: BASELINE + INJECTIONS WITH BIASING USER ANALYSIS ===
+[19:44:04] Loading ORIGINAL → /home/moshtasa/Research/phd-svd-recsys/Book/Archive/data/genre_clean.csv
+[19:44:10] Training NMF on ORIGINAL
+[19:48:20] Scoring 53,424 users for ORIGINAL
+[19:51:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/ORIGINAL_15recommendation.csv (801,360 rows)
+[19:51:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/ORIGINAL_25recommendation.csv (1,335,600 rows)
+[19:51:14] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/ORIGINAL_35recommendation.csv (1,869,840 rows)
+[19:51:48] Found 10 injection files
+[19:51:48] [1/10] f_Romance_2u_pos5_neg1_books
+[19:56:13] Scoring 53,424 users for f_Romance_2u_pos5_neg1_books
+[19:58:55] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[19:58:58] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[19:59:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[19:59:39] [2/10] f_Romance_4u_pos5_neg1_books
+[20:04:05] Scoring 53,424 users for f_Romance_4u_pos5_neg1_books
+[20:06:48] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:06:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:06:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:07:31] [3/10] f_Romance_6u_pos5_neg1_books
+[20:11:57] Scoring 53,424 users for f_Romance_6u_pos5_neg1_books
+[20:14:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:14:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:14:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:15:15] [4/10] f_Romance_25u_pos5_neg1_books
+[20:19:48] Scoring 53,424 users for f_Romance_25u_pos5_neg1_books
+[20:22:28] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:22:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:22:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:23:13] [5/10] f_Romance_50u_pos5_neg1_books
+[20:27:52] Scoring 53,424 users for f_Romance_50u_pos5_neg1_books
+[20:30:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:30:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:30:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:31:23] [6/10] f_Romance_100u_pos5_neg1_books
+[20:36:09] Scoring 53,424 users for f_Romance_100u_pos5_neg1_books
+[20:38:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:38:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:39:02] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:39:39] [7/10] f_Romance_200u_pos5_neg1_books
+[20:44:56] Scoring 53,424 users for f_Romance_200u_pos5_neg1_books
+[20:47:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:47:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:47:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:48:32] [8/10] f_Romance_500u_pos5_neg1_books
+[20:54:56] Scoring 53,424 users for f_Romance_500u_pos5_neg1_books
+[20:57:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[20:57:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[20:57:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[20:58:49] [9/10] f_Romance_1000u_pos5_neg1_books
+[21:06:59] Scoring 53,424 users for f_Romance_1000u_pos5_neg1_books
+[21:09:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[21:09:54] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[21:09:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[21:11:25] [10/10] f_Romance_2000u_pos5_neg1_books
+[21:24:23] Scoring 53,424 users for f_Romance_2000u_pos5_neg1_books
+[21:27:20] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[21:27:23] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[21:27:28] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0420/NMF-0420/result/data/f_Romance_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[21:29:35] Finished in 1.76h

@@ -1,0 +1,230 @@
+nohup: ignoring input
+[13:46:52] === SVD 0413: BASELINE + INJECTIONS WITH BIASING USER ANALYSIS ===
+[13:46:52] Loading ORIGINAL → /home/moshtasa/Research/phd-svd-recsys/Book/Archive/data/genre_clean.csv
+[13:46:58] Training SVD on ORIGINAL
+[13:47:32] Scoring 53,424 users for ORIGINAL
+[13:50:17] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/ORIGINAL_15recommendation.csv (801,360 rows)
+[13:50:20] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/ORIGINAL_25recommendation.csv (1,335,600 rows)
+[13:50:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/ORIGINAL_35recommendation.csv (1,869,840 rows)
+[13:50:58] Found 44 injection files
+[13:50:58] [1/44] f_Historical_2u_pos5_neg1_books
+[13:51:40] Scoring 53,424 users for f_Historical_2u_pos5_neg1_books
+[13:54:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:54:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:54:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:55:08] [2/44] f_Adult_2u_pos5_neg1_books
+[13:55:48] Scoring 53,424 users for f_Adult_2u_pos5_neg1_books
+[13:58:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[13:58:44] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[13:58:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[13:59:22] [3/44] f_Mystery_2u_pos5_neg1_books
+[14:00:06] Scoring 53,424 users for f_Mystery_2u_pos5_neg1_books
+[14:02:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:02:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:03:02] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:03:34] [4/44] f_Classics_2u_pos5_neg1_books
+[14:04:14] Scoring 53,424 users for f_Classics_2u_pos5_neg1_books
+[14:07:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_2u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:07:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_2u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:07:16] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_2u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:07:50] [5/44] f_Adult_4u_pos5_neg1_books
+[14:08:32] Scoring 53,424 users for f_Adult_4u_pos5_neg1_books
+[14:11:18] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:11:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:11:28] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:12:06] [6/44] f_Historical_4u_pos5_neg1_books
+[14:12:53] Scoring 53,424 users for f_Historical_4u_pos5_neg1_books
+[14:16:10] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:16:15] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:16:21] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:16:59] [7/44] f_Classics_4u_pos5_neg1_books
+[14:17:46] Scoring 53,424 users for f_Classics_4u_pos5_neg1_books
+[14:21:18] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:21:21] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:21:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:21:59] [8/44] f_Mystery_4u_pos5_neg1_books
+[14:22:39] Scoring 53,424 users for f_Mystery_4u_pos5_neg1_books
+[14:25:52] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_4u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:25:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_4u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:26:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_4u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:26:42] [9/44] f_Mystery_6u_pos5_neg1_books
+[14:28:04] Scoring 53,424 users for f_Mystery_6u_pos5_neg1_books
+[14:31:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:31:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:31:32] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:32:10] [10/44] f_Historical_6u_pos5_neg1_books
+[14:32:54] Scoring 53,424 users for f_Historical_6u_pos5_neg1_books
+[14:35:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:35:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:36:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:36:38] [11/44] f_Adult_6u_pos5_neg1_books
+[14:37:19] Scoring 53,424 users for f_Adult_6u_pos5_neg1_books
+[14:40:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:40:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:40:18] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:40:50] [12/44] f_Classics_6u_pos5_neg1_books
+[14:41:31] Scoring 53,424 users for f_Classics_6u_pos5_neg1_books
+[14:44:23] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_6u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:44:27] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_6u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:44:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_6u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:45:08] [13/44] f_Classics_25u_pos5_neg1_books
+[14:45:48] Scoring 53,424 users for f_Classics_25u_pos5_neg1_books
+[14:48:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:48:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:48:51] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:49:25] [14/44] f_Mystery_25u_pos5_neg1_books
+[14:50:06] Scoring 53,424 users for f_Mystery_25u_pos5_neg1_books
+[14:52:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:53:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:53:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:53:42] [15/44] f_Adult_25u_pos5_neg1_books
+[14:54:23] Scoring 53,424 users for f_Adult_25u_pos5_neg1_books
+[14:57:14] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[14:57:18] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[14:57:23] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[14:57:56] [16/44] f_Historical_25u_pos5_neg1_books
+[14:58:38] Scoring 53,424 users for f_Historical_25u_pos5_neg1_books
+[15:01:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_25u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:01:36] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_25u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:01:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_25u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:02:15] [17/44] f_Mystery_50u_pos5_neg1_books
+[15:02:57] Scoring 53,424 users for f_Mystery_50u_pos5_neg1_books
+[15:05:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:05:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:06:02] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:06:37] [18/44] f_Classics_50u_pos5_neg1_books
+[15:07:22] Scoring 53,424 users for f_Classics_50u_pos5_neg1_books
+[15:10:16] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:10:20] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:10:25] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:11:01] [19/44] f_Adult_50u_pos5_neg1_books
+[15:11:43] Scoring 53,424 users for f_Adult_50u_pos5_neg1_books
+[15:14:34] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:14:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:14:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:15:21] [20/44] f_Historical_50u_pos5_neg1_books
+[15:16:30] Scoring 53,424 users for f_Historical_50u_pos5_neg1_books
+[15:19:26] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_50u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:19:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_50u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:19:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_50u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:20:11] [21/44] f_Adult_100u_pos5_neg1_books
+[15:20:55] Scoring 53,424 users for f_Adult_100u_pos5_neg1_books
+[15:23:46] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:23:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:23:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:24:37] [22/44] f_Historical_100u_pos5_neg1_books
+[15:25:58] Scoring 53,424 users for f_Historical_100u_pos5_neg1_books
+[15:28:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:29:00] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:29:05] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:29:42] [23/44] f_Classics_100u_pos5_neg1_books
+[15:30:26] Scoring 53,424 users for f_Classics_100u_pos5_neg1_books
+[15:33:21] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:33:25] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:33:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:34:26] [24/44] f_Mystery_100u_pos5_neg1_books
+[15:35:08] Scoring 53,424 users for f_Mystery_100u_pos5_neg1_books
+[15:38:05] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_100u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:38:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_100u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:38:13] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_100u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:38:50] [25/44] f_Adult_200u_pos5_neg1_books
+[15:39:38] Scoring 53,424 users for f_Adult_200u_pos5_neg1_books
+[15:42:29] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:42:32] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:42:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:43:19] [26/44] f_Historical_200u_pos5_neg1_books
+[15:44:06] Scoring 53,424 users for f_Historical_200u_pos5_neg1_books
+[15:47:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:47:07] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:47:12] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:47:54] [27/44] f_Classics_200u_pos5_neg1_books
+[15:48:45] Scoring 53,424 users for f_Classics_200u_pos5_neg1_books
+[15:51:39] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:51:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:51:47] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:52:28] [28/44] f_Mystery_200u_pos5_neg1_books
+[15:53:15] Scoring 53,424 users for f_Mystery_200u_pos5_neg1_books
+[15:56:12] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_200u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[15:56:16] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_200u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[15:56:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_200u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[15:57:07] [29/44] f_Adult_300u_pos5_neg1_books
+[15:58:01] Scoring 53,424 users for f_Adult_300u_pos5_neg1_books
+[16:00:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_300u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:00:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_300u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:01:02] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_300u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:01:47] [30/44] f_Classics_300u_pos5_neg1_books
+[16:02:37] Scoring 53,424 users for f_Classics_300u_pos5_neg1_books
+[16:05:31] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_300u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:05:35] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_300u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:05:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_300u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:06:48] [31/44] f_Mystery_300u_pos5_neg1_books
+[16:07:42] Scoring 53,424 users for f_Mystery_300u_pos5_neg1_books
+[16:10:41] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_300u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:10:45] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_300u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:10:50] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_300u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:11:35] [32/44] f_Historical_300u_pos5_neg1_books
+[16:12:27] Scoring 53,424 users for f_Historical_300u_pos5_neg1_books
+[16:15:33] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_300u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:15:37] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_300u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:15:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_300u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:16:34] [33/44] f_Mystery_500u_pos5_neg1_books
+[16:17:41] Scoring 53,424 users for f_Mystery_500u_pos5_neg1_books
+[16:20:38] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:20:42] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:20:47] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:21:49] [34/44] f_Classics_500u_pos5_neg1_books
+[16:22:52] Scoring 53,424 users for f_Classics_500u_pos5_neg1_books
+[16:25:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:26:00] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:26:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:27:07] [35/44] f_Adult_500u_pos5_neg1_books
+[16:28:09] Scoring 53,424 users for f_Adult_500u_pos5_neg1_books
+[16:31:04] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:31:08] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:31:14] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:32:15] [36/44] f_Historical_500u_pos5_neg1_books
+[16:33:21] Scoring 53,424 users for f_Historical_500u_pos5_neg1_books
+[16:36:20] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_500u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:36:24] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_500u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:36:30] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_500u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:37:33] [37/44] f_Mystery_1000u_pos5_neg1_books
+[16:39:00] Scoring 53,424 users for f_Mystery_1000u_pos5_neg1_books
+[16:41:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:42:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:42:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:43:34] [38/44] f_Adult_1000u_pos5_neg1_books
+[16:45:05] Scoring 53,424 users for f_Adult_1000u_pos5_neg1_books
+[16:47:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:48:00] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:48:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:49:32] [39/44] f_Classics_1000u_pos5_neg1_books
+[16:50:58] Scoring 53,424 users for f_Classics_1000u_pos5_neg1_books
+[16:53:59] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[16:54:03] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[16:54:09] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[16:55:33] [40/44] f_Historical_1000u_pos5_neg1_books
+[16:56:59] Scoring 53,424 users for f_Historical_1000u_pos5_neg1_books
+[16:59:56] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_1000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:00:00] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_1000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:00:06] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_1000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:01:30] [41/44] f_Historical_2000u_pos5_neg1_books
+[17:03:36] Scoring 53,424 users for f_Historical_2000u_pos5_neg1_books
+[17:06:39] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:06:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:06:49] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Historical_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:09:07] [42/44] f_Adult_2000u_pos5_neg1_books
+[17:11:16] Scoring 53,424 users for f_Adult_2000u_pos5_neg1_books
+[17:14:12] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:14:16] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:14:22] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Adult_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:16:40] [43/44] f_Classics_2000u_pos5_neg1_books
+[17:18:49] Scoring 53,424 users for f_Classics_2000u_pos5_neg1_books
+[17:21:57] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:22:01] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:22:07] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Classics_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:24:31] [44/44] f_Mystery_2000u_pos5_neg1_books
+[17:26:39] Scoring 53,424 users for f_Mystery_2000u_pos5_neg1_books
+[17:29:43] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_2000u_pos5_neg1_books_15recommendation.csv (801,360 rows)
+[17:29:48] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_2000u_pos5_neg1_books_25recommendation.csv (1,335,600 rows)
+[17:29:53] Saved → /home/moshtasa/Research/phd-svd-recsys/Book/current/0413/SVD-0413/result/data/f_Mystery_2000u_pos5_neg1_books_35recommendation.csv (1,869,840 rows)
+[17:32:10] Finished in 3.75h

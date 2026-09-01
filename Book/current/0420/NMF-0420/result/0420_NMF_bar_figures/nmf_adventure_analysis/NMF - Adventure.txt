@@ -1,0 +1,43 @@
+NMF Analysis for Genre: Adventure
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 3.5889 (users=53424)
+  2u: 3.6647 (users=53424)
+  4u: 2.7794 (users=53424)
+  6u: 3.2605 (users=53424)
+  25u: 4.8452 (users=53424)
+  50u: 6.8231 (users=53424)
+  100u: 10.8963 (users=53424)
+  200u: 12.9713 (users=53424)
+  500u: 13.4227 (users=53424)
+  1000u: 0.6461 (users=53424)
+  2000u: 1.0798 (users=53424)
+
+k = 25
+  original: 6.1608 (users=53424)
+  2u: 6.2583 (users=53424)
+  4u: 4.9534 (users=53424)
+  6u: 5.8344 (users=53424)
+  25u: 8.1161 (users=53424)
+  50u: 11.3674 (users=53424)
+  100u: 17.5153 (users=53424)
+  200u: 20.9616 (users=53424)
+  500u: 21.6196 (users=53424)
+  1000u: 1.9712 (users=53424)
+  2000u: 2.8029 (users=53424)
+
+k = 35
+  original: 8.7359 (users=53424)
+  2u: 8.8612 (users=53424)
+  4u: 7.2361 (users=53424)
+  6u: 8.4366 (users=53424)
+  25u: 11.3410 (users=53424)
+  50u: 15.7275 (users=53424)
+  100u: 23.6699 (users=53424)
+  200u: 28.6206 (users=53424)
+  500u: 29.3857 (users=53424)
+  1000u: 4.7748 (users=53424)
+  2000u: 5.7867 (users=53424)
+

@@ -1,0 +1,43 @@
+SVD Analysis for Genre: Adventure
+
+Metric: Average count of target genre per user
+
+k = 15
+  original: 3.4652 (users=53424)
+  2u: 3.1685 (users=53424)
+  4u: 2.7168 (users=53424)
+  6u: 3.2369 (users=53424)
+  25u: 2.8657 (users=53424)
+  50u: 2.8494 (users=53424)
+  100u: 3.1896 (users=53424)
+  200u: 2.8875 (users=53424)
+  500u: 2.7956 (users=53424)
+  1000u: 2.8346 (users=53424)
+  2000u: 2.6764 (users=53424)
+
+k = 25
+  original: 5.8636 (users=53424)
+  2u: 5.4772 (users=53424)
+  4u: 4.8088 (users=53424)
+  6u: 5.5678 (users=53424)
+  25u: 5.0807 (users=53424)
+  50u: 4.9972 (users=53424)
+  100u: 5.5424 (users=53424)
+  200u: 5.1287 (users=53424)
+  500u: 4.8854 (users=53424)
+  1000u: 4.9285 (users=53424)
+  2000u: 4.7223 (users=53424)
+
+k = 35
+  original: 8.2550 (users=53424)
+  2u: 7.7850 (users=53424)
+  4u: 6.9521 (users=53424)
+  6u: 7.9355 (users=53424)
+  25u: 7.3756 (users=53424)
+  50u: 7.1773 (users=53424)
+  100u: 7.9427 (users=53424)
+  200u: 7.4217 (users=53424)
+  500u: 7.0097 (users=53424)
+  1000u: 7.0442 (users=53424)
+  2000u: 6.8071 (users=53424)
+
