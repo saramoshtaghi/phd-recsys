@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
 
 p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);a=p.parse_args()
 r=a.root
@@ -45,6 +46,8 @@ for model in ['nmf','svd']:
   ax2.set_xticks(x,labels);ax2.set_yticks(np.arange(len(order)),order);ax2.set_title('All genres: mean recommendation share across the 20 real neighbors',pad=14)
   for i,row in enumerate(matrix.to_numpy()):
    for j,v in enumerate(row):ax2.text(j,i,f'{v:.1f}',ha='center',va='center',color='white' if v>55 else '#162B3B',fontsize=10)
+  ax2.add_patch(Rectangle((-.5,-.5),len(doses),1,fill=False,edgecolor='#111111',linewidth=3,clip_on=False,zorder=10))
+  ax2.get_yticklabels()[0].set_fontweight('bold')
   fig.colorbar(im,ax=ax2,pad=.015,label='Share (%)')
   fig.suptitle(f'{model.upper()} | {target} injection: what neighbors are recommended',fontsize=22,y=.98)
   fig.text(.5,.045,'Bars: old + new contributions = final target share. Old/New labels: fraction of that final share.\nNeighbors are real users; books already rated are excluded. Multi-genre books may count in multiple rows.',ha='center',fontsize=11)
