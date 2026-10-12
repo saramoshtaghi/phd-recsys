@@ -9,7 +9,7 @@ from concurrent.futures import ProcessPoolExecutor
 ROOT=Path('/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf')
 L=ROOT/'layer1';E=ROOT/'layer2/embeddings'
 SRC=Path('/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv')
-COUNTS=[0,2,4,6,25,50,100,200,500,1000,2000]
+COUNTS=[0,2,4,6,25,50,100,200,500,1000,2000,2500,3000]
 TABLE=L/'tables/controlled_thriller_top15.csv'
 PNG=L/'comparision - Thriller_top15_powerpoint.png'
 
@@ -53,12 +53,12 @@ def plot(data):
  plt.rcParams.update({'font.family':'DejaVu Sans','font.size':15})
  fig,axes=plt.subplots(1,2,figsize=(16,9),sharey=True)
  navy='#142E49';muted='#546576'
- colors=['#34495E','#4E79A7','#76B7B2','#59A14F','#B07AA1','#9C755F','#E15759','#F28E2B','#D6A300','#2A9DAB','#A0CBE8'];handles=[]
+ colors=['#34495E','#4E79A7','#76B7B2','#59A14F','#B07AA1','#9C755F','#E15759','#F28E2B','#D6A300','#2A9DAB','#A0CBE8','#FF9DA7','#8064A2'];handles=[]
  ymax=max(data.mean_target_count.max()*1.15,3)
  for ax,m in zip(axes,['nmf','svd']):
   d=data[data.model==m].sort_values('n_fake');assert d.n_fake.tolist()==COUNTS
-  x=(np.arange(11)-5)*.098
-  bars=ax.bar(x,d.mean_target_count,width=.092,color=colors,edgecolor='white',linewidth=.5,zorder=3)
+  x=(np.arange(len(COUNTS))-(len(COUNTS)-1)/2)*.084
+  bars=ax.bar(x,d.mean_target_count,width=.079,color=colors,edgecolor='white',linewidth=.5,zorder=3)
   if m=='nmf':handles=list(bars)
   ax.set_title(m.upper(),fontsize=23,color=navy,weight='bold',pad=16)
   ax.set_xticks([0]);ax.set_xticklabels(['Top-15'],fontsize=17,color=navy)
@@ -70,8 +70,8 @@ def plot(data):
  axes[0].set_ylabel('Mean Thriller books per real user',fontsize=16,color=navy,labelpad=14)
  fig.subplots_adjust(left=.085,right=.975,bottom=.21,top=.72,wspace=.12)
  fig.text(.055,.943,'Thriller recommendations after synthetic-user injection',fontsize=26,weight='bold',color=navy)
- fig.text(.055,.892,'Controlled model runs • Baseline and 10 injection sizes • Top-15 recommendations',fontsize=13,color=muted)
- fig.legend(handles,['Baseline']+[f'{n} users' for n in COUNTS[1:]],loc='upper center',bbox_to_anchor=(.51,.856),ncol=6,frameon=False,fontsize=13,columnspacing=1.7,handlelength=1.3,handletextpad=.6)
+ fig.text(.055,.892,'Controlled model runs • Baseline and 12 injection sizes • Top-15 recommendations',fontsize=13,color=muted)
+ fig.legend(handles,['Baseline']+[f'{n} users' for n in COUNTS[1:]],loc='upper center',bbox_to_anchor=(.51,.856),ncol=7,frameon=False,fontsize=12,columnspacing=1.25,handlelength=1.3,handletextpad=.6)
  fig.text(.055,.075,'Mean over 53,424 real users; previously rated books excluded. Scores use learned factors and item biases.',fontsize=12.5,color=navy)
  fig.text(.055,.037,'Shared linear y-axis. Synthetic users: Thriller ratings = 5; other-book ratings = 1. Ties use ascending book ID.',fontsize=11.5,color=muted)
  fig.savefig(PNG,dpi=240,facecolor='white');plt.close(fig)
@@ -81,9 +81,18 @@ if __name__=='__main__':
  rng=np.random.RandomState(42);s=rng.randint(-2,4,(7,30)).astype(float);mask=np.zeros_like(s,dtype=bool);mask[:,0]=True;t=rng.rand(30)>.5
  ref=s.copy();ref[mask]=-np.inf;expected=t[np.argsort(-ref,axis=1,kind='stable')[:,:15]].sum(1)
  assert np.array_equal(count_top(s.copy(),mask,t),expected)
- if TABLE.exists():data=pd.read_csv(TABLE)
+ if TABLE.exists():
+  data=pd.read_csv(TABLE)
+  extension=pd.read_csv(L/'tables/extension_2500_3000_recommendation_counts.csv')
+  new=extension[(extension.genre=='Thriller')&(extension.k==15)&(extension.n_fake.isin([2500,3000]))]
+  assert len(new)==4
+  old=data[~data.n_fake.isin([2500,3000])].copy()
+  data=pd.concat([old,new],ignore_index=True).sort_values(['model','n_fake']).reset_index(drop=True)
+  check=data[data.n_fake<=2000].sort_values(['model','n_fake']).reset_index(drop=True)
+  pd.testing.assert_frame_equal(check,old.sort_values(['model','n_fake']).reset_index(drop=True))
+  data.to_csv(TABLE,index=False)
  else:
   with ProcessPoolExecutor(max_workers=2) as pool:results=list(pool.map(run,['nmf','svd']))
   data=pd.DataFrame([r for a in results for r in a]);data.to_csv(TABLE,index=False)
- assert len(data)==22 and set(data.k)=={15}
+ assert len(data)==26 and set(data.k)=={15}
  plot(data);print('SAVED',PNG,flush=True)
