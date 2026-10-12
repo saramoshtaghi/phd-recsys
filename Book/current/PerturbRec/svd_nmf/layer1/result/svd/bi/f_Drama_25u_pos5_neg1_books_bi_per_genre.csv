@@ -1,0 +1,14 @@
+n_fake,injected_genre,genre,avg_bi,std_bi,n_items,is_target,training_protocol
+25,Drama,Adult,-0.1625082476724414,0.2780631062028383,331,non_target,controlled_clean_catalog
+25,Drama,Adventure,-0.0241537788986831,0.233133065037138,1789,non_target,controlled_clean_catalog
+25,Drama,Children's,-0.0015312311056598,0.2289882660289567,863,non_target,controlled_clean_catalog
+25,Drama,Classics,-0.0787868144318073,0.2341893034180419,901,non_target,controlled_clean_catalog
+25,Drama,Drama,-0.0747216900234045,0.2631715420362415,3006,target,controlled_clean_catalog
+25,Drama,Fantasy,-0.048103137937637,0.2467679306513344,2088,non_target,controlled_clean_catalog
+25,Drama,Historical,-0.0250694013133386,0.2416179242844455,857,non_target,controlled_clean_catalog
+25,Drama,Horror,-0.1103409660940855,0.2535292889841489,769,non_target,controlled_clean_catalog
+25,Drama,Mystery,-0.0952620467911326,0.2409896444011924,2563,non_target,controlled_clean_catalog
+25,Drama,Nonfiction,-0.0123528283107794,0.242562053522332,1071,non_target,controlled_clean_catalog
+25,Drama,Romance,-0.1473504974511353,0.2578163976478368,2131,non_target,controlled_clean_catalog
+25,Drama,Science Fiction,-0.0669346821553124,0.2444298938360596,855,non_target,controlled_clean_catalog
+25,Drama,Thriller,-0.0943754807403541,0.2330332859181158,1606,non_target,controlled_clean_catalog

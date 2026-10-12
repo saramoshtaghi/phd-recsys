@@ -1,0 +1,35 @@
+{
+  "moved": [
+    {
+      "from": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/notebook/NMF_result_analysis_0420.ipynb",
+      "to": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/notebook/NMF_result_analysis_0420.ipynb",
+      "action": "adapt inputs, preserve plotting, move"
+    },
+    {
+      "from": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/notebook/SVD_result_analysis_0420.ipynb",
+      "to": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/notebook/SVD_result_analysis_0420.ipynb",
+      "action": "adapt inputs, preserve plotting, move"
+    },
+    {
+      "from": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/notebook/plot_recommendation_shift.py",
+      "to": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/notebook/plot_recommendation_shift.py",
+      "action": "move"
+    },
+    {
+      "from": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/result/summary/recommendation_target_share.png",
+      "to": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/summary/recommendation_target_share.png",
+      "action": "move"
+    }
+  ],
+  "summary_rows": 40,
+  "notebooks_executed": false,
+  "controlled_bias_analysis": {
+    "status": "complete",
+    "model_cases_verified": 52,
+    "genres": 13,
+    "existing_csv_files_updated": 168,
+    "embedded_figures": 20,
+    "new_result_files": 0,
+    "containers": "2000 files hold 2000/2500/3000, keyed by n_fake"
+  }
+}

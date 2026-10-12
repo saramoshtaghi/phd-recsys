@@ -1,0 +1,14 @@
+n_fake,injected_genre,genre,user_type,avg_bu,std_bu,n_users,is_target,training_protocol
+0,Baseline,Adult,non_biasing,-0.497741477589333,0.4146262609264583,47029,ORIGINAL,controlled_clean_catalog
+0,Baseline,Adventure,non_biasing,-0.49702853801288,0.4170951564663109,53413,ORIGINAL,controlled_clean_catalog
+0,Baseline,Children's,non_biasing,-0.4970322684600913,0.4169501577935107,53230,ORIGINAL,controlled_clean_catalog
+0,Baseline,Classics,non_biasing,-0.4970665957501779,0.4170378514468335,53307,ORIGINAL,controlled_clean_catalog
+0,Baseline,Drama,non_biasing,-0.4969974792958592,0.4170976180666387,53424,ORIGINAL,controlled_clean_catalog
+0,Baseline,Fantasy,non_biasing,-0.4970220484865936,0.41707049342402,53419,ORIGINAL,controlled_clean_catalog
+0,Baseline,Historical,non_biasing,-0.4973886963573372,0.4164561450151832,52858,ORIGINAL,controlled_clean_catalog
+0,Baseline,Horror,non_biasing,-0.4969200136807042,0.4163922522764807,52644,ORIGINAL,controlled_clean_catalog
+0,Baseline,Mystery,non_biasing,-0.4969939732549723,0.4170914571062643,53419,ORIGINAL,controlled_clean_catalog
+0,Baseline,Nonfiction,non_biasing,-0.4974642474799932,0.4167480092999223,53027,ORIGINAL,controlled_clean_catalog
+0,Baseline,Romance,non_biasing,-0.4970042804951493,0.4171089467288287,53420,ORIGINAL,controlled_clean_catalog
+0,Baseline,Science Fiction,non_biasing,-0.4967693314026591,0.4164598938935445,53052,ORIGINAL,controlled_clean_catalog
+0,Baseline,Thriller,non_biasing,-0.4967982371089003,0.416871955777504,53350,ORIGINAL,controlled_clean_catalog

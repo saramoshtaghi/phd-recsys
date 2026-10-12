@@ -1,0 +1,27 @@
+n_fake,injected_genre,genre,user_type,avg_bu,std_bu,n_users,is_target,training_protocol
+100,Drama,Adult,non_biasing,0.038822760826234,0.4417762342152219,47029,non_target,controlled_clean_catalog
+100,Drama,Adult,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Adventure,non_biasing,0.0423982596998963,0.4439690725359175,53413,non_target,controlled_clean_catalog
+100,Drama,Adventure,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Children's,non_biasing,0.0420839213999391,0.4438713331624828,53230,non_target,controlled_clean_catalog
+100,Drama,Children's,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Classics,non_biasing,0.0423123283056781,0.4438962090120922,53307,non_target,controlled_clean_catalog
+100,Drama,Classics,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Drama,non_biasing,0.0424357282044467,0.4439678840098566,53424,target,controlled_clean_catalog
+100,Drama,Drama,biasing,-0.0587507482454687,0.0790789734716297,100,target,controlled_clean_catalog
+100,Drama,Fantasy,non_biasing,0.042399862879755,0.4439303891604265,53419,non_target,controlled_clean_catalog
+100,Drama,Fantasy,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Historical,non_biasing,0.0413851505185361,0.4434331279426354,52858,non_target,controlled_clean_catalog
+100,Drama,Historical,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Horror,non_biasing,0.0417814456682255,0.4437026174263314,52644,non_target,controlled_clean_catalog
+100,Drama,Horror,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Mystery,non_biasing,0.0424104515109939,0.4439653366483916,53419,non_target,controlled_clean_catalog
+100,Drama,Mystery,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Nonfiction,non_biasing,0.0414146117384338,0.4436864127739133,53027,non_target,controlled_clean_catalog
+100,Drama,Nonfiction,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Romance,non_biasing,0.0424234064333119,0.4439715782066012,53420,non_target,controlled_clean_catalog
+100,Drama,Romance,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Science Fiction,non_biasing,0.0418696643511227,0.4436019661573713,53052,non_target,controlled_clean_catalog
+100,Drama,Science Fiction,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog
+100,Drama,Thriller,non_biasing,0.0423695116943949,0.4438659944293271,53350,non_target,controlled_clean_catalog
+100,Drama,Thriller,biasing,-0.0587507482454687,0.0790789734716297,100,non_target,controlled_clean_catalog

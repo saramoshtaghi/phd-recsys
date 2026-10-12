@@ -1,0 +1,40 @@
+n_fake,injected_genre,genre,avg_bi,std_bi,n_items,is_target,training_protocol
+2000,Thriller,Adult,-0.4397210704432442,0.6677145685774518,331,non_target,controlled_clean_catalog
+2000,Thriller,Adventure,-0.4081821306791128,0.9588817403498596,1789,non_target,controlled_clean_catalog
+2000,Thriller,Children's,-0.5705440093521599,0.6540170325145235,863,non_target,controlled_clean_catalog
+2000,Thriller,Classics,-0.6929430549197385,0.6975807560110355,901,non_target,controlled_clean_catalog
+2000,Thriller,Drama,-0.5281486025806109,0.7316671546945117,3006,non_target,controlled_clean_catalog
+2000,Thriller,Fantasy,-0.4707365341270468,0.8085800213928955,2088,non_target,controlled_clean_catalog
+2000,Thriller,Historical,-0.4589171872007407,0.7529616919818873,857,non_target,controlled_clean_catalog
+2000,Thriller,Horror,0.0546979267360477,1.5350503611290074,769,non_target,controlled_clean_catalog
+2000,Thriller,Mystery,1.0415992953146165,1.8990143569736984,2563,non_target,controlled_clean_catalog
+2000,Thriller,Nonfiction,-0.4687494440036616,0.7225386129504747,1071,non_target,controlled_clean_catalog
+2000,Thriller,Romance,-0.4179604928526584,0.8335212524670905,2131,non_target,controlled_clean_catalog
+2000,Thriller,Science Fiction,0.1492568565219766,1.5968489484597257,855,non_target,controlled_clean_catalog
+2000,Thriller,Thriller,3.1626633302112337,0.4122402955291914,1606,target,controlled_clean_catalog
+2500,Thriller,Adult,-0.1636814715321535,0.6212314649908295,331,non_target,controlled_clean_catalog
+2500,Thriller,Adventure,-0.1121103727033509,0.921696119669884,1789,non_target,controlled_clean_catalog
+2500,Thriller,Children's,-0.2732456916561503,0.5236330275218268,863,non_target,controlled_clean_catalog
+2500,Thriller,Classics,-0.3674573757545306,0.5477419215347288,901,non_target,controlled_clean_catalog
+2500,Thriller,Drama,-0.2365217308560282,0.6374218972194355,3006,non_target,controlled_clean_catalog
+2500,Thriller,Fantasy,-0.1889886739440114,0.7401345914351324,2088,non_target,controlled_clean_catalog
+2500,Thriller,Historical,-0.1765175161054417,0.6841235924698842,857,non_target,controlled_clean_catalog
+2500,Thriller,Horror,0.3526177817900682,1.5245347350812504,769,non_target,controlled_clean_catalog
+2500,Thriller,Mystery,1.3812885483696062,1.9388929105114132,2563,non_target,controlled_clean_catalog
+2500,Thriller,Nonfiction,-0.1879783286088025,0.6384406813427033,1071,non_target,controlled_clean_catalog
+2500,Thriller,Romance,-0.1328174677101537,0.7896199451402008,2131,non_target,controlled_clean_catalog
+2500,Thriller,Science Fiction,0.4634168085453585,1.592796889538319,855,non_target,controlled_clean_catalog
+2500,Thriller,Thriller,3.5848792967986687,0.2407057134524389,1606,target,controlled_clean_catalog
+3000,Thriller,Adult,-0.8729691206270659,0.4532367851989707,331,non_target,controlled_clean_catalog
+3000,Thriller,Adventure,-0.7814480803896209,0.8194428644081817,1789,non_target,controlled_clean_catalog
+3000,Thriller,Children's,-0.9530702778853912,0.2020259566155568,863,non_target,controlled_clean_catalog
+3000,Thriller,Classics,-0.9797609268189212,0.2096995333437293,901,non_target,controlled_clean_catalog
+3000,Thriller,Drama,-0.904788087086422,0.4285295287562086,3006,non_target,controlled_clean_catalog
+3000,Thriller,Fantasy,-0.8724775639741248,0.5864407217143801,2088,non_target,controlled_clean_catalog
+3000,Thriller,Historical,-0.8684129176975135,0.517178844569618,857,non_target,controlled_clean_catalog
+3000,Thriller,Horror,-0.3034441868028755,1.490536324292373,769,non_target,controlled_clean_catalog
+3000,Thriller,Mystery,0.7317348341859725,1.9463431313380577,2563,non_target,controlled_clean_catalog
+3000,Thriller,Nonfiction,-0.8843859771915652,0.4516362951558001,1071,non_target,controlled_clean_catalog
+3000,Thriller,Romance,-0.8221004866576883,0.6699773479289209,2131,non_target,controlled_clean_catalog
+3000,Thriller,Science Fiction,-0.1873699717336452,1.5776981584359229,855,non_target,controlled_clean_catalog
+3000,Thriller,Thriller,3.00035886512709,0.1942196047302798,1606,target,controlled_clean_catalog
