@@ -11,6 +11,12 @@ p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);a=p
 r=a.root
 identity=pd.read_csv(r/'tables/controlled/genre_summary.csv')
 taste=pd.read_csv(r/'tables/neighborhood_taste/genre_table_old_new.csv')
+color_limit=0.0
+for (_, _), group in taste[(taste.n_fake<=500)&(taste.genre.str.lower()!='unknown')].groupby(['model','target']):
+ values=group.pivot(index='genre',columns='n_fake',values='total_percent').sort_index(axis=1)
+ changes=values.diff(axis=1).fillna(0)
+ color_limit=max(color_limit,float(changes.abs().to_numpy().max()))
+color_limit=max(1.0,float(np.ceil(color_limit/5)*5))
 blue='#2563A6';green='#218B58';orange='#D97732'
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':12,'axes.titlesize':17,'axes.labelsize':13,'savefig.dpi':200,'axes.spines.top':False,'axes.spines.right':False})
 for model in ['nmf','svd']:
@@ -34,24 +40,34 @@ for model in ['nmf','svd']:
   z=t[t.genre==target].set_index('n_fake').loc[doses]
   assert np.allclose(z.old_contribution_pp+z.new_contribution_pp,z.total_percent)
   assert np.allclose(z.neighbor_turnover_percent.to_numpy(),turn,atol=.01)
-  fig=plt.figure(figsize=(16,10));gs=fig.add_gridspec(2,1,height_ratios=[1,1.6],hspace=.5)
+  fig=plt.figure(figsize=(16,14));gs=fig.add_gridspec(2,1,height_ratios=[1,3],hspace=.35)
   ax=fig.add_subplot(gs[0]);old=z.old_contribution_pp.to_numpy();new=z.new_contribution_pp.to_numpy();total=z.total_percent.to_numpy()
   ax.bar(x,old,color=blue,label='Retained real neighbors');ax.bar(x,new,bottom=old,color=green,label='Incoming real neighbors')
   for xx,y,o,n in zip(x,total,z.old_share_of_total_percent,z.new_share_of_total_percent):
    ax.text(xx,y+1.5,f'{y:.1f}%\nOld {o:.0f}%\nNew {n:.0f}%',ha='center',fontsize=10)
   ax.set_ylim(0,min(115,max(total)*1.3+8));ax.set_xticks(x,labels);ax.set_ylabel(f'{target} share (%)');ax.set_title('Target genre in neighbors’ own Top-20 recommendations');ax.legend(loc='upper left',bbox_to_anchor=(0,1.3),ncol=2,frameon=False,fontsize=11);ax.grid(axis='y',alpha=.18);ax.set_axisbelow(True)
-  ax2=fig.add_subplot(gs[1]);matrix=t.pivot(index='genre',columns='n_fake',values='total_percent').loc[:,doses]
+  matrix=t.pivot(index='genre',columns='n_fake',values='total_percent').loc[:,doses]
   order=[target]+[g for g in matrix.index if g!=target];matrix=matrix.loc[order]
-  im=ax2.imshow(matrix.to_numpy(),cmap='YlGnBu',vmin=0,vmax=100,aspect='auto')
-  ax2.set_xticks(x,labels);ax2.set_yticks(np.arange(len(order)),order);ax2.set_title('All genres: mean recommendation share across the 20 real neighbors',pad=14)
-  for i,row in enumerate(matrix.to_numpy()):
-   for j,v in enumerate(row):ax2.text(j,i,f'{v:.1f}',ha='center',va='center',color='white' if v>55 else '#162B3B',fontsize=10)
-  ax2.add_patch(Rectangle((-.5,-.5),len(doses),1,fill=False,edgecolor='#111111',linewidth=3,clip_on=False,zorder=10))
-  ax2.get_yticklabels()[0].set_fontweight('bold')
-  fig.colorbar(im,ax=ax2,pad=.015,label='Share (%)')
+  mini=gs[1].subgridspec(4,4,hspace=.75,wspace=.35)
+  for k,g in enumerate(order):
+   ax2=fig.add_subplot(mini[k//4,k%4]);v=matrix.loc[g].to_numpy()
+   # Equal axes across genres/models; dose levels are categorical and explicitly labeled.
+   ax2.plot(x,v,color=blue if g==target else '#5E6E82',linewidth=2.5,marker='o',markersize=4)
+   ax2.set_title(g,fontweight='bold' if g==target else 'normal',fontsize=12)
+   ax2.set_xticks(x,labels,rotation=60,ha='right',fontsize=8)
+   ax2.set_ylim(0,100);ax2.set_yticks([0,50,100]);ax2.tick_params(axis='y',labelsize=9)
+   ax2.grid(axis='y',alpha=.2);ax2.set_axisbelow(True)
+   if k%4==0:ax2.set_ylabel('Share (%)',fontsize=10)
+   if g==target:
+    for spine in ax2.spines.values():spine.set_visible(True);spine.set_color('#111111');spine.set_linewidth(2.5)
+   ax2.annotate(f'{v[0]:.1f}%',(x[0],v[0]),xytext=(0,8),textcoords='offset points',fontsize=9)
+   ax2.annotate(f'{v[-1]:.1f}%',(x[-1],v[-1]),xytext=(-5,8),ha='right',textcoords='offset points',fontsize=9)
+  noteax=fig.add_subplot(mini[3,1:]);noteax.axis('off')
+  noteax.text(0,.75,'How to read the lines',fontweight='bold',fontsize=14)
+  noteax.text(0,.5,'Moving upward: more books of that genre are recommended.\nMoving downward: fewer books of that genre are recommended.\nCompare any point directly with the preceding injection level.\nAll genre panels use the same 0–100% vertical scale.',fontsize=12,va='top',linespacing=1.5)
   fig.suptitle(f'{model.upper()} | {target} injection: what neighbors are recommended',fontsize=22,y=.98)
-  fig.text(.5,.045,'Bars: old + new contributions = final target share. Old/New labels: fraction of that final share.\nNeighbors are real users; books already rated are excluded. Multi-genre books may count in multiple rows.',ha='center',fontsize=11)
-  fig.subplots_adjust(top=.83,bottom=.13,left=.1,right=.95)
+  fig.text(.5,.045,'Bars: old + new contributions = final target share. Old/New labels: fraction of that final share.\nLines: each genre’s actual share across injection levels. Multi-genre books can contribute to more than one genre.',ha='center',fontsize=11)
+  fig.subplots_adjust(top=.87,bottom=.1,left=.07,right=.97)
   fig.savefig(out/'neighborhood_recommendations_up_to_500.png',facecolor='white');plt.close(fig)
   source=r/'result'/model.upper()/'UMAP'/target/'umap_before_after_500.png'
   assert source.is_file(),source
