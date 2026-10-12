@@ -77,7 +77,7 @@ def bias():
  fig.text(.055,.885,'NMF and SVD · Baseline to 500 injected users · Shared linear scale',fontsize=15,color=MUTED)
  handles,labels=axes[0].get_legend_handles_labels()
  fig.legend(handles,labels,loc='lower center',bbox_to_anchor=(.51,.035),ncol=5,frameon=False,fontsize=11.5,columnspacing=1.3,handlelength=1.8)
- fig.text(.055,.235,'Each curve averages book biases for one genre; multi-genre books can contribute to multiple curves.',fontsize=12,color=MUTED)
+ fig.text(.055,.185,'Each curve averages book biases for one genre; multi-genre books can contribute to multiple curves.',fontsize=12,color=MUTED)
  save(fig,'Thriller_bi_only_up_to_500.png')
 
 if __name__=='__main__':bars();bias()
