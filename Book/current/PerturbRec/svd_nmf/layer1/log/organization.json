@@ -30,6 +30,11 @@
     "existing_csv_files_updated": 168,
     "embedded_figures": 20,
     "new_result_files": 0,
-    "containers": "2000 files hold 2000/2500/3000, keyed by n_fake"
+    "containers": "2000 files hold 2000/2500/3000, keyed by n_fake",
+    "standalone_figures": 20,
+    "figure_folders": [
+      "result/nmf/NMF_details_figures",
+      "result/svd/SVD_details_figures"
+    ]
   }
 }
