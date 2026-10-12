@@ -15,5 +15,9 @@
   "positive_rating": 5,
   "negative_rating": 1,
   "row_order": "Original rows unchanged; each fake user: sorted target IDs then sorted other IDs",
-  "bytes": 975134791
+  "bytes": 975134791,
+  "dataset_csv_removed": true,
+  "removed_bytes": 975134791,
+  "removed_at_utc": "2026-10-12T15:38:40.125904+00:00",
+  "removal_reason": "User requested removal of large Thriller injection CSVs after training; saved models and results retained"
 }
