@@ -1,0 +1,29 @@
+{
+  "status": "complete",
+  "counts": [
+    0,
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500
+  ],
+  "models": [
+    "nmf",
+    "svd"
+  ],
+  "genres": [
+    "Drama",
+    "Thriller"
+  ],
+  "k": 20,
+  "pair_sample": 100000,
+  "pair_seed": 20261012,
+  "trained_models_reused": true,
+  "training_seed": 42,
+  "created": "2026-10-12T16:53:13",
+  "validation": "finite scores; user/item IDs matched; unseen books; no duplicate recommendations; NMF nonnegative <=500; every saved target-count array matched previous cross-genre output exactly"
+}

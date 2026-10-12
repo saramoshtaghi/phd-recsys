@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "top20_arrays": 34,
+  "catalog_rows": 36,
+  "pair_metric_rows": 108,
+  "model_specific_control_rows": 108,
+  "analytic_metric_unit_checks": "passed",
+  "reference_target_counts": "all 32 injection outputs exactly matched saved cross-genre arrays",
+  "recommendations": "all users matched by ID; all unseen; no duplicates; finite scores; NMF factors nonnegative for all evaluated checkpoints",
+  "cross_model_shared_cohort_validation": "passed: identical users and pair counts across models and doses",
+  "cross_model_control_rows": 108
+}

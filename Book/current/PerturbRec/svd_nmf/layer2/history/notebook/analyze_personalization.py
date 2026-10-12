@@ -97,6 +97,8 @@ def plot():
  plt.rcParams.update({'font.family':'DejaVu Sans','font.size':12,'axes.spines.top':False,'axes.spines.right':False,'savefig.dpi':200})
  catalog=pd.concat([pd.read_csv(H/'tables'/f'{m}_catalog_metrics.csv') for m in ['nmf','svd']]);pair=pd.concat([pd.read_csv(H/'tables'/f'{m}_pair_metrics.csv') for m in ['nmf','svd']]);control=pd.concat([pd.read_csv(H/'tables'/f'{m}_fixed_target_control.csv') for m in ['nmf','svd']])
  for name,df in [('catalog_metrics',catalog),('pair_metrics',pair),('fixed_target_control',control)]:df.to_csv(H/'tables'/f'{name}.csv',index=False)
+ matched=H/'tables/cross_model_fixed_target_control.csv'
+ if matched.exists():control=pd.read_csv(matched)
  for genre in ['Drama','Thriller']:
   fig,axs=plt.subplots(2,3,figsize=(20,11.25));x=np.arange(9);labels=['Base']+list(map(str,COUNTS))
   for model,color in [('nmf','#218B58'),('svd','#2563A6')]:
@@ -104,7 +106,7 @@ def plot():
    specs=[(c,'exact_mean_pair_shared_books','Shared book titles across all user pairs','Mean shared titles out of 20'),(p,'mean_jaccard_percent','Overlap between different-history users','Mean Jaccard (%)'),(c,'unique_books','Catalog coverage','Distinct recommended titles'),(c,'target_effective_catalog','Within-target exposure concentration','Effective number of target titles'),(q,'mean_target_jaccard_percent','Count-controlled target overlap','Jaccard of top TWO target books (%)'),(c,'target_top10_exposure_percent','Target exposure captured by 10 titles','Share of target recommendations (%)')]
    for ax,(df,key,title,ylabel) in zip(axs.flat,specs):ax.plot(x,df[key],'-o',color=color,label=model.upper(),lw=2.5,ms=5);ax.set_title(title,fontsize=14);ax.set_ylabel(ylabel);ax.set_xticks(x,labels,rotation=40,ha='right');ax.grid(alpha=.18);ax.legend(frameon=False)
   fig.suptitle(f'{genre} injection: are recommendations becoming more alike?',fontsize=23)
-  fig.text(.5,.025,'Same real users and unseen-book catalog; Top-20 raw ranking scores. Different histories = lowest baseline history-cosine quartile.\nTarget control: same eligible users and pairs at every dose, exactly 2 target titles per user. One controlled training seed; sampled pair metrics are descriptive.',ha='center',fontsize=11)
+  fig.text(.5,.025,'Same real users and unseen-book catalog; Top-20 raw ranking scores. Different histories = lowest baseline history-cosine quartile.\nTarget control: same eligible users and pairs across both models and every dose, exactly 2 target titles per user. One controlled training seed; sampled pair metrics are descriptive.',ha='center',fontsize=11)
   fig.subplots_adjust(top=.88,bottom=.15,left=.07,right=.98,hspace=.45,wspace=.3)
   folder=H/'result'/genre;folder.mkdir(parents=True,exist_ok=True);fig.savefig(folder/'personalization_6panel.png',facecolor='white');plt.close(fig)
  lines=['# Personalization and concentration after injection','', 'This analysis is about recommended titles, not observed changes in human taste. No retraining was performed.','', '## Results at 500 synthetic users','', '|Model|Target|Shared titles before → after (out of 20)|Distinct recommended titles before → after|Effective target catalog before → after|Different-history fixed-two target Jaccard before → after|','|---|---|---|---|---|---|']

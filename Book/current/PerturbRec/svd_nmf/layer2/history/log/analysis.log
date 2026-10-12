@@ -1,0 +1,70 @@
+TOP20 svd baseline 0
+TOP20 nmf baseline 0
+TOP20 svd Drama 2
+TOP20 nmf Drama 2
+TOP20 svd Drama 4
+TOP20 nmf Drama 4
+TOP20 svd Drama 6
+TOP20 nmf Drama 6
+TOP20 svd Drama 25
+TOP20 nmf Drama 25
+TOP20 svd Drama 50
+TOP20 nmf Drama 50
+TOP20 svd Drama 100
+TOP20 nmf Drama 100
+TOP20 svd Drama 200
+TOP20 nmf Drama 200
+TOP20 svd Drama 500
+METRICS svd Drama 0 shared 0.86 coverage 2579 target_eff 139.8
+METRICS svd Drama 2 shared 0.854 coverage 2661 target_eff 147.5
+METRICS svd Drama 4 shared 0.925 coverage 2649 target_eff 144.7
+METRICS svd Drama 6 shared 0.888 coverage 2637 target_eff 156.1
+METRICS svd Drama 25 shared 0.902 coverage 2575 target_eff 157.8
+METRICS svd Drama 50 shared 0.902 coverage 2611 target_eff 162.8
+METRICS svd Drama 100 shared 0.897 coverage 2681 target_eff 165.9
+METRICS svd Drama 200 shared 0.871 coverage 2845 target_eff 170.5
+METRICS svd Drama 500 shared 0.837 coverage 3108 target_eff 177.9
+TOP20 nmf Drama 500
+METRICS nmf Drama 0 shared 1.737 coverage 1177 target_eff 68.9
+METRICS nmf Drama 2 shared 1.666 coverage 1169 target_eff 72.6
+METRICS nmf Drama 4 shared 1.612 coverage 1181 target_eff 74.9
+METRICS nmf Drama 6 shared 1.579 coverage 1179 target_eff 76.7
+METRICS nmf Drama 25 shared 1.48 coverage 1184 target_eff 94.1
+METRICS nmf Drama 50 shared 1.921 coverage 1144 target_eff 68.4
+METRICS nmf Drama 100 shared 4.525 coverage 1150 target_eff 38.0
+METRICS nmf Drama 200 shared 7.753 coverage 1116 target_eff 32.0
+METRICS nmf Drama 500 shared 3.563 coverage 1068 target_eff 29.1
+TOP20 svd Thriller 2
+TOP20 nmf Thriller 2
+TOP20 svd Thriller 4
+TOP20 nmf Thriller 4
+TOP20 svd Thriller 6
+TOP20 nmf Thriller 6
+TOP20 svd Thriller 25
+TOP20 nmf Thriller 25
+TOP20 svd Thriller 50
+TOP20 nmf Thriller 50
+TOP20 svd Thriller 100
+TOP20 nmf Thriller 100
+TOP20 svd Thriller 200
+TOP20 nmf Thriller 200
+TOP20 svd Thriller 500
+METRICS svd Thriller 0 shared 0.86 coverage 2579 target_eff 73.5
+METRICS svd Thriller 2 shared 0.878 coverage 2605 target_eff 69.8
+METRICS svd Thriller 4 shared 0.951 coverage 2635 target_eff 67.5
+METRICS svd Thriller 6 shared 1.006 coverage 2582 target_eff 86.0
+METRICS svd Thriller 25 shared 1.003 coverage 2481 target_eff 88.7
+METRICS svd Thriller 50 shared 0.941 coverage 2501 target_eff 92.9
+METRICS svd Thriller 100 shared 0.975 coverage 2576 target_eff 88.6
+METRICS svd Thriller 200 shared 0.981 coverage 2718 target_eff 92.3
+METRICS svd Thriller 500 shared 0.833 coverage 3066 target_eff 96.4
+TOP20 nmf Thriller 500
+METRICS nmf Thriller 0 shared 1.737 coverage 1177 target_eff 26.7
+METRICS nmf Thriller 2 shared 1.66 coverage 1166 target_eff 27.3
+METRICS nmf Thriller 4 shared 1.611 coverage 1169 target_eff 28.0
+METRICS nmf Thriller 6 shared 1.595 coverage 1156 target_eff 28.4
+METRICS nmf Thriller 25 shared 1.596 coverage 1142 target_eff 38.2
+METRICS nmf Thriller 50 shared 1.745 coverage 1113 target_eff 35.7
+METRICS nmf Thriller 100 shared 3.849 coverage 1148 target_eff 25.6
+METRICS nmf Thriller 200 shared 8.081 coverage 1192 target_eff 23.4
+METRICS nmf Thriller 500 shared 8.749 coverage 1326 target_eff 22.9
