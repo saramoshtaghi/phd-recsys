@@ -155,7 +155,9 @@ def analyze_job(job):
     assert len(after['fp'])==n
     expected_mu=(rating.sum()+n*np.where(target,5.,1.).sum())/(len(rating)+n*len(items))
     assert np.isclose(after['mu'],expected_mu,rtol=0,atol=1e-10), 'Augmented mean does not match dense injection'
-    if model=='nmf':assert min(after['p'].min(),after['q'].min(),after['fp'].min())>=-1e-12
+    assert all(np.isfinite(after[key]).all() for key in ('p','q','fp','bu','bi','fbu'))
+    # A constraint violation is an observed checkpoint failure, not grounds
+    # for silently clipping or changing the saved model.
     metadata={'model':model,'genre':genre,'n_fake':n}
     observed,margin,recs=analyze_case(base,after,target,u,i,rating,seen,ks=tuple(args.k),block=args.block)
     return metadata,observed,synthetic_stats(after,target),margin,recs,{'baseline':str(basepath),'after':str(path),**metadata}
@@ -171,9 +173,44 @@ def run(args):
     assert all(tags[x] for x in items),'Unknown/unlabelled item remains in clean catalog'
     seen=csr_matrix((np.ones(len(df),bool),(u,i)),shape=(len(users),len(items)))
     all_obs=[];all_fake=[];all_margin=[];all_rec=[];sources=[]
+    audit=[]
+    for model in ('nmf','svd'):
+      for genre in ('Drama','Thriller'):
+        for n in args.counts:
+          path=root/'layer2/embeddings/controlled'/model/genre.lower()/f'{model}_{genre.lower()}_{n}.npz'
+          with np.load(path) as z:
+            pu=z['pu'];qi=z['qi']
+            audit.append(dict(model=model,genre=genre,n_fake=n,
+                min_pu=float(pu.min()),max_abs_pu=float(np.abs(pu).max()),
+                negative_pu_percent=100*float((pu< -1e-12).mean()),
+                min_qi=float(qi.min()),max_abs_qi=float(np.abs(qi).max()),
+                negative_qi_percent=100*float((qi< -1e-12).mean()),
+                factors_finite=bool(np.isfinite(pu).all() and np.isfinite(qi).all()),
+                nonnegative_factors=bool(pu.min()>=-1e-12 and qi.min()>=-1e-12)))
+    output.mkdir(parents=True,exist_ok=True)
+    pd.DataFrame(audit).to_csv(output/'factor_constraint_audit.csv',index=False)
+    complete=set()
+    if args.resume:
+      for model in ('nmf','svd'):
+        for genre in ('Drama','Thriller'):
+          dest=output/model.upper()/genre
+          paths=[dest/(name+'.csv') for name in ('real_observed_score_components','synthetic_score_components','candidate_margins','recommendation_component_swaps')]
+          if not all(path.exists() for path in paths):continue
+          frames=[pd.read_csv(path) for path in paths]
+          candidate=set(args.counts)
+          for f in frames:candidate &= set(f.n_fake)
+          for n in candidate:
+            parts=[f[f.n_fake==n].to_dict('records') for f in frames]
+            if [len(x) for x in parts]!=[3,2,1,len(args.k)]:continue
+            all_obs.extend(parts[0]);all_fake.extend(parts[1]);all_margin.extend(parts[2]);all_rec.extend(parts[3])
+            complete.add((model,genre,n))
+            sources.append({'model':model,'genre':genre,'n_fake':n,
+                            'baseline':str(root/'layer2/embeddings/pilot'/f'{model}_baseline_a.npz'),
+                            'after':str(root/'layer2/embeddings/controlled'/model/genre.lower()/f'{model}_{genre.lower()}_{n}.npz')})
     global _DATA
     _DATA=(users,items,u,i,rating,tags,seen,args)
-    jobs=[(model,genre,n) for model in ('nmf','svd') for genre in ('Drama','Thriller') for n in args.counts]
+    jobs=[(model,genre,n) for model in ('nmf','svd') for genre in ('Drama','Thriller') for n in args.counts if (model,genre,n) not in complete]
+    print('RESUMED',len(complete),'remaining',len(jobs),flush=True)
     if args.workers>1:
         from concurrent.futures import ProcessPoolExecutor
         import multiprocessing
@@ -200,6 +237,8 @@ def run(args):
     provenance={'status':'complete','data':str(args.data),'data_sha256':hashlib.sha256(args.data.read_bytes()).hexdigest(),
                 'users':len(users),'items':len(items),'real_ratings':len(df),'cases':sources,
                 'counts':args.counts,'k':args.k,'no_retraining':True,
+                'factor_constraint_audit':audit,
+                'nmf_constraint_violations':[row for row in audit if row['model']=='nmf' and not row['nonnegative_factors']],
                 'interpretation':'Component swaps are conditional fitted-score decompositions, not causal retraining interventions.'}
     (output/'validation.json').write_text(json.dumps(provenance,indent=2))
     (output/'README.md').write_text(METHOD)
@@ -224,7 +263,13 @@ from the original data. Unknown labels are excluded by requiring the clean catal
    Symmetric two-component allocation sums to the total exposure change, including
    nonlinearity; it is not a causal proof because components were jointly trained.
 
-NMF's nonnegative interaction is an algebraic constraint, not empirical confirmation
+IMPORTANT: factor_constraint_audit.csv checks actual raw checkpoint factors.
+Some biased Surprise NMF runs can violate nonnegativity. Such cases are retained
+as raw checkpoint diagnostics, flagged explicitly, and must not be interpreted as
+valid evidence about a strictly nonnegative factorization. Saved arrays are never
+clipped or changed.
+
+NMF's intended nonnegative interaction is an algebraic constraint, not empirical confirmation
 of the reviewer's full explanation. Evidence for bias compensation requires actual
 bias/offset changes alongside low-rating fit. A decrease in a positive interaction
 can also lower predictions. No component percentage is reported when opposite signs
@@ -261,7 +306,10 @@ def plot(tables,output):
         axes[1,1].axhline(0,color='#777',lw=.7);axes[1,1].set_title(f'Top-{int(rec.k.iloc[0])}: conditional component allocation');axes[1,1].set_ylabel('Change in mean target-book count');axes[1,1].legend(fontsize=9)
         for ax in axes.flat:ax.set_xticks(x,ticks,rotation=45);ax.set_xlabel('Injected users');ax.grid(axis='y',alpha=.2)
         fig.suptitle(f'{model.upper()} · {genre} · Reviewer hypothesis',weight='bold',fontsize=17)
-        fig.text(.04,.018,'Saved-model diagnostics; component swaps do not establish a causal training mechanism.',fontsize=10)
+        audit=pd.read_csv(output/'factor_constraint_audit.csv')
+        bad=audit[(audit.model==model)&(audit.genre==genre)&(~audit.nonnegative_factors.astype(bool))] if model=='nmf' else audit.iloc[:0]
+        warning=(' NMF sign constraint violated at: '+', '.join(bad.n_fake.astype(str))+'.') if len(bad) else ''
+        fig.text(.04,.018,'Raw checkpoint diagnostics; swaps are not causal.'+warning,fontsize=9,color='#B34032' if warning else '#333')
         fig.tight_layout(rect=(0,.04,1,.94));fig.savefig(output/model.upper()/genre/'reviewer_hypothesis_4panel.png',dpi=240);plt.close(fig)
 
 if __name__=='__main__':
@@ -271,6 +319,7 @@ if __name__=='__main__':
     parser.add_argument('--output',type=Path)
     parser.add_argument('--counts',nargs='+',type=int,default=list(COUNTS))
     parser.add_argument('--k',nargs='+',type=int,default=[15,25,35])
+    parser.add_argument('--resume',action='store_true')
     parser.add_argument('--workers',type=int,default=1)
     parser.add_argument('--block',type=int,default=256)
     args=parser.parse_args();run(args)
