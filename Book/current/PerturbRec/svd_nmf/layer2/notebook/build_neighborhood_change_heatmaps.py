@@ -16,28 +16,44 @@ for model in ['nmf','svd']:
   values=t.pivot(index='genre',columns='n_fake',values='total_percent').sort_index(axis=1)
   values=values.loc[[target]+[g for g in values.index if g!=target]]
   delta=values.diff(axis=1).fillna(0)
-  fig,ax=plt.subplots(figsize=(16,10))
+  fig=plt.figure(figsize=(16,14));gs=fig.add_gridspec(2,1,height_ratios=[1,2.7],hspace=.4)
+  top=fig.add_subplot(gs[0]);ax=fig.add_subplot(gs[1])
   # A fixed +/-5 pp display range makes small shifts visible; printed changes retain exact magnitude.
   im=ax.imshow(delta.to_numpy(),cmap='RdBu_r',norm=TwoSlopeNorm(vmin=-5,vcenter=0,vmax=5),aspect='auto')
   doses=values.columns.tolist()
+  z=t[t.genre==target].set_index('n_fake').loc[doses]
+  x=np.arange(len(doses));labels=['Baseline']+[str(n) for n in doses[1:]]
+  top.bar(x,z.old_contribution_pp,color='#2563A6',label='Retained real neighbors')
+  top.bar(x,z.new_contribution_pp,bottom=z.old_contribution_pp,color='#218B58',label='Incoming real neighbors')
+  for j,row in enumerate(z.itertuples()):
+   top.text(j,row.total_percent+1.5,f'{row.total_percent:.1f}%\nOld {row.old_share_of_total_percent:.0f}%\nNew {row.new_share_of_total_percent:.0f}%',ha='center',fontsize=10)
+  top.set_ylim(0,min(115,float(z.total_percent.max())*1.3+8));top.set_xticks(x,labels)
+  top.set_ylabel(f'{target} share (%)');top.set_title('Target genre in neighbors’ own Top-20 recommendations',fontsize=16)
+  top.legend(loc='upper left',bbox_to_anchor=(0,1.3),ncol=2,frameon=False)
+  top.grid(axis='y',alpha=.18);top.set_axisbelow(True);top.spines['top'].set_visible(False);top.spines['right'].set_visible(False)
   ax.set_xticks(range(len(doses)),['Baseline']+[str(n) for n in doses[1:]],fontsize=12)
   ax.set_yticks(range(len(values)),values.index,fontsize=13)
   ax.get_yticklabels()[0].set_fontweight('bold')
   for i in range(len(values)):
    for j in range(len(doses)):
     v=values.iloc[i,j];d=delta.iloc[i,j]
-    label=f'{v:.1f}%' if j==0 else f'{v:.1f}%\n({d:+.2f} pp)'
-    ax.text(j,i,label,ha='center',va='center',fontsize=10,color='white' if abs(d)>3 else '#172535',fontweight='bold' if i==0 else 'normal')
+    dark=abs(d)>3
+    color='white' if dark else '#172535'
+    if j==0:
+     ax.text(j,i,f'{v:.1f}%',ha='center',va='center',fontsize=10,color=color,fontweight='bold' if i==0 else 'normal')
+    else:
+     ax.text(j,i-.14,f'{v:.1f}%',ha='center',va='center',fontsize=10,color=color,fontweight='bold' if i==0 else 'normal')
+     ax.text(j,i+.18,f'({d:+.2f})',ha='center',va='center',fontsize=9,color='#D0D0D0' if dark else '#666666')
   ax.set_xticks(np.arange(-.5,len(doses),1),minor=True);ax.set_yticks(np.arange(-.5,len(values),1),minor=True)
   ax.grid(which='minor',color='white',linewidth=1.4);ax.tick_params(which='minor',bottom=False,left=False)
   ax.add_patch(Rectangle((-.5,-.5),len(doses),1,fill=False,edgecolor='#111111',linewidth=3,clip_on=False,zorder=10))
   ax.set_xlabel('Injected users',labelpad=12)
-  fig.suptitle(f'{model.upper()} | {target}: recommendation changes across injection levels',fontsize=21,y=.96)
+  fig.suptitle(f'{model.upper()} | {target}: neighborhood recommendations and genre changes',fontsize=21,y=.97)
   ax.set_title('Warm = increase • Cool = decrease • Each column compared with the preceding column',fontsize=13,pad=18)
   cb=fig.colorbar(im,ax=ax,pad=.02,extend='both',fraction=.035)
   cb.set_label('Change from previous level (percentage points)',fontsize=12)
-  fig.text(.5,.055,'Each cell: actual genre share (%) and change from the previous column (pp). Baseline has no preceding comparison.\nColors saturate at ±5 pp; printed changes show the full magnitude. Shares average neighbors’ own Top-20 recommendations.\nAll 20 neighbors are real users. Multi-genre books can contribute to multiple rows.',ha='center',fontsize=11,linespacing=1.5)
-  fig.subplots_adjust(top=.86,bottom=.17,left=.12,right=.92)
+  fig.text(.5,.045,'Heatmap: actual share (%) and change from the preceding column (gray numbers, in percentage points).\nColors saturate at ±5 percentage points; numbers show full changes. Baseline is neutral.\nBars: old + new contributions = final share; Old/New labels give their fractions of that share. All neighbors are real users.',ha='center',fontsize=11,linespacing=1.5)
+  fig.subplots_adjust(top=.87,bottom=.13,left=.12,right=.92)
   out=r/'result/final_results'/model.upper()/target/'neighborhood_recommendation_change_heatmap_up_to_500.png'
   out.parent.mkdir(parents=True,exist_ok=True);fig.savefig(out,facecolor='white');plt.close(fig)
   print(out)
