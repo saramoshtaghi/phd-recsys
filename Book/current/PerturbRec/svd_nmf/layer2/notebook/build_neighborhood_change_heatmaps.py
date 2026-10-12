@@ -16,7 +16,7 @@ for model in ['nmf','svd']:
   values=t.pivot(index='genre',columns='n_fake',values='total_percent').sort_index(axis=1)
   values=values.loc[[target]+[g for g in values.index if g!=target]]
   delta=values.diff(axis=1).fillna(0)
-  fig=plt.figure(figsize=(16,14));gs=fig.add_gridspec(2,1,height_ratios=[1,2.7],hspace=.4)
+  fig=plt.figure(figsize=(16,14));gs=fig.add_gridspec(2,1,height_ratios=[1,4],hspace=.3)
   top=fig.add_subplot(gs[0]);ax=fig.add_subplot(gs[1])
   # A fixed +/-5 pp display range makes small shifts visible; printed changes retain exact magnitude.
   im=ax.imshow(delta.to_numpy(),cmap='RdBu_r',norm=TwoSlopeNorm(vmin=-5,vcenter=0,vmax=5),aspect='auto')
@@ -26,10 +26,10 @@ for model in ['nmf','svd']:
   top.bar(x,z.old_contribution_pp,color='#2563A6',label='Retained real neighbors')
   top.bar(x,z.new_contribution_pp,bottom=z.old_contribution_pp,color='#218B58',label='Incoming real neighbors')
   for j,row in enumerate(z.itertuples()):
-   top.text(j,row.total_percent+1.5,f'{row.total_percent:.1f}%\nOld {row.old_share_of_total_percent:.0f}%\nNew {row.new_share_of_total_percent:.0f}%',ha='center',fontsize=10)
+   top.text(j,row.total_percent+1.5,f'{row.total_percent:.1f}%\nOld {row.old_share_of_total_percent:.0f}%\nNew {row.new_share_of_total_percent:.0f}%',ha='center',fontsize=9)
   top.set_ylim(0,min(115,float(z.total_percent.max())*1.3+8));top.set_xticks(x,labels)
-  top.set_ylabel(f'{target} share (%)');top.set_title('Target genre in neighbors’ own Top-20 recommendations',fontsize=16)
-  top.legend(loc='upper left',bbox_to_anchor=(0,1.3),ncol=2,frameon=False)
+  top.set_ylabel(f'{target} share (%)');top.set_title('Target genre in neighbors’ own Top-20 recommendations',fontsize=14)
+  top.legend(loc='upper left',bbox_to_anchor=(0,1.3),ncol=2,frameon=False,fontsize=10)
   top.grid(axis='y',alpha=.18);top.set_axisbelow(True);top.spines['top'].set_visible(False);top.spines['right'].set_visible(False)
   ax.set_xticks(range(len(doses)),['Baseline']+[str(n) for n in doses[1:]],fontsize=12)
   ax.set_yticks(range(len(values)),values.index,fontsize=13)
