@@ -22,15 +22,18 @@ def top_counts(score,seen,target,ks):
     score=np.array(score,copy=True);score[seen]=-np.inf
     assert np.all((~seen).sum(axis=1)>=max(ks))
     # Ascending raw item IDs resolve ties (columns are sorted beforehand).
-    counts={}
-    for k in ks:
-        threshold=np.partition(score,-k,axis=1)[:,-k]
-        higher=score>threshold[:,None];ties=score==threshold[:,None]
-        remaining=k-higher.sum(1)
-        chosen=higher|(ties&(ties.cumsum(1)<=remaining[:,None]))
-        assert np.all(chosen.sum(1)==k)
-        counts[k]=(chosen&target).sum(axis=1)
-    return counts
+    kmax=max(ks)
+    partial=np.argpartition(-score,kmax-1,axis=1)[:,:kmax]
+    threshold=np.take_along_axis(score,partial,axis=1).min(axis=1)
+    higher=score>threshold[:,None];ties=score==threshold[:,None]
+    remaining=kmax-higher.sum(1)
+    chosen=higher|(ties&(ties.cumsum(1)<=remaining[:,None]))
+    assert np.all(chosen.sum(1)==kmax)
+    # nonzero returns ascending column IDs, so stable sorting preserves ID ties.
+    ids=np.nonzero(chosen)[1].reshape(len(score),kmax)
+    order=np.argsort(-np.take_along_axis(score,ids,axis=1),axis=1,kind='stable')
+    ids=np.take_along_axis(ids,order,axis=1)
+    return {k:target[ids[:,:k]].sum(axis=1) for k in ks}
 
 def align(z,users,items):
     ids=z['ids'];rawitems=z['items'];uorder=np.argsort(ids)
@@ -135,6 +138,28 @@ def analyze_case(base,after,target,u,i,rating,seen,ks=(15,25,35),block=256):
                         embedding_swap_allocation=emb,item_bias_swap_allocation=bias))
     return groups,margin,rec
 
+def analyze_job(job):
+    users,items,u,i,rating,tags,seen,args=_DATA
+    model,genre,n=job;root=args.root
+    basepath=root/'layer2/embeddings/pilot'/f'{model}_baseline_a.npz'
+    with np.load(basepath) as z:base=align(z,users,items)
+    assert np.isclose(base['mu'],rating.mean(),rtol=0,atol=1e-10), 'Baseline mean does not match real data'
+    repeat=root/'layer2/embeddings/pilot'/f'{model}_baseline_b.npz'
+    if repeat.exists():
+        with np.load(basepath) as za, np.load(repeat) as zb:
+            assert set(za.files)==set(zb.files)
+            assert all(np.array_equal(za[key],zb[key]) for key in za.files), 'Baseline repeat differs'
+    target=np.array([genre in tags[x] for x in items]);assert target.any() and (~target).any()
+    path=root/'layer2/embeddings/controlled'/model/genre.lower()/f'{model}_{genre.lower()}_{n}.npz'
+    with np.load(path) as z:after=align(z,users,items)
+    assert len(after['fp'])==n
+    expected_mu=(rating.sum()+n*np.where(target,5.,1.).sum())/(len(rating)+n*len(items))
+    assert np.isclose(after['mu'],expected_mu,rtol=0,atol=1e-10), 'Augmented mean does not match dense injection'
+    if model=='nmf':assert min(after['p'].min(),after['q'].min(),after['fp'].min())>=-1e-12
+    metadata={'model':model,'genre':genre,'n_fake':n}
+    observed,margin,recs=analyze_case(base,after,target,u,i,rating,seen,ks=tuple(args.k),block=args.block)
+    return metadata,observed,synthetic_stats(after,target),margin,recs,{'baseline':str(basepath),'after':str(path),**metadata}
+
 def run(args):
     root=args.root;output=args.output or root/'layer1/result/reviewer_hypothesis'
     df=pd.read_csv(args.data,usecols=['user_id','book_id','rating','genres'])
@@ -146,38 +171,29 @@ def run(args):
     assert all(tags[x] for x in items),'Unknown/unlabelled item remains in clean catalog'
     seen=csr_matrix((np.ones(len(df),bool),(u,i)),shape=(len(users),len(items)))
     all_obs=[];all_fake=[];all_margin=[];all_rec=[];sources=[]
-    for model in ('nmf','svd'):
-        basepath=root/'layer2/embeddings/pilot'/f'{model}_baseline_a.npz'
-        with np.load(basepath) as z:base=align(z,users,items)
-        assert np.isclose(base['mu'],rating.mean(),rtol=0,atol=1e-10), 'Baseline mean does not match real data'
-        repeat=root/'layer2/embeddings/pilot'/f'{model}_baseline_b.npz'
-        if repeat.exists():
-            with np.load(basepath) as za, np.load(repeat) as zb:
-                assert set(za.files)==set(zb.files)
-                assert all(np.array_equal(za[key],zb[key]) for key in za.files), 'Baseline repeat differs'
-        for genre in ('Drama','Thriller'):
-            target=np.array([genre in tags[x] for x in items]);assert target.any() and (~target).any()
-            for n in args.counts:
-                path=root/'layer2/embeddings/controlled'/model/genre.lower()/f'{model}_{genre.lower()}_{n}.npz'
-                with np.load(path) as z:after=align(z,users,items)
-                assert len(after['fp'])==n
-                expected_mu=(rating.sum()+n*np.where(target,5.,1.).sum())/(len(rating)+n*len(items))
-                assert np.isclose(after['mu'],expected_mu,rtol=0,atol=1e-10), 'Augmented mean does not match dense injection'
-                if model=='nmf':
-                    assert min(after['p'].min(),after['q'].min(),after['fp'].min())>=-1e-12
-                metadata={'model':model,'genre':genre,'n_fake':n}
-                observed,margin,recs=analyze_case(base,after,target,u,i,rating,seen,ks=tuple(args.k),block=args.block)
-                all_obs.extend([{**metadata,**row} for row in observed])
-                all_fake.extend([{**metadata,**row} for row in synthetic_stats(after,target)])
-                all_margin.append({**metadata,**margin})
-                all_rec.extend([{**metadata,**row} for row in recs])
-                sources.append({'baseline':str(basepath),'after':str(path),**metadata})
-                dest=output/model.upper()/genre;dest.mkdir(parents=True,exist_ok=True)
-                pd.DataFrame([x for x in all_obs if x['model']==model and x['genre']==genre]).to_csv(dest/'real_observed_score_components.csv',index=False)
-                pd.DataFrame([x for x in all_fake if x['model']==model and x['genre']==genre]).to_csv(dest/'synthetic_score_components.csv',index=False)
-                pd.DataFrame([x for x in all_margin if x['model']==model and x['genre']==genre]).to_csv(dest/'candidate_margins.csv',index=False)
-                pd.DataFrame([x for x in all_rec if x['model']==model and x['genre']==genre]).to_csv(dest/'recommendation_component_swaps.csv',index=False)
-                print('DONE',model,genre,n,flush=True)
+    global _DATA
+    _DATA=(users,items,u,i,rating,tags,seen,args)
+    jobs=[(model,genre,n) for model in ('nmf','svd') for genre in ('Drama','Thriller') for n in args.counts]
+    if args.workers>1:
+        from concurrent.futures import ProcessPoolExecutor
+        import multiprocessing
+        pool=ProcessPoolExecutor(max_workers=args.workers,mp_context=multiprocessing.get_context('fork'))
+        results=pool.map(analyze_job,jobs)
+    else:
+        pool=None;results=map(analyze_job,jobs)
+    try:
+        for metadata,observed,fakes,margin,recs,source in results:
+            model=metadata['model'];genre=metadata['genre']
+            all_obs.extend([{**metadata,**row} for row in observed])
+            all_fake.extend([{**metadata,**row} for row in fakes])
+            all_margin.append({**metadata,**margin})
+            all_rec.extend([{**metadata,**row} for row in recs]);sources.append(source)
+            dest=output/model.upper()/genre;dest.mkdir(parents=True,exist_ok=True)
+            for name,rows in [('real_observed_score_components',all_obs),('synthetic_score_components',all_fake),('candidate_margins',all_margin),('recommendation_component_swaps',all_rec)]:
+                pd.DataFrame([x for x in rows if x['model']==model and x['genre']==genre]).to_csv(dest/(name+'.csv'),index=False)
+            print('DONE',model,genre,metadata['n_fake'],flush=True)
+    finally:
+        if pool:pool.shutdown(wait=True,cancel_futures=True)
     tables={'observed':pd.DataFrame(all_obs),'synthetic':pd.DataFrame(all_fake),
             'margins':pd.DataFrame(all_margin),'recommendations':pd.DataFrame(all_rec)}
     plot(tables,output)
@@ -255,5 +271,6 @@ if __name__=='__main__':
     parser.add_argument('--output',type=Path)
     parser.add_argument('--counts',nargs='+',type=int,default=list(COUNTS))
     parser.add_argument('--k',nargs='+',type=int,default=[15,25,35])
+    parser.add_argument('--workers',type=int,default=1)
     parser.add_argument('--block',type=int,default=256)
     args=parser.parse_args();run(args)
