@@ -43,19 +43,17 @@ for model in ['nmf','svd']:
     if j==0:
      ax.text(j,i,f'{v:.1f}%',ha='center',va='center',fontsize=12 if i==0 else 10,color=color,fontweight='bold' if i==0 else 'normal')
     else:
-     ax.text(j,i-.14,f'{v:.1f}%',ha='center',va='center',fontsize=12 if i==0 else 10,color=color,fontweight='bold' if i==0 else 'normal')
-     ax.text(j,i+.18,f'({d:+.2f})',ha='center',va='center',fontsize=11 if i==0 else 9,color='#D0D0D0' if dark else '#666666')
+     ax.text(j,i-.20,f'{v:.1f}%',ha='center',va='center',fontsize=12 if i==0 else 10,color=color,fontweight='bold' if i==0 else 'normal')
+     ax.text(j,i+.23,f'({d:+.2f})',ha='center',va='center',fontsize=11 if i==0 else 9,color='#D0D0D0' if dark else '#666666')
   ax.set_xticks(np.arange(-.5,len(doses),1),minor=True);ax.set_yticks(np.arange(-.5,len(values),1),minor=True)
   ax.grid(which='minor',color='white',linewidth=1.4);ax.tick_params(which='minor',bottom=False,left=False)
   ax.add_patch(Rectangle((-.5,-.5),len(doses),1,fill=False,edgecolor='#111111',linewidth=3,clip_on=False,zorder=10))
-  # Mute all non-target rows while keeping their data and text legible.
-  ax.add_patch(Rectangle((-.5,.5),len(doses),len(values)-1,facecolor='#D0D0D0',edgecolor='none',alpha=.42,zorder=2))
   ax.set_xlabel('Injected users',labelpad=12)
   fig.suptitle(f'{model.upper()} | {target}: neighborhood recommendations and genre changes',fontsize=21,y=.97)
   ax.set_title('Warm = increase • Cool = decrease • Each column compared with the preceding column',fontsize=13,pad=18)
   cb=fig.colorbar(im,ax=ax,pad=.02,extend='both',fraction=.035)
   cb.set_label('Change from previous level (percentage points)',fontsize=12)
-  fig.text(.5,.035,'Heatmap: actual share (%) and change from the preceding column (gray numbers, in percentage points).\nColors saturate at ±5 percentage points; numbers show full changes. Baseline is neutral.\nBars: retained + incoming contributions = final share. Gray overlay mutes non-target genres. All neighbors are real users.',ha='center',fontsize=11,linespacing=1.5)
+  fig.text(.5,.035,'Heatmap: actual share (%) and change from the preceding column (gray numbers, in percentage points).\nColors saturate at ±5 percentage points; numbers show full changes. Baseline is neutral.\nBars: retained + incoming contributions = final share. All neighbors are real users.',ha='center',fontsize=11,linespacing=1.5)
   fig.subplots_adjust(top=.85,bottom=.16,left=.1,right=.94)
   out=r/'result/final_results'/model.upper()/target/'neighborhood_recommendation_change_heatmap_up_to_500.png'
   out.parent.mkdir(parents=True,exist_ok=True);fig.savefig(out,facecolor='white');plt.close(fig)
