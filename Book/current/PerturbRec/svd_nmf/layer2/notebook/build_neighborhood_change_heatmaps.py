@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.colors import TwoSlopeNorm, ListedColormap
+from matplotlib.colors import TwoSlopeNorm, ListedColormap, LinearSegmentedColormap
 from matplotlib.patches import Rectangle
 p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);r=p.parse_args().root
 all_data=pd.read_csv(r/'tables/neighborhood_taste/genre_table_old_new.csv')
@@ -19,8 +19,8 @@ for model in ['nmf','svd']:
   fig=plt.figure(figsize=(20,11.25));gs=fig.add_gridspec(2,1,height_ratios=[1,4],hspace=.35)
   top=fig.add_subplot(gs[0]);ax=fig.add_subplot(gs[1])
   # A fixed +/-5 pp display range makes small shifts visible; printed changes retain exact magnitude.
-  colors=plt.get_cmap('RdBu_r')(np.linspace(0,1,256))
-  colors[:,:3]=colors[:,:3]*.55+.45
+  base_cmap=LinearSegmentedColormap.from_list('teal_white_orange',['#007C83','#FFFFFF','#E77817'])
+  colors=base_cmap(np.linspace(0,1,256))
   light_cmap=ListedColormap(colors)
   im=ax.imshow(delta.to_numpy(),cmap=light_cmap,norm=TwoSlopeNorm(vmin=-5,vcenter=0,vmax=5),aspect='auto')
   doses=values.columns.tolist()
@@ -51,6 +51,8 @@ for model in ['nmf','svd']:
   ax.set_xticks(np.arange(-.5,len(doses),1),minor=True);ax.set_yticks(np.arange(-.5,len(values),1),minor=True)
   ax.grid(which='minor',color='white',linewidth=1.4);ax.tick_params(which='minor',bottom=False,left=False)
   ax.add_patch(Rectangle((-.5,-.5),len(doses),1,fill=False,edgecolor='#111111',linewidth=3,clip_on=False,zorder=10))
+  # Keep the target row at full palette strength; lighten only other rows with white.
+  ax.add_patch(Rectangle((-.5,.5),len(doses),len(values)-1,facecolor='white',edgecolor='none',alpha=.25,zorder=2))
   ax.set_xlabel('Injected users',labelpad=12)
   fig.suptitle(f'{model.upper()} | {target}: neighborhood recommendations and genre changes',fontsize=21,y=.97)
   ax.set_title('Warm = increase • Cool = decrease • Each column compared with the preceding column',fontsize=13,pad=18)
