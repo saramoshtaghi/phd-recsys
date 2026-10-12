@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.colors import TwoSlopeNorm
+from matplotlib.colors import TwoSlopeNorm, ListedColormap
 from matplotlib.patches import Rectangle
 p=argparse.ArgumentParser();p.add_argument('--root',type=Path,required=True);r=p.parse_args().root
 all_data=pd.read_csv(r/'tables/neighborhood_taste/genre_table_old_new.csv')
@@ -19,7 +19,10 @@ for model in ['nmf','svd']:
   fig=plt.figure(figsize=(20,11.25));gs=fig.add_gridspec(2,1,height_ratios=[1,4],hspace=.35)
   top=fig.add_subplot(gs[0]);ax=fig.add_subplot(gs[1])
   # A fixed +/-5 pp display range makes small shifts visible; printed changes retain exact magnitude.
-  im=ax.imshow(delta.to_numpy(),cmap='RdBu_r',norm=TwoSlopeNorm(vmin=-5,vcenter=0,vmax=5),aspect='auto')
+  colors=plt.get_cmap('RdBu_r')(np.linspace(0,1,256))
+  colors[:,:3]=colors[:,:3]*.55+.45
+  light_cmap=ListedColormap(colors)
+  im=ax.imshow(delta.to_numpy(),cmap=light_cmap,norm=TwoSlopeNorm(vmin=-5,vcenter=0,vmax=5),aspect='auto')
   doses=values.columns.tolist()
   z=t[t.genre==target].set_index('n_fake').loc[doses]
   x=np.arange(len(doses));labels=['Baseline']+[str(n) for n in doses[1:]]
@@ -39,12 +42,12 @@ for model in ['nmf','svd']:
    for j in range(len(doses)):
     v=values.iloc[i,j];d=delta.iloc[i,j]
     dark=abs(d)>3
-    color='white' if dark else '#172535'
+    color='#172535'
     if j==0:
      ax.text(j,i,f'{v:.1f}%',ha='center',va='center',fontsize=12 if i==0 else 10,color=color,fontweight='bold' if i==0 else 'normal')
     else:
      ax.text(j,i-.20,f'{v:.1f}%',ha='center',va='center',fontsize=12 if i==0 else 10,color=color,fontweight='bold' if i==0 else 'normal')
-     ax.text(j,i+.23,f'({d:+.2f})',ha='center',va='center',fontsize=11 if i==0 else 9,color='#D0D0D0' if dark else '#666666')
+     ax.text(j,i+.23,f'({d:+.2f})',ha='center',va='center',fontsize=11 if i==0 else 9,color='#555555')
   ax.set_xticks(np.arange(-.5,len(doses),1),minor=True);ax.set_yticks(np.arange(-.5,len(values),1),minor=True)
   ax.grid(which='minor',color='white',linewidth=1.4);ax.tick_params(which='minor',bottom=False,left=False)
   ax.add_patch(Rectangle((-.5,-.5),len(doses),1,fill=False,edgecolor='#111111',linewidth=3,clip_on=False,zorder=10))
