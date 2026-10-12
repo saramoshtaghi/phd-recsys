@@ -36,3 +36,9 @@ These two cases cannot be used to support a mechanism premised on strictly nonne
 ## Outputs
 
 Each model/genre folder contains four CSV tables and one PNG four-panel figure. factor_constraint_audit.csv records all factor audits; validation.json contains the source-data hash, all cases, and cross-checks. Figures use linear axes. The earlier failed audit and successful resumed completion are preserved in layer1/log/reviewer_hypothesis.log.
+
+## Input audit follow-up
+
+The actual clean input has 5,815,569 ratings, all between 1 and 5, no negative ratings and no missing values in user/book/rating columns. Common initialization reconstructed from that input matches both stored training hashes exactly and is positive. Synthetic factor initialization is also positive; generated synthetic ratings are exclusively 1 and 5. Therefore negative factors arose during training, not from negative ratings or negative initialization.
+
+Thirty small positive-input toy fits did not reproduce sign loss. The exact first offending epoch in the real large runs has not been traced. Dense injection and weak regularization are possible triggers, not established causes. See input_audit.json.

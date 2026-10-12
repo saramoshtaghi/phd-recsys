@@ -1,0 +1,40 @@
+{
+  "real_ratings": 5815569,
+  "rating_min": 1.0,
+  "rating_max": 5.0,
+  "negative_ratings": 0,
+  "missing_values": 0,
+  "initial_pu_min": 2.2272957072022592e-06,
+  "initial_qi_min": 5.188445665327279e-07,
+  "initial_common_hashes": [
+    "230771ec7136bd3a062f4d8a364caefd47d2e8ee849ebf98993f73ab2a725d68",
+    "c3996ef854dbeb7537a1c82447cd914b9ca56767fa3657acf1755d5a184858f3"
+  ],
+  "cases": [
+    {
+      "n_fake": 1000,
+      "common_initialization_matches": true,
+      "fake_initial_min": 0.00036648241278292026,
+      "fake_initial_max": 0.9997627092050728,
+      "synthetic_ratings": [
+        1,
+        5
+      ],
+      "augmented_ratings": 15230569
+    },
+    {
+      "n_fake": 2000,
+      "common_initialization_matches": true,
+      "fake_initial_min": 2.5031657948537678e-05,
+      "fake_initial_max": 0.999876536024311,
+      "synthetic_ratings": [
+        1,
+        5
+      ],
+      "augmented_ratings": 24645569
+    }
+  ],
+  "toy_trials": 30,
+  "positive_input_toy_sign_loss": null,
+  "interpretation": "Actual ratings and both common/fake initialization are positive. The bad factors arise during optimization, not from negative input. Dense profile replication changes the training signal; exact first offending epoch in the real runs is not traced."
+}
