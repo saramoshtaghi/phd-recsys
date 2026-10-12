@@ -1,0 +1,72 @@
+DONE nmf Drama 2
+DONE nmf Drama 4
+DONE nmf Drama 6
+DONE nmf Drama 25
+DONE nmf Drama 50
+DONE nmf Drama 100
+DONE nmf Drama 200
+DONE nmf Drama 500
+DONE nmf Drama 1000
+DONE nmf Drama 2000
+DONE nmf Thriller 2
+DONE nmf Thriller 4
+DONE nmf Thriller 6
+DONE nmf Thriller 25
+DONE nmf Thriller 50
+DONE nmf Thriller 100
+DONE nmf Thriller 200
+DONE nmf Thriller 500
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/local/anaconda3/lib/python3.9/concurrent/futures/process.py", line 246, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "/usr/local/anaconda3/lib/python3.9/concurrent/futures/process.py", line 205, in _process_chunk
+    return [fn(*args) for args in chunk]
+  File "/usr/local/anaconda3/lib/python3.9/concurrent/futures/process.py", line 205, in <listcomp>
+    return [fn(*args) for args in chunk]
+  File "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/notebook/analyze_reviewer_hypothesis.py", line 158, in analyze_job
+    if model=='nmf':assert min(after['p'].min(),after['q'].min(),after['fp'].min())>=-1e-12
+AssertionError
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/notebook/analyze_reviewer_hypothesis.py", line 276, in <module>
+    args=parser.parse_args();run(args)
+  File "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/notebook/analyze_reviewer_hypothesis.py", line 185, in run
+    for metadata,observed,fakes,margin,recs,source in results:
+  File "/usr/local/anaconda3/lib/python3.9/concurrent/futures/process.py", line 562, in _chain_from_iterable_of_lists
+    for element in iterable:
+  File "/usr/local/anaconda3/lib/python3.9/concurrent/futures/_base.py", line 609, in result_iterator
+    yield fs.pop().result()
+  File "/usr/local/anaconda3/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/usr/local/anaconda3/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+AssertionError
+RESUMED 18 remaining 22
+DONE nmf Thriller 1000
+DONE nmf Thriller 2000
+DONE svd Drama 2
+DONE svd Drama 4
+DONE svd Drama 6
+DONE svd Drama 25
+DONE svd Drama 50
+DONE svd Drama 100
+DONE svd Drama 200
+DONE svd Drama 500
+DONE svd Drama 1000
+DONE svd Drama 2000
+DONE svd Thriller 2
+DONE svd Thriller 4
+DONE svd Thriller 6
+DONE svd Thriller 25
+DONE svd Thriller 50
+DONE svd Thriller 100
+DONE svd Thriller 200
+DONE svd Thriller 500
+DONE svd Thriller 1000
+DONE svd Thriller 2000
+COMPLETE /home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis

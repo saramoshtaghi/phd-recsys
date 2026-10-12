@@ -1,0 +1,30 @@
+{
+  "surprise_version": "1.1.4",
+  "installed_source": "/home/moshtasa/.local/lib/python3.9/site-packages/surprise/prediction_algorithms/matrix_factorization.pyx",
+  "source_sha256": "7a3c546cc55e212d194d40ca27a26af159ed2984a5907b50f022c0c5df6401ed",
+  "source_fragments": [
+    {
+      "line": 714,
+      "code": "est = global_mean + bu[u] + bi[i] + dot"
+    },
+    {
+      "line": 725,
+      "code": "user_denom[u, f] += qi[i, f] * est"
+    },
+    {
+      "line": 727,
+      "code": "item_denom[i, f] += pu[u, f] * est"
+    },
+    {
+      "line": 735,
+      "code": "pu[u, f] *= user_num[u, f] / user_denom[u, f]"
+    },
+    {
+      "line": 743,
+      "code": "qi[i, f] *= item_num[i, f] / item_denom[i, f]"
+    }
+  ],
+  "training_script": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/notebook/run_controlled.py",
+  "trainer_saves_raw_model_arrays": true,
+  "interpretation": "The biased estimator enters the multiplicative denominators and no nonnegative projection is applied in these updates. This provides a possible sign-loss pathway; the first offending epoch was not traced in the saved runs."
+}

@@ -1,0 +1,885 @@
+{
+  "status": "complete",
+  "data": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+  "data_sha256": "0ec565e1dfeecdf1213d7b960b1c43b1ed1738826038bded0255110cb395d95e",
+  "users": 53424,
+  "items": 9415,
+  "real_ratings": 5815569,
+  "cases": [
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 2,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_2.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 100,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_100.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 4,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_4.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 6,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_6.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 200,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_200.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 1000,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_1000.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 2000,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_2000.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 50,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_50.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 500,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_500.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 25,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_25.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 2,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_2.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 100,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_100.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 4,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_4.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 6,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_6.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 200,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_200.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 50,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_50.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 500,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_500.npz"
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 25,
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_25.npz"
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_1000.npz",
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 1000
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_2000.npz",
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 2000
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_2.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 2
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_4.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 4
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_6.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 6
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_25.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 25
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_50.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 50
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_100.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 100
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_200.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 200
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_500.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 500
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_1000.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 1000
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_2000.npz",
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 2000
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_2.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 2
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_4.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 4
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_6.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 6
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_25.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 25
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_50.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 50
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_100.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 100
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_200.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 200
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_500.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 500
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_1000.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 1000
+    },
+    {
+      "baseline": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "after": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_2000.npz",
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 2000
+    }
+  ],
+  "counts": [
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500,
+    1000,
+    2000
+  ],
+  "k": [
+    15,
+    25,
+    35
+  ],
+  "no_retraining": true,
+  "factor_constraint_audit": [
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 2,
+      "min_pu": 3.99205074030779e-18,
+      "max_abs_pu": 6.9693986755796296,
+      "negative_pu_percent": 0.0,
+      "min_qi": 2.2545987393698855e-09,
+      "max_abs_qi": 3.5125633842186157,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 4,
+      "min_pu": 2.7499459301074155e-18,
+      "max_abs_pu": 6.984397224139577,
+      "negative_pu_percent": 0.0,
+      "min_qi": 1.8575780208135098e-09,
+      "max_abs_qi": 3.439676756675546,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 6,
+      "min_pu": 2.7685880189247467e-18,
+      "max_abs_pu": 7.0307768792638035,
+      "negative_pu_percent": 0.0,
+      "min_qi": 3.496120415512116e-10,
+      "max_abs_qi": 3.389031369339498,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 25,
+      "min_pu": 1.3897679298389624e-18,
+      "max_abs_pu": 7.382970606955493,
+      "negative_pu_percent": 0.0,
+      "min_qi": 1.6980717454442204e-12,
+      "max_abs_qi": 3.113683993564768,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 50,
+      "min_pu": 2.649210314262944e-18,
+      "max_abs_pu": 7.679957159532899,
+      "negative_pu_percent": 0.0,
+      "min_qi": 1.228438656438121e-14,
+      "max_abs_qi": 3.085054730592545,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 100,
+      "min_pu": 1.2248898093097818e-18,
+      "max_abs_pu": 7.9111529274422265,
+      "negative_pu_percent": 0.0,
+      "min_qi": 1.443921481585112e-15,
+      "max_abs_qi": 3.0658930562963658,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 200,
+      "min_pu": 5.656032149517356e-17,
+      "max_abs_pu": 7.873098063511437,
+      "negative_pu_percent": 0.0,
+      "min_qi": 9.783762600634718e-19,
+      "max_abs_qi": 2.858949247919638,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 500,
+      "min_pu": 9.21211854776559e-18,
+      "max_abs_pu": 6.6082564309320695,
+      "negative_pu_percent": 0.0,
+      "min_qi": 3.799462496113497e-17,
+      "max_abs_qi": 3.5271440433797325,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 1000,
+      "min_pu": 1.4856487738438368e-24,
+      "max_abs_pu": 11.589838610866348,
+      "negative_pu_percent": 0.0,
+      "min_qi": 2.8626101790957476e-16,
+      "max_abs_qi": 4.292950735750653,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "n_fake": 2000,
+      "min_pu": 7.979046030274092e-38,
+      "max_abs_pu": 12.351734955604648,
+      "negative_pu_percent": 0.0,
+      "min_qi": 8.884693495449817e-11,
+      "max_abs_qi": 3.3487365231968167,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 2,
+      "min_pu": 2.349308471424859e-18,
+      "max_abs_pu": 6.81564389656283,
+      "negative_pu_percent": 0.0,
+      "min_qi": 1.948380243467156e-09,
+      "max_abs_qi": 3.5241915108866624,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 4,
+      "min_pu": 1.032710996870151e-18,
+      "max_abs_pu": 6.643456470052676,
+      "negative_pu_percent": 0.0,
+      "min_qi": 1.4393328985396409e-09,
+      "max_abs_qi": 3.4386787135296153,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 6,
+      "min_pu": 7.113321671623282e-19,
+      "max_abs_pu": 6.569742507668653,
+      "negative_pu_percent": 0.0,
+      "min_qi": 3.85001033796092e-10,
+      "max_abs_qi": 3.3967388858971055,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 25,
+      "min_pu": 1.4479632578713834e-19,
+      "max_abs_pu": 5.680050188431657,
+      "negative_pu_percent": 0.0,
+      "min_qi": 2.0869324869403653e-13,
+      "max_abs_qi": 3.1239925670881825,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 50,
+      "min_pu": 3.476693623529202e-19,
+      "max_abs_pu": 5.575931465794464,
+      "negative_pu_percent": 0.0,
+      "min_qi": 5.926901006095409e-16,
+      "max_abs_qi": 3.0913090350302417,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 100,
+      "min_pu": 3.78363417054853e-18,
+      "max_abs_pu": 5.761120380750724,
+      "negative_pu_percent": 0.0,
+      "min_qi": 1.2537318147262283e-18,
+      "max_abs_qi": 3.0154012857230157,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 200,
+      "min_pu": 1.825236502568001e-15,
+      "max_abs_pu": 4.736497466306309,
+      "negative_pu_percent": 0.0,
+      "min_qi": 5.524451650775133e-23,
+      "max_abs_qi": 2.7474930592330913,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 500,
+      "min_pu": 3.253266364535132e-12,
+      "max_abs_pu": 4.842004364742185,
+      "negative_pu_percent": 0.0,
+      "min_qi": 4.767968691895622e-28,
+      "max_abs_qi": 2.5813618048183393,
+      "negative_qi_percent": 0.0,
+      "factors_finite": true,
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 1000,
+      "min_pu": -1156356.8971408694,
+      "max_abs_pu": 4608183.030161859,
+      "negative_pu_percent": 49.202557695134495,
+      "min_qi": -47.958380017802874,
+      "max_abs_qi": 47.958380017802874,
+      "negative_qi_percent": 49.02947424322889,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 2000,
+      "min_pu": -12158611.416550124,
+      "max_abs_pu": 12158611.416550124,
+      "negative_pu_percent": 48.96051349595843,
+      "min_qi": -0.4932251534346176,
+      "max_abs_qi": 0.6292403622379246,
+      "negative_qi_percent": 47.371216144450344,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 2,
+      "min_pu": -4.477088731698926,
+      "max_abs_pu": 4.477088731698926,
+      "negative_pu_percent": 52.85441545315015,
+      "min_qi": -2.9439187283638115,
+      "max_abs_qi": 2.9439187283638115,
+      "negative_qi_percent": 48.88608603292618,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 4,
+      "min_pu": -4.012835367050034,
+      "max_abs_pu": 4.012835367050034,
+      "negative_pu_percent": 52.65193344313843,
+      "min_qi": -3.3304767738010796,
+      "max_abs_qi": 3.3304767738010796,
+      "negative_qi_percent": 49.82209240573553,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 6,
+      "min_pu": -4.279119129381725,
+      "max_abs_pu": 4.279119129381725,
+      "negative_pu_percent": 52.45765487553808,
+      "min_qi": -3.456396355650123,
+      "max_abs_qi": 3.456396355650123,
+      "negative_qi_percent": 52.33935209771641,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 25,
+      "min_pu": -4.703035329797302,
+      "max_abs_pu": 4.939145986015546,
+      "negative_pu_percent": 52.334936107317255,
+      "min_qi": -3.622851423729839,
+      "max_abs_qi": 3.622851423729839,
+      "negative_qi_percent": 50.55762081784386,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 50,
+      "min_pu": -5.256441782125646,
+      "max_abs_pu": 5.256441782125646,
+      "negative_pu_percent": 52.627445113513105,
+      "min_qi": -3.522883482242588,
+      "max_abs_qi": 3.522883482242588,
+      "negative_qi_percent": 50.88289962825279,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 100,
+      "min_pu": -5.198377891442834,
+      "max_abs_pu": 5.198377891442834,
+      "negative_pu_percent": 53.00099020999925,
+      "min_qi": -3.4835341451181163,
+      "max_abs_qi": 3.4835341451181163,
+      "negative_qi_percent": 51.0926712692512,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 200,
+      "min_pu": -5.225240303676189,
+      "max_abs_pu": 5.225240303676189,
+      "negative_pu_percent": 53.55484484559153,
+      "min_qi": -3.320430031355363,
+      "max_abs_qi": 3.320430031355363,
+      "negative_qi_percent": 51.91848114710568,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 500,
+      "min_pu": -5.181666782360043,
+      "max_abs_pu": 5.181666782360043,
+      "negative_pu_percent": 55.28753430754395,
+      "min_qi": -2.838176605095466,
+      "max_abs_qi": 2.838176605095466,
+      "negative_qi_percent": 53.27535847052576,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 1000,
+      "min_pu": -4.835538235873701,
+      "max_abs_pu": 4.835538235873701,
+      "negative_pu_percent": 56.80145707775981,
+      "min_qi": -2.3743428463127114,
+      "max_abs_qi": 2.3743428463127114,
+      "negative_qi_percent": 55.51779075942645,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "n_fake": 2000,
+      "min_pu": -4.595835590684936,
+      "max_abs_pu": 4.595835590684936,
+      "negative_pu_percent": 58.971294024249424,
+      "min_qi": -1.9699753548563732,
+      "max_abs_qi": 1.9699753548563732,
+      "negative_qi_percent": 58.59399893786511,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 2,
+      "min_pu": -4.456271644970137,
+      "max_abs_pu": 4.456271644970137,
+      "negative_pu_percent": 52.58815932317599,
+      "min_qi": -3.2027712641883705,
+      "max_abs_qi": 3.2027712641883705,
+      "negative_qi_percent": 49.620286776420606,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 4,
+      "min_pu": -3.863333263032362,
+      "max_abs_pu": 3.863333263032362,
+      "negative_pu_percent": 52.49518042973722,
+      "min_qi": -3.173690684488602,
+      "max_abs_qi": 3.173690684488602,
+      "negative_qi_percent": 49.90971853425385,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 6,
+      "min_pu": -3.864402144186397,
+      "max_abs_pu": 3.864402144186397,
+      "negative_pu_percent": 52.602938424106306,
+      "min_qi": -3.24616890566556,
+      "max_abs_qi": 3.24616890566556,
+      "negative_qi_percent": 50.61205523101434,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 25,
+      "min_pu": -4.168948403977825,
+      "max_abs_pu": 4.168948403977825,
+      "negative_pu_percent": 51.863692491908175,
+      "min_qi": -2.746071341243508,
+      "max_abs_qi": 2.812647027733288,
+      "negative_qi_percent": 49.93494423791822,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 50,
+      "min_pu": -4.195352698506813,
+      "max_abs_pu": 4.195352698506813,
+      "negative_pu_percent": 52.08021655383925,
+      "min_qi": -2.8863441527125215,
+      "max_abs_qi": 2.931109249094449,
+      "negative_qi_percent": 51.86271906532129,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 100,
+      "min_pu": -4.509602280579838,
+      "max_abs_pu": 4.509602280579838,
+      "negative_pu_percent": 52.15277258799791,
+      "min_qi": -2.7211036209401693,
+      "max_abs_qi": 2.876252804966097,
+      "negative_qi_percent": 52.247742963356345,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 200,
+      "min_pu": -4.429741407385303,
+      "max_abs_pu": 4.429741407385303,
+      "negative_pu_percent": 52.54783305982396,
+      "min_qi": -2.6344267907742798,
+      "max_abs_qi": 2.680535869911925,
+      "negative_qi_percent": 53.49442379182157,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 500,
+      "min_pu": -4.42863821199503,
+      "max_abs_pu": 4.42863821199503,
+      "negative_pu_percent": 54.518859876863736,
+      "min_qi": -2.4464373422589487,
+      "max_abs_qi": 2.670191059578257,
+      "negative_qi_percent": 53.564790228359,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 1000,
+      "min_pu": -4.104473855428568,
+      "max_abs_pu": 4.104473855428568,
+      "negative_pu_percent": 55.82762200499779,
+      "min_qi": -2.384075388184748,
+      "max_abs_qi": 2.5822778233170847,
+      "negative_qi_percent": 56.43122676579926,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "n_fake": 2000,
+      "min_pu": -4.107304379187465,
+      "max_abs_pu": 4.107304379187465,
+      "negative_pu_percent": 58.018863669168596,
+      "min_qi": -2.0780157874398912,
+      "max_abs_qi": 2.3350233825600983,
+      "negative_qi_percent": 59.01221455124801,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    }
+  ],
+  "nmf_constraint_violations": [
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 1000,
+      "min_pu": -1156356.8971408694,
+      "max_abs_pu": 4608183.030161859,
+      "negative_pu_percent": 49.202557695134495,
+      "min_qi": -47.958380017802874,
+      "max_abs_qi": 47.958380017802874,
+      "negative_qi_percent": 49.02947424322889,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 2000,
+      "min_pu": -12158611.416550124,
+      "max_abs_pu": 12158611.416550124,
+      "negative_pu_percent": 48.96051349595843,
+      "min_qi": -0.4932251534346176,
+      "max_abs_qi": 0.6292403622379246,
+      "negative_qi_percent": 47.371216144450344,
+      "factors_finite": true,
+      "nonnegative_factors": false
+    }
+  ],
+  "interpretation": "Component swaps are conditional fitted-score decompositions, not causal retraining interventions.",
+  "previous_top15_crosschecks": [
+    {
+      "model": "nmf",
+      "genre": "Drama",
+      "top15_matches_previous_table": true,
+      "cases": 10
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "top15_matches_previous_table": true,
+      "cases": 10
+    },
+    {
+      "model": "svd",
+      "genre": "Drama",
+      "top15_matches_previous_table": true,
+      "cases": 10
+    },
+    {
+      "model": "svd",
+      "genre": "Thriller",
+      "top15_matches_previous_table": true,
+      "cases": 10
+    }
+  ]
+}
