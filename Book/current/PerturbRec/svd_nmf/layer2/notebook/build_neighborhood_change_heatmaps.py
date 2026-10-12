@@ -25,8 +25,6 @@ for model in ['nmf','svd']:
   x=np.arange(len(doses));labels=['Baseline']+[str(n) for n in doses[1:]]
   top.bar(x,z.old_contribution_pp,color='#2563A6',label='Retained real neighbors')
   top.bar(x,z.new_contribution_pp,bottom=z.old_contribution_pp,color='#218B58',label='Incoming real neighbors')
-  for j,row in enumerate(z.itertuples()):
-   top.text(j,row.total_percent+1.5,f'{row.total_percent:.1f}%\nOld {row.old_share_of_total_percent:.0f}%\nNew {row.new_share_of_total_percent:.0f}%',ha='center',fontsize=9)
   top.set_ylim(0,min(115,float(z.total_percent.max())*1.3+8));top.set_xticks(x,labels)
   top.set_ylabel(f'{target} share (%)');top.set_title('Target genre in neighbors’ own Top-20 recommendations',fontsize=14)
   top.legend(loc='upper left',bbox_to_anchor=(0,1.3),ncol=2,frameon=False,fontsize=10)
@@ -47,12 +45,14 @@ for model in ['nmf','svd']:
   ax.set_xticks(np.arange(-.5,len(doses),1),minor=True);ax.set_yticks(np.arange(-.5,len(values),1),minor=True)
   ax.grid(which='minor',color='white',linewidth=1.4);ax.tick_params(which='minor',bottom=False,left=False)
   ax.add_patch(Rectangle((-.5,-.5),len(doses),1,fill=False,edgecolor='#111111',linewidth=3,clip_on=False,zorder=10))
+  # Mute all non-target rows while keeping their data and text legible.
+  ax.add_patch(Rectangle((-.5,.5),len(doses),len(values)-1,facecolor='#D0D0D0',edgecolor='none',alpha=.62,zorder=2))
   ax.set_xlabel('Injected users',labelpad=12)
   fig.suptitle(f'{model.upper()} | {target}: neighborhood recommendations and genre changes',fontsize=21,y=.97)
   ax.set_title('Warm = increase • Cool = decrease • Each column compared with the preceding column',fontsize=13,pad=18)
   cb=fig.colorbar(im,ax=ax,pad=.02,extend='both',fraction=.035)
   cb.set_label('Change from previous level (percentage points)',fontsize=12)
-  fig.text(.5,.045,'Heatmap: actual share (%) and change from the preceding column (gray numbers, in percentage points).\nColors saturate at ±5 percentage points; numbers show full changes. Baseline is neutral.\nBars: old + new contributions = final share; Old/New labels give their fractions of that share. All neighbors are real users.',ha='center',fontsize=11,linespacing=1.5)
+  fig.text(.5,.045,'Heatmap: actual share (%) and change from the preceding column (gray numbers, in percentage points).\nColors saturate at ±5 percentage points; numbers show full changes. Baseline is neutral.\nBars: retained + incoming contributions = final share. Gray overlay mutes non-target genres. All neighbors are real users.',ha='center',fontsize=11,linespacing=1.5)
   fig.subplots_adjust(top=.87,bottom=.13,left=.12,right=.92)
   out=r/'result/final_results'/model.upper()/target/'neighborhood_recommendation_change_heatmap_up_to_500.png'
   out.parent.mkdir(parents=True,exist_ok=True);fig.savefig(out,facecolor='white');plt.close(fig)
