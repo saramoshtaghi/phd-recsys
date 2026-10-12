@@ -1,0 +1,43 @@
+STAGE generating
+GENERATED f_Drama_2500u_pos5_neg1_books.csv rows 29353069
+GENERATED f_Drama_3000u_pos5_neg1_books.csv rows 34060569
+GENERATED f_Thriller_2500u_pos5_neg1_books.csv rows 29353069
+GENERATED f_Thriller_3000u_pos5_neg1_books.csv rows 34060569
+STAGE training
+BASELINES VERIFIED; TRAINING 8 NEW CASES
+TRAIN svd drama_2500 ratings 29353069
+TRAIN nmf drama_2500 ratings 29353069
+TRAIN nmf thriller_2500 ratings 29353069
+TRAIN svd thriller_2500 ratings 29353069
+TRAIN nmf drama_3000 ratings 34060569
+TRAIN nmf thriller_3000 ratings 34060569
+TRAIN svd thriller_3000 ratings 34060569
+TRAIN svd drama_3000 ratings 34060569
+DONE svd drama_2500 seconds 726
+DONE svd thriller_2500 seconds 741
+DONE svd drama_3000 seconds 842
+DONE svd thriller_3000 seconds 859
+DONE nmf drama_2500 seconds 894
+DONE nmf thriller_2500 seconds 900
+DONE nmf drama_3000 seconds 1035
+DONE nmf thriller_3000 seconds 1057
+ALL 8 NEW MODELS COMPLETE
+STAGE recommendations
+EXPOSURE nmf Drama 0 Top15 5.06448
+EXPOSURE svd Drama 0 Top15 4.60849
+EXPOSURE svd Thriller 0 Top15 1.57656
+EXPOSURE nmf Thriller 0 Top15 1.72986
+EXPOSURE nmf Thriller 2000 Top15 8.1645
+EXPOSURE nmf Drama 2000 Top15 13.75305
+EXPOSURE svd Drama 2000 Top15 4.99038
+EXPOSURE svd Thriller 2000 Top15 2.59994
+EXPOSURE nmf Drama 2500 Top15 14.99994
+EXPOSURE nmf Thriller 2500 Top15 3.79013
+EXPOSURE svd Drama 2500 Top15 5.00404
+EXPOSURE svd Thriller 2500 Top15 2.62567
+EXPOSURE nmf Drama 3000 Top15 15.0
+EXPOSURE nmf Thriller 3000 Top15 14.41343
+EXPOSURE svd Drama 3000 Top15 5.01853
+EXPOSURE svd Thriller 3000 Top15 2.63344
+RECOMMENDATION ANALYSIS COMPLETE
+PIPELINE COMPLETE

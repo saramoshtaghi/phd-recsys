@@ -1,0 +1,23 @@
+{
+  "model": "nmf",
+  "case": "drama_2500",
+  "n_fake": 2500,
+  "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+  "ratings": 29353069,
+  "n_real": 53424,
+  "parameters": {
+    "biased": true,
+    "n_factors": 8,
+    "n_epochs": 180,
+    "reg_pu": 0.0,
+    "reg_qi": 0.002,
+    "random_state": 42,
+    "verbose": false
+  },
+  "initial_common_hashes": [
+    "230771ec7136bd3a062f4d8a364caefd47d2e8ee849ebf98993f73ab2a725d68",
+    "c3996ef854dbeb7537a1c82447cd914b9ca56767fa3657acf1755d5a184858f3"
+  ],
+  "shared_initialization_verified": true,
+  "elapsed_seconds": 893.3258781433105
+}

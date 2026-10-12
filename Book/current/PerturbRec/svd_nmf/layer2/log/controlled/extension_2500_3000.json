@@ -1,0 +1,215 @@
+{
+  "status": "trained",
+  "counts": [
+    2500,
+    3000
+  ],
+  "models": [
+    "nmf",
+    "svd"
+  ],
+  "genres": [
+    "Drama",
+    "Thriller"
+  ],
+  "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+  "parameters": {
+    "biased": true,
+    "n_factors": 8,
+    "n_epochs": 180,
+    "reg_pu": 0.0,
+    "reg_qi": 0.002,
+    "random_state": 42,
+    "verbose": false
+  },
+  "baseline_reused": true,
+  "paired_baselines_equal": true,
+  "started": 1791783775.9393897,
+  "jobs": [
+    {
+      "model": "nmf",
+      "case": "drama_2500",
+      "n_fake": 2500,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+      "ratings": 29353069,
+      "n_real": 53424,
+      "parameters": {
+        "biased": true,
+        "n_factors": 8,
+        "n_epochs": 180,
+        "reg_pu": 0.0,
+        "reg_qi": 0.002,
+        "random_state": 42,
+        "verbose": false
+      },
+      "initial_common_hashes": [
+        "230771ec7136bd3a062f4d8a364caefd47d2e8ee849ebf98993f73ab2a725d68",
+        "c3996ef854dbeb7537a1c82447cd914b9ca56767fa3657acf1755d5a184858f3"
+      ],
+      "shared_initialization_verified": true,
+      "elapsed_seconds": 893.3258781433105
+    },
+    {
+      "model": "nmf",
+      "case": "thriller_2500",
+      "n_fake": 2500,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+      "ratings": 29353069,
+      "n_real": 53424,
+      "parameters": {
+        "biased": true,
+        "n_factors": 8,
+        "n_epochs": 180,
+        "reg_pu": 0.0,
+        "reg_qi": 0.002,
+        "random_state": 42,
+        "verbose": false
+      },
+      "initial_common_hashes": [
+        "230771ec7136bd3a062f4d8a364caefd47d2e8ee849ebf98993f73ab2a725d68",
+        "c3996ef854dbeb7537a1c82447cd914b9ca56767fa3657acf1755d5a184858f3"
+      ],
+      "shared_initialization_verified": true,
+      "elapsed_seconds": 900.0666742324829
+    },
+    {
+      "model": "svd",
+      "case": "drama_2500",
+      "n_fake": 2500,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+      "ratings": 29353069,
+      "n_real": 53424,
+      "parameters": {
+        "biased": true,
+        "n_factors": 8,
+        "n_epochs": 180,
+        "reg_pu": 0.0,
+        "reg_qi": 0.002,
+        "random_state": 42,
+        "verbose": false
+      },
+      "initial_common_hashes": [
+        "f376cd26f91f42b262bc61ccffb7972f7114fa8927bdeb6d523c1787cfa2783a",
+        "78e9083a4aa6283a8d394c2b42eb261bdf1bd23946f656039be577c11cf57e1a"
+      ],
+      "shared_initialization_verified": true,
+      "elapsed_seconds": 725.6228702068329
+    },
+    {
+      "model": "svd",
+      "case": "thriller_2500",
+      "n_fake": 2500,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+      "ratings": 29353069,
+      "n_real": 53424,
+      "parameters": {
+        "biased": true,
+        "n_factors": 8,
+        "n_epochs": 180,
+        "reg_pu": 0.0,
+        "reg_qi": 0.002,
+        "random_state": 42,
+        "verbose": false
+      },
+      "initial_common_hashes": [
+        "f376cd26f91f42b262bc61ccffb7972f7114fa8927bdeb6d523c1787cfa2783a",
+        "78e9083a4aa6283a8d394c2b42eb261bdf1bd23946f656039be577c11cf57e1a"
+      ],
+      "shared_initialization_verified": true,
+      "elapsed_seconds": 741.1826322078705
+    },
+    {
+      "model": "nmf",
+      "case": "drama_3000",
+      "n_fake": 3000,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+      "ratings": 34060569,
+      "n_real": 53424,
+      "parameters": {
+        "biased": true,
+        "n_factors": 8,
+        "n_epochs": 180,
+        "reg_pu": 0.0,
+        "reg_qi": 0.002,
+        "random_state": 42,
+        "verbose": false
+      },
+      "initial_common_hashes": [
+        "230771ec7136bd3a062f4d8a364caefd47d2e8ee849ebf98993f73ab2a725d68",
+        "c3996ef854dbeb7537a1c82447cd914b9ca56767fa3657acf1755d5a184858f3"
+      ],
+      "shared_initialization_verified": true,
+      "elapsed_seconds": 1035.0999960899353
+    },
+    {
+      "model": "nmf",
+      "case": "thriller_3000",
+      "n_fake": 3000,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+      "ratings": 34060569,
+      "n_real": 53424,
+      "parameters": {
+        "biased": true,
+        "n_factors": 8,
+        "n_epochs": 180,
+        "reg_pu": 0.0,
+        "reg_qi": 0.002,
+        "random_state": 42,
+        "verbose": false
+      },
+      "initial_common_hashes": [
+        "230771ec7136bd3a062f4d8a364caefd47d2e8ee849ebf98993f73ab2a725d68",
+        "c3996ef854dbeb7537a1c82447cd914b9ca56767fa3657acf1755d5a184858f3"
+      ],
+      "shared_initialization_verified": true,
+      "elapsed_seconds": 1056.8059916496277
+    },
+    {
+      "model": "svd",
+      "case": "drama_3000",
+      "n_fake": 3000,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+      "ratings": 34060569,
+      "n_real": 53424,
+      "parameters": {
+        "biased": true,
+        "n_factors": 8,
+        "n_epochs": 180,
+        "reg_pu": 0.0,
+        "reg_qi": 0.002,
+        "random_state": 42,
+        "verbose": false
+      },
+      "initial_common_hashes": [
+        "f376cd26f91f42b262bc61ccffb7972f7114fa8927bdeb6d523c1787cfa2783a",
+        "78e9083a4aa6283a8d394c2b42eb261bdf1bd23946f656039be577c11cf57e1a"
+      ],
+      "shared_initialization_verified": true,
+      "elapsed_seconds": 841.9907495975494
+    },
+    {
+      "model": "svd",
+      "case": "thriller_3000",
+      "n_fake": 3000,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+      "ratings": 34060569,
+      "n_real": 53424,
+      "parameters": {
+        "biased": true,
+        "n_factors": 8,
+        "n_epochs": 180,
+        "reg_pu": 0.0,
+        "reg_qi": 0.002,
+        "random_state": 42,
+        "verbose": false
+      },
+      "initial_common_hashes": [
+        "f376cd26f91f42b262bc61ccffb7972f7114fa8927bdeb6d523c1787cfa2783a",
+        "78e9083a4aa6283a8d394c2b42eb261bdf1bd23946f656039be577c11cf57e1a"
+      ],
+      "shared_initialization_verified": true,
+      "elapsed_seconds": 858.676689863205
+    }
+  ],
+  "finished": 1791784851.3232994
+}

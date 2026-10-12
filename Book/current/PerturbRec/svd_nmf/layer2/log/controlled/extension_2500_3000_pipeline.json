@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "started": 1791783651.4003441,
+  "completed_stages": [
+    "generating",
+    "training",
+    "recommendations"
+  ],
+  "finished": 1791784919.7702005
+}

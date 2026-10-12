@@ -1,0 +1,23 @@
+{
+  "model": "svd",
+  "case": "thriller_3000",
+  "n_fake": 3000,
+  "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+  "ratings": 34060569,
+  "n_real": 53424,
+  "parameters": {
+    "biased": true,
+    "n_factors": 8,
+    "n_epochs": 180,
+    "reg_pu": 0.0,
+    "reg_qi": 0.002,
+    "random_state": 42,
+    "verbose": false
+  },
+  "initial_common_hashes": [
+    "f376cd26f91f42b262bc61ccffb7972f7114fa8927bdeb6d523c1787cfa2783a",
+    "78e9083a4aa6283a8d394c2b42eb261bdf1bd23946f656039be577c11cf57e1a"
+  ],
+  "shared_initialization_verified": true,
+  "elapsed_seconds": 858.676689863205
+}
