@@ -7,6 +7,7 @@ import pandas as pd
 from scipy.sparse import csr_matrix
 from concurrent.futures import ProcessPoolExecutor
 R=Path('/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2');H=R/'history';OUT=H/'tables/title_mechanism';OUT.mkdir(parents=True,exist_ok=True)
+DATA=H/'data/title_mechanism';DATA.mkdir(parents=True,exist_ok=True)
 SRC=Path('/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv');CONDITIONS=['baseline','embedding_only','item_bias_only','full_after']
 
 def genres(v):
@@ -75,7 +76,7 @@ def job(model):
   if condition in ['baseline','full_after']:
    # Verify top-two target recommendations agree with the original within-Top-20 control on selected users.
    users=np.unique(np.r_[a,v]);actual=np.array([row[target[row]][:2] for row in top[users]]);assert np.array_equal(actual,two[users])
-  np.savez_compressed(OUT/f'{model}_{condition}_recommendations.npz',ids=ids,items=items,top20=top,top2_unseen_thriller=two)
+  np.savez_compressed(DATA/f'{model}_{condition}_recommendations.npz',ids=ids,items=items,top20=top,top2_unseen_thriller=two)
  pd.DataFrame(records).to_csv(OUT/f'{model}_conditions.csv',index=False)
  records=pd.DataFrame(records).set_index('condition');attrib=[]
  for key in ['exact_mean_shared_titles','fixed_target_jaccard_percent','mean_target_count']:

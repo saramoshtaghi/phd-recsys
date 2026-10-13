@@ -46,4 +46,6 @@ See `reports/summary_fa.md` for the Persian explanation and `log/validation.json
 
 ## Score mechanism follow-up (Thriller, 500)
 
-See `reports/title_mechanism_fa.md` and `reports/title_mechanism.md`; `tables/title_mechanism` contains full per-title scores, hybrid rankings, component allocations and invariant score heterogeneity. Figures are in `result/Thriller/title_mechanism/{NMF,SVD}/mechanism_4panel.png`. Reproduce with `python notebook/analyze_title_mechanism.py`. This script reads saved factors directly and supports the reorganized materials layout.
+See `reports/title_mechanism_fa.md` and `reports/title_mechanism.md`; `tables/title_mechanism` contains full per-title scores, component allocations and invariant score heterogeneity. Figures are in `result/Thriller/title_mechanism/{NMF,SVD}/mechanism_4panel.png`. Reproduce with `python notebook/analyze_title_mechanism.py`. This script reads saved factors directly and supports the reorganized materials layout.
+
+Hybrid recommendation arrays are stored separately in `data/title_mechanism`, not in the tables directory.
