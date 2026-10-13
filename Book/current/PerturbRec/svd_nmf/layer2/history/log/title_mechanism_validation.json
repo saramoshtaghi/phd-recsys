@@ -1,0 +1,13 @@
+{
+  "status": "complete",
+  "models": [
+    "nmf",
+    "svd"
+  ],
+  "target": "Thriller",
+  "n_fake": 500,
+  "original_ranking_exact_match": true,
+  "relative_score_identity": true,
+  "symmetric_metric_allocations_sum_to_observed_change": true,
+  "retrained": false
+}

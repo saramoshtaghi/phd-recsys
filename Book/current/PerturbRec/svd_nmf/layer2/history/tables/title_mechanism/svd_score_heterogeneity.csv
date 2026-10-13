@@ -1,0 +1,3 @@
+model,condition,target_personalized_score_rms,target_common_score_std,common_to_personalized_ratio
+svd,baseline,0.5173426121229399,0.2840467707601414,0.5490496319151869
+svd,full_after,0.48797761961626496,0.27556395899687186,0.5647061420840763

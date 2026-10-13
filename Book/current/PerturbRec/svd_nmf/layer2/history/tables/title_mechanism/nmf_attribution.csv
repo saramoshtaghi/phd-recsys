@@ -1,0 +1,4 @@
+model,metric,embedding_allocation,item_bias_allocation,total_change
+nmf,exact_mean_shared_titles,5.74052828708968,1.2710498143319766,7.011578101421657
+nmf,fixed_target_jaccard_percent,45.26796185814082,-16.145275610626687,29.122686247514142
+nmf,mean_target_count,-4.119880578017369,15.80771750524109,11.68783692722372

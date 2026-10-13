@@ -43,3 +43,7 @@ No accuracy/utility degradation, multi-seed stability, or first-ever research no
 Run `python notebook/analyze_personalization.py`, then `python notebook/match_model_cohorts.py`. The second command computes the same eligible cohort across both models, samples 100,000 pairs within it for each genre, and updates the final plots/report.
 
 See `reports/summary_fa.md` for the Persian explanation and `log/validation.json` for validation.
+
+## Score mechanism follow-up (Thriller, 500)
+
+See `reports/title_mechanism_fa.md` and `reports/title_mechanism.md`; `tables/title_mechanism` contains full per-title scores, hybrid rankings, component allocations and invariant score heterogeneity. Figures are in `result/Thriller/title_mechanism/{NMF,SVD}/mechanism_4panel.png`. Reproduce with `python notebook/analyze_title_mechanism.py`. This script reads saved factors directly and supports the reorganized materials layout.

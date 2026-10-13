@@ -1,0 +1,30 @@
+/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/notebook/analyze_title_mechanism.py:37: RuntimeWarning: invalid value encountered in divide
+  freq=np.bincount(top.ravel(),minlength=len(target));N=len(top);f=freq[target];p=f/f.sum()
+/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/notebook/analyze_title_mechanism.py:38: RuntimeWarning: invalid value encountered in long_scalars
+  return dict(exact_mean_shared_titles=float((freq.astype(float)*(freq-1)).sum()/(N*(N-1))),mean_target_count=float(f.sum()/N),target_effective_catalog=float(1/(p@p)),target_top10_exposure_percent=float(np.sort(f)[-10:].sum()/f.sum()*100),catalog_coverage=int((freq>0).sum()))
+nmf                 exact_mean_shared_titles  fixed_target_jaccard_percent
+condition                                                             
+baseline                        1.737163                     10.293968
+embedding_only                  9.583486                     70.097139
+item_bias_only                  5.114008                      8.683902
+full_after                      8.748741                     39.416654
+svd                 exact_mean_shared_titles  fixed_target_jaccard_percent
+condition                                                             
+baseline                        0.860180                      2.339248
+embedding_only                  1.254281                      2.575085
+item_bias_only                  0.910562                      2.508796
+full_after                      0.832506                      3.129621
+Traceback (most recent call last):
+  File "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/notebook/analyze_title_mechanism.py", line 124, in <module>
+    finish()
+  File "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/notebook/analyze_title_mechanism.py", line 117, in finish
+    report=['# What drives shared Thriller titles at 500 injected users?','', '## Four score combinations','', 'Baseline = G0 + bi0; embedding only = G1 + bi0; item bias only = G0 + bi1; full after = G1 + bi1. G = pu @ qi.T. The global mean and user bias cancel within each user’s raw-score ranking. Previously rated books are excluded.', '', conditions.to_markdown(index=False), '', '## Symmetric allocation of metric changes','', alloc.to_markdown(index=False), '', '## Personalized score heterogeneity within Thriller','', hetero.to_markdown(index=False), '', 'Within-target personalized score RMS is the root mean square of the double-centered interaction matrix: sqrt(trace(Cov(pu) Cov(qi_target))). It removes user-constant and item-common score terms and is invariant to equivalent factor reparameterization. Common-score spread is std_i(mean_u G_ui + bi_i) within target books. These are diagnostics of score variation, not measured preference or accuracy.', '', '## Limits', '', '- Hybrid scores are not retrained models. Symmetric allocations sum exactly to the observed output-metric change but are not estimates of causal effects of changing the training algorithm.', '- Bias-only and embedding-only combinations are descriptive substitutions at the saved fitted parameters. They can be implausible standalone training outcomes.', '- The target control fixes original pairs and exactly two target titles. In hybrid conditions those titles are selected from all unseen Thriller books, even if fewer than two appear in a hybrid Top-20; the baseline/full conditions exactly reproduce the original within-Top-20 control.', '- Relative book-score decomposition centers each user’s score by their mean score over all unseen candidates. Raw score increases alone do not establish rank improvements; observed recommendation reach and the hybrid rerankings provide separate evidence.', '- One training seed and one dense target=5 / other=1 protocol; only Thriller at 500 evaluated here. No additional training was run.']
+  File "/home/moshtasa/.local/lib/python3.9/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/home/moshtasa/.local/lib/python3.9/site-packages/pandas/core/frame.py", line 2994, in to_markdown
+    tabulate = import_optional_dependency("tabulate")
+  File "/home/moshtasa/.local/lib/python3.9/site-packages/pandas/compat/_optional.py", line 164, in import_optional_dependency
+    raise ImportError(msg)
+ImportError: Pandas requires version '0.9.0' or newer of 'tabulate' (version '0.8.10' currently installed).
+
+COMPLETED: report rendering repaired using native markdown serialization; all diagnostic checks passed.

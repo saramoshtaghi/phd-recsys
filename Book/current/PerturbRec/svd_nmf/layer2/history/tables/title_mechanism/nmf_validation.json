@@ -1,0 +1,15 @@
+{
+  "model": "nmf",
+  "original_top20_exactly_matched": true,
+  "original_count_control_exact_match": true,
+  "relative_score_decomposition_max_error": 5.329070518200751e-15,
+  "artifacts": {
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz": "c933ff003da13d60e91af99280ebaa61e2583c69ce8b777d674bb6245bb8993a",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_500.npz": "31b009a4ccb14e26d29668277288e37bfe6095c69882e411098b381bd14a63df"
+  },
+  "n_real_users": 53424,
+  "n_books": 9415,
+  "n_original_rating_rows": 5815569,
+  "n_injected_rating_rows_protocol": 4707500,
+  "injected_to_original_rating_rows_percent": 80.94650755583848
+}
