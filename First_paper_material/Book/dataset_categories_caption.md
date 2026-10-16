@@ -1,1 +1,1 @@
-Item distributions across (a) book genres, (b) movie release decades, and (c) mobile application domains. The original 48-category mobile taxonomy is summarized using nine broader domains.
+Dataset characteristics: (a) user and item counts, (b) rating distributions, and item counts by (c) book genre, (d) movie release decade, and (e) mobile application domain. The original 48 mobile categories are summarized into nine domains. Books may have multiple genre labels; the category panels cover 1,681 movies with known decades and 9,751 apps with mapped domains.
