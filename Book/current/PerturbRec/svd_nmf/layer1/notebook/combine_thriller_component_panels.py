@@ -51,5 +51,5 @@ handles=[Line2D([0],[0],color=BLUE,lw=3,marker='o',label='Interaction / embeddin
 fig.legend(handles=handles,loc='lower center',bbox_to_anchor=(.51,.105),ncol=4,frameon=False,fontsize=12,columnspacing=1.4)
 fig.text(.045,.067,r'Rating fit: bias offset = $\mu+b_u+b_i$. Columns 3–4 show changes from baseline for real users.',fontsize=11.5,color='#50657A')
 fig.text(.045,.025,'Component swaps describe fitted-score contributions; they do not establish a causal training mechanism.',fontsize=11.5,color='#50657A')
-path=ROOT/'result/final_results/Thriller_NMF_SVD_components_powerpoint.png'
+path=ROOT.parent/'layer2/final_results/Thriller_NMF_SVD_components_powerpoint.png'
 fig.savefig(path,dpi=240,facecolor='white');plt.close(fig);print('SAVED',path)

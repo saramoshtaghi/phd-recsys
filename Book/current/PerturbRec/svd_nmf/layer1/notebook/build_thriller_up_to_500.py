@@ -25,7 +25,8 @@ def style(ax):
  ax.set_xlabel('Number of injected users',fontsize=15,color=NAVY,labelpad=12)
 
 def save(fig,name):
- OUT.mkdir(parents=True,exist_ok=True);p=OUT/name
+ folder=ROOT.parent/'layer2/final_results' if '_bi_only_' in name else OUT
+ folder.mkdir(parents=True,exist_ok=True);p=folder/name
  fig.savefig(p,dpi=240,facecolor='white');plt.close(fig);print('SAVED',p,flush=True)
 
 def bars():
