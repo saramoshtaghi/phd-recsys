@@ -1,0 +1,106 @@
+{
+  "status": "complete",
+  "model": "svd",
+  "injected_genre": "Thriller",
+  "doses": [
+    0,
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500
+  ],
+  "n_real_users": 53424,
+  "neighbor_k": 20,
+  "recommendation_k": 15,
+  "neighbor_selection": "exact cosine in original saved user-factor space; self and synthetic users excluded; smaller raw user ID breaks ties",
+  "turnover_reference": "baseline identities at every dose, not previous injection level",
+  "bottom_metric": "mean over real egos of mean over their current 20 real neighbors of 100*genre count in own Top15/15",
+  "history_and_real_ids_unchanged": true,
+  "recommendations": "previously rated books excluded; raw pu@qi.T+bi; ties by raw book ID; first 15 of saved exact ordered Top20 validated",
+  "genre_counting": "inclusive multi-label; genre percentages need not sum to 100",
+  "no_observed_human_taste_change_claim": true,
+  "top_panel_baseline_annotation": null,
+  "top_panel": "retained and replaced percentages from 20 identities; fixed baseline reference; stacked total100",
+  "heatmap_color": "original teal-white-orange palette; change vs preceding dose; saturates at +/-5 percentage points; printed values are absolute Top15 genre shares",
+  "in_figure_caption_removed": true,
+  "no_retraining": true,
+  "checks": [
+    {
+      "n_fake": 0,
+      "turnover_percent": 0.0,
+      "mean_replaced_neighbors": 0.0,
+      "knn_boundary_ties": 0,
+      "top15_exact_ranking_sample_checks": 20,
+      "top20_source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/baseline_top20.npz"
+    },
+    {
+      "n_fake": 2,
+      "turnover_percent": 44.69311545372866,
+      "mean_replaced_neighbors": 8.938623090745732,
+      "knn_boundary_ties": 0,
+      "top15_exact_ranking_sample_checks": 20,
+      "top20_source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_2_top20.npz"
+    },
+    {
+      "n_fake": 4,
+      "turnover_percent": 79.25997678945792,
+      "mean_replaced_neighbors": 15.851995357891585,
+      "knn_boundary_ties": 0,
+      "top15_exact_ranking_sample_checks": 20,
+      "top20_source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_4_top20.npz"
+    },
+    {
+      "n_fake": 6,
+      "turnover_percent": 82.63898247978436,
+      "mean_replaced_neighbors": 16.52779649595687,
+      "knn_boundary_ties": 0,
+      "top15_exact_ranking_sample_checks": 20,
+      "top20_source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_6_top20.npz"
+    },
+    {
+      "n_fake": 25,
+      "turnover_percent": 88.04123614854747,
+      "mean_replaced_neighbors": 17.608247229709495,
+      "knn_boundary_ties": 0,
+      "top15_exact_ranking_sample_checks": 20,
+      "top20_source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_25_top20.npz"
+    },
+    {
+      "n_fake": 50,
+      "turnover_percent": 88.02897574123989,
+      "mean_replaced_neighbors": 17.605795148247978,
+      "knn_boundary_ties": 0,
+      "top15_exact_ranking_sample_checks": 20,
+      "top20_source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_50_top20.npz"
+    },
+    {
+      "n_fake": 100,
+      "turnover_percent": 89.94702755315963,
+      "mean_replaced_neighbors": 17.989405510631926,
+      "knn_boundary_ties": 0,
+      "top15_exact_ranking_sample_checks": 20,
+      "top20_source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_100_top20.npz"
+    },
+    {
+      "n_fake": 200,
+      "turnover_percent": 91.99208221024259,
+      "mean_replaced_neighbors": 18.398416442048518,
+      "knn_boundary_ties": 0,
+      "top15_exact_ranking_sample_checks": 20,
+      "top20_source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_200_top20.npz"
+    },
+    {
+      "n_fake": 500,
+      "turnover_percent": 94.32324423480084,
+      "mean_replaced_neighbors": 18.86464884696017,
+      "knn_boundary_ties": 0,
+      "top15_exact_ranking_sample_checks": 20,
+      "top20_source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_500_top20.npz"
+    }
+  ],
+  "output": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/SVD/Thriller/neighborhood_recommendation_change_heatmap_up_to_500.png"
+}

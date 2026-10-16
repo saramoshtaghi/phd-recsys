@@ -1,0 +1,10 @@
+n_fake,turnover_percent,mean_replaced_neighbors,knn_boundary_ties,top15_exact_ranking_sample_checks,top20_source
+0,0.0,0.0,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/baseline_top20.npz
+2,44.69311545372866,8.938623090745732,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_2_top20.npz
+4,79.25997678945792,15.851995357891585,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_4_top20.npz
+6,82.63898247978436,16.52779649595687,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_6_top20.npz
+25,88.04123614854747,17.608247229709495,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_25_top20.npz
+50,88.02897574123989,17.605795148247978,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_50_top20.npz
+100,89.94702755315963,17.989405510631926,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_100_top20.npz
+200,91.99208221024259,18.398416442048518,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_200_top20.npz
+500,94.32324423480084,18.86464884696017,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/svd/thriller_500_top20.npz

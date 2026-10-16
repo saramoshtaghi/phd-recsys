@@ -2,7 +2,7 @@
 import os
 for k in ['OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS']:os.environ[k]='1'
 from pathlib import Path
-import sys,json,time,hashlib
+import sys,json,time,hashlib,argparse
 import numpy as np,pandas as pd
 import matplotlib
 matplotlib.use('Agg')
@@ -13,10 +13,11 @@ from scipy.sparse import csr_matrix
 ROOT=Path('/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2')
 sys.path.insert(0,str(ROOT/'materials/notebook'))
 from embedding_utils import neighbors,real_rows,parse_genres
-MODEL='nmf';TARGET='Thriller';DOSES=[0,2,4,6,25,50,100,200,500]
-OUT=ROOT/'final_results/NMF/Thriller';DATA=ROOT/'materials/tables/neighborhood_top15/nmf/Thriller';DATA.mkdir(parents=True,exist_ok=True)
+ap=argparse.ArgumentParser();ap.add_argument('--model',choices=['nmf','svd'],default='nmf');ap.add_argument('--genre',choices=['Drama','Thriller'],default='Thriller');args=ap.parse_args()
+MODEL=args.model;TARGET=args.genre;DOSES=[0,2,4,6,25,50,100,200,500]
+OUT=ROOT/'final_results'/MODEL.upper()/TARGET;DATA=ROOT/'materials/tables/neighborhood_top15'/MODEL/TARGET;DATA.mkdir(parents=True,exist_ok=True);OUT.mkdir(parents=True,exist_ok=True)
 SRC=Path('/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv')
-base=np.load(ROOT/'embeddings/pilot/nmf_baseline_a.npz');uorder=np.argsort(base['ids']);iorder=np.argsort(base['items']);ids=base['ids'][uorder];items=base['items'][iorder]
+base=np.load(ROOT/'embeddings/pilot'/f'{MODEL}_baseline_a.npz');uorder=np.argsort(base['ids']);iorder=np.argsort(base['items']);ids=base['ids'][uorder];items=base['items'][iorder]
 df=pd.read_csv(SRC,usecols=['user_id','book_id','genres']);ur=np.searchsorted(ids,df.user_id.to_numpy());ir=np.searchsorted(items,df.book_id.to_numpy());assert np.array_equal(ids[ur],df.user_id) and np.array_equal(items[ir],df.book_id)
 seen=csr_matrix((np.ones(len(df),bool),(ur,ir)),shape=(len(ids),len(items)))
 booklabels={int(i):[g for g in parse_genres(v) if g.lower()!='unknown'] for i,v in df[['book_id','genres']].drop_duplicates('book_id').itertuples(index=False,name=None)}
@@ -36,7 +37,7 @@ for n in DOSES:
  if n==0:baseline_nn=nn.copy()
  retained=(nn[:,:,None]==baseline_nn[:,None,:]).any(axis=2);turnover=100*(~retained).mean();turnovers.append(turnover)
  assert np.isclose(turnover,old.loc[n,'neighbor_turnover_percent'],atol=1e-8),(n,turnover,old.loc[n,'neighbor_turnover_percent'])
- path=ROOT/'history/data/nmf'/('baseline_top20.npz' if n==0 else f'thriller_{n}_top20.npz');cache=np.load(path);assert np.array_equal(cache['ids'],ids) and np.array_equal(cache['items'],items);top=cache['top'][:,:15]
+ path=ROOT/'history/data'/MODEL/('baseline_top20.npz' if n==0 else f'{TARGET.lower()}_{n}_top20.npz');cache=np.load(path);assert np.array_equal(cache['ids'],ids) and np.array_equal(cache['items'],items);top=cache['top'][:,:15]
  assert top.shape==(len(ids),15)
  # Confirm saved ordered Top-20 prefix is the exact Top-15 score ranking for fixed users.
  sample=np.random.default_rng(42).choice(len(ids),20,replace=False);mask=seen[sample].toarray();scores=pu[sample]@qi.T+bi;scores[mask]=-np.inf;expected=np.argsort(-scores,axis=1,kind='stable')[:,:15];assert np.array_equal(top[sample],expected)
@@ -50,7 +51,7 @@ for n in DOSES:
  direct=(counts[nn[sample]].astype(float)/15*100).mean(axis=(0,1));weighted=np.bincount(nn[sample].ravel(),minlength=len(ids))@counts.astype(float)/(len(sample)*20*15)*100;assert np.allclose(direct,weighted)
  for g,v in zip(genres,shares):result.append(dict(model=MODEL,injected_genre=TARGET,n_fake=n,genre=g,n_egos=len(ids),n_neighbors=20,recommendation_k=15,mean_genre_share_percent=float(v)))
  checks.append(dict(n_fake=n,turnover_percent=float(turnover),mean_replaced_neighbors=float(turnover/5),knn_boundary_ties=ties,top15_exact_ranking_sample_checks=len(sample),top20_source=str(path)))
- print('DONE',n,'turnover',round(turnover,5),'Thriller',round(shares[0],5),flush=True)
+ print('DONE',n,'turnover',round(turnover,5),TARGET,round(shares[0],5),flush=True)
 table=pd.DataFrame(result);table.to_csv(DATA/'genre_shares_top15.csv',index=False);pd.DataFrame(checks).to_csv(DATA/'neighbor_turnover.csv',index=False)
 values=table.pivot(index='genre',columns='n_fake',values='mean_genre_share_percent').loc[genres,DOSES]
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':12,'axes.spines.top':False,'axes.spines.right':False,'figure.facecolor':'white','savefig.facecolor':'white'})
@@ -72,7 +73,7 @@ for i in range(len(genres)):
   v=values.iloc[i,j];hm.text(j,i,f'{v:.1f}%',ha='center',va='center',fontsize=12 if i==0 else 11,fontweight='bold' if i==0 else 'normal',color='#163342')
 hm.set_xticks(np.arange(-.5,len(DOSES),1),minor=True);hm.set_yticks(np.arange(-.5,len(genres),1),minor=True);hm.grid(which='minor',color='white',lw=1.3);hm.tick_params(which='minor',bottom=False,left=False);hm.add_patch(Rectangle((-.5,-.5),len(DOSES),1,fill=False,edgecolor='#172B3A',linewidth=2.2,clip_on=False))
 # Dedicated colorbar axis preserves identical column positions in both panels.
-fig.subplots_adjust(left=.12,right=.925,top=.89,bottom=.075);pos=hm.get_position();cax=fig.add_axes([.94,pos.y0,.012,pos.height]);fig.colorbar(im,cax=cax,label='Change from previous level (percentage points)',extend='both');fig.suptitle('NMF | Real-user neighborhoods',x=.12,ha='left',fontsize=23,fontweight='bold',y=.975)
+fig.subplots_adjust(left=.12,right=.925,top=.89,bottom=.075);pos=hm.get_position();cax=fig.add_axes([.94,pos.y0,.012,pos.height]);fig.colorbar(im,cax=cax,label='Change from previous level (percentage points)',extend='both');fig.suptitle(f'{MODEL.upper()} | Real-user neighborhoods',x=.12,ha='left',fontsize=23,fontweight='bold',y=.975)
 out=OUT/'neighborhood_recommendation_change_heatmap_up_to_500.png';fig.savefig(out,dpi=200);fig.savefig(DATA/'preview.png',dpi=100);plt.close(fig)
 report={'status':'complete','model':MODEL,'injected_genre':TARGET,'doses':DOSES,'n_real_users':len(ids),'neighbor_k':20,'recommendation_k':15,'neighbor_selection':'exact cosine in original saved user-factor space; self and synthetic users excluded; smaller raw user ID breaks ties','turnover_reference':'baseline identities at every dose, not previous injection level','bottom_metric':'mean over real egos of mean over their current 20 real neighbors of 100*genre count in own Top15/15','history_and_real_ids_unchanged':True,'recommendations':'previously rated books excluded; raw pu@qi.T+bi; ties by raw book ID; first 15 of saved exact ordered Top20 validated','genre_counting':'inclusive multi-label; genre percentages need not sum to 100','no_observed_human_taste_change_claim':True,'top_panel_baseline_annotation':None,'top_panel':'retained and replaced percentages from 20 identities; fixed baseline reference; stacked total100','heatmap_color':'original teal-white-orange palette; change vs preceding dose; saturates at +/-5 percentage points; printed values are absolute Top15 genre shares','in_figure_caption_removed':True,'no_retraining':True,'checks':checks,'output':str(out)}
 (DATA/'validation.json').write_text(json.dumps(report,indent=2));print('SAVED',out,flush=True)

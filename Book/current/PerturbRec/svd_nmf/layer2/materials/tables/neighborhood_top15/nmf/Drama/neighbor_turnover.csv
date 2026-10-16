@@ -1,0 +1,10 @@
+n_fake,turnover_percent,mean_replaced_neighbors,knn_boundary_ties,top15_exact_ranking_sample_checks,top20_source
+0,0.0,0.0,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/nmf/baseline_top20.npz
+2,8.306472746331236,1.6612945492662472,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/nmf/drama_2_top20.npz
+4,13.996237646001797,2.7992475292003594,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/nmf/drama_4_top20.npz
+6,19.703036088649295,3.940607217729859,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/nmf/drama_6_top20.npz
+25,53.78874663072776,10.757749326145552,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/nmf/drama_25_top20.npz
+50,73.93493560946392,14.786987121892784,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/nmf/drama_50_top20.npz
+100,88.93849206349206,17.78769841269841,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/nmf/drama_100_top20.npz
+200,95.77455825097334,19.15491165019467,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/nmf/drama_200_top20.npz
+500,99.05735250074873,19.811470500149746,0,20,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/history/data/nmf/drama_500_top20.npz
