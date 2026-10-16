@@ -1,0 +1,47 @@
+{
+  "Books": {
+    "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+    "source_size_bytes": 474765722,
+    "users": 53424,
+    "items": 9415,
+    "observed_ratings": 5815569,
+    "global_mean": 3.9181110223264484,
+    "rating_counts": {
+      "1": 120964,
+      "2": 350205,
+      "3": 1336839,
+      "4": 2083651,
+      "5": 1923910
+    }
+  },
+  "Movies": {
+    "source": "/home/moshtasa/Research/phd-recsys/Movie /archive/preprocessing/df_final.csv",
+    "source_size_bytes": 1679149,
+    "users": 943,
+    "items": 1682,
+    "observed_ratings": 100000,
+    "global_mean": 3.52986,
+    "rating_counts": {
+      "1": 6110,
+      "2": 11370,
+      "3": 27145,
+      "4": 34174,
+      "5": 21201
+    }
+  },
+  "Mobile apps": {
+    "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0316_Single/data/data/mobilerec_final.csv",
+    "source_size_bytes": 4416654250,
+    "users": 700111,
+    "items": 10173,
+    "observed_ratings": 19297019,
+    "global_mean": 3.280593080205808,
+    "rating_counts": {
+      "1": 4068183,
+      "2": 2441008,
+      "3": 2919802,
+      "4": 3744068,
+      "5": 6123958
+    }
+  }
+}

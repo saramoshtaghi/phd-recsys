@@ -1,0 +1,303 @@
+{
+  "no_retraining": true,
+  "source_files": [
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/bi/ORIGINAL_bi_per_genre.csv",
+      "sha256": "e97a14ec68ea79cdc6c3a20ac6f68e35c2e9b07a12275dda5e8c362e02b84231"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/mio/ORIGINAL_mu_per_genre.csv",
+      "sha256": "e6bd3ed5a72779b6fd55a2fa92e20b7f6fdd99ec2bac0206c8fdb9b24fde1412"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/bi/f_Thriller_2u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "088ab00558ac4bfd784313687a6d6240982562a5fa8944a80b5580033418d5bc"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/mio/f_Thriller_2u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "7de7821f9ffa4d52dc87e90d0a3313c7e4694d1236ed2f2709dd186cebf53f11"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/bi/f_Thriller_4u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "9b780a57aed9427d55fe971eac38f0d45180464dfe67af041c78daf9fbbcaa74"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/mio/f_Thriller_4u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "25fa6900908f4fe75346cd2fdec4971474463daef4ac2e566dc8d8bcdb25e6ee"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/bi/f_Thriller_6u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "38fe0b03805c8527da944e038da8b94d047a3b58e15ede23993044d6eed898f0"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/mio/f_Thriller_6u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "7180934eda22d5f06fa88b7de5da634078c5bbcff0c7126b8f8528e2e5a92165"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/bi/f_Thriller_25u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "70411306d94e17b26ffbf2c413bc2a562ad185a8e3afd09fb70bb6e9604e3add"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/mio/f_Thriller_25u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "7c7bef2300f8d0385bec1dba60b8c987b935713396874dfbc87cc81834fd64d9"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/bi/f_Thriller_50u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "9ffe5c57619e40b8fd0f45d3d58c78144985d365a0dc979d19b554f5ef7ef98e"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/mio/f_Thriller_50u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "0908142a45f1463be5d744b5d5fcd4f377969800a395e6d1b4e38a3283692fb2"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/bi/f_Thriller_100u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "c79193fc49ac9362a8c962985b2597a10450213b268a1b7c24fd7eda31de31d7"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/mio/f_Thriller_100u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "0bf3cf3efc6544da89f5609e8807c9f4ac2051f16a601ee635dbf7bc1e385d80"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/bi/f_Thriller_200u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "23b6390debceacbb9b7b200f662a22355b9a2344958a1291f8b4a05425a8106d"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/mio/f_Thriller_200u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "355a8c23b4a9ebb07b438b238994345bad76b1f3d3893869757ab017aaffddbe"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/bi/f_Thriller_500u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "a8e8dcad974d43b8bfd807f205a6cd98e01891c6878f83c422efdfc687eaf4c5"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/mio/f_Thriller_500u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "70a1e9b5183356e0a3b02903601c9ff2edfe99dc53783f03f692ebf39ee057a7"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/bi/ORIGINAL_bi_per_genre.csv",
+      "sha256": "478744146331f328cae00b58ab7680b13505a4c97ba29010cdef0fe5a475fb2b"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/mio/ORIGINAL_mu_per_genre.csv",
+      "sha256": "e6bd3ed5a72779b6fd55a2fa92e20b7f6fdd99ec2bac0206c8fdb9b24fde1412"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/bi/f_Thriller_2u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "2f4664720f08e7c96e44f4de047a06645239f59d3d65e9108e79b3b68c1a99ba"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/mio/f_Thriller_2u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "7de7821f9ffa4d52dc87e90d0a3313c7e4694d1236ed2f2709dd186cebf53f11"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/bi/f_Thriller_4u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "bb2ddffd699d11eaabc51610c94e26a5e11ac6b9792ee414ec628822b75792e9"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/mio/f_Thriller_4u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "25fa6900908f4fe75346cd2fdec4971474463daef4ac2e566dc8d8bcdb25e6ee"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/bi/f_Thriller_6u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "714a2d93d17939896db666c19514d52837dc7b3e30653e2f9e917b0f76d3b534"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/mio/f_Thriller_6u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "7180934eda22d5f06fa88b7de5da634078c5bbcff0c7126b8f8528e2e5a92165"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/bi/f_Thriller_25u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "04a606b3cc0bebccf0ae7b0066ea6cb9b5c5923b43b134eca965bef2fcbb65f5"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/mio/f_Thriller_25u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "7c7bef2300f8d0385bec1dba60b8c987b935713396874dfbc87cc81834fd64d9"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/bi/f_Thriller_50u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "1a474e22471224c4f4de52703d5b9a56096ab8ae0e3803ce9efd6ca0bebb52ea"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/mio/f_Thriller_50u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "0908142a45f1463be5d744b5d5fcd4f377969800a395e6d1b4e38a3283692fb2"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/bi/f_Thriller_100u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "f4a51ccfc8ff7a4d2d878c98c9ece7f330cb8fd9e62647cf312b7e221cd70ff0"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/mio/f_Thriller_100u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "0bf3cf3efc6544da89f5609e8807c9f4ac2051f16a601ee635dbf7bc1e385d80"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/bi/f_Thriller_200u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "5fa73d10d01e02c5e9665232c1e46bebd5be0ea0b61925beea231ac3ba24baec"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/mio/f_Thriller_200u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "355a8c23b4a9ebb07b438b238994345bad76b1f3d3893869757ab017aaffddbe"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/bi/f_Thriller_500u_pos5_neg1_books_bi_per_genre.csv",
+      "sha256": "a2fd3359c7ed9abd603f51cfb8aaa7f6d5a83a43197ac62f7b7eea039de6ba69"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/mio/f_Thriller_500u_pos5_neg1_books_mu_per_genre.csv",
+      "sha256": "70a1e9b5183356e0a3b02903601c9ff2edfe99dc53783f03f692ebf39ee057a7"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/bi/ORIGINAL_bi_per_category.csv",
+      "sha256": "2a1f4f0645ea07efc1c599facbd97aa3c346806a2224fc80594a3b3e17909bc3"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/mio/ORIGINAL_mu_per_category.csv",
+      "sha256": "a4b9ceab080e38b419cbdfa651bcd8b8aec5755ddf1fd464944b0331a29e702b"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/bi/f_Shopping_30u_pos5_neg1_allapps_bi_per_category.csv",
+      "sha256": "efbc549664228bff94f06037ab6b1992451b8e032dd60f460f639840f78d1a4d"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/mio/f_Shopping_30u_pos5_neg1_allapps_mu_per_category.csv",
+      "sha256": "f97f1aa3a2e580cd1e414b232a8ec2ddd42c16638461aa331e3f90163cbf0552"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/bi/f_Shopping_60u_pos5_neg1_allapps_bi_per_category.csv",
+      "sha256": "ca297ecff40a08521f3457bbd97e728205ca811f44288671f11f2b066510880b"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/mio/f_Shopping_60u_pos5_neg1_allapps_mu_per_category.csv",
+      "sha256": "075ed9fd2346d995370d3b1798cd8a3491a36107fb7f57773ae0ba974efbe3fc"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/bi/f_Shopping_300u_pos5_neg1_allapps_bi_per_category.csv",
+      "sha256": "dddb6673ddb01f6c755f1e9f4f08cb9adc34f395c36b7ba3070fb09caf01e11d"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/mio/f_Shopping_300u_pos5_neg1_allapps_mu_per_category.csv",
+      "sha256": "d9bfbe8a7907a6b5f54a82985dd8fe184b862e2651eba07b2630eb0da71ed49c"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/bi/ORIGINAL_bi_per_category.csv",
+      "sha256": "f26bba0d35283ec73f35d10528ef3c9aba152c477a4343ff10426413e5cdc96a"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/mio/ORIGINAL_mu_per_category.csv",
+      "sha256": "a4b9ceab080e38b419cbdfa651bcd8b8aec5755ddf1fd464944b0331a29e702b"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/bi/f_Shopping_30u_pos5_neg1_allapps_bi_per_category.csv",
+      "sha256": "d28cb943bb704425c0591140d43bc1a42f04b24b80ce2bc3709b23001e0209c5"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/mio/f_Shopping_30u_pos5_neg1_allapps_mu_per_category.csv",
+      "sha256": "f97f1aa3a2e580cd1e414b232a8ec2ddd42c16638461aa331e3f90163cbf0552"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/bi/f_Shopping_60u_pos5_neg1_allapps_bi_per_category.csv",
+      "sha256": "4a68ee7688fb7e6774884c7e5026742b983431bd0b458eb3040b73c243b28a8e"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/mio/f_Shopping_60u_pos5_neg1_allapps_mu_per_category.csv",
+      "sha256": "075ed9fd2346d995370d3b1798cd8a3491a36107fb7f57773ae0ba974efbe3fc"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/bi/f_Shopping_300u_pos5_neg1_allapps_bi_per_category.csv",
+      "sha256": "08b5c67c579ef18b14c98a3eb0be276cccb7057f2b174eb0c63522bab8d30dca"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/mio/f_Shopping_300u_pos5_neg1_allapps_mu_per_category.csv",
+      "sha256": "d9bfbe8a7907a6b5f54a82985dd8fe184b862e2651eba07b2630eb0da71ed49c"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/bi/ORIGINAL_bi_per_decade.csv",
+      "sha256": "07bb6c728a6a4a170f072ec3411a2be0afb00228af13b0e364a0853da70893a0"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/mio/ORIGINAL_mu_per_decade.csv",
+      "sha256": "49d401db4f314c987af67faf14579da587b47c2eff0719dd1844629bc6bbd18b"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/bi/f_1990_2u_pos5_neg1_movies_bi_per_decade.csv",
+      "sha256": "4ef952a080e7a1e65e11a8440606c00d5c9bdddefe7215f7dd76e850075906fd"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/mio/f_1990_2u_pos5_neg1_movies_mu_per_decade.csv",
+      "sha256": "6fcc93e2345f162ecfef2885f5cc4ed0e522e5d864bb9b076f17e6a309719d76"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/bi/f_1990_6u_pos5_neg1_movies_bi_per_decade.csv",
+      "sha256": "eb55ee305e394ec507be1b1206779c312f426c79aec82e1a6190fd77dc9a0c45"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/mio/f_1990_6u_pos5_neg1_movies_mu_per_decade.csv",
+      "sha256": "90c61b73256a6fee9bf6e682cd08a09f0033ba1b5797af0053941e1a51082966"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/bi/f_1990_10u_pos5_neg1_movies_bi_per_decade.csv",
+      "sha256": "ffdaedf772fe1c25c20988d02764bff0f06630751171341815f319c53580c7c1"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/mio/f_1990_10u_pos5_neg1_movies_mu_per_decade.csv",
+      "sha256": "2fd86634c9881f8886fd1038c83d1555f6af2e477cefefc1b5c9a1498f6004f9"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/bi/f_1990_50u_pos5_neg1_movies_bi_per_decade.csv",
+      "sha256": "ccce3f85fd5db32237125d3e847908d86f9c84dbbcc7a83d9aaf6cbce55af2ac"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/mio/f_1990_50u_pos5_neg1_movies_mu_per_decade.csv",
+      "sha256": "eb96effc91f0d3f0c08f72b5636b13022270c87c549aa02851ee8209bd44d728"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/bi/ORIGINAL_bi_per_decade.csv",
+      "sha256": "2499f355060b89329fc37ebd3776170fb7861b3bb573fed627f64517ac304fe7"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/mio/ORIGINAL_mu_per_decade.csv",
+      "sha256": "49d401db4f314c987af67faf14579da587b47c2eff0719dd1844629bc6bbd18b"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/bi/f_1990_2u_pos5_neg1_movies_bi_per_decade.csv",
+      "sha256": "2cc08316e0246d514f34f8ef9894812ff9f59edb7bbee31f2a64735658bfb65a"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/mio/f_1990_2u_pos5_neg1_movies_mu_per_decade.csv",
+      "sha256": "6fcc93e2345f162ecfef2885f5cc4ed0e522e5d864bb9b076f17e6a309719d76"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/bi/f_1990_6u_pos5_neg1_movies_bi_per_decade.csv",
+      "sha256": "35bf9d31fe3b2dfa4d9cd3a8589a4a61dfa052f24aab95313f92e9834b4bd9c7"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/mio/f_1990_6u_pos5_neg1_movies_mu_per_decade.csv",
+      "sha256": "90c61b73256a6fee9bf6e682cd08a09f0033ba1b5797af0053941e1a51082966"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/bi/f_1990_10u_pos5_neg1_movies_bi_per_decade.csv",
+      "sha256": "d60c9bddf6fc5895c0da62ebf71182cc4e28cd929074b435d1b4c7d1de63fbf5"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/mio/f_1990_10u_pos5_neg1_movies_mu_per_decade.csv",
+      "sha256": "2fd86634c9881f8886fd1038c83d1555f6af2e477cefefc1b5c9a1498f6004f9"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/bi/f_1990_50u_pos5_neg1_movies_bi_per_decade.csv",
+      "sha256": "8e58a4ea803946e0c26941a7b534f08960a3fa6d2033dba2f5907f5a01b5655e"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/mio/f_1990_50u_pos5_neg1_movies_mu_per_decade.csv",
+      "sha256": "eb96effc91f0d3f0c08f72b5636b13022270c87c549aa02851ee8209bd44d728"
+    }
+  ],
+  "dose_limits": {
+    "Books": 500,
+    "Mobile apps": 300,
+    "Movies": 50
+  },
+  "global_mean_matches_between_models": true,
+  "category_item_bias_means_used_without_reweighting": true,
+  "unknown_categories_excluded_from_category_curves": true,
+  "original_mobile_categories_used_in_parameter_curves": true,
+  "rows": 698
+}
