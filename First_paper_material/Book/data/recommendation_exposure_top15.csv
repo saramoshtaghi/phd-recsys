@@ -1,0 +1,41 @@
+dataset,target,model,k,n_fake,n_real_users,mean_target_count,source,source_precision
+Books,Thriller,NMF,15,0,53424,1.7298592392932015,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,NMF,15,2,53424,1.7415955375861036,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,NMF,15,4,53424,1.7370657382449834,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,NMF,15,6,53424,1.7431117100928422,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,NMF,15,25,53424,2.3804844264749927,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,NMF,15,50,53424,3.725029949086553,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,NMF,15,100,53424,7.023903114705002,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,NMF,15,200,53424,10.422132374962564,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,NMF,15,500,53424,10.839248277927522,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,SVD,15,0,53424,1.5765573525007488,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,SVD,15,2,53424,1.5657943995208146,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,SVD,15,4,53424,1.8326033243486075,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,SVD,15,6,53424,2.4357779275232105,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,SVD,15,25,53424,2.4736822401916743,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,SVD,15,50,53424,2.469919886193471,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,SVD,15,100,53424,2.350235849056604,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,SVD,15,200,53424,2.307651991614256,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Books,Thriller,SVD,15,500,53424,2.279556004791854,/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv,full CSV precision
+Mobile apps,Shopping,NMF,15,0,700111,0.1902,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,NMF,15,30,700111,0.133,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,NMF,15,60,700111,0.1998,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,NMF,15,300,700111,0.9002,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,NMF,15,500,700111,0.0298,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,NMF,15,2000,700111,8.0515,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,SVD,15,0,700111,0.3262,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,SVD,15,30,700111,0.629,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,SVD,15,60,700111,1.2369,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,SVD,15,300,700111,3.5656,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,SVD,15,500,700111,3.9056,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt,four decimals in original analysis output
+Mobile apps,Shopping,SVD,15,2000,700111,2.7032,/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt,four decimals in original analysis output
+Movies,1990s,NMF,15,0,943,11.4836,/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt,four decimals in original analysis output
+Movies,1990s,NMF,15,2,943,12.1755,/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt,four decimals in original analysis output
+Movies,1990s,NMF,15,6,943,13.018,/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt,four decimals in original analysis output
+Movies,1990s,NMF,15,10,943,13.2121,/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt,four decimals in original analysis output
+Movies,1990s,NMF,15,50,943,15.0,/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt,four decimals in original analysis output
+Movies,1990s,SVD,15,0,943,9.983,/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt,four decimals in original analysis output
+Movies,1990s,SVD,15,2,943,10.0297,/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt,four decimals in original analysis output
+Movies,1990s,SVD,15,6,943,10.5302,/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt,four decimals in original analysis output
+Movies,1990s,SVD,15,10,943,10.9925,/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt,four decimals in original analysis output
+Movies,1990s,SVD,15,50,943,13.3415,/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt,four decimals in original analysis output

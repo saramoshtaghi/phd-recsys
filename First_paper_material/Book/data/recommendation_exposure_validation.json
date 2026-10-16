@@ -1,0 +1,54 @@
+{
+  "rows": 40,
+  "k": 15,
+  "no_retraining": true,
+  "book_matches_two_controlled_CSVs": true,
+  "dose_limits": {
+    "Books": 500,
+    "Mobile apps": 2000,
+    "Movies": 50
+  },
+  "sources": [
+    {
+      "dataset": "Books",
+      "model": "NMF",
+      "file": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+      "sha256": "f37b8d214b60d19078f3be83dc4d8bf79033df841867a73b98018ef07b37c056"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "file": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+      "sha256": "f37b8d214b60d19078f3be83dc4d8bf79033df841867a73b98018ef07b37c056"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "NMF",
+      "file": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt",
+      "sha256": "22b5f60ba66e2e78c2aed3a03716d9e3edb5795d1a3b429d18839014fb9fd88a"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "SVD",
+      "file": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt",
+      "sha256": "5629b4acfee077797a2e6fdbd57de1677ae43cb5937266b678bc5b3eb78583a4"
+    },
+    {
+      "dataset": "Movies",
+      "model": "NMF",
+      "file": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt",
+      "sha256": "ea0e511f7e9d788910b671a768e423ef4d3da873a788bfad9bc4f09603aff7db"
+    },
+    {
+      "dataset": "Movies",
+      "model": "SVD",
+      "file": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt",
+      "sha256": "e45b45133535d5e52399d0718263e7a2da0581b02fda2d8810cf442ca1733160"
+    }
+  ],
+  "source_numeric_values_unchanged": true,
+  "combined_layout": "2 model rows x 3 dataset columns",
+  "all_y_axes_shared": true,
+  "png_dpi": 600,
+  "source_precision_note": "Mobile and movie means are faithfully reproduced at the four-decimal precision saved by their original analysis scripts."
+}

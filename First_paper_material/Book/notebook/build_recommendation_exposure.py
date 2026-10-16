@@ -40,11 +40,11 @@ df=pd.DataFrame(records);assert len(df)==40;assert not df.duplicated(['dataset',
 df.to_csv(DATA/'recommendation_exposure_top15.csv',index=False)
 NAVY='#172B3A';MUTED='#4E5B65';COLORS={'NMF':'#0072B2','SVD':'#009E73'}
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8,'axes.titlesize':9,'axes.titleweight':'bold','axes.labelsize':8,'xtick.labelsize':7,'ytick.labelsize':7,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.linewidth':.5,'savefig.facecolor':'white','figure.facecolor':'white'})
-def panel(ax,d,model,annotate=True):
+def panel(ax,d,model,annotate=True,compact=False):
  d=d.sort_values('n_fake');x=np.arange(len(d));v=d.mean_target_count.to_numpy()
  ax.bar(x,v,width=.76,color=COLORS[model],linewidth=.4,edgecolor='white',zorder=3)
  if annotate:
-  for xx,yy in zip(x,v):ax.text(xx,yy+.23,f'{yy:.2f}',ha='center',va='bottom',fontsize=6.7,color=NAVY)
+  for xx,yy in zip(x,v):ax.text(xx,yy+.23+(.65 if len(v)>8 and yy>=10 and xx%2==0 else 0),(f'{yy:.2f}' if not compact or yy<1 else f'{yy:.1f}'),ha='center',va='bottom',fontsize=6.7,color=NAVY)
  ax.set_ylim(0,16.8);ax.yaxis.set_major_locator(MultipleLocator(3));ax.set_xticks(x,['Base']+[str(n) for n in d.n_fake.iloc[1:]],rotation=45,ha='right');ax.tick_params(axis='both',length=0,pad=3,colors=MUTED)
  ax.grid(axis='y',color='#DFE5E9',linewidth=.45,zorder=0);ax.set_axisbelow(True);ax.spines['bottom'].set_color('#AEBAC2')
  ax.text(.03,.93,model,transform=ax.transAxes,ha='left',fontsize=8,fontweight='bold',color=COLORS[model])
@@ -52,7 +52,7 @@ def panel(ax,d,model,annotate=True):
 fig,axs=plt.subplots(2,3,figsize=(7.1,4.2),sharey=True)
 for ci,(dataset,target,limit,N,name) in enumerate(configs):
  for ri,model in enumerate(['NMF','SVD']):
-  panel(axs[ri,ci],df[(df.dataset==dataset)&(df.model==model)],model)
+  panel(axs[ri,ci],df[(df.dataset==dataset)&(df.model==model)],model,compact=True)
   if ri==0:axs[ri,ci].set_title(f'({chr(97+ci)}) {dataset}: {target}',loc='left',pad=11,color=NAVY)
   if ri==1:axs[ri,ci].set_xlabel('Injected users',labelpad=4,color=MUTED)
 fig.supylabel('Mean target items in Top-15',x=.014,fontsize=9,color=NAVY)
