@@ -18,9 +18,14 @@
     35
   ],
   "n_real_users": 53424,
-  "top35_exactly_matches_previous_results": true,
-  "top15_matches_available_reference": true,
-  "arithmetic_checked": true,
-  "bar_labels": "mean target count only",
+  "three_metrics": [
+    "mean_target_count",
+    "union_distinct_target_titles",
+    "most_frequent_book_user_reach_percent"
+  ],
+  "repeat_rate_removed_from_figure": true,
+  "no_recomputation_of_recommendations": true,
+  "existing_values_preserved": true,
+  "top_title_user_reach_arithmetic_checked": true,
   "negative_factor_checkpoints": []
 }
