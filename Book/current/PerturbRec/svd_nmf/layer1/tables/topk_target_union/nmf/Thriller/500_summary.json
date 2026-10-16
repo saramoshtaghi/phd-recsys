@@ -1,0 +1,53 @@
+[
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 500,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 10.839248277927522,
+    "target_share_percent": 72.26165518618349,
+    "total_target_recommendation_slots": 579076,
+    "union_distinct_target_titles": 36,
+    "union_repeat_percent": 99.99378319944186,
+    "most_frequent_book_id": 98,
+    "most_frequent_book_title": "Flickan som lekte med elden",
+    "most_frequent_book_users": 40229,
+    "most_frequent_book_user_reach_percent": 75.30136268343816,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 500,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 17.07144728960767,
+    "target_share_percent": 68.28578915843067,
+    "total_target_recommendation_slots": 912025,
+    "union_distinct_target_titles": 51,
+    "union_repeat_percent": 99.994408048025,
+    "most_frequent_book_id": 98,
+    "most_frequent_book_title": "Flickan som lekte med elden",
+    "most_frequent_book_users": 41755,
+    "most_frequent_book_user_reach_percent": 78.1577568134172,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 500,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 23.285059149445942,
+    "target_share_percent": 66.5287404269884,
+    "total_target_recommendation_slots": 1243981,
+    "union_distinct_target_titles": 65,
+    "union_repeat_percent": 99.99477483980864,
+    "most_frequent_book_id": 98,
+    "most_frequent_book_title": "Flickan som lekte med elden",
+    "most_frequent_book_users": 42548,
+    "most_frequent_book_user_reach_percent": 79.64210841569331,
+    "nmf_nonnegative_constraint_ok": true
+  }
+]

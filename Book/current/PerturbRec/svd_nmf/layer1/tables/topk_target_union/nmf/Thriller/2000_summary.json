@@ -1,0 +1,53 @@
+[
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 2000,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 8.164495357891584,
+    "target_share_percent": 54.42996905261056,
+    "total_target_recommendation_slots": 436180,
+    "union_distinct_target_titles": 42,
+    "union_repeat_percent": 99.99037094777385,
+    "most_frequent_book_id": 68,
+    "most_frequent_book_title": "The Perks of Being a Wallflower",
+    "most_frequent_book_users": 29050,
+    "most_frequent_book_user_reach_percent": 54.376310272536685,
+    "nmf_nonnegative_constraint_ok": false
+  },
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 2000,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 15.343104222821204,
+    "target_share_percent": 61.372416891284814,
+    "total_target_recommendation_slots": 819690,
+    "union_distinct_target_titles": 65,
+    "union_repeat_percent": 99.99207017287023,
+    "most_frequent_book_id": 68,
+    "most_frequent_book_title": "The Perks of Being a Wallflower",
+    "most_frequent_book_users": 34117,
+    "most_frequent_book_user_reach_percent": 63.860811620245585,
+    "nmf_nonnegative_constraint_ok": false
+  },
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 2000,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 23.112103174603174,
+    "target_share_percent": 66.03458049886622,
+    "total_target_recommendation_slots": 1234741,
+    "union_distinct_target_titles": 83,
+    "union_repeat_percent": 99.99327794249967,
+    "most_frequent_book_id": 68,
+    "most_frequent_book_title": "The Perks of Being a Wallflower",
+    "most_frequent_book_users": 36815,
+    "most_frequent_book_user_reach_percent": 68.91097634022162,
+    "nmf_nonnegative_constraint_ok": false
+  }
+]

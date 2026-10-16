@@ -1,0 +1,53 @@
+[
+  {
+    "model": "nmf",
+    "genre": "Drama",
+    "n_fake": 500,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 6.5163596885295,
+    "target_share_percent": 43.44239792353,
+    "total_target_recommendation_slots": 348130,
+    "union_distinct_target_titles": 218,
+    "union_repeat_percent": 99.93737971447447,
+    "most_frequent_book_id": 4,
+    "most_frequent_book_title": "To Kill a Mockingbird",
+    "most_frequent_book_users": 32210,
+    "most_frequent_book_user_reach_percent": 60.29125486672657,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "nmf",
+    "genre": "Drama",
+    "n_fake": 500,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 10.409085804132975,
+    "target_share_percent": 41.6363432165319,
+    "total_target_recommendation_slots": 556095,
+    "union_distinct_target_titles": 304,
+    "union_repeat_percent": 99.94533308157779,
+    "most_frequent_book_id": 4,
+    "most_frequent_book_title": "To Kill a Mockingbird",
+    "most_frequent_book_users": 32842,
+    "most_frequent_book_user_reach_percent": 61.47424378556454,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "nmf",
+    "genre": "Drama",
+    "n_fake": 500,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 14.20940026954178,
+    "target_share_percent": 40.59828648440508,
+    "total_target_recommendation_slots": 759123,
+    "union_distinct_target_titles": 378,
+    "union_repeat_percent": 99.95020569789087,
+    "most_frequent_book_id": 8946,
+    "most_frequent_book_title": "\u062f\u06cc\u0648\u0627\u0646\u200e\u200e [D\u012bv\u0101n]",
+    "most_frequent_book_users": 33921,
+    "most_frequent_book_user_reach_percent": 63.49393530997305,
+    "nmf_nonnegative_constraint_ok": true
+  }
+]

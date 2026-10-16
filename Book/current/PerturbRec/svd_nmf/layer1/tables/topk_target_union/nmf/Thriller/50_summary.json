@@ -1,0 +1,53 @@
+[
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 50,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 3.725029949086553,
+    "target_share_percent": 24.833532993910353,
+    "total_target_recommendation_slots": 199006,
+    "union_distinct_target_titles": 135,
+    "union_repeat_percent": 99.93216284936133,
+    "most_frequent_book_id": 780,
+    "most_frequent_book_title": "Calvin and Hobbes",
+    "most_frequent_book_users": 19994,
+    "most_frequent_book_user_reach_percent": 37.42512728361785,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 50,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 6.292602575621443,
+    "target_share_percent": 25.170410302485774,
+    "total_target_recommendation_slots": 336176,
+    "union_distinct_target_titles": 188,
+    "union_repeat_percent": 99.94407691209366,
+    "most_frequent_book_id": 780,
+    "most_frequent_book_title": "Calvin and Hobbes",
+    "most_frequent_book_users": 23798,
+    "most_frequent_book_user_reach_percent": 44.54552261156035,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 50,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 8.87340895477688,
+    "target_share_percent": 25.352597013648225,
+    "total_target_recommendation_slots": 474053,
+    "union_distinct_target_titles": 237,
+    "union_repeat_percent": 99.95000559009225,
+    "most_frequent_book_id": 780,
+    "most_frequent_book_title": "Calvin and Hobbes",
+    "most_frequent_book_users": 26511,
+    "most_frequent_book_user_reach_percent": 49.6237646001797,
+    "nmf_nonnegative_constraint_ok": true
+  }
+]

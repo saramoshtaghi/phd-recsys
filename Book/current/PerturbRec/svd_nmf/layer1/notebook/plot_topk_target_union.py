@@ -24,7 +24,7 @@ for genre in ['Thriller','Drama']:
    ax.set_ylabel(f'Top-{k}\nMean {genre} books',fontsize=13,color=navy)
    if ri==0:ax.set_title(model.upper(),fontsize=23,fontweight='bold',color=navy,pad=12)
    ax.grid(axis='y',color='#DCE3E9',linewidth=.7,zorder=0);ax.spines['left'].set_visible(False);ax.spines['bottom'].set_color('#C0CBD5');ax.tick_params(axis='y',length=0,colors=muted)
- fig.subplots_adjust(left=.07,right=.98,top=.82,bottom=.145,wspace=.15,hspace=.88)
+ fig.subplots_adjust(left=.07,right=.98,top=.82,bottom=.175,wspace=.15,hspace=.88)
  fig.text(.055,.956,f'{genre} recommendations after synthetic-user injection',fontsize=27,fontweight='bold',color=navy)
  fig.text(.055,.915,'Top-15, Top-25 and Top-35 unseen-book recommendations • Same 53,424 real users • X-axis: injected users',fontsize=15,color=muted)
  fig.text(.055,.88,'Above each bar: mean target-book count only. Below each bar: unique titles (union) / repeat (%) / most frequent title’s user reach (%).',fontsize=13,color=muted)

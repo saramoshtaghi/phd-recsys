@@ -1,0 +1,53 @@
+[
+  {
+    "model": "nmf",
+    "genre": "Drama",
+    "n_fake": 50,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 6.9116689128481585,
+    "target_share_percent": 46.07779275232105,
+    "total_target_recommendation_slots": 369249,
+    "union_distinct_target_titles": 312,
+    "union_repeat_percent": 99.91550417198151,
+    "most_frequent_book_id": 161,
+    "most_frequent_book_title": "The Return of the King",
+    "most_frequent_book_users": 19083,
+    "most_frequent_book_user_reach_percent": 35.719901168014374,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "nmf",
+    "genre": "Drama",
+    "n_fake": 50,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 11.481862084456424,
+    "target_share_percent": 45.927448337825695,
+    "total_target_recommendation_slots": 613407,
+    "union_distinct_target_titles": 409,
+    "union_repeat_percent": 99.93332322585168,
+    "most_frequent_book_id": 161,
+    "most_frequent_book_title": "The Return of the King",
+    "most_frequent_book_users": 23100,
+    "most_frequent_book_user_reach_percent": 43.23899371069182,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "nmf",
+    "genre": "Drama",
+    "n_fake": 50,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 16.06199460916442,
+    "target_share_percent": 45.8914131690412,
+    "total_target_recommendation_slots": 858096,
+    "union_distinct_target_titles": 497,
+    "union_repeat_percent": 99.94208107251403,
+    "most_frequent_book_id": 161,
+    "most_frequent_book_title": "The Return of the King",
+    "most_frequent_book_users": 25858,
+    "most_frequent_book_user_reach_percent": 48.401467505241094,
+    "nmf_nonnegative_constraint_ok": true
+  }
+]

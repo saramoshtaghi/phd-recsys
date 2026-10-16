@@ -1,0 +1,53 @@
+[
+  {
+    "model": "svd",
+    "genre": "Thriller",
+    "n_fake": 4,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 1.8326033243486073,
+    "target_share_percent": 12.217355495657383,
+    "total_target_recommendation_slots": 97905,
+    "union_distinct_target_titles": 325,
+    "union_repeat_percent": 99.66804555436393,
+    "most_frequent_book_id": 9672,
+    "most_frequent_book_title": "The Night is for Hunting",
+    "most_frequent_book_users": 4187,
+    "most_frequent_book_user_reach_percent": 7.837301587301587,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Thriller",
+    "n_fake": 4,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 3.0882374962563643,
+    "target_share_percent": 12.352949985025457,
+    "total_target_recommendation_slots": 164986,
+    "union_distinct_target_titles": 446,
+    "union_repeat_percent": 99.72967403294824,
+    "most_frequent_book_id": 6920,
+    "most_frequent_book_title": "The Indispensable Calvin and Hobbes: A Calvin and Hobbes Treasury",
+    "most_frequent_book_users": 6381,
+    "most_frequent_book_user_reach_percent": 11.944070080862534,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Thriller",
+    "n_fake": 4,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 4.366595537586104,
+    "target_share_percent": 12.47598725024601,
+    "total_target_recommendation_slots": 233281,
+    "union_distinct_target_titles": 568,
+    "union_repeat_percent": 99.75651681877221,
+    "most_frequent_book_id": 6920,
+    "most_frequent_book_title": "The Indispensable Calvin and Hobbes: A Calvin and Hobbes Treasury",
+    "most_frequent_book_users": 8477,
+    "most_frequent_book_user_reach_percent": 15.867400419287211,
+    "nmf_nonnegative_constraint_ok": true
+  }
+]

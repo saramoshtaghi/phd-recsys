@@ -1,0 +1,53 @@
+[
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 1000,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 6.983752620545073,
+    "target_share_percent": 46.55835080363382,
+    "total_target_recommendation_slots": 373100,
+    "union_distinct_target_titles": 61,
+    "union_repeat_percent": 99.98365049584562,
+    "most_frequent_book_id": 450,
+    "most_frequent_book_title": "Storm Front",
+    "most_frequent_book_users": 29628,
+    "most_frequent_book_user_reach_percent": 55.45822102425876,
+    "nmf_nonnegative_constraint_ok": false
+  },
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 1000,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 13.73624213836478,
+    "target_share_percent": 54.94496855345912,
+    "total_target_recommendation_slots": 733845,
+    "union_distinct_target_titles": 84,
+    "union_repeat_percent": 99.98855344112177,
+    "most_frequent_book_id": 891,
+    "most_frequent_book_title": "Fool Moon ",
+    "most_frequent_book_users": 35073,
+    "most_frequent_book_user_reach_percent": 65.65026954177898,
+    "nmf_nonnegative_constraint_ok": false
+  },
+  {
+    "model": "nmf",
+    "genre": "Thriller",
+    "n_fake": 1000,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 21.155866277328542,
+    "target_share_percent": 60.44533222093869,
+    "total_target_recommendation_slots": 1130231,
+    "union_distinct_target_titles": 109,
+    "union_repeat_percent": 99.9903559537829,
+    "most_frequent_book_id": 891,
+    "most_frequent_book_title": "Fool Moon ",
+    "most_frequent_book_users": 38347,
+    "most_frequent_book_user_reach_percent": 71.77860137765798,
+    "nmf_nonnegative_constraint_ok": false
+  }
+]

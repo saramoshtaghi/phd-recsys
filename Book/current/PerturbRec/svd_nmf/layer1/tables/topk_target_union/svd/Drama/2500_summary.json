@@ -1,0 +1,53 @@
+[
+  {
+    "model": "svd",
+    "genre": "Drama",
+    "n_fake": 2500,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 5.004043126684636,
+    "target_share_percent": 33.36028751123091,
+    "total_target_recommendation_slots": 267336,
+    "union_distinct_target_titles": 1148,
+    "union_repeat_percent": 99.57057784959751,
+    "most_frequent_book_id": 1788,
+    "most_frequent_book_title": "The Calvin and Hobbes Tenth Anniversary Book",
+    "most_frequent_book_users": 7165,
+    "most_frequent_book_user_reach_percent": 13.41157532195268,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Drama",
+    "n_fake": 2500,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 8.335167714884696,
+    "target_share_percent": 33.34067085953878,
+    "total_target_recommendation_slots": 445298,
+    "union_distinct_target_titles": 1405,
+    "union_repeat_percent": 99.68448095432721,
+    "most_frequent_book_id": 1788,
+    "most_frequent_book_title": "The Calvin and Hobbes Tenth Anniversary Book",
+    "most_frequent_book_users": 9775,
+    "most_frequent_book_user_reach_percent": 18.297020065887992,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Drama",
+    "n_fake": 2500,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 11.662604821802935,
+    "target_share_percent": 33.3217280622941,
+    "total_target_recommendation_slots": 623063,
+    "union_distinct_target_titles": 1646,
+    "union_repeat_percent": 99.73582125724045,
+    "most_frequent_book_id": 1788,
+    "most_frequent_book_title": "The Calvin and Hobbes Tenth Anniversary Book",
+    "most_frequent_book_users": 11780,
+    "most_frequent_book_user_reach_percent": 22.050014974543277,
+    "nmf_nonnegative_constraint_ok": true
+  }
+]

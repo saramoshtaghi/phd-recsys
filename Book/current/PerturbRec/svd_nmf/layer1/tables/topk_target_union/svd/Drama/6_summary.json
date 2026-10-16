@@ -1,0 +1,53 @@
+[
+  {
+    "model": "svd",
+    "genre": "Drama",
+    "n_fake": 6,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 5.012559898173106,
+    "target_share_percent": 33.417065987820706,
+    "total_target_recommendation_slots": 267791,
+    "union_distinct_target_titles": 811,
+    "union_repeat_percent": 99.69715188337173,
+    "most_frequent_book_id": 8946,
+    "most_frequent_book_title": "\u062f\u06cc\u0648\u0627\u0646\u200e\u200e [D\u012bv\u0101n]",
+    "most_frequent_book_users": 8767,
+    "most_frequent_book_user_reach_percent": 16.410227613057803,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Drama",
+    "n_fake": 6,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 8.30604222821204,
+    "target_share_percent": 33.22416891284816,
+    "total_target_recommendation_slots": 443742,
+    "union_distinct_target_titles": 1078,
+    "union_repeat_percent": 99.75706604288077,
+    "most_frequent_book_id": 8946,
+    "most_frequent_book_title": "\u062f\u06cc\u0648\u0627\u0646\u200e\u200e [D\u012bv\u0101n]",
+    "most_frequent_book_users": 11122,
+    "most_frequent_book_user_reach_percent": 20.8183587900569,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Drama",
+    "n_fake": 6,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 11.628219526804433,
+    "target_share_percent": 33.22348436229838,
+    "total_target_recommendation_slots": 621226,
+    "union_distinct_target_titles": 1277,
+    "union_repeat_percent": 99.79443873888086,
+    "most_frequent_book_id": 8946,
+    "most_frequent_book_title": "\u062f\u06cc\u0648\u0627\u0646\u200e\u200e [D\u012bv\u0101n]",
+    "most_frequent_book_users": 12978,
+    "most_frequent_book_user_reach_percent": 24.29245283018868,
+    "nmf_nonnegative_constraint_ok": true
+  }
+]

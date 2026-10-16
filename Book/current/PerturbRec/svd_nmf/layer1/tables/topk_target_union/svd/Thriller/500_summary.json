@@ -1,0 +1,53 @@
+[
+  {
+    "model": "svd",
+    "genre": "Thriller",
+    "n_fake": 500,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 2.279556004791854,
+    "target_share_percent": 15.197040031945692,
+    "total_target_recommendation_slots": 121783,
+    "union_distinct_target_titles": 631,
+    "union_repeat_percent": 99.48186528497409,
+    "most_frequent_book_id": 6920,
+    "most_frequent_book_title": "The Indispensable Calvin and Hobbes: A Calvin and Hobbes Treasury",
+    "most_frequent_book_users": 6633,
+    "most_frequent_book_user_reach_percent": 12.41576819407008,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Thriller",
+    "n_fake": 500,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 3.8154013177598083,
+    "target_share_percent": 15.261605271039233,
+    "total_target_recommendation_slots": 203834,
+    "union_distinct_target_titles": 791,
+    "union_repeat_percent": 99.61193912693662,
+    "most_frequent_book_id": 6920,
+    "most_frequent_book_title": "The Indispensable Calvin and Hobbes: A Calvin and Hobbes Treasury",
+    "most_frequent_book_users": 9150,
+    "most_frequent_book_user_reach_percent": 17.12713387241689,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Thriller",
+    "n_fake": 500,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 5.340034441449536,
+    "target_share_percent": 15.257241261284388,
+    "total_target_recommendation_slots": 285286,
+    "union_distinct_target_titles": 912,
+    "union_repeat_percent": 99.68032080088052,
+    "most_frequent_book_id": 6920,
+    "most_frequent_book_title": "The Indispensable Calvin and Hobbes: A Calvin and Hobbes Treasury",
+    "most_frequent_book_users": 11131,
+    "most_frequent_book_user_reach_percent": 20.83520515124289,
+    "nmf_nonnegative_constraint_ok": true
+  }
+]

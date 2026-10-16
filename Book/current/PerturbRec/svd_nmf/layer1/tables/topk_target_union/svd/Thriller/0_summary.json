@@ -1,0 +1,53 @@
+[
+  {
+    "model": "svd",
+    "genre": "Thriller",
+    "n_fake": 0,
+    "k": 15,
+    "n_users": 53424,
+    "mean_target_count": 1.5765573525007488,
+    "target_share_percent": 10.510382350004992,
+    "total_target_recommendation_slots": 84226,
+    "union_distinct_target_titles": 297,
+    "union_repeat_percent": 99.64737729442214,
+    "most_frequent_book_id": 9625,
+    "most_frequent_book_title": "Healthy Sleep Habits, Happy Child",
+    "most_frequent_book_users": 3420,
+    "most_frequent_book_user_reach_percent": 6.401617250673854,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Thriller",
+    "n_fake": 0,
+    "k": 25,
+    "n_users": 53424,
+    "mean_target_count": 2.7630840071877807,
+    "target_share_percent": 11.052336028751123,
+    "total_target_recommendation_slots": 147615,
+    "union_distinct_target_titles": 387,
+    "union_repeat_percent": 99.73783152118688,
+    "most_frequent_book_id": 6920,
+    "most_frequent_book_title": "The Indispensable Calvin and Hobbes: A Calvin and Hobbes Treasury",
+    "most_frequent_book_users": 5708,
+    "most_frequent_book_user_reach_percent": 10.684336627732854,
+    "nmf_nonnegative_constraint_ok": true
+  },
+  {
+    "model": "svd",
+    "genre": "Thriller",
+    "n_fake": 0,
+    "k": 35,
+    "n_users": 53424,
+    "mean_target_count": 3.9523435160227613,
+    "target_share_percent": 11.292410045779318,
+    "total_target_recommendation_slots": 211150,
+    "union_distinct_target_titles": 476,
+    "union_repeat_percent": 99.7745678427658,
+    "most_frequent_book_id": 6920,
+    "most_frequent_book_title": "The Indispensable Calvin and Hobbes: A Calvin and Hobbes Treasury",
+    "most_frequent_book_users": 7668,
+    "most_frequent_book_user_reach_percent": 14.35309973045822,
+    "nmf_nonnegative_constraint_ok": true
+  }
+]
