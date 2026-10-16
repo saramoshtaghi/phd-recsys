@@ -27,7 +27,7 @@ assert Nbook==9415 and Nmovie==1681 and Napp==10173
 mapped=int(acounts.sum());assert mapped+sum(unmapped.values())==Napp
 meta={'sources':{k:str(v) for k,v in paths.items()},'mapping_source':str(NB),'original_image_sha256':hashlib.sha256((ROOT/'state of the art/paper_figures/combined_3plots_A4.png').read_bytes()).hexdigest(),'books':{'n_unique_items':int(Nbook),'counts':{str(k):int(v) for k,v in bcounts.items()},'multi_label':True},'movies':{'n_unique_items':int(Nmovie),'counts':{str(k):int(v) for k,v in mcounts.items()}},'mobile':{'n_unique_items':int(Napp),'mapped_items':mapped,'counts':{str(k):int(v) for k,v in acounts.items()},'unmapped_categories':{str(k):int(v) for k,v in unmapped.items()}},'original_saved_summaries_matched':True,'duplicate_item_category_counts_removed':True,'original_nine_domain_mapping_unchanged':True}
 (DATA/'dataset_category_counts.json').write_text(json.dumps(meta,indent=2))
-rows=[{'dataset':name,'category':str(k),'unique_items':int(v)} for name,s in [('Books',bcounts),('Movies',mcounts),('Mobile apps',acounts)]
+rows=[{'dataset':name,'category':str(k),'unique_items':int(v)} for name,s in [('Books',bcounts),('Movies',mcounts),('Mobile apps',acounts)] for k,v in s.items()]
 pd.DataFrame(rows).to_csv(DATA/'dataset_category_counts.csv',index=False)
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8.5,'axes.titlesize':10,'axes.titleweight':'bold','axes.labelsize':8.5,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.linewidth':.5,'xtick.labelsize':7.5,'ytick.labelsize':8.2,'savefig.facecolor':'white','figure.facecolor':'white'})
 fig,axs=plt.subplots(3,1,figsize=(5.4,7.1),gridspec_kw={'height_ratios':[13,8,9]})
