@@ -1,5 +1,17 @@
 {
-  "rows": 156,
+  "rows": 108,
+  "max_injected_users": 500,
+  "displayed_injection_counts": [
+    0,
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500
+  ],
   "k_values": [
     15,
     25,
@@ -10,26 +22,5 @@
   "top15_matches_available_reference": true,
   "arithmetic_checked": true,
   "bar_labels": "mean target count only",
-  "negative_factor_checkpoints": [
-    {
-      "model": "nmf",
-      "genre": "Thriller",
-      "n_fake": 3000
-    },
-    {
-      "model": "nmf",
-      "genre": "Thriller",
-      "n_fake": 1000
-    },
-    {
-      "model": "nmf",
-      "genre": "Thriller",
-      "n_fake": 2000
-    },
-    {
-      "model": "nmf",
-      "genre": "Thriller",
-      "n_fake": 2500
-    }
-  ]
+  "negative_factor_checkpoints": []
 }
