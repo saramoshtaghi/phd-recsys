@@ -31,7 +31,7 @@ for genre in ['Thriller','Drama']:
  fig.text(.055,.88,'Above each bar: mean target-book count only. Below each bar: unique titles (union) / repeat (%) / most frequent title’s user reach (%).',fontsize=13,color=muted)
  fig.text(.055,.055,'Union = distinct target titles across all users. Repeat = 100 × (1 − union / total target recommendations); it is not pairwise list overlap.',fontsize=12,color=muted)
  fig.text(.055,.028,'Previously rated books excluded. Both models use the same real users and candidate-book catalog.',fontsize=12,color=muted)
- out=L/'result/final_results'/f'comparision - {genre}_top35_union_powerpoint.png';fig.savefig(out,dpi=240,facecolor='white');plt.close(fig);print(out)
+ out=R/'layer2/final_results'/f'comparision - {genre}_top35_union_powerpoint.png';fig.savefig(out,dpi=240,facecolor='white');plt.close(fig);print(out)
 assert np.allclose(d.target_share_percent,d.mean_target_count/d.k*100)
 assert np.allclose(d.union_repeat_percent,100*(1-d.union_distinct_target_titles/d.total_target_recommendation_slots))
 (L/'log/topk_target_union_validation.json').write_text(json.dumps({'rows':len(d),'max_injected_users':500,'displayed_injection_counts':COUNTS,'k_values':KS,'n_real_users':53424,'top35_exactly_matches_previous_results':True,'top15_matches_available_reference':True,'arithmetic_checked':True,'bar_labels':'mean target count only','negative_factor_checkpoints':d[~d.nmf_nonnegative_constraint_ok][['model','genre','n_fake']].drop_duplicates().to_dict('records')},indent=2))

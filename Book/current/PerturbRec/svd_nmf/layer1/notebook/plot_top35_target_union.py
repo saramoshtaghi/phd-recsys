@@ -32,6 +32,6 @@ for genre in ['Thriller','Drama']:
  fig.text(.055,.08,'U is the union of target-book IDs across all real users. Rankings use saved factors + item biases; rated books excluded; book-ID-stable ties.',fontsize=11,color=muted)
  bad=d[(d.model=='nmf')&(d.genre==genre)&(~d.nmf_nonnegative_constraint_ok)]
  if len(bad):fig.text(.055,.04,'Hatched NMF bars: historical checkpoints contain negative factors; these are reproduced saved outputs, not validated nonnegative fits.',fontsize=11,color='#88482A')
- out=L/'result/final_results'/f'comparision - {genre}_top35_union_powerpoint.png';fig.savefig(out,dpi=240,facecolor='white');plt.close(fig);print(out)
+ out=R/'layer2/final_results'/f'comparision - {genre}_top35_union_powerpoint.png';fig.savefig(out,dpi=240,facecolor='white');plt.close(fig);print(out)
 manifest={'k':35,'metric':a.metric,'definition':metric[2],'n_summary_rows':len(d),'no_retraining':True,'negative_factor_checkpoints':d[~d.nmf_nonnegative_constraint_ok][['model','genre','n_fake']].to_dict('records'),'source':'saved controlled factors, original real users; recomputed full Top-35 with stable ID ties','validation':'all available Top-15 and extension Top-35 reference means matched exactly'}
 (L/'log/top35_target_union_validation.json').write_text(json.dumps(manifest,indent=2))
