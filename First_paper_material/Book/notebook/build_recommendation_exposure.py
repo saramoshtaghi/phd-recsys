@@ -38,11 +38,12 @@ for dataset,target,limit,N,name in configs:
   sources.append({'dataset':dataset,'model':model.upper(),'file':str(source),'sha256':hashlib.sha256(source.read_bytes()).hexdigest()})
 df=pd.DataFrame(records);assert len(df)==36;assert not df.duplicated(['dataset','model','n_fake']).any()
 df.to_csv(DATA/'recommendation_exposure_top15.csv',index=False)
-NAVY='#172B3A';MUTED='#4E5B65';COLORS={'NMF':'#0072B2','SVD':'#009E73'}
+NAVY='#172B3A';MUTED='#4E5B65';COLORS={'NMF':'#0072B2','SVD':'#D55E00'}
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8,'axes.titlesize':9,'axes.titleweight':'bold','axes.labelsize':8,'xtick.labelsize':7,'ytick.labelsize':7,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.linewidth':.5,'savefig.facecolor':'white','figure.facecolor':'white'})
+# Model colours are consistent across domains; baseline is neutral grey.
 def panel(ax,d,model,annotate=True,compact=False):
  d=d.sort_values('n_fake');x=np.arange(len(d));v=d.mean_target_count.to_numpy()
- ax.bar(x,v,width=.76,color=COLORS[model],linewidth=.4,edgecolor='white',zorder=3)
+ ax.bar(x,v,width=.76,color=['#AAB2BA' if int(n)==0 else COLORS[model] for n in d.n_fake],linewidth=.4,edgecolor='white',zorder=3)
  if annotate:
   for xx,yy in zip(x,v):ax.text(xx,yy+.23+(.65 if len(v)>8 and yy>=10 and xx%2==0 else 0),(f'{yy:.2f}' if not compact or yy<1 else f'{yy:.1f}'),ha='center',va='bottom',fontsize=6.7,color=NAVY)
  ax.set_ylim(0,16.8);ax.yaxis.set_major_locator(MultipleLocator(3));ax.set_xticks(x,['Base']+[str(n) for n in d.n_fake.iloc[1:]],rotation=45,ha='right');ax.tick_params(axis='both',length=0,pad=3,colors=MUTED)
