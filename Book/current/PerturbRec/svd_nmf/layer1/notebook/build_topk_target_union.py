@@ -3,7 +3,8 @@ from build_top35_target_union import *
 MULTI=L/'tables/topk_target_union';MULTI.mkdir(parents=True,exist_ok=True)
 KS=[15,25,35]
 
-def run_model(model):
+def run_model(job):
+ model,partition=job
  df=pd.read_csv(SRC,usecols=['user_id','book_id','genres','original_title'])
  base=np.load(E/'pilot'/f'{model}_baseline_a.npz');ids=np.sort(base['ids']);items=np.sort(base['items']);N=len(ids)
  u=np.searchsorted(ids,df.user_id.to_numpy());i=np.searchsorted(items,df.book_id.to_numpy())
@@ -15,7 +16,7 @@ def run_model(model):
  for genre in ['Drama','Thriller']:
   folder=MULTI/model/genre;folder.mkdir(parents=True,exist_ok=True)
   refs=pd.read_csv(L/'tables'/f'controlled_{genre.lower()}_top15.csv')
-  for n in COUNTS:
+  for n in COUNTS[partition::4]:
    cache=folder/f'{n}_summary.json'
    if cache.exists():rows.extend(json.loads(cache.read_text()));continue
    z=base if n==0 else np.load(E/'controlled'/model/genre.lower()/f'{model}_{genre.lower()}_{n}.npz')
@@ -44,10 +45,10 @@ def run_model(model):
     records.append(rec)
    cache.write_text(json.dumps(records,indent=2));rows.extend(records)
    print(model,genre,n,'K15/25/35',[round(x['mean_target_count'],3) for x in records],flush=True)
- pd.DataFrame(rows).to_csv(MULTI/f'{model}_summary.csv',index=False)
+ pd.DataFrame(rows).to_csv(MULTI/f'{model}_{partition}_summary.csv',index=False)
 
 if __name__=='__main__':
- with ProcessPoolExecutor(max_workers=2) as pool:list(pool.map(run_model,['nmf','svd']))
- d=pd.concat([pd.read_csv(MULTI/f'{m}_summary.csv') for m in ['nmf','svd']]);assert len(d)==156
+ with ProcessPoolExecutor(max_workers=8) as pool:list(pool.map(run_model,[(m,p) for m in ['nmf','svd'] for p in range(4)]))
+ d=pd.concat([pd.read_csv(MULTI/f'{m}_{p}_summary.csv') for m in ['nmf','svd'] for p in range(4)]);assert len(d)==156
  d.to_csv(MULTI/'summary.csv',index=False)
  print('ALL K15/25/35 METRICS COMPLETE',flush=True)
