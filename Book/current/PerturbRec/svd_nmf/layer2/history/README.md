@@ -49,3 +49,7 @@ See `reports/summary_fa.md` for the Persian explanation and `log/validation.json
 See `reports/title_mechanism_fa.md` and `reports/title_mechanism.md`; `tables/title_mechanism` contains full per-title scores, component allocations and invariant score heterogeneity. Figures are in `result/Thriller/title_mechanism/{NMF,SVD}/mechanism_4panel.png`. Reproduce with `python notebook/analyze_title_mechanism.py`. This script reads saved factors directly and supports the reorganized materials layout.
 
 Hybrid recommendation arrays are stored separately in `data/title_mechanism`, not in the tables directory.
+
+## Prior ratings of the leading NMF Thriller books
+
+See `reports/prior_book_ratings_fa.md` and `reports/prior_book_ratings.md`. Source rating aggregates and before/after scores are in `tables/title_mechanism/nmf_original_ratings_and_after_scores.csv` and `nmf_leading_thriller_prior_ratings.csv`. Reproduce with `python notebook/audit_prior_book_ratings.py`; no model is retrained. Validation and catalog-wide descriptive correlations: `log/prior_book_ratings_validation.json`.

@@ -1,0 +1,14 @@
+{
+  "model": "NMF",
+  "injected_genre": "Thriller",
+  "n_fake": 500,
+  "rating_rows_original": 5815569,
+  "n_target_books": 1606,
+  "original_rating_count_target_median": 245.5,
+  "original_mean_rating_target_median": 3.9046745303626036,
+  "leading_10_min_rating_count_percentile": 99.25280199252802,
+  "count_vs_after_reach_spearman": 0.2744996262659046,
+  "mean_rating_vs_after_reach_spearman": 0.036192745788871904,
+  "validation": "9415 book IDs matched one-to-one; 1606 target books; original counts sum exactly to 5815569; all means within 1..5; no model retraining",
+  "rating_rows_match_original_unique_rater_counts_for_all_books": true
+}
