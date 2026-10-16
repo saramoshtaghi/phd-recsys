@@ -75,12 +75,15 @@ for ci,(dataset,target,ns,category,domain) in enumerate(configs):
  d=f[f.dataset==dataset];yl=lim(d,'mu_plus_bi')
  for ri,model in enumerate(['NMF','SVD']):
   ax=axs[ri,ci];panel(ax,d[d.model==model],model,'mu_plus_bi',ns,yl)
-  if ri==0:ax.set_title(f'({chr(97+ci)}) {dataset}: '+('1990s' if target=='1990' else target),loc='left',pad=9,color=NAVY)
+  # Keep model labels outside the data area, below the dataset headings.
+  for label in list(ax.texts): label.remove()
+  ax.text(.025,1.025,model,color=MODEL[model],transform=ax.transAxes,fontsize=8,weight='bold',va='bottom',clip_on=False)
+  if ri==0:ax.set_title(f'({chr(97+ci)}) {dataset}: '+('1990s' if target=='1990' else target),loc='left',pad=23,color=NAVY)
   if ri==0:ax.set_xlabel('')
   if ci==0:ax.set_ylabel(r'Mean $\mu+b_i$',color=NAVY)
 leg=legend+[Line2D([0],[0],color='#505A63',ls='--',lw=.85,label=r'Global mean ($\mu$)')]
 fig.legend(handles=leg,loc='lower center',bbox_to_anchor=(.51,.005),ncol=4,frameon=False,fontsize=6.8,handlelength=1.7,columnspacing=1.2)
-fig.subplots_adjust(left=.075,right=.99,top=.90,bottom=.205,wspace=.30,hspace=.45);save(fig,'score_offsets_three_domains.png')
+fig.subplots_adjust(left=.075,right=.99,top=.84,bottom=.205,wspace=.30,hspace=.70);save(fig,'score_offsets_three_domains.png')
 for dataset,target,ns,category,domain in configs:
  d=f[f.dataset==dataset];fig,axs=plt.subplots(1,2,figsize=(7.1,2.8),sharey=True)
  for ax,model in zip(axs,['NMF','SVD']):panel(ax,d[d.model==model],model,'mu_plus_bi',ns,lim(d,'mu_plus_bi'))
