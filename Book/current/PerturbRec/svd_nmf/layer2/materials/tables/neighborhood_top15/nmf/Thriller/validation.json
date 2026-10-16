@@ -24,7 +24,8 @@
   "genre_counting": "inclusive multi-label; genre percentages need not sum to 100",
   "no_observed_human_taste_change_claim": true,
   "top_panel_baseline_annotation": null,
-  "heatmap_color": "absolute share 0 to100; no delta numbers",
+  "top_panel": "retained and replaced percentages from 20 identities; fixed baseline reference; stacked total100",
+  "heatmap_color": "original teal-white-orange palette; change vs preceding dose; saturates at +/-5 percentage points; printed values are absolute Top15 genre shares",
   "in_figure_caption_removed": true,
   "no_retraining": true,
   "checks": [
