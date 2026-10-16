@@ -107,7 +107,7 @@ axs[0].set_yscale('log');axs[0].set_ylim(500,2e6);axs[0].set_xticks(x,names);axs
 for dataset,color,marker in [('Books','#0072B2','o'),('Mobile apps','#8064A2','s'),('Movies','#009E73','^')]:
  vals=[100*overview[dataset]['rating_counts'].get(k,0)/overview[dataset]['observed_ratings'] for k in range(1,6)]
  axs[1].plot(range(1,6),vals,color=color,marker=marker,ms=3,lw=1.2,label=dataset)
-axs[1].set_xticks(range(1,6));axs[1].set_xlabel('Observed rating',color=MUTED);axs[1].set_ylabel('Share of ratings (%)',color=NAVY);axs[1].set_ylim(0,65);axs[1].set_title('(b) Rating distribution',loc='left',color=NAVY);axs[1].legend(frameon=False,fontsize=7,loc='upper left')
+axs[1].set_xticks(range(1,6));axs[1].set_xlabel('Observed rating',color=MUTED);axs[1].set_ylabel('Share of ratings (%)',color=NAVY);axs[1].set_ylim(0,45);axs[1].set_title('(b) Rating distribution',loc='left',color=NAVY);axs[1].legend(frameon=False,fontsize=7,loc='upper left')
 for ax in axs:
  ax.grid(axis='y',color='#DFE5E9',lw=.45);ax.set_axisbelow(True);ax.tick_params(axis='both',colors=MUTED,length=0,pad=3);ax.spines['bottom'].set_color('#AEBAC2')
 fig.subplots_adjust(left=.085,right=.985,top=.90,bottom=.20,wspace=.30);save(fig,'dataset_overview.png')
