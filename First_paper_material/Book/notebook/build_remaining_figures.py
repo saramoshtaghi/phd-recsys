@@ -66,9 +66,12 @@ def lim(d,col):
 legend=[Line2D([0],[0],color=MODEL['NMF'],lw=1.7,label='Target (NMF)'),Line2D([0],[0],color=MODEL['SVD'],lw=1.7,label='Target (SVD)'),Line2D([0],[0],color=GRAY,lw=.9,label='Other category means')]
 # Book item-bias figure, NMF and SVD side by side.
 b=f[f.dataset=='Books'];ns=configs[0][2];fig,axs=plt.subplots(1,2,figsize=(7.1,2.8),sharey=True)
-for ax,model in zip(axs,['NMF','SVD']):panel(ax,b[b.model==model],model,'avg_bi',ns,lim(b,'avg_bi'))
+for ax,model in zip(axs,['NMF','SVD']):
+ panel(ax,b[b.model==model],model,'avg_bi',ns,lim(b,'avg_bi'))
+ for label in list(ax.texts): label.remove()
+ ax.text(.025,1.025,model,color=MODEL[model],transform=ax.transAxes,fontsize=8,weight='bold',va='bottom',clip_on=False)
 axs[0].set_ylabel(r'Mean book bias ($b_i$)',color=NAVY);fig.legend(handles=legend,loc='lower center',ncol=3,frameon=False,fontsize=7,bbox_to_anchor=(.52,.01))
-fig.subplots_adjust(left=.085,right=.99,top=.96,bottom=.31,wspace=.15);save(fig,'book_thriller_bi_updated.png')
+fig.subplots_adjust(left=.085,right=.99,top=.88,bottom=.31,wspace=.15);save(fig,'book_thriller_bi_updated.png')
 # Combined score-offset figure and the individual figures expected by the manuscript.
 fig,axs=plt.subplots(2,3,figsize=(7.1,4.25))
 for ci,(dataset,target,ns,category,domain) in enumerate(configs):
