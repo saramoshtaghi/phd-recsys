@@ -1,0 +1,31 @@
+dataset,category,unique_items
+Books,Drama,3006
+Books,Mystery,2563
+Books,Romance,2131
+Books,Fantasy,2088
+Books,Adventure,1789
+Books,Thriller,1606
+Books,Nonfiction,1071
+Books,Classics,901
+Books,Children's,863
+Books,Historical,857
+Books,Science Fiction,855
+Books,Horror,769
+Books,Adult,331
+Movies,1990,1348
+Movies,1980,107
+Movies,1970,53
+Movies,1960,43
+Movies,1950,54
+Movies,1940,45
+Movies,1930,29
+Movies,1920,2
+Mobile apps,Games,5025
+Mobile apps,Education & Learning,1132
+Mobile apps,Work & Productivity,881
+Mobile apps,Media & Entertainment,609
+Mobile apps,Utilities & Info,503
+Mobile apps,Social & Communication,478
+Mobile apps,Health & Lifestyle,383
+Mobile apps,Shopping & Food,374
+Mobile apps,Travel & Navigation,366

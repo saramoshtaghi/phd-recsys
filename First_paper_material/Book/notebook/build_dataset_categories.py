@@ -31,7 +31,7 @@ rows=[{'dataset':name,'category':str(k),'unique_items':int(v)} for name,s in [('
 pd.DataFrame(rows).to_csv(DATA/'dataset_category_counts.csv',index=False)
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8.5,'axes.titlesize':10,'axes.titleweight':'bold','axes.labelsize':8.5,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.linewidth':.5,'xtick.labelsize':7.5,'ytick.labelsize':8.2,'savefig.facecolor':'white','figure.facecolor':'white'})
 fig,axs=plt.subplots(3,1,figsize=(5.4,7.1),gridspec_kw={'height_ratios':[13,8,9]})
-series=[bcounts,mcounts,acounts];titles=[f'(a) Books: genre ({Nbook:,} books)',f'(b) Movies: release decade ({Nmovie:,} movies)',f'(c) Mobile apps: domain ({mapped:,} mapped apps)'];colors=['#0072B2','#009E73','#8064A2'];units=['Unique books','Unique movies','Unique applications']
+series=[bcounts,mcounts,acounts];titles=[f'(a) Books: genre (n = {Nbook:,})',f'(b) Movies: decade (n = {Nmovie:,})',f'(c) Mobile apps: domain (n = {mapped:,})'];colors=['#0072B2','#009E73','#8064A2'];units=['Unique books','Unique movies','Unique applications']
 for ax,s,title,color,unit in zip(axs,series,titles,colors,units):
  y=np.arange(len(s));labels=[str(x)+'s' if unit=='Unique movies' else str(x) for x in s.index]
  labels=[x.replace('Science Fiction','Science fiction').replace('Nonfiction','Non-fiction') for x in labels]

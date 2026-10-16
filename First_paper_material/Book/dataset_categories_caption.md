@@ -1,0 +1,3 @@
+Figure. Item-category distributions in the three datasets. (a) Unique books per assigned genre; multi-label books can contribute to two genres. (b) Unique MovieLens movies per release decade. (c) Unique mobile applications in the original nine aggregated domains. The mobile mapping covers 9,751 of 10,173 applications; the 422 applications labelled Medical in the original metadata are not assigned a domain by that mapping. Each bar counts distinct items rather than ratings. All axes use linear scales.
+
+LaTeX path: figures/dataset_categories.png. Upload dataset_categories.png into the project’s figures folder to replace the matching figure without changing its LaTeX filename.

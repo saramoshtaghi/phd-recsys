@@ -1,0 +1,62 @@
+{
+  "sources": {
+    "books": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+    "movies": "/home/moshtasa/Research/phd-recsys/Movie /archive/preprocessing/df_final.csv",
+    "mobile": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0316_Single/data/data/mobilerec_final.csv"
+  },
+  "mapping_source": "/home/moshtasa/Research/phd-recsys/state of the art/paper_figures/figures_0323.ipynb",
+  "original_image_sha256": "cca28244fc4909a1c79a537a775a954fd726e95b873d982c1f8e264206cedd8c",
+  "books": {
+    "n_unique_items": 9415,
+    "counts": {
+      "Drama": 3006,
+      "Mystery": 2563,
+      "Romance": 2131,
+      "Fantasy": 2088,
+      "Adventure": 1789,
+      "Thriller": 1606,
+      "Nonfiction": 1071,
+      "Classics": 901,
+      "Children's": 863,
+      "Historical": 857,
+      "Science Fiction": 855,
+      "Horror": 769,
+      "Adult": 331
+    },
+    "multi_label": true
+  },
+  "movies": {
+    "n_unique_items": 1681,
+    "counts": {
+      "1990": 1348,
+      "1980": 107,
+      "1970": 53,
+      "1960": 43,
+      "1950": 54,
+      "1940": 45,
+      "1930": 29,
+      "1920": 2
+    }
+  },
+  "mobile": {
+    "n_unique_items": 10173,
+    "mapped_items": 9751,
+    "counts": {
+      "Games": 5025,
+      "Education & Learning": 1132,
+      "Work & Productivity": 881,
+      "Media & Entertainment": 609,
+      "Utilities & Info": 503,
+      "Social & Communication": 478,
+      "Health & Lifestyle": 383,
+      "Shopping & Food": 374,
+      "Travel & Navigation": 366
+    },
+    "unmapped_categories": {
+      "Medical": 422
+    }
+  },
+  "original_saved_summaries_matched": true,
+  "duplicate_item_category_counts_removed": true,
+  "original_nine_domain_mapping_unchanged": true
+}
