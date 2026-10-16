@@ -1,11 +1,11 @@
 {
-  "rows": 40,
+  "rows": 36,
   "k": 15,
   "no_retraining": true,
   "book_matches_two_controlled_CSVs": true,
   "dose_limits": {
     "Books": 500,
-    "Mobile apps": 2000,
+    "Mobile apps": 300,
     "Movies": 50
   },
   "sources": [
