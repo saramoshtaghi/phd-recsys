@@ -1,0 +1,35 @@
+{
+  "k": 35,
+  "metric": "union",
+  "definition": "Repeat = target recommendation occurrences beyond the first of each distinct title, divided by all target occurrences. This is NOT pairwise list overlap.",
+  "n_summary_rows": 52,
+  "no_retraining": true,
+  "negative_factor_checkpoints": [
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 1000
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 2000
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 2500
+    },
+    {
+      "model": "nmf",
+      "genre": "Thriller",
+      "n_fake": 3000
+    }
+  ],
+  "source": "saved controlled factors, original real users; recomputed full Top-35 with stable ID ties",
+  "validation": "all available Top-15 and extension Top-35 reference means matched exactly",
+  "summary_arithmetic_validated": true,
+  "union_and_title_reach_both_reported": true,
+  "top15_reference_matched_cases": 52,
+  "top35_reference_matched_cases": 16
+}
