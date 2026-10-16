@@ -44,11 +44,8 @@ for genre in ['Thriller','Drama']:
    if ri==2:ax.set_xlabel('Injected users',labelpad=8,fontsize=13,color=MUTED)
   axs[0,ci].text(.5,1.38,model.upper(),transform=axs[0,ci].transAxes,ha='center',va='bottom',fontsize=24,fontweight='bold',color=NAVY)
  fig.suptitle(f'{genre}: recommendation volume, title variety and concentration',x=.065,ha='left',y=.975,fontsize=27,fontweight='bold',color=NAVY)
- fig.text(.065,.93,'Same 53,424 real users • Previously rated books excluded • Baseline and injections up to 500 users',fontsize=14,color=MUTED)
  handles=[Line2D([0],[0],color=c,marker=m,lw=2.5,label=f'Top-{k}') for k,c,m in zip(KS,COLORS,MARKERS)]
  fig.legend(handles=handles,loc='upper right',bbox_to_anchor=(.965,.95),ncol=3,frameon=False,fontsize=14,handlelength=2.2,columnspacing=2)
- fig.subplots_adjust(left=.07,right=.96,top=.80,bottom=.13,hspace=.55,wspace=.22)
- fig.text(.065,.045,'Different titles = union of target-book IDs across all users. Top title = the most frequently recommended target book at each injection level; its identity may change.',fontsize=12,color=MUTED)
- fig.text(.065,.02,'Rows measure different quantities: recommendation count, catalog variety, and user reach. Colors consistently identify recommendation-list length.',fontsize=12,color=MUTED)
+ fig.subplots_adjust(left=.07,right=.96,top=.80,bottom=.075,hspace=.55,wspace=.22)
  out=R/'layer2/final_results'/f'comparision - {genre}_top35_union_powerpoint.png';fig.savefig(out,dpi=240);preview=L/'log'/f'{genre}_union_preview.png';fig.savefig(preview,dpi=90);plt.close(fig);print(out,flush=True)
 (L/'log/topk_target_union_validation.json').write_text(json.dumps({'rows':len(d),'max_injected_users':500,'displayed_injection_counts':COUNTS,'k_values':KS,'n_real_users':53424,'three_metrics':['mean_target_count','union_distinct_target_titles','most_frequent_book_user_reach_percent'],'repeat_rate_removed_from_figure':True,'no_recomputation_of_recommendations':True,'existing_values_preserved':True,'top_title_user_reach_arithmetic_checked':True,'negative_factor_checkpoints':d[~d.nmf_nonnegative_constraint_ok][['model','genre','n_fake']].drop_duplicates().to_dict('records')},indent=2))
