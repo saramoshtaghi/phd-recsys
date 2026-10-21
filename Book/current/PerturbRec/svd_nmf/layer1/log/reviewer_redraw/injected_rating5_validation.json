@@ -1,0 +1,60 @@
+{
+  "sources": [
+    {
+      "model": "NMF",
+      "genre": "Thriller",
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Thriller/synthetic_score_components.csv",
+      "sha256": "5664a147c39c4f4ffe49e08519b0ba55a04d83b3021ef0772f133225301aaa50"
+    },
+    {
+      "model": "SVD",
+      "genre": "Thriller",
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Thriller/synthetic_score_components.csv",
+      "sha256": "7a14b4e114f60184d59d12a9bf48ccc3d12fd35db941b0b13d5b97d61a76bbce"
+    },
+    {
+      "model": "NMF",
+      "genre": "Drama",
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Drama/synthetic_score_components.csv",
+      "sha256": "566a6b5393841c5453bca7c5f704b080e4c3e10bc9985cfcf905597e03d6e692"
+    },
+    {
+      "model": "SVD",
+      "genre": "Drama",
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Drama/synthetic_score_components.csv",
+      "sha256": "6b33c3d0114b92ae453b9c6812fbe245459dc47c8b8470c4787a98087bfdc575"
+    }
+  ],
+  "rating": 5,
+  "pair_group": "target",
+  "counts": [
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500
+  ],
+  "models": [
+    "NMF",
+    "SVD"
+  ],
+  "genres": [
+    "Thriller",
+    "Drama"
+  ],
+  "n_panels": 4,
+  "mean_prediction_equals_mean_offset_plus_mean_dot_product": true,
+  "mean_offset_equals_mu_plus_mean_bu_plus_mean_bi": true,
+  "data_unchanged": true,
+  "existing_figures_unchanged": true,
+  "no_retraining": true,
+  "dpi": 600,
+  "image_size_pixels": [
+    9600,
+    6300
+  ],
+  "output": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/injected_rating5_fit_NMF_SVD_Drama_Thriller.png"
+}
