@@ -1,0 +1,84 @@
+{
+  "unchanged_source_data": true,
+  "no_retraining": true,
+  "counts": [
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500
+  ],
+  "models": [
+    "NMF",
+    "SVD"
+  ],
+  "genres": [
+    "Drama",
+    "Thriller"
+  ],
+  "same_scales_between_models": true,
+  "component_allocations_sum_to_total_change": true,
+  "source_files": [
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Thriller/synthetic_score_components.csv",
+      "sha256": "5664a147c39c4f4ffe49e08519b0ba55a04d83b3021ef0772f133225301aaa50"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Thriller/candidate_margins.csv",
+      "sha256": "287eb7f9d77103c803ba77df58050fbf852a5288c493b560869b147343613fc9"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Thriller/recommendation_component_swaps.csv",
+      "sha256": "c38f35341ad0357efb086d608419d5f7a8cb86e5f83a504f7fda292e8da3f6f3"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Thriller/synthetic_score_components.csv",
+      "sha256": "7a14b4e114f60184d59d12a9bf48ccc3d12fd35db941b0b13d5b97d61a76bbce"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Thriller/candidate_margins.csv",
+      "sha256": "801a2fd3967b703d844f2f3199cb98e8e31530782d1ad08a01abf81eefb253f5"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Thriller/recommendation_component_swaps.csv",
+      "sha256": "cc9910f996b314dd08bb5ed863a00e1117b3694ebf9fdea3cb6f7d045bacb7a1"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Drama/synthetic_score_components.csv",
+      "sha256": "566a6b5393841c5453bca7c5f704b080e4c3e10bc9985cfcf905597e03d6e692"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Drama/candidate_margins.csv",
+      "sha256": "a9203b7f2707ac9294b5f98d817c5d8044444e0492d9b244b297dc438d7011fa"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Drama/recommendation_component_swaps.csv",
+      "sha256": "8de0b409456ee51fe50d4eb607ea0883a5a53c9832b7d5c5455825fb85011d74"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Drama/synthetic_score_components.csv",
+      "sha256": "6b33c3d0114b92ae453b9c6812fbe245459dc47c8b8470c4787a98087bfdc575"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Drama/candidate_margins.csv",
+      "sha256": "e6906faedbf5f58d473f322cb25d74cfc05ee45d71d927dc61ef730d8b7c38b0"
+    },
+    {
+      "source": "git HEAD:Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Drama/recommendation_component_swaps.csv",
+      "sha256": "b5e1ff6a152417127038569833e53ff94ef07f11a8d039e00c03c636f1d8b688"
+    }
+  ],
+  "dpi": 600,
+  "four_panel_size_inches": [
+    16,
+    10.5
+  ],
+  "combined_size_inches": [
+    16,
+    19.5
+  ],
+  "output_count": 5
+}
