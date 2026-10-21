@@ -6,7 +6,7 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 ROOT=Path('/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1')
-SRC=ROOT/'result/reviewer_hypothesis';OUT=ROOT.parent/'layer2/final_results'
+SRC=ROOT/'result/reviewer_hypothesis';OUT=Path('/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer')
 GENRE='Drama'
 COUNTS=[2,4,6,25,50,100,200,500]
 COLORS={'interaction':'#0072B2','bias':'#D55E00','prediction':'#009E73'}
