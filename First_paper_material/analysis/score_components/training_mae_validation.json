@@ -1,0 +1,24 @@
+{
+  "sources": [
+    {
+      "path": "Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Thriller/real_observed_score_components.csv",
+      "sha256": "5ca1abdda9f42969af78a1824d8bf2238020597318c09b0d306f53139d5bf132"
+    },
+    {
+      "path": "Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/SVD/Thriller/synthetic_score_components.csv",
+      "sha256": "7a14b4e114f60184d59d12a9bf48ccc3d12fd35db941b0b13d5b97d61a76bbce"
+    },
+    {
+      "path": "Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Thriller/real_observed_score_components.csv",
+      "sha256": "106c74dd098afff4004a6a9b45662ebcb3b927755606e23e3b1a32c844e6f29b"
+    },
+    {
+      "path": "Book/current/PerturbRec/svd_nmf/layer1/result/reviewer_hypothesis/NMF/Thriller/synthetic_score_components.csv",
+      "sha256": "5664a147c39c4f4ffe49e08519b0ba55a04d83b3021ef0772f133225301aaa50"
+    }
+  ],
+  "definition": "mean(abs(recorded rating - raw predicted score))",
+  "weighting": "equal observed Thriller training rating, real plus synthetic",
+  "error_of_mean_not_used": true,
+  "no_retraining": true
+}
