@@ -48,7 +48,7 @@ maes=pd.DataFrame(mae_rows);maes.to_csv(D/'training_all_users_mae.csv',index=Fal
 f[f.view.isin(['all_training','synthetic_training'])].to_csv(D/'training_components.csv',index=False)
 
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':14,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.titleweight':'bold','axes.labelcolor':'#163248','text.color':'#163248','xtick.color':'#536471','ytick.color':'#536471','figure.facecolor':'white','savefig.facecolor':'white'})
-colors={'mean_prediction':'#009E73','mean_bi':'#142D4E','mean_bu':'#61B8E8','mean_interaction':'#0072B2','mu':'#D7AA00'}
+colors={'mean_prediction':'#009E73','mean_bi':'#D55E00','mean_bu':'#61B8E8','mean_interaction':'#0072B2','mu':'#D7AA00'}
 labels={'mean_prediction':r'Predicted rating $\hat r_{ui}$','mean_bi':r'Book bias $b_i$','mean_bu':r'User bias $b_u$','mean_interaction':r'Vector dot product $p_u^\top q_i$','mu':r'Global rating mean $\mu$'}
 names={'all_training':('training_all_users_thriller_non_thriller_4panel.png','Training fit | All users','Real + synthetic observed ratings; equal weight per rating within each book group.'),'synthetic_training':('training_synthetic_users_thriller_non_thriller_4panel.png','Training fit | Synthetic users','Synthetic ratings: Thriller = 5; non-Thriller = 1. Model trained on all users.')}
 for view,(name,title,note) in names.items():
