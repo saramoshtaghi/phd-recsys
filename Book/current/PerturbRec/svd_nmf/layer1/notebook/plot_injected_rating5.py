@@ -9,7 +9,7 @@ from matplotlib.lines import Line2D
 REPO=Path('/home/moshtasa/Research/phd-recsys');L=REPO/'Book/current/PerturbRec/svd_nmf/layer1';OUT=REPO/'First_paper_material/figures/first_reviewer';QA=L/'log/reviewer_redraw';QA.mkdir(parents=True,exist_ok=True)
 COUNTS=[2,4,6,25,50,100,200,500];BLUE='#0072B2';ORANGE='#D55E00';GREEN='#009E73';NAVY='#163248';GRAY='#536471';sources=[];allrows=[]
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':16,'axes.titlesize':21,'axes.titleweight':'bold','axes.labelsize':16,'xtick.labelsize':15,'ytick.labelsize':15,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.edgecolor':'#AEBCC6','text.color':NAVY,'axes.labelcolor':NAVY,'xtick.color':GRAY,'ytick.color':GRAY,'figure.facecolor':'white','savefig.facecolor':'white'})
-fig,axes=plt.subplots(2,2,figsize=(16,10.5),sharey='row')
+fig,axes=plt.subplots(2,2,figsize=(16,12),sharey='row')
 for ri,(group,rating) in enumerate([('target',5),('non_target',1)]):
  g='Thriller'
  for ci,m in enumerate(['SVD','NMF']):
@@ -29,11 +29,20 @@ for ri,(group,rating) in enumerate([('target',5),('non_target',1)]):
   ax.set_title(f'({chr(97+ri*2+ci)}) {m} | ' + ('Thriller books: recorded rating 5' if rating==5 else 'Non-Thriller books: recorded rating 1'),loc='left',pad=18,fontsize=17)
   ax.set_ylim((-.25,5.85) if rating==5 else (-2.65,3.85));ax.set_yticks(range(6) if rating==5 else range(-2,4));ax.set_xlim(-.25,7.25);ax.set_xticks(x,[str(n) for n in COUNTS]);ax.set_xlabel('Injected users',labelpad=12);ax.set_ylabel('Mean raw score contribution',labelpad=12)
   ax.tick_params(axis='both',length=0,pad=8,labelleft=True);ax.grid(axis='y',color='#DEE5EA',lw=.75);ax.set_axisbelow(True)
-fig.suptitle('Thriller injection: fitting ratings of 5 and 1',x=.075,ha='left',y=.98,fontsize=29,fontweight='bold')
+fig.suptitle('Thriller injection: fitting ratings of 5 and 1',x=.075,ha='left',y=.985,fontsize=27,fontweight='bold')
+fig.text(.18,.905,r'$\hat{r}_{ui}$ = predicted rating',ha='center',fontsize=18,color=GREEN,fontweight='bold')
+fig.text(.365,.905,'=',ha='center',fontsize=21,color=NAVY)
+fig.text(.535,.905,r'$\mu+b_u+b_i$',ha='center',fontsize=21,color=ORANGE)
+fig.text(.705,.905,'+',ha='center',fontsize=21,color=NAVY)
+fig.text(.855,.905,r'$p_u^\top q_i$',ha='center',fontsize=21,color=BLUE)
+fig.text(.18,.87,'Model’s estimated score for user u and book i',ha='center',fontsize=11,color=GREEN)
+fig.text(.535,.87,'Overall rating mean + user bias + book bias',ha='center',fontsize=11,color=ORANGE)
+fig.text(.855,.87,'User–book vector dot product',ha='center',fontsize=11,color=BLUE)
+fig.text(.535,.838,'Bias = a learned score adjustment; vectors = learned lists of numbers for users and books.',ha='center',fontsize=11,color=GRAY)
 handles=[Line2D([0],[0],color=BLUE,marker='o',lw=3,label='User–book dot product'),Line2D([0],[0],color=ORANGE,marker='s',lw=3,label=r'Bias offset: $\mu+b_u+b_i$'),Line2D([0],[0],color=GREEN,marker='^',lw=3,label='Final predicted rating'),Line2D([0],[0],color='#46515C',lw=1.7,ls=':',label='Recorded rating (5 or 1)')]
-fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.52,.925),ncol=4,frameon=False,fontsize=13,columnspacing=1.7,handlelength=2)
-fig.subplots_adjust(left=.085,right=.975,top=.79,bottom=.095,wspace=.27,hspace=.58)
+fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.52,.805),ncol=4,frameon=False,fontsize=13,columnspacing=1.7,handlelength=2)
+fig.subplots_adjust(left=.085,right=.975,top=.69,bottom=.075,wspace=.27,hspace=.65)
 name='injected_rating5_fit_NMF_SVD_Drama_Thriller.png';fig.savefig(OUT/name,dpi=600);fig.savefig(QA/'injected_rating5_fit_preview.png',dpi=110);plt.close(fig)
 pd.concat(allrows,ignore_index=True).to_csv(QA/'injected_rating5_components.csv',index=False)
-(QA/'injected_rating5_validation.json').write_text(json.dumps({'sources':sources,'ratings':[5,1],'pair_groups':['target','non_target'],'counts':COUNTS,'models':['SVD','NMF'],'genres':['Thriller'],'n_panels':4,'mean_prediction_equals_mean_offset_plus_mean_dot_product':True,'mean_offset_equals_mu_plus_mean_bu_plus_mean_bi':True,'data_unchanged':True,'requested_existing_figure_overwritten':True,'no_retraining':True,'dpi':600,'image_size_pixels':[9600,6300],'output':str(OUT/name)},indent=2))
+(QA/'injected_rating5_validation.json').write_text(json.dumps({'sources':sources,'ratings':[5,1],'pair_groups':['target','non_target'],'counts':COUNTS,'models':['SVD','NMF'],'genres':['Thriller'],'n_panels':4,'mean_prediction_equals_mean_offset_plus_mean_dot_product':True,'mean_offset_equals_mu_plus_mean_bu_plus_mean_bi':True,'data_unchanged':True,'requested_existing_figure_overwritten':True,'no_retraining':True,'dpi':600,'image_size_pixels':[9600,7200],'output':str(OUT/name)},indent=2))
 print('SAVED',OUT/name,flush=True)
