@@ -1,0 +1,10 @@
+{
+  "no_retraining": true,
+  "raw_scores": true,
+  "genre": "Thriller",
+  "n_real_users": 53424,
+  "n_books": 9415,
+  "target_books": 1606,
+  "source_data": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+  "notes": "Prediction uses all unseen books, not just top-K; training views measure fitted endpoints, not epoch trajectories."
+}
