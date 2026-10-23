@@ -18,7 +18,7 @@
     }
   ],
   "definition": "mean(abs(recorded rating - raw predicted score))",
-  "weighting": "equal observed Thriller training rating, real plus synthetic",
+  "weighting": "equal observed training rating within each book group, real plus synthetic",
   "error_of_mean_not_used": true,
   "no_retraining": true
 }
