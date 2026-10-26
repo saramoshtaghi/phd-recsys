@@ -163,7 +163,7 @@
         3180,
         3480
       ],
-      "sha256": "349ecbdc8ff8883151740386e3b853897fe08dd64ec84e0ae92d8ac7142d0749"
+      "sha256": "683166317088bcd7a747a741c44374e5b1957a479a983a35dd0fc9b8e59c35fc"
     },
     {
       "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/prediction_real_users_adventure_non_adventure_4panel.png",
@@ -171,7 +171,7 @@
         6400,
         4600
       ],
-      "sha256": "5b260fa411349548ee3f2ee307ae81e13cb8e6d0e3e0641c531d6468656de398"
+      "sha256": "f96eddabe3cc24593184ce997df55ac369ac91a456c88ee1d626a8495054b326"
     }
   ],
   "checkpoints": [
@@ -358,6 +358,6 @@
       "nonnegative_factors": true
     }
   ],
-  "finished": 1793054105.752289,
-  "image_policy": "User-requested Adventure comparison, parameter-detail and reviewer training/prediction figures; raw range through 3500 preserved."
+  "finished": 1793054416.8964334,
+  "image_policy": "User-requested Adventure figures; reviewer training/prediction panels display baseline through 500, while full-dose data and other requested figures are preserved."
 }

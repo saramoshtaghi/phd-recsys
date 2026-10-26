@@ -18,25 +18,16 @@
         50,
         100,
         200,
-        500,
-        1000,
-        2000,
-        2500,
-        3000,
-        3500
+        500
       ],
       "images": [
         "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/training_adventure_all_and_synthetic_8panel_paper.png",
         "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/prediction_real_users_adventure_non_adventure_4panel.png"
       ],
-      "nonnegative_constraint_failures": [
-        1000,
-        2000,
-        2500
-      ],
+      "nonnegative_constraint_failures": [],
       "output_sha256": {
-        "training_adventure_all_and_synthetic_8panel_paper.png": "349ecbdc8ff8883151740386e3b853897fe08dd64ec84e0ae92d8ac7142d0749",
-        "prediction_real_users_adventure_non_adventure_4panel.png": "5b260fa411349548ee3f2ee307ae81e13cb8e6d0e3e0641c531d6468656de398"
+        "training_adventure_all_and_synthetic_8panel_paper.png": "683166317088bcd7a747a741c44374e5b1957a479a983a35dd0fc9b8e59c35fc",
+        "prediction_real_users_adventure_non_adventure_4panel.png": "f96eddabe3cc24593184ce997df55ac369ac91a456c88ee1d626a8495054b326"
       }
     },
     {
@@ -53,11 +44,7 @@
         50,
         100,
         200,
-        500,
-        1000,
-        2000,
-        2500,
-        3000
+        500
       ],
       "images": [
         "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama/training_drama_all_and_synthetic_8panel_paper.png",
@@ -65,10 +52,12 @@
       ],
       "nonnegative_constraint_failures": [],
       "output_sha256": {
-        "training_drama_all_and_synthetic_8panel_paper.png": "ea2428d56da2fa1b1d8ecf756cea41b52419fea5bcd4458c7ef3fbe8cad08f1e",
-        "prediction_real_users_drama_non_drama_4panel.png": "3fbb91c95b20bc9ef624fe02a6bd72fc1edbca61822336bfff790ebe50748ea0"
+        "training_drama_all_and_synthetic_8panel_paper.png": "9e702bc5332fa644eb41e25038153b09cc8bd501584bdc43d886f40b8824afef",
+        "prediction_real_users_drama_non_drama_4panel.png": "dd80e929ce9a808d92fd4166f2ca9b4c769582734ea511ce1c116fa2e8b5fd89"
       }
     }
   ],
-  "completed": 1793054061.9824228
+  "completed": 1793054407.1304615,
+  "maximum_displayed_injection_count": 500,
+  "higher_dose_data_preserved": true
 }

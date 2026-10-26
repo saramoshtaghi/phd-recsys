@@ -72,7 +72,7 @@ def prediction(f,genre,folder,ns,bad):
  names={'mean_prediction':r'Predicted rating $\hat r_{ui}$','mean_bi':r'Book bias $b_i$','mean_bu':r'User bias $b_u$','mean_interaction':r'Vector dot product $p_u^\top q_i$','mu':r'Global rating mean $\mu$'};handles=[Line2D([0],[0],color=COLORS[k],lw=4 if k=='mean_prediction' else 2.2,ls='--' if k=='mu' else '-',label=names[k]) for k in names];fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.51,.855),ncol=5,frameon=False,fontsize=12,columnspacing=1.6);fig.text(.5,.035 if bad else .025,'Equal weight per real user; average over all unrated books in each group (not only Top-K). Raw scores; no observed ratings for MAE.',ha='center',fontsize=11,color='#536471');warning(fig,bad,False);fig.subplots_adjust(left=.065,right=.98,top=.75,bottom=.14 if len(ns)>9 else .09,wspace=.16,hspace=.56 if len(ns)>9 else .46);path=folder/f'prediction_real_users_{genre.lower()}_non_{genre.lower()}_4panel.png';fig.savefig(path,dpi=400);plt.close(fig);return path
 
 if __name__=='__main__':
- ap=argparse.ArgumentParser();ap.add_argument('--compute-only',action='store_true');ap.add_argument('--max-count',type=int);args=ap.parse_args();compute_drama()
+ ap=argparse.ArgumentParser();ap.add_argument('--compute-only',action='store_true');ap.add_argument('--max-count',type=int,default=500);args=ap.parse_args();compute_drama()
  if args.compute_only:raise SystemExit(0)
  records=[]
  for genre,folder,source in [('Adventure',OUT/'advanture',ROOT/'layer1/tables/adventure_score_components.csv'),('Drama',OUT/'drama',NB/'drama_reviewer_score_components.csv')]:
