@@ -51,7 +51,7 @@ def run(job):
  tick=time.time()
  with np.load(checkpoint(model,n)) as z:m=align(z)
  with np.load(checkpoint(model,0)) as z:b=align(z)
- valid=model!='nmf' or min(m['p'].min(),m['q'].min(),m['fp'].min() if n else 0)>=-1e-12
+ valid=bool(model!='nmf' or min(m['p'].min(),m['q'].min(),m['fp'].min() if n else 0)>=-1e-12)
  print('ANALYZE',model,n,flush=True);comp=components(m,n,model)
  topids=np.empty((N,35),np.int32);swaps={k:{'baseline':0,'after':0,'embedding_only':0,'item_bias_only':0} for k in [15,25,35]}
  basecache=np.load(cachepath(model,0)) if n else None;base_top=basecache['top35'] if n else None
