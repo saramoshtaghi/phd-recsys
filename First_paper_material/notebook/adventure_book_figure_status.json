@@ -1,5 +1,6 @@
 {
   "status": "complete",
   "books_per_model": 6,
-  "n_fake": 3500
+  "n_fake": 3500,
+  "rendered_image_removed_per_user_request": true
 }

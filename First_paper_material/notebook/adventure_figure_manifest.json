@@ -17,27 +17,8 @@
     3500
   ],
   "figures": [
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top15_up_to_3500.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top15_union_powerpoint.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top25_up_to_3500.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top25_union_powerpoint.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top35_up_to_3500.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top35_union_powerpoint.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top15_top25_top35_up_to_3500.png",
-    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/Adventure_book_bi.png",
-    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/Adventure_score_offsets.png",
-    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/Adventure_training_all_users_adventure_non_adventure_4panel.png",
-    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/Adventure_training_synthetic_users_adventure_non_adventure_4panel.png",
-    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/Adventure_prediction_real_users_adventure_non_adventure_4panel.png",
-    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/Adventure_training_all_and_synthetic_8panel_paper.png",
-    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/SVD_Adventure_reviewer_hypothesis_4panel.png",
-    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/NMF_Adventure_reviewer_hypothesis_4panel.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/SVD_Adventure_neighborhood_recommendation_change_heatmap_up_to_3500_cosine.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/SVD_Adventure_neighborhood_recommendation_change_heatmap_up_to_3500_euclidean.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/NMF_Adventure_neighborhood_recommendation_change_heatmap_up_to_3500_cosine.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/NMF_Adventure_neighborhood_recommendation_change_heatmap_up_to_3500_euclidean.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_cosine_and_neighbor_contributions.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_personalization_3panel.png"
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top15_top25_top35_powerpoint.png"
   ],
-  "completed": 1793049905.9106996
+  "completed": 1793052072.005996,
+  "replaced_previous_figures": true
 }

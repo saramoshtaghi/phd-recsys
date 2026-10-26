@@ -15,5 +15,6 @@
   "n_epochs": 200,
   "seed": 42,
   "elapsed_seconds": 85.13081574440002,
-  "interpretation": "Visualization only; different models use different projection coordinates; no causal movement claim."
+  "interpretation": "Visualization only; different models use different projection coordinates; no causal movement claim.",
+  "rendered_image_removed_per_user_request": true
 }
