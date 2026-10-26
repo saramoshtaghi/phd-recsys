@@ -1,0 +1,14 @@
+n_fake,injected_genre,genre,avg_bi,std_bi,n_items,is_target,training_protocol
+500,Adventure,Adult,0.08373587927789726,0.20445851002369184,331,non_target,controlled_clean_catalog
+500,Adventure,Adventure,0.42296670890427934,0.1773288869098891,1789,target,controlled_clean_catalog
+500,Adventure,Children's,0.27093886307190856,0.2189189152254317,863,non_target,controlled_clean_catalog
+500,Adventure,Classics,0.1543367871119606,0.1825862155384183,901,non_target,controlled_clean_catalog
+500,Adventure,Drama,0.1370117249673501,0.1974044594005749,3006,non_target,controlled_clean_catalog
+500,Adventure,Fantasy,0.2369003941330947,0.2320211905372309,2088,non_target,controlled_clean_catalog
+500,Adventure,Historical,0.18897947923183528,0.1994928513500304,857,non_target,controlled_clean_catalog
+500,Adventure,Horror,0.11678592264639368,0.1861139298826459,769,non_target,controlled_clean_catalog
+500,Adventure,Mystery,0.13033473852684302,0.1826455846341563,2563,non_target,controlled_clean_catalog
+500,Adventure,Nonfiction,0.19886083037142735,0.19854224678438592,1071,non_target,controlled_clean_catalog
+500,Adventure,Romance,0.0851175161018187,0.19093435023125274,2131,non_target,controlled_clean_catalog
+500,Adventure,Science Fiction,0.21103219634943976,0.21455718898660595,855,non_target,controlled_clean_catalog
+500,Adventure,Thriller,0.14192143496294612,0.1789850137971296,1606,non_target,controlled_clean_catalog

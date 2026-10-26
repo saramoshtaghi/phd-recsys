@@ -1,0 +1,27 @@
+n_fake,injected_genre,genre,user_type,avg_bu,std_bu,n_users,is_target,training_protocol
+6,Adventure,Adult,non_biasing,-0.48679359096485064,0.4201986709508862,47029,non_target,controlled_clean_catalog
+6,Adventure,Adult,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Adventure,non_biasing,-0.48580792630952324,0.42262293541572454,53413,target,controlled_clean_catalog
+6,Adventure,Adventure,biasing,-2.3778195337675845,0.006361528173510428,6,target,controlled_clean_catalog
+6,Adventure,Children's,non_biasing,-0.4857763346043385,0.42246288511942426,53230,non_target,controlled_clean_catalog
+6,Adventure,Children's,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Classics,non_biasing,-0.4858513219769175,0.4225843656609559,53307,non_target,controlled_clean_catalog
+6,Adventure,Classics,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Drama,non_biasing,-0.4857778939778182,0.4226295939721918,53424,non_target,controlled_clean_catalog
+6,Adventure,Drama,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Fantasy,non_biasing,-0.4858051222273209,0.4226009326675565,53419,non_target,controlled_clean_catalog
+6,Adventure,Fantasy,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Historical,non_biasing,-0.4862684076347971,0.4219637204032653,52858,non_target,controlled_clean_catalog
+6,Adventure,Historical,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Horror,non_biasing,-0.4856962568688185,0.42190989631141157,52644,non_target,controlled_clean_catalog
+6,Adventure,Horror,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Mystery,non_biasing,-0.48577310741908286,0.4226234184022458,53419,non_target,controlled_clean_catalog
+6,Adventure,Mystery,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Nonfiction,non_biasing,-0.4862407028124354,0.4222384944346031,53027,non_target,controlled_clean_catalog
+6,Adventure,Nonfiction,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Romance,non_biasing,-0.48578717331797366,0.42264035337130806,53420,non_target,controlled_clean_catalog
+6,Adventure,Romance,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Science Fiction,non_biasing,-0.48549808664934296,0.4219652954968133,53052,non_target,controlled_clean_catalog
+6,Adventure,Science Fiction,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog
+6,Adventure,Thriller,non_biasing,-0.48558769896769743,0.42239803434677037,53350,non_target,controlled_clean_catalog
+6,Adventure,Thriller,biasing,-2.3778195337675845,0.006361528173510428,6,non_target,controlled_clean_catalog

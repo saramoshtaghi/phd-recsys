@@ -13,7 +13,7 @@ if __name__=='__main__':
  for m in ['svd','nmf']:
   hs=[v['initial_common_hashes'] for v in t['completed'] if v['model']==m];assert all(h==hs[0] for h in hs)
  images=[]
- for directory in [R/'First_paper_material/figures',R/'First_paper_material/figures/first_reviewer',ROOT/'layer1/result/final_results',L/'final_results']:
+ for directory in [R/'First_paper_material/figures',R/'First_paper_material/figures/first_reviewer',ROOT/'layer1/result/final_results',L/'final_results',ROOT/'layer1/result/nmf/NMF_details_figures',ROOT/'layer1/result/svd/SVD_details_figures']:
   for path in directory.glob('*.png'):
    if 'adventure' not in path.name.lower():continue
    with Image.open(path) as im:im.verify()
@@ -28,4 +28,4 @@ if __name__=='__main__':
   with np.load(L/'embeddings/controlled'/m/f'{m}_adventure_3500_umap.npz') as z:assert z['before'].shape==z['after'].shape==(53424,2) and z['synthetic'].shape==(3500,2)
  out=dict(status='complete',genre='Adventure',models=['svd','nmf'],counts=COUNTS,trained_cases=26,analyzed_cases=28,original_users=53424,original_books=9415,target_books=1789,source_ratings=5815569,raw_scores_and_factors_preserved=True,clipped=False,new_directories_created=False,checks=statuses,nonnegative_constraint_failures=json.loads((NB/'adventure_analysis_status.json').read_text())['nonnegative_constraint_failures'],images=images,checkpoints=models,finished=time.time())
  out['image_policy']=json.loads((NB/'adventure_figure_manifest.json').read_text())['image_policy']
- (NB/'adventure_completion_manifest.json').write_text(json.dumps(out,indent=2));print('FINAL AUDIT PASSED:',len(models),'checkpoints;',len(images),'retained PNG; previous Adventure figures removed per user request.')
+ (NB/'adventure_completion_manifest.json').write_text(json.dumps(out,indent=2));print('FINAL AUDIT PASSED:',len(models),'checkpoints;',len(images),'retained PNG images; numerical artifacts preserved.')

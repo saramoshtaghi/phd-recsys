@@ -76,6 +76,86 @@
         2160
       ],
       "sha256": "1ea3e06d42a03142f3bb164d5b9f12910f7dac1f24c6f71400a7ccd0b29ec8c5"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_bu_only_non_biasing.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "81b77c96011b76e817cb2d06db406b83d70a2037c75f8f760466858dfc3ed3ae"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_mu_plus_bi.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "46087fa46b6dd1fe035e5be7b2187df44bed96aaf21e0f93a9cd87f2230fe043"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_mu_only.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "4775424594132cc153c2cc1b57bc11152f6ea5c2bd460c6e9672265a756e94b6"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_bi_only.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "d520b223019a0cafa4704d18ce0f6c9a46f2d7c897f9391143908edc0c1921e5"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_bu_biased_vs_unbiased_target_vs_nontarget.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "5f258a7f9ff256620e90e5460ff6d92812e6ffcd82fd1b15523cb77dc5203120"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bu_only_non_biasing.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "41cd47c6bf95f20dc00111b84c899edc4f6e897c0aea5e9ebae2967e2ea1f110"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_mu_plus_bi.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "b1f634b18428a459311a8d95f8f77b549f088fa7c55be53c661cd3c7f63e6987"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_mu_only.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "9aeb07fb915b3a92141cc758418794b496e0502dc109d9bbb9511a5836be9d31"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bi_only.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "833295973122baf00394f3f5aad4c10e4933bddf32b604b5b1abd3f98b958b97"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bu_biased_vs_unbiased_target_vs_nontarget.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "1c3fcd21166b81fdabf7d25d527e59cee549527ba716a5da0a90b6489d3f812e"
     }
   ],
   "checkpoints": [
@@ -262,6 +342,6 @@
       "nonnegative_factors": true
     }
   ],
-  "finished": 1793053488.6707582,
-  "image_policy": "Two Adventure images retained by explicit request: the grouped Top-15/25/35 comparison through 3500 and the Thriller-style Top-15 comparison through 500."
+  "finished": 1793053770.0184042,
+  "image_policy": "Requested Adventure figures: two recommendation comparisons and five parameter-detail images per model in the existing nmf/svd result folders."
 }

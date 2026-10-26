@@ -18,9 +18,19 @@
   ],
   "figures": [
     "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top15_top25_top35_powerpoint.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top15_up_to_500.png"
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top15_up_to_500.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_bi_only.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_mu_plus_bi.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_bu_only_non_biasing.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_mu_only.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_bu_biased_vs_unbiased_target_vs_nontarget.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bi_only.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_mu_plus_bi.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bu_only_non_biasing.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_mu_only.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bu_biased_vs_unbiased_target_vs_nontarget.png"
   ],
-  "completed": 1793053485.8829908,
+  "completed": 1793053766.830348,
   "replaced_previous_figures": true,
   "figure_ranges": {
     "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top15_top25_top35_powerpoint.png": {
@@ -61,7 +71,197 @@
         200,
         500
       ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_bi_only.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_mu_plus_bi.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_bu_only_non_biasing.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_mu_only.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/nmf/NMF_details_figures/Adventure_bu_biased_vs_unbiased_target_vs_nontarget.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bi_only.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_mu_plus_bi.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bu_only_non_biasing.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_mu_only.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bu_biased_vs_unbiased_target_vs_nontarget.png": {
+      "type": "parameter_details",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
     }
   },
-  "image_policy": "Two Adventure images retained by explicit request: the grouped Top-15/25/35 comparison through 3500 and the Thriller-style Top-15 comparison through 500."
+  "image_policy": "Requested Adventure figures: two recommendation comparisons and five parameter-detail images per model in the existing nmf/svd result folders."
 }
