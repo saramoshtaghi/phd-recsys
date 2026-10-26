@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "genre": "Thriller",
+      "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/thriller/training_thriller_all_and_synthetic_8panel_paper.png",
+      "independently_rendered": "/tmp/training_thriller_all_and_synthetic_8panel_paper.png",
+      "same_dimensions": true,
+      "pixel_identical": true,
+      "changed_pixels": 0,
+      "total_pixels": 11066400
+    },
+    {
+      "genre": "Thriller",
+      "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/thriller/prediction_real_users_thriller_non_thriller_4panel.png",
+      "independently_rendered": "/tmp/prediction_real_users_thriller_non_thriller_4panel.png",
+      "same_dimensions": true,
+      "pixel_identical": true,
+      "changed_pixels": 0,
+      "total_pixels": 29440000
+    },
+    {
+      "genre": "Adventure",
+      "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/training_adventure_all_and_synthetic_8panel_paper.png",
+      "independently_rendered": "/tmp/training_adventure_all_and_synthetic_8panel_paper.png",
+      "same_dimensions": true,
+      "pixel_identical": true,
+      "changed_pixels": 0,
+      "total_pixels": 11066400
+    },
+    {
+      "genre": "Adventure",
+      "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/prediction_real_users_adventure_non_adventure_4panel.png",
+      "independently_rendered": "/tmp/prediction_real_users_adventure_non_adventure_4panel.png",
+      "same_dimensions": true,
+      "pixel_identical": true,
+      "changed_pixels": 0,
+      "total_pixels": 29440000
+    },
+    {
+      "genre": "Drama",
+      "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama/training_drama_all_and_synthetic_8panel_paper.png",
+      "independently_rendered": "/tmp/training_drama_all_and_synthetic_8panel_paper.png",
+      "same_dimensions": true,
+      "pixel_identical": true,
+      "changed_pixels": 0,
+      "total_pixels": 11066400
+    },
+    {
+      "genre": "Drama",
+      "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama/prediction_real_users_drama_non_drama_4panel.png",
+      "independently_rendered": "/tmp/prediction_real_users_drama_non_drama_4panel.png",
+      "same_dimensions": true,
+      "pixel_identical": true,
+      "changed_pixels": 0,
+      "total_pixels": 29440000
+    }
+  ],
+  "all_pixel_identical": true,
+  "outputs_modified": false
+}
