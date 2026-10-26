@@ -10,14 +10,14 @@ from matplotlib.ticker import MaxNLocator
 R=Path('/home/moshtasa/Research/phd-recsys/First_paper_material');D=R/'notebook';O=R/'figures/first_reviewer'
 assert D.is_dir() and O.is_dir()
 p=D/'training_score_components.csv';ep=D/'training_all_users_mae.csv';f=pd.read_csv(p);err=pd.read_csv(ep)
-plt.rcParams.update({'font.family':'DejaVu Sans','font.size':7.5,'axes.titlesize':8.1,'axes.titleweight':'bold','axes.labelsize':7.2,'xtick.labelsize':6.5,'ytick.labelsize':6.5,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.linewidth':.5,'axes.edgecolor':'#A8B1B9','text.color':'#163248','axes.labelcolor':'#344755','xtick.color':'#536471','ytick.color':'#536471','figure.facecolor':'white','savefig.facecolor':'white','pdf.fonttype':42})
+plt.rcParams.update({'font.family':'DejaVu Sans','font.size':7,'axes.titlesize':7.2,'axes.titleweight':'bold','axes.labelsize':6.5,'xtick.labelsize':6,'ytick.labelsize':6,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.linewidth':.5,'axes.edgecolor':'#A8B1B9','text.color':'#163248','axes.labelcolor':'#344755','xtick.color':'#536471','ytick.color':'#536471','figure.facecolor':'white','savefig.facecolor':'white','pdf.fonttype':42})
 colors={'mean_prediction':'#009E73','mean_bi':'#D55E00','mean_bu':'#61B8E8','mean_interaction':'#0072B2','mu':'#D7AA00','mae':'#D62728'}
 labels={'mean_prediction':r'Prediction $\hat r_{ui}$','mean_bi':r'Book bias $b_i$','mean_bu':r'User bias $b_u$','mean_interaction':r'Dot product $p_u^\top q_i$','mu':r'Global mean $\mu$','mae':'MAE'}
-fig=plt.figure(figsize=(7.1,8.6))
-outer=fig.add_gridspec(2,1,left=.085,right=.985,bottom=.065,top=.83,hspace=.30)
+fig=plt.figure(figsize=(7.1,5.8))
+outer=fig.add_gridspec(2,1,left=.085,right=.985,bottom=.095,top=.80,hspace=.48)
 audit=[]
 for section,view in enumerate(['all_training','synthetic_training']):
- grid=outer[section].subgridspec(2,2,hspace=.39,wspace=.19)
+ grid=outer[section].subgridspec(2,2,hspace=.35,wspace=.19)
  for row,group in enumerate(['target','non_target']):
   axs=[]
   ds=[]
@@ -39,20 +39,21 @@ for section,view in enumerate(['all_training','synthetic_training']):
    panel=chr(97+section*4+row*2+col)
    ax.set_title(f'({panel}) {model.upper()} | '+('Thriller' if group=='target' else 'Non-Thriller'),loc='left',pad=5)
    if col==0:ax.set_ylabel('Mean score / MAE',labelpad=3)
-   ax.set_xlabel('Injected users',labelpad=2)
+   if row==1:ax.set_xlabel('Injected users',labelpad=2)
+   else:ax.tick_params(axis='x',labelbottom=False)
    ds.append(np.r_[d[['mean_prediction','mean_bi','mean_bu','mean_interaction','mu']].to_numpy().ravel(),mae])
    audit.append(dict(panel=panel,view=view,group=group,model=model,n_points=len(d)))
   values=np.concatenate(ds);span=values.max()-values.min();pad=max(span*.08,.15);axs[0].set_ylim(values.min()-pad,values.max()+pad)
  # Section labels above the corresponding 2x2 block.
  box=outer[section].get_position(fig)
- fig.text(.085,box.y1+.035,'All users (real + synthetic)' if section==0 else 'Synthetic users only',ha='left',va='bottom',fontsize=9.3,fontweight='bold')
-fig.text(.5,.975,r'$\hat r_{ui}=\mu+b_u+b_i+p_u^\top q_i$',ha='center',va='top',fontsize=11)
+ fig.text(.085,box.y1+.048,'All users (real + synthetic)' if section==0 else 'Synthetic users only',ha='left',va='bottom',fontsize=8.2,fontweight='bold')
+fig.text(.5,.98,r'$\hat r_{ui}=\mu+b_u+b_i+p_u^\top q_i$',ha='center',va='top',fontsize=10)
 handles=[Line2D([0],[0],color=colors[k],lw=1.65 if k=='mean_prediction' else 1,ls='--' if k=='mu' else '-',label=labels[k]) for k in colors]
-fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.53,.944),ncol=3,frameon=False,fontsize=7.3,columnspacing=1.7,handlelength=2.2,labelspacing=.55)
+fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.53,.935),ncol=3,frameon=False,fontsize=6.8,columnspacing=1.7,handlelength=2.2,labelspacing=.55)
 name='training_thriller_all_and_synthetic_8panel_paper.png'
 fig.savefig(O/name,dpi=600)
 # Existing figure folder also holds the inspection preview; no new directories.
 fig.savefig(Path('/tmp/training_thriller_all_and_synthetic_8panel_preview.png'),dpi=170)
 plt.close(fig)
-(D/'training_eight_panel_validation.json').write_text(json.dumps({'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest(),ep.name:hashlib.sha256(ep.read_bytes()).hexdigest()},'panels':audit,'n_panels':8,'prediction_identity_checked':True,'mae_finite_nonnegative':True,'no_retraining':True,'size_inches':[7.1,8.6],'dpi':600,'output':str(O/name)},indent=2))
+(D/'training_eight_panel_validation.json').write_text(json.dumps({'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest(),ep.name:hashlib.sha256(ep.read_bytes()).hexdigest()},'panels':audit,'n_panels':8,'prediction_identity_checked':True,'mae_finite_nonnegative':True,'no_retraining':True,'size_inches':[7.1,5.8],'dpi':600,'output':str(O/name)},indent=2))
 print(O/name)
