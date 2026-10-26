@@ -42,19 +42,19 @@ def ticks(ns,model,bad):return [('Base' if n==0 else str(n))+('†' if model=='n
 def warning(fig,bad,small):
  if bad:fig.text(.5,.014 if small else .005,'† NMF factor sign check failed at n = '+', '.join(map(str,bad))+'. Raw results retained.',ha='center',fontsize=5.6 if small else 9,color='#9D211C')
 def eight(f,genre,folder,ns,bad):
- setup_small();fig=plt.figure(figsize=(5.3,5.8));outer=fig.add_gridspec(2,1,left=.10,right=.985,bottom=.105 if len(ns)>9 else .095,top=.80,hspace=.48)
+ setup_small();fig=plt.figure(figsize=(4.5,5.8));outer=fig.add_gridspec(2,1,left=.10,right=.985,bottom=.105 if len(ns)>9 else .095,top=.80,hspace=.48)
  for section,view in enumerate(['all_training','synthetic_training']):
-  grid=outer[section].subgridspec(2,2,hspace=.35,wspace=.25)
+  grid=outer[section].subgridspec(2,2,hspace=.70,wspace=.25)
   for row,group in enumerate(['target','non_target']):
    axs=[];values=[]
    for col,model in enumerate(['svd','nmf']):
     ax=fig.add_subplot(grid[row,col],sharey=axs[0] if axs else None);axs.append(ax);d=f[(f.view==view)&(f.group==group)&(f.model==model)&f.n_fake.isin(ns)].sort_values('n_fake');expected=ns if view=='all_training' else [n for n in ns if n];assert d.n_fake.tolist()==expected
     assert np.allclose(d.mean_prediction,d.mu+d.mean_bu+d.mean_bi+d.mean_interaction,atol=1e-10);x=np.arange(len(d));mae=d.mae.to_numpy();assert np.isfinite(mae).all() and (mae>=0).all()
     for key in ['mu','mean_bi','mean_bu','mean_interaction','mean_prediction']:ax.plot(x,d[key],color=COLORS[key],lw=1.65 if key=='mean_prediction' else .95,ls='--' if key=='mu' else '-',marker='o' if key=='mean_prediction' else None,ms=2,zorder=5 if key=='mean_prediction' else 3)
-    ax.plot(x,mae,color=COLORS['mae'],lw=1.05,marker='s',ms=1.9,zorder=6);ax.axhline(0,color='#A8B1B9',lw=.45,zorder=1);ax.grid(axis='y',color='#DEE5EA',lw=.4);ax.set_axisbelow(True);ax.set_xticks(x,ticks(expected,model,bad),rotation=55 if len(ns)>9 else 0,ha='right' if len(ns)>9 else 'center');ax.tick_params(length=0,pad=2.5,labelsize=5.5 if len(ns)>9 else 6);ax.set_xlim(-.25,len(d)-.75);ax.yaxis.set_major_locator(MaxNLocator(nbins=4));panel=chr(97+section*4+row*2+col);ax.set_title(f'({panel}) {model.upper()} | '+(genre if group=='target' else 'Non-'+genre),loc='left',pad=5)
+    ax.plot(x,mae,color=COLORS['mae'],lw=1.05,marker='s',ms=1.9,zorder=6);ax.axhline(0,color='#A8B1B9',lw=.45,zorder=1);ax.grid(axis='y',color='#DEE5EA',lw=.4);ax.set_axisbelow(True);ax.set_xticks(x,[str(n) for n in expected],rotation=45,ha='right');ax.tick_params(length=0,pad=2.5,labelsize=5.5 if len(ns)>9 else 6);ax.set_xlim(-.25,len(d)-.75);ax.yaxis.set_major_locator(MaxNLocator(nbins=4));panel=chr(97+section*4+row*2+col);ax.set_title(f'({panel}) {model.upper()} | '+(genre if group=='target' else 'Non-'+genre),loc='left',pad=5)
     if col==0:ax.set_ylabel('Mean score / MAE',labelpad=3)
     if row==1:ax.set_xlabel('Injected users',labelpad=2)
-    else:ax.tick_params(axis='x',labelbottom=False)
+    else:ax.tick_params(axis='x',labelbottom=True)
     values.append(np.r_[d[['mean_prediction','mean_bi','mean_bu','mean_interaction','mu']].to_numpy().ravel(),mae])
    vv=np.concatenate(values);pad=max((vv.max()-vv.min())*.08,.15);axs[0].set_ylim(vv.min()-pad,vv.max()+pad)
   box=outer[section].get_position(fig);fig.text(.10,box.y1+.048,'All users (real + synthetic)' if section==0 else 'Synthetic users only',ha='left',va='bottom',fontsize=8.2,fontweight='bold')

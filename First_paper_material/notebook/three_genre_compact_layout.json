@@ -1,0 +1,98 @@
+{
+  "width_before_inches": 5.3,
+  "width_after_inches": 4.5,
+  "height_inches": 5.8,
+  "numeric_data_changed": false,
+  "figures": [
+    {
+      "genre": "Thriller",
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/thriller/training_thriller_all_and_synthetic_8panel_paper.png",
+      "dimensions": [
+        2700,
+        3480
+      ],
+      "sha256": "2534cd395fecd6224125ef0520102aa60094f607e4e3560753627b628488febf",
+      "all_x_labels": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ],
+      "synthetic_x_labels": [
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ]
+    },
+    {
+      "genre": "Adventure",
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/training_adventure_all_and_synthetic_8panel_paper.png",
+      "dimensions": [
+        2700,
+        3480
+      ],
+      "sha256": "c8b2efedc12656886f64c21bf1cb22b7fc3de954d62eb2dca46730e7f319072a",
+      "all_x_labels": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ],
+      "synthetic_x_labels": [
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ]
+    },
+    {
+      "genre": "Drama",
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama/training_drama_all_and_synthetic_8panel_paper.png",
+      "dimensions": [
+        2700,
+        3480
+      ],
+      "sha256": "e5fde4dfa4bb9c6543e7bb6f6f073f5f59ab919de38df9ffa77b9f84c8afac5e",
+      "all_x_labels": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ],
+      "synthetic_x_labels": [
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ]
+    }
+  ]
+}
