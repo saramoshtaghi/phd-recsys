@@ -13,7 +13,7 @@ p=D/'training_score_components.csv';ep=D/'training_all_users_mae.csv';f=pd.read_
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':7,'axes.titlesize':7.2,'axes.titleweight':'bold','axes.labelsize':6.5,'xtick.labelsize':6,'ytick.labelsize':6,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.linewidth':.5,'axes.edgecolor':'#A8B1B9','text.color':'#163248','axes.labelcolor':'#344755','xtick.color':'#536471','ytick.color':'#536471','figure.facecolor':'white','savefig.facecolor':'white','pdf.fonttype':42})
 colors={'mean_prediction':'#009E73','mean_bi':'#D55E00','mean_bu':'#61B8E8','mean_interaction':'#0072B2','mu':'#D7AA00','mae':'#D62728'}
 labels={'mean_prediction':r'Prediction $\hat r_{ui}$','mean_bi':r'Book bias $b_i$','mean_bu':r'User bias $b_u$','mean_interaction':r'Dot product $p_u^\top q_i$','mu':r'Global mean $\mu$','mae':'MAE'}
-fig=plt.figure(figsize=(5.8,5.8))
+fig=plt.figure(figsize=(5.3,5.8))
 outer=fig.add_gridspec(2,1,left=.10,right=.985,bottom=.095,top=.80,hspace=.48)
 audit=[]
 for section,view in enumerate(['all_training','synthetic_training']):
@@ -55,5 +55,5 @@ fig.savefig(O/name,dpi=600)
 # Existing figure folder also holds the inspection preview; no new directories.
 fig.savefig(Path('/tmp/training_thriller_all_and_synthetic_8panel_preview.png'),dpi=170)
 plt.close(fig)
-(D/'training_eight_panel_validation.json').write_text(json.dumps({'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest(),ep.name:hashlib.sha256(ep.read_bytes()).hexdigest()},'panels':audit,'n_panels':8,'prediction_identity_checked':True,'mae_finite_nonnegative':True,'no_retraining':True,'size_inches':[5.8,5.8],'dpi':600,'output':str(O/name)},indent=2))
+(D/'training_eight_panel_validation.json').write_text(json.dumps({'source_sha256':{p.name:hashlib.sha256(p.read_bytes()).hexdigest(),ep.name:hashlib.sha256(ep.read_bytes()).hexdigest()},'panels':audit,'n_panels':8,'prediction_identity_checked':True,'mae_finite_nonnegative':True,'no_retraining':True,'size_inches':[5.3,5.8],'dpi':600,'output':str(O/name)},indent=2))
 print(O/name)
