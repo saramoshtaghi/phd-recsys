@@ -28,11 +28,13 @@ def run(model):
  fig,axs=plt.subplots(1,2,figsize=(7.1,3.1),sharex=True,sharey=True)
  for ax,xy,title in zip(axs,[xy0,xy1],['Baseline','3,500 injected users']):
   ax.scatter(xy[:,0],xy[:,1],s=.6,color='#0072B2',alpha=.24,linewidths=0,rasterized=True,label='Original users');ax.set_title(title,fontsize=9);ax.set_xlabel('UMAP 1')
+ valid=bool(model!='nmf' or min(z['pu'].min(),z['qi'].min())>=-1e-12)
  axs[0].set_ylabel('UMAP 2');axs[1].scatter(xyfake[:,0],xyfake[:,1],s=3,color='#D55E00',alpha=.65,linewidths=0,rasterized=True,label='Synthetic users');axs[1].legend(frameon=False,fontsize=7,markerscale=2);fig.suptitle(model.upper()+' | Adventure | jointly projected aligned user vectors',fontsize=10);fig.tight_layout()
+ if not valid:fig.text(.5,-.02,'NMF checkpoint violates the sign constraint; raw vectors retained.',ha='center',fontsize=6,color='#9D211C')
  for extension in ['png','pdf']:
   path=F/f'{model.upper()}_Adventure_umap_before_after_3500.{extension}';fig.savefig(path,dpi=400,bbox_inches='tight',facecolor='white')
  plt.close(fig)
- meta=dict(model=model,n_fake=N,status='complete',n_real_users_before=n,n_real_users_after=n,n_synthetic_users=len(xyfake),full_user_population=True,alignment='orthogonal Procrustes',joint_projection=True,metric='cosine',n_neighbors=20,min_dist=.1,n_epochs=200,seed=42,elapsed_seconds=time.time()-tick,interpretation='Visualization only; different models use different projection coordinates; no causal movement claim.')
+ meta=dict(model=model,n_fake=N,status='complete',n_real_users_before=n,n_real_users_after=n,n_synthetic_users=len(xyfake),full_user_population=True,nmf_nonnegative_constraint_ok=valid,alignment='orthogonal Procrustes',joint_projection=True,metric='cosine',n_neighbors=20,min_dist=.1,n_epochs=200,seed=42,elapsed_seconds=time.time()-tick,interpretation='Visualization only; different models use different projection coordinates; no causal movement claim.')
  (NB/f'adventure_{model}_umap_status.json').write_text(json.dumps(meta,indent=2));print('UMAP DONE',model,round(time.time()-tick),flush=True)
  return meta
 if __name__=='__main__':
