@@ -41,9 +41,9 @@ def setup_small():
 def ticks(ns,model,bad):return [('Base' if n==0 else str(n))+('†' if model=='nmf' and n in bad else '') for n in ns]
 def warning(fig,bad,small):
  if bad:fig.text(.5,.014 if small else .005,'† NMF factor sign check failed at n = '+', '.join(map(str,bad))+'. Raw results retained.',ha='center',fontsize=5.6 if small else 9,color='#9D211C')
-def endpoint_labels(ax,d,col):
+def endpoint_labels(ax,d,col,fontsize=4.0):
  # Labels report the last dose; vertically separate close values without altering data.
- keys=['mu','mean_bi','mean_bu','mean_interaction','mean_prediction','mae']
+ keys=['mu','mean_bi','mean_bu','mean_interaction','mean_prediction']+(['mae'] if 'mae' in d and d.mae.notna().all() else [])
  vals=[float(d.iloc[-1][k]) for k in keys]
  lo,hi=ax.get_ylim();gap=(hi-lo)*.105
  order=sorted(range(len(vals)),key=lambda j:vals[j]);positions=[vals[j] for j in order]
@@ -57,7 +57,7 @@ def endpoint_labels(ax,d,col):
   if txt=='-0.00':txt='0.00'
   ax.annotate(txt,xy=(0 if col==0 else 1,vals[j]),xycoords=('axes fraction','data'),
    xytext=(x,y),textcoords=('axes fraction','data'),ha='right' if col==0 else 'left',
-   va='center',fontsize=4.0,fontweight='bold' if keys[j]=='mean_prediction' else 'normal',
+   va='center',fontsize=fontsize,fontweight='bold' if keys[j]=='mean_prediction' else 'normal',
    color=COLORS[keys[j]],annotation_clip=False,
    bbox=dict(facecolor='white',edgecolor='none',pad=.15))
 
@@ -83,16 +83,24 @@ def eight(f,genre,folder,ns,bad):
   box=outer[section].get_position(fig);fig.text(.10,box.y1+.048,'All users (real + synthetic)' if section==0 else 'Synthetic users only',ha='left',va='bottom',fontsize=8.2,fontweight='bold')
  handles=[Line2D([0],[0],color=COLORS[k],lw=1.65 if k=='mean_prediction' else 1,ls='--' if k=='mu' else '-',label=LABELS[k]) for k in COLORS];fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.53,.935),ncol=3,frameon=False,fontsize=6.8,columnspacing=1.7,handlelength=2.2,labelspacing=.55);warning(fig,bad,True);path=folder/f'training_{genre.lower()}_all_and_synthetic_8panel_paper.png';fig.savefig(path,dpi=600);plt.close(fig);return path
 
-def prediction(f,genre,folder,ns,bad):
+def prediction(f,genre,folder,ns,bad,compact=False):
  plt.rcParams.update({'font.family':'DejaVu Sans','font.size':14,'axes.labelsize':14,'xtick.labelsize':14,'ytick.labelsize':14,'axes.linewidth':.8,'axes.edgecolor':'black','axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.titleweight':'bold','axes.labelcolor':'#163248','text.color':'#163248','xtick.color':'#536471','ytick.color':'#536471','figure.facecolor':'white','savefig.facecolor':'white'})
- fig,axs=plt.subplots(2,2,figsize=(16,11.5),sharey='row')
+ fig,axs=plt.subplots(2,2,figsize=(13.6 if compact else 16,11.5),sharey='row')
  for row,group in enumerate(['target','non_target']):
   for col,model in enumerate(['svd','nmf']):
    ax=axs[row,col];d=f[(f.view=='real_unseen_prediction')&(f.group==group)&(f.model==model)&f.n_fake.isin(ns)].sort_values('n_fake');assert d.n_fake.tolist()==ns;assert np.allclose(d.mean_prediction,d.mu+d.mean_bu+d.mean_bi+d.mean_interaction,atol=1e-10);x=np.arange(len(d))
    for key in ['mu','mean_bi','mean_bu','mean_interaction','mean_prediction']:ax.plot(x,d[key],color=COLORS[key],lw=4.2 if key=='mean_prediction' else 2.2,marker='o' if key=='mean_prediction' else None,ms=5,zorder=5 if key=='mean_prediction' else 3,ls='--' if key=='mu' else '-')
-   ax.axhline(0,color='#A6B2BB',lw=.7,zorder=1);ax.set_title(model.upper()+' | '+(genre+' books' if group=='target' else 'Non-'+genre+' books'),loc='left',pad=16,fontsize=19);ax.set_xticks(x,ticks(ns,model,bad),rotation=45 if len(ns)>9 else 0,ha='right' if len(ns)>9 else 'center');ax.set_xlabel('Injected users',labelpad=8);ax.set_ylabel('Mean raw score component');ax.grid(axis='y',color='#DEE5EA',lw=.7);ax.tick_params(length=0,pad=7,labelleft=True)
- fig.suptitle('Prediction | Real users, unrated books | '+genre+' injection',x=.065,ha='left',y=.975,fontsize=24,fontweight='bold');fig.text(.5,.91,r'$\hat r_{ui}=\mu+b_u+b_i+p_u^\top q_i$',ha='center',fontsize=23)
- names={'mean_prediction':r'Predicted rating $\hat r_{ui}$','mean_bi':r'Book bias $b_i$','mean_bu':r'User bias $b_u$','mean_interaction':r'Vector dot product $p_u^\top q_i$','mu':r'Global rating mean $\mu$'};handles=[Line2D([0],[0],color=COLORS[k],lw=4 if k=='mean_prediction' else 2.2,ls='--' if k=='mu' else '-',label=names[k]) for k in names];fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.51,.855),ncol=5,frameon=False,fontsize=12,columnspacing=1.6);fig.text(.5,.035 if bad else .025,'Equal weight per real user; average over all unrated books in each group (not only Top-K). Raw scores; no observed ratings for MAE.',ha='center',fontsize=11,color='#536471');warning(fig,bad,False);fig.subplots_adjust(left=.065,right=.98,top=.75,bottom=.14 if len(ns)>9 else .09,wspace=.16,hspace=.56 if len(ns)>9 else .46);path=folder/f'prediction_real_users_{genre.lower()}_non_{genre.lower()}_4panel.png';fig.savefig(path,dpi=400);plt.close(fig);return path
+   ax.axhline(0,color='#A6B2BB',lw=.7,zorder=1);ax.set_title(model.upper()+' | '+(genre+' books' if group=='target' else 'Non-'+genre+' books'),loc='left',pad=16,fontsize=19);ax.set_xticks(x,[str(n) for n in ns] if compact else ticks(ns,model,bad),rotation=45 if compact or len(ns)>9 else 0,ha='right' if compact or len(ns)>9 else 'center');ax.set_xlabel('Injected users',labelpad=8);ax.set_ylabel('' if compact else 'Mean raw score component');ax.grid(axis='y',color='#DEE5EA',lw=.7);ax.tick_params(length=0,pad=7,labelleft=True)
+ if compact:
+  for row,group in enumerate(['target','non_target']):
+   for col,model in enumerate(['svd','nmf']):
+    d=f[(f.view=='real_unseen_prediction')&(f.group==group)&(f.model==model)&f.n_fake.isin(ns)].sort_values('n_fake')
+    # Prediction has no observed ratings and therefore no MAE.
+    endpoint_labels(axs[row,col],d,col,fontsize=9)
+  fig.text(.012,.46,'Mean raw score component',rotation=90,va='center',fontsize=13)
+ fig.suptitle('Prediction | Real users, unrated books | '+genre+' injection',x=.065,ha='left',y=.975,fontsize=24,fontweight='bold')
+ if not compact:fig.text(.5,.91,r'$\hat r_{ui}=\mu+b_u+b_i+p_u^\top q_i$',ha='center',fontsize=23)
+ names={'mean_prediction':r'Predicted rating $\hat r_{ui}$','mean_bi':r'Book bias $b_i$','mean_bu':r'User bias $b_u$','mean_interaction':r'Vector dot product $p_u^\top q_i$','mu':r'Global rating mean $\mu$'};handles=[Line2D([0],[0],color=COLORS[k],lw=4 if k=='mean_prediction' else 2.2,ls='--' if k=='mu' else '-',label=names[k]) for k in names];fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.51,.855),ncol=5,frameon=False,fontsize=12,columnspacing=1.6);fig.text(.5,.035 if bad else .025,'Equal weight per real user; average over all unrated books in each group (not only Top-K). Raw scores; no observed ratings for MAE.',ha='center',fontsize=11,color='#536471');warning(fig,bad,False);fig.subplots_adjust(left=.16 if compact else .065,right=.87 if compact else .98,top=.75,bottom=.16 if compact else (.14 if len(ns)>9 else .09),wspace=.16,hspace=.56 if len(ns)>9 else .46);path=folder/f'prediction_real_users_{genre.lower()}_non_{genre.lower()}_4panel.png';fig.savefig(path,dpi=400);plt.close(fig);return path
 
 if __name__=='__main__':
  ap=argparse.ArgumentParser();ap.add_argument('--compute-only',action='store_true');ap.add_argument('--max-count',type=int,default=500);args=ap.parse_args();compute_drama()
@@ -102,5 +110,5 @@ if __name__=='__main__':
   assert folder.is_dir();f=pd.read_csv(source);ns=sorted(f.n_fake.unique().tolist());ns=[n for n in ns if args.max_count is None or n<=args.max_count]
   if genre=='Adventure':bad=[r['n_fake'] for r in json.loads((NB/'adventure_analysis_status.json').read_text())['nonnegative_constraint_failures']]
   else:bad=[r['n_fake'] for r in json.loads((NB/'drama_reviewer_components_validation.json').read_text())['checkpoints'] if not r['nmf_nonnegative_constraint_ok']]
-  bad=sorted(set(bad)&set(ns));paths=[eight(f,genre,folder,ns,bad),prediction(f,genre,folder,ns,bad)];records.append(dict(genre=genre,folder=str(folder),source=str(source),source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),counts=ns,images=list(map(str,paths)),nonnegative_constraint_failures=bad));print('FIGURES COMPLETE',genre,ns,flush=True)
+  bad=sorted(set(bad)&set(ns));paths=[eight(f,genre,folder,ns,bad),prediction(f,genre,folder,ns,bad,compact=(genre=='Drama'))];records.append(dict(genre=genre,folder=str(folder),source=str(source),source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),counts=ns,images=list(map(str,paths)),nonnegative_constraint_failures=bad));print('FIGURES COMPLETE',genre,ns,flush=True)
  (NB/'genre_reviewer_figures_manifest.json').write_text(json.dumps(dict(status='complete',no_retraining=True,raw_components_preserved=True,reference_folder=str(OUT/'thriller'),figures=records,completed=time.time()),indent=2))
