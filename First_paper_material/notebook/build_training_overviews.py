@@ -14,7 +14,7 @@ for genre,folder in [('Thriller','thriller'),('Adventure','advanture'),('Drama',
  fig=plt.figure(figsize=(11,9.6))
  grid=fig.add_gridspec(3,4)
  axs=[fig.add_subplot(grid[0,:2]),fig.add_subplot(grid[0,2:]),fig.add_subplot(grid[1,:2]),fig.add_subplot(grid[1,2:]),fig.add_subplot(grid[2,1:3])]
- panels=[('mae','(A) Training error (MAE)','Mean absolute error'),('mean_bi',r'(B) Book bias $b_i$','Mean raw score component'),('mean_interaction',r'(C) Dot product $p_u^\top q_i$','Mean raw score component'),('mean_prediction',r'(D) Predicted rating $\hat r_{ui}$','Mean raw predicted rating'),('mean_bu',r'(E) User bias $b_u$','Mean raw score component')]
+ panels=[('mae','(A) Training error (MAE)','Mean absolute error'),('mean_bi',r'(B) Book bias $b_i$','Mean raw score component'),('mean_interaction',r'(C) Dot product $p_u^\top q_i$','Mean raw score component'),('mean_bu',r'(D) User bias $b_u$','Mean raw score component'),('mean_prediction',r'(E) Predicted rating $\hat r_{ui}$','Mean raw predicted rating')]
  for ax,(key,title,ylabel) in zip(axs,panels):
   for model in ['svd','nmf']:
    for group,style in [('target','-'),('non_target','--')]:
@@ -32,10 +32,10 @@ for genre,folder in [('Thriller','thriller'),('Adventure','advanture'),('Drama',
   if key in ['mean_bi','mean_interaction','mean_bu']:ax.axhline(0,color='#96A4AE',lw=.7)
   if key=='mae':ax.set_ylim(bottom=0)
   ax.set_xticks(x,[str(n) for n in ns]);ax.tick_params(axis='x',labelsize=9);ax.set_xlabel('Injected users');ax.grid(axis='y',color='#E2E8EC',lw=.65);ax.set_axisbelow(True);ax.margins(x=.04)
- fig.suptitle(genre+': training fit and score components | '+('Synthetic users only' if args.synthetic_only else 'All users'),x=.08,ha='left',y=.98,fontsize=15,fontweight='bold')
- handles=[Line2D([0],[0],color=colors['svd'],lw=2.5,label='SVD'),Line2D([0],[0],color=colors['nmf'],lw=2.5,label='NMF'),Line2D([0],[0],color='#536471',lw=1.8,marker='o',ms=4,label=genre),Line2D([0],[0],color='#536471',lw=1.8,ls='--',marker='s',ms=4,label='Non-'+genre),Line2D([0],[0],color='#777777',lw=1.25,label='Recorded rating (D)')]
+ fig.suptitle(genre+': training fit and score components | '+('Synthetic users only' if args.synthetic_only else 'All users (53,424 real + n synthetic)'),x=.08,ha='left',y=.98,fontsize=12.5 if not args.synthetic_only else 15,fontweight='bold')
+ handles=[Line2D([0],[0],color=colors['svd'],lw=2.5,label='SVD'),Line2D([0],[0],color=colors['nmf'],lw=2.5,label='NMF'),Line2D([0],[0],color='#536471',lw=1.8,marker='o',ms=4,label=genre),Line2D([0],[0],color='#536471',lw=1.8,ls='--',marker='s',ms=4,label='Non-'+genre),Line2D([0],[0],color='#777777',lw=1.25,label='Recorded rating (E)')]
  fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.53,.945),ncol=5,frameon=False,columnspacing=1.7,fontsize=9)
- fig.text(.5,.018,('Synthetic training ratings only. A: mean individual absolute error. D: grey = recorded rating (target 5; non-target 1).' if args.synthetic_only else 'Real + synthetic training ratings; averages weighted by observed rating pairs. A: mean individual absolute error. D: grey = mean recorded rating.'),ha='center',fontsize=7.8,color='#536471')
+ fig.text(.5,.018,('Synthetic training ratings only. A: mean individual absolute error. E: grey = recorded rating (target 5; non-target 1).' if args.synthetic_only else 'Real + synthetic training ratings; averages weighted by observed rating pairs. A: mean individual absolute error. E: grey = mean recorded rating.'),ha='center',fontsize=7.8,color='#536471')
  fig.subplots_adjust(left=.08,right=.98,bottom=.09,top=.86,hspace=.70,wspace=.65)
  out=R/'figures/first_reviewer'/folder/('training_'+genre.lower()+('_synthetic_only_overview_5panel.png' if args.synthetic_only else '_all_users_overview_4panel.png'))
  fig.savefig(out,dpi=300,facecolor='white');plt.close(fig);print(out)
