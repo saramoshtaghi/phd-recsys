@@ -1,0 +1,238 @@
+{
+  "status": "complete",
+  "genre": "Drama",
+  "counts": [
+    0,
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500,
+    1000,
+    2000,
+    2500,
+    3000
+  ],
+  "n_real": 53424,
+  "n_items": 9415,
+  "target_books": 3006,
+  "no_retraining": true,
+  "clipped": false,
+  "prediction_identity_verified": true,
+  "synthetic_interaction_independently_verified": true,
+  "global_mean_formula_verified": true,
+  "checkpoints": [
+    {
+      "model": "svd",
+      "n_fake": 0,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz",
+      "min_pu": -4.615302990784116,
+      "min_qi": -3.1179407878196352,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 2,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_2.npz",
+      "min_pu": -4.477088731698926,
+      "min_qi": -2.9439187283638115,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 4,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_4.npz",
+      "min_pu": -4.012835367050034,
+      "min_qi": -3.3304767738010796,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 6,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_6.npz",
+      "min_pu": -4.279119129381725,
+      "min_qi": -3.456396355650123,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 25,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_25.npz",
+      "min_pu": -4.703035329797302,
+      "min_qi": -3.622851423729839,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 50,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_50.npz",
+      "min_pu": -5.256441782125646,
+      "min_qi": -3.522883482242588,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 100,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_100.npz",
+      "min_pu": -5.198377891442834,
+      "min_qi": -3.4835341451181163,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_200.npz",
+      "min_pu": -5.225240303676189,
+      "min_qi": -3.320430031355363,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 500,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_500.npz",
+      "min_pu": -5.181666782360043,
+      "min_qi": -2.838176605095466,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 1000,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_1000.npz",
+      "min_pu": -4.835538235873701,
+      "min_qi": -2.3743428463127114,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 2000,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_2000.npz",
+      "min_pu": -4.595835590684936,
+      "min_qi": -1.9699753548563732,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 2500,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_2500.npz",
+      "min_pu": -4.452542100214169,
+      "min_qi": -1.854198843376202,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "n_fake": 3000,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/drama/svd_drama_3000.npz",
+      "min_pu": -4.283180882603353,
+      "min_qi": -1.7462771000881323,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 0,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz",
+      "min_pu": 4.971812980758991e-18,
+      "min_qi": 2.1194940223768053e-09,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 2,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_2.npz",
+      "min_pu": 3.99205074030779e-18,
+      "min_qi": 2.2545987393698855e-09,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 4,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_4.npz",
+      "min_pu": 2.7499459301074155e-18,
+      "min_qi": 1.8575780208135098e-09,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 6,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_6.npz",
+      "min_pu": 2.7685880189247467e-18,
+      "min_qi": 3.496120415512116e-10,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 25,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_25.npz",
+      "min_pu": 1.3897679298389624e-18,
+      "min_qi": 1.6980717454442204e-12,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 50,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_50.npz",
+      "min_pu": 2.649210314262944e-18,
+      "min_qi": 1.228438656438121e-14,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_100.npz",
+      "min_pu": 1.2248898093097818e-18,
+      "min_qi": 1.443921481585112e-15,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 200,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_200.npz",
+      "min_pu": 5.656032149517356e-17,
+      "min_qi": 9.783762600634718e-19,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 500,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_500.npz",
+      "min_pu": 9.21211854776559e-18,
+      "min_qi": 3.799462496113497e-17,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 1000,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_1000.npz",
+      "min_pu": 1.4856487738438368e-24,
+      "min_qi": 2.8626101790957476e-16,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 2000,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_2000.npz",
+      "min_pu": 7.979046030274092e-38,
+      "min_qi": 8.884693495449817e-11,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 2500,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_2500.npz",
+      "min_pu": 1.3597447716511828e-38,
+      "min_qi": 3.063553905543694e-10,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3000,
+      "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/drama/nmf_drama_3000.npz",
+      "min_pu": 1.8910492496086664e-39,
+      "min_qi": 1.6950482452569577e-09,
+      "nmf_nonnegative_constraint_ok": true
+    }
+  ],
+  "all_checkpoint_shapes_and_id_counts_verified": true
+}

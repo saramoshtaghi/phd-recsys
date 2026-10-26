@@ -156,6 +156,22 @@
         2160
       ],
       "sha256": "1c3fcd21166b81fdabf7d25d527e59cee549527ba716a5da0a90b6489d3f812e"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/training_adventure_all_and_synthetic_8panel_paper.png",
+      "pixels": [
+        3180,
+        3480
+      ],
+      "sha256": "349ecbdc8ff8883151740386e3b853897fe08dd64ec84e0ae92d8ac7142d0749"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/prediction_real_users_adventure_non_adventure_4panel.png",
+      "pixels": [
+        6400,
+        4600
+      ],
+      "sha256": "5b260fa411349548ee3f2ee307ae81e13cb8e6d0e3e0641c531d6468656de398"
     }
   ],
   "checkpoints": [
@@ -342,6 +358,6 @@
       "nonnegative_factors": true
     }
   ],
-  "finished": 1793053770.0184042,
-  "image_policy": "Requested Adventure figures: two recommendation comparisons and five parameter-detail images per model in the existing nmf/svd result folders."
+  "finished": 1793054105.752289,
+  "image_policy": "User-requested Adventure comparison, parameter-detail and reviewer training/prediction figures; raw range through 3500 preserved."
 }

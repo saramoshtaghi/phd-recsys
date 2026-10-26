@@ -28,9 +28,11 @@
     "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_mu_plus_bi.png",
     "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bu_only_non_biasing.png",
     "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_mu_only.png",
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bu_biased_vs_unbiased_target_vs_nontarget.png"
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/svd/SVD_details_figures/Adventure_bu_biased_vs_unbiased_target_vs_nontarget.png",
+    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/training_adventure_all_and_synthetic_8panel_paper.png",
+    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/prediction_real_users_adventure_non_adventure_4panel.png"
   ],
-  "completed": 1793053766.830348,
+  "completed": 1793054103.5109038,
   "replaced_previous_figures": true,
   "figure_ranges": {
     "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top15_top25_top35_powerpoint.png": {
@@ -261,7 +263,45 @@
         3000,
         3500
       ]
+    },
+    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/training_adventure_all_and_synthetic_8panel_paper.png": {
+      "type": "training_components",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/prediction_real_users_adventure_non_adventure_4panel.png": {
+      "type": "real_unseen_prediction_components",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
     }
   },
-  "image_policy": "Requested Adventure figures: two recommendation comparisons and five parameter-detail images per model in the existing nmf/svd result folders."
+  "image_policy": "User-requested Adventure comparison, parameter-detail and reviewer training/prediction figures; raw range through 3500 preserved."
 }

@@ -1,0 +1,74 @@
+{
+  "status": "complete",
+  "no_retraining": true,
+  "raw_components_preserved": true,
+  "reference_folder": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/thriller",
+  "figures": [
+    {
+      "genre": "Adventure",
+      "folder": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture",
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/adventure_score_components.csv",
+      "source_sha256": "f190ab5720c5e63767331de0c904529889a0c1a14788e8bbda048bc1cda52442",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ],
+      "images": [
+        "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/training_adventure_all_and_synthetic_8panel_paper.png",
+        "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/prediction_real_users_adventure_non_adventure_4panel.png"
+      ],
+      "nonnegative_constraint_failures": [
+        1000,
+        2000,
+        2500
+      ],
+      "output_sha256": {
+        "training_adventure_all_and_synthetic_8panel_paper.png": "349ecbdc8ff8883151740386e3b853897fe08dd64ec84e0ae92d8ac7142d0749",
+        "prediction_real_users_adventure_non_adventure_4panel.png": "5b260fa411349548ee3f2ee307ae81e13cb8e6d0e3e0641c531d6468656de398"
+      }
+    },
+    {
+      "genre": "Drama",
+      "folder": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama",
+      "source": "/home/moshtasa/Research/phd-recsys/First_paper_material/notebook/drama_reviewer_score_components.csv",
+      "source_sha256": "8d03784b3dcd2b66c4d3cca1672407deb4d0ead0aea7d74b6044f4e7c22a4524",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000
+      ],
+      "images": [
+        "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama/training_drama_all_and_synthetic_8panel_paper.png",
+        "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama/prediction_real_users_drama_non_drama_4panel.png"
+      ],
+      "nonnegative_constraint_failures": [],
+      "output_sha256": {
+        "training_drama_all_and_synthetic_8panel_paper.png": "ea2428d56da2fa1b1d8ecf756cea41b52419fea5bcd4458c7ef3fbe8cad08f1e",
+        "prediction_real_users_drama_non_drama_4panel.png": "3fbb91c95b20bc9ef624fe02a6bd72fc1edbca61822336bfff790ebe50748ea0"
+      }
+    }
+  ],
+  "completed": 1793054061.9824228
+}

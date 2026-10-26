@@ -13,7 +13,7 @@ if __name__=='__main__':
  for m in ['svd','nmf']:
   hs=[v['initial_common_hashes'] for v in t['completed'] if v['model']==m];assert all(h==hs[0] for h in hs)
  images=[]
- for directory in [R/'First_paper_material/figures',R/'First_paper_material/figures/first_reviewer',ROOT/'layer1/result/final_results',L/'final_results',ROOT/'layer1/result/nmf/NMF_details_figures',ROOT/'layer1/result/svd/SVD_details_figures']:
+ for directory in [R/'First_paper_material/figures',R/'First_paper_material/figures/first_reviewer',ROOT/'layer1/result/final_results',L/'final_results',ROOT/'layer1/result/nmf/NMF_details_figures',ROOT/'layer1/result/svd/SVD_details_figures',R/'First_paper_material/figures/first_reviewer/advanture']:
   for path in directory.glob('*.png'):
    if 'adventure' not in path.name.lower():continue
    with Image.open(path) as im:im.verify()
