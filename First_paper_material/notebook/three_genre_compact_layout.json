@@ -11,7 +11,7 @@
         2700,
         3480
       ],
-      "sha256": "2534cd395fecd6224125ef0520102aa60094f607e4e3560753627b628488febf",
+      "sha256": "4c8898735992f800dd7d6752a30fbd137edd2fff5cc02ad0c1ca39d7e7a3b043",
       "all_x_labels": [
         0,
         2,
@@ -41,7 +41,7 @@
         2700,
         3480
       ],
-      "sha256": "c8b2efedc12656886f64c21bf1cb22b7fc3de954d62eb2dca46730e7f319072a",
+      "sha256": "a091b29fe4b577bb11655265d4f01b509c727eb277b6c09847c23e1fe7dd0107",
       "all_x_labels": [
         0,
         2,
@@ -71,7 +71,7 @@
         2700,
         3480
       ],
-      "sha256": "e5fde4dfa4bb9c6543e7bb6f6f073f5f59ab919de38df9ffa77b9f84c8afac5e",
+      "sha256": "057aae46e981fcadc81051a03727aed4dcd7cd9519edb33160a8f0a67f87b6a2",
       "all_x_labels": [
         0,
         2,
@@ -94,5 +94,11 @@
         500
       ]
     }
-  ]
+  ],
+  "endpoint_labels": {
+    "dose": 500,
+    "decimal_places": 2,
+    "left_column_side": "left",
+    "right_column_side": "right"
+  }
 }

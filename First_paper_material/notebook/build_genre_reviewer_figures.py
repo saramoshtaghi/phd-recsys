@@ -41,10 +41,31 @@ def setup_small():
 def ticks(ns,model,bad):return [('Base' if n==0 else str(n))+('†' if model=='nmf' and n in bad else '') for n in ns]
 def warning(fig,bad,small):
  if bad:fig.text(.5,.014 if small else .005,'† NMF factor sign check failed at n = '+', '.join(map(str,bad))+'. Raw results retained.',ha='center',fontsize=5.6 if small else 9,color='#9D211C')
+def endpoint_labels(ax,d,col):
+ # Labels report the last dose; vertically separate close values without altering data.
+ keys=['mu','mean_bi','mean_bu','mean_interaction','mean_prediction','mae']
+ vals=[float(d.iloc[-1][k]) for k in keys]
+ lo,hi=ax.get_ylim();gap=(hi-lo)*.105
+ order=sorted(range(len(vals)),key=lambda j:vals[j]);positions=[vals[j] for j in order]
+ for j in range(1,len(positions)):positions[j]=max(positions[j],positions[j-1]+gap)
+ if positions[-1]>hi-gap*.25:
+  shift=positions[-1]-(hi-gap*.25);positions=[v-shift for v in positions]
+ for j in range(len(positions)-2,-1,-1):positions[j]=min(positions[j],positions[j+1]-gap)
+ for j,y in zip(order,positions):
+  x=-.23 if col==0 else 1.10
+  txt=f'{vals[j]:.2f}'
+  if txt=='-0.00':txt='0.00'
+  ax.annotate(txt,xy=(0 if col==0 else 1,vals[j]),xycoords=('axes fraction','data'),
+   xytext=(x,y),textcoords=('axes fraction','data'),ha='right' if col==0 else 'left',
+   va='center',fontsize=5.1,fontweight='bold' if keys[j]=='mean_prediction' else 'normal',
+   color=COLORS[keys[j]],annotation_clip=False,
+   arrowprops=dict(arrowstyle='-',color=COLORS[keys[j]],lw=.35,alpha=.7),
+   bbox=dict(facecolor='white',edgecolor='none',pad=.15))
+
 def eight(f,genre,folder,ns,bad):
- setup_small();fig=plt.figure(figsize=(4.5,5.8));outer=fig.add_gridspec(2,1,left=.10,right=.985,bottom=.105 if len(ns)>9 else .095,top=.80,hspace=.48)
+ setup_small();fig=plt.figure(figsize=(4.5,5.8));fig.text(.012,.49,'Mean score / MAE',rotation=90,va='center',fontsize=6.5);outer=fig.add_gridspec(2,1,left=.16,right=.87,bottom=.105 if len(ns)>9 else .095,top=.80,hspace=.48)
  for section,view in enumerate(['all_training','synthetic_training']):
-  grid=outer[section].subgridspec(2,2,hspace=.70,wspace=.25)
+  grid=outer[section].subgridspec(2,2,hspace=.70,wspace=.32)
   for row,group in enumerate(['target','non_target']):
    axs=[];values=[]
    for col,model in enumerate(['svd','nmf']):
@@ -52,11 +73,14 @@ def eight(f,genre,folder,ns,bad):
     assert np.allclose(d.mean_prediction,d.mu+d.mean_bu+d.mean_bi+d.mean_interaction,atol=1e-10);x=np.arange(len(d));mae=d.mae.to_numpy();assert np.isfinite(mae).all() and (mae>=0).all()
     for key in ['mu','mean_bi','mean_bu','mean_interaction','mean_prediction']:ax.plot(x,d[key],color=COLORS[key],lw=1.65 if key=='mean_prediction' else .95,ls='--' if key=='mu' else '-',marker='o' if key=='mean_prediction' else None,ms=2,zorder=5 if key=='mean_prediction' else 3)
     ax.plot(x,mae,color=COLORS['mae'],lw=1.05,marker='s',ms=1.9,zorder=6);ax.axhline(0,color='#A8B1B9',lw=.45,zorder=1);ax.grid(axis='y',color='#DEE5EA',lw=.4);ax.set_axisbelow(True);ax.set_xticks(x,[str(n) for n in expected],rotation=45,ha='right');ax.tick_params(length=0,pad=2.5,labelsize=5.5 if len(ns)>9 else 6);ax.set_xlim(-.25,len(d)-.75);ax.yaxis.set_major_locator(MaxNLocator(nbins=4));panel=chr(97+section*4+row*2+col);ax.set_title(f'({panel}) {model.upper()} | '+(genre if group=='target' else 'Non-'+genre),loc='left',pad=5)
-    if col==0:ax.set_ylabel('Mean score / MAE',labelpad=3)
+    if col==0:ax.set_ylabel('')
     if row==1:ax.set_xlabel('Injected users',labelpad=2)
     else:ax.tick_params(axis='x',labelbottom=True)
     values.append(np.r_[d[['mean_prediction','mean_bi','mean_bu','mean_interaction','mu']].to_numpy().ravel(),mae])
    vv=np.concatenate(values);pad=max((vv.max()-vv.min())*.08,.15);axs[0].set_ylim(vv.min()-pad,vv.max()+pad)
+   for col,model in enumerate(['svd','nmf']):
+    d=f[(f.view==view)&(f.group==group)&(f.model==model)&f.n_fake.isin(ns)].sort_values('n_fake')
+    endpoint_labels(axs[col],d,col)
   box=outer[section].get_position(fig);fig.text(.10,box.y1+.048,'All users (real + synthetic)' if section==0 else 'Synthetic users only',ha='left',va='bottom',fontsize=8.2,fontweight='bold')
  fig.text(.5,.98,r'$\hat r_{ui}=\mu+b_u+b_i+p_u^\top q_i$',ha='center',va='top',fontsize=10);handles=[Line2D([0],[0],color=COLORS[k],lw=1.65 if k=='mean_prediction' else 1,ls='--' if k=='mu' else '-',label=LABELS[k]) for k in COLORS];fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.53,.935),ncol=3,frameon=False,fontsize=6.8,columnspacing=1.7,handlelength=2.2,labelspacing=.55);warning(fig,bad,True);path=folder/f'training_{genre.lower()}_all_and_synthetic_8panel_paper.png';fig.savefig(path,dpi=600);plt.close(fig);return path
 
