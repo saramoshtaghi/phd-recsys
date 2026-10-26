@@ -59,7 +59,6 @@ def endpoint_labels(ax,d,col):
    xytext=(x,y),textcoords=('axes fraction','data'),ha='right' if col==0 else 'left',
    va='center',fontsize=4.0,fontweight='bold' if keys[j]=='mean_prediction' else 'normal',
    color=COLORS[keys[j]],annotation_clip=False,
-   arrowprops=dict(arrowstyle='-',color=COLORS[keys[j]],lw=.35,alpha=.7),
    bbox=dict(facecolor='white',edgecolor='none',pad=.15))
 
 def eight(f,genre,folder,ns,bad):
