@@ -57,7 +57,7 @@ def endpoint_labels(ax,d,col):
   if txt=='-0.00':txt='0.00'
   ax.annotate(txt,xy=(0 if col==0 else 1,vals[j]),xycoords=('axes fraction','data'),
    xytext=(x,y),textcoords=('axes fraction','data'),ha='right' if col==0 else 'left',
-   va='center',fontsize=5.1,fontweight='bold' if keys[j]=='mean_prediction' else 'normal',
+   va='center',fontsize=4.0,fontweight='bold' if keys[j]=='mean_prediction' else 'normal',
    color=COLORS[keys[j]],annotation_clip=False,
    arrowprops=dict(arrowstyle='-',color=COLORS[keys[j]],lw=.35,alpha=.7),
    bbox=dict(facecolor='white',edgecolor='none',pad=.15))

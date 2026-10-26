@@ -11,7 +11,7 @@
         2700,
         3480
       ],
-      "sha256": "4c8898735992f800dd7d6752a30fbd137edd2fff5cc02ad0c1ca39d7e7a3b043",
+      "sha256": "f8c773ee2099c92e6811cff98a2ad8b339893c1dca722c3b02f0ebfc99dbcc46",
       "all_x_labels": [
         0,
         2,
@@ -41,7 +41,7 @@
         2700,
         3480
       ],
-      "sha256": "a091b29fe4b577bb11655265d4f01b509c727eb277b6c09847c23e1fe7dd0107",
+      "sha256": "d70f1e4d680f884d3a98134a21750aa4a70d9920603d604070ace68c0daf6edd",
       "all_x_labels": [
         0,
         2,
@@ -71,7 +71,7 @@
         2700,
         3480
       ],
-      "sha256": "057aae46e981fcadc81051a03727aed4dcd7cd9519edb33160a8f0a67f87b6a2",
+      "sha256": "325bd444ece608ba7f7c2d73683aa129a9769a17b93577a8180ff63d1a2af1e8",
       "all_x_labels": [
         0,
         2,
@@ -99,6 +99,7 @@
     "dose": 500,
     "decimal_places": 2,
     "left_column_side": "left",
-    "right_column_side": "right"
+    "right_column_side": "right",
+    "font_size_pt": 4.0
   }
 }
