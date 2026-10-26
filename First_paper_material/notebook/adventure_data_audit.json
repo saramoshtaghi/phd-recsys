@@ -1,0 +1,48 @@
+{
+  "users": 53424,
+  "books": 9415,
+  "real_ratings": 5815569,
+  "target_books": 1789,
+  "non_target_books": 7626,
+  "genres": [
+    "Adult",
+    "Adventure",
+    "Children's",
+    "Classics",
+    "Drama",
+    "Fantasy",
+    "Historical",
+    "Horror",
+    "Mystery",
+    "Nonfiction",
+    "Romance",
+    "Science Fiction",
+    "Thriller"
+  ],
+  "counts": [
+    0,
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500,
+    1000,
+    2000,
+    2500,
+    3000,
+    3500
+  ],
+  "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+  "original_data_unchanged": true,
+  "neighbors_real_users_only": true,
+  "topk": [
+    15,
+    20,
+    25,
+    35
+  ],
+  "no_new_directories": true
+}

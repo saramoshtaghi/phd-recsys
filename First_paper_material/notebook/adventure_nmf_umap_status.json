@@ -1,0 +1,19 @@
+{
+  "model": "nmf",
+  "n_fake": 3500,
+  "status": "complete",
+  "n_real_users_before": 53424,
+  "n_real_users_after": 53424,
+  "n_synthetic_users": 3500,
+  "full_user_population": true,
+  "nmf_nonnegative_constraint_ok": true,
+  "alignment": "orthogonal Procrustes",
+  "joint_projection": true,
+  "metric": "cosine",
+  "n_neighbors": 20,
+  "min_dist": 0.1,
+  "n_epochs": 200,
+  "seed": 42,
+  "elapsed_seconds": 85.13081574440002,
+  "interpretation": "Visualization only; different models use different projection coordinates; no causal movement claim."
+}

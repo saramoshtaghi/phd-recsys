@@ -1,0 +1,956 @@
+{
+  "model": "nmf",
+  "n_fake": 3500,
+  "genre": "Adventure",
+  "components": [
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "group": "target",
+      "view": "real_observed_training",
+      "n_pairs": 1241666,
+      "mu": 2.083790786690975,
+      "mean_bu": 0.2470613098215644,
+      "mean_bi": 0.5665920793184445,
+      "mean_interaction": 1.0862894361276259,
+      "mean_prediction": 3.9837336119586086,
+      "mae": 0.6240527660322515,
+      "mean_recorded_rating": 3.997385770408467
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "group": "target",
+      "view": "real_unseen_prediction",
+      "n_pairs": 94333870,
+      "n_users": 53424,
+      "mu": 2.083790786690975,
+      "mean_bu": 0.2045999433518734,
+      "mean_bi": 0.5839456878765503,
+      "mean_interaction": 1.1951066041398752,
+      "mean_prediction": 4.067443022059274
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "group": "target",
+      "view": "synthetic_training",
+      "n_pairs": 6261500,
+      "mu": 2.083790786690975,
+      "mean_bu": -0.6117837673904617,
+      "mean_bi": 0.5837139812946549,
+      "mean_interaction": 2.8411856995364824,
+      "mean_offset": 2.0557210005951685,
+      "mean_prediction": 4.896906700131651,
+      "mae": 0.11544341362924881,
+      "rmse": 0.1410766134418122,
+      "mean_recorded_rating": 5,
+      "negative_interaction_percent": 0.0,
+      "min_interaction": 0.15713358573607628
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "group": "target",
+      "view": "all_training",
+      "n_pairs": 7503166,
+      "mu": 2.083790786690975,
+      "mean_bu": -0.46965726617196973,
+      "mean_bi": 0.5808805529073323,
+      "mean_interaction": 2.5507756214705273,
+      "mean_prediction": 4.745789694896865,
+      "mae": 0.1996109423978815,
+      "mean_recorded_rating": 4.83408177294758
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "group": "non_target",
+      "view": "real_observed_training",
+      "n_pairs": 4573903,
+      "mu": 2.083790786690975,
+      "mean_bu": 0.19131815218191334,
+      "mean_bi": -0.7971864383832441,
+      "mean_interaction": 2.2972857964738216,
+      "mean_prediction": 3.775208296963467,
+      "mae": 0.6670295172590657,
+      "mean_recorded_rating": 3.8965905048707854
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "group": "non_target",
+      "view": "real_unseen_prediction",
+      "n_pairs": 402837521,
+      "n_users": 53424,
+      "mu": 2.083790786690975,
+      "mean_bu": 0.2045999433518734,
+      "mean_bi": -0.6989191341010771,
+      "mean_interaction": 2.2110766340989,
+      "mean_prediction": 3.8005482300406714
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "group": "non_target",
+      "view": "synthetic_training",
+      "n_pairs": 26691000,
+      "mu": 2.083790786690975,
+      "mean_bu": -0.6117837673904618,
+      "mean_bi": -0.7000231991184714,
+      "mean_interaction": 0.16741419531917298,
+      "mean_offset": 0.7719838201820409,
+      "mean_prediction": 0.939398015501214,
+      "mae": 0.061207120370288824,
+      "rmse": 0.08043546046423901,
+      "mean_recorded_rating": 1,
+      "negative_interaction_percent": 0.0,
+      "min_interaction": 0.017927370672245882
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "group": "non_target",
+      "view": "all_training",
+      "n_pairs": 31264903,
+      "mu": 2.083790786690975,
+      "mean_bu": -0.49429386891747296,
+      "mean_bi": -0.7142377076862051,
+      "mean_interaction": 0.47900403476745307,
+      "mean_prediction": 1.3542632448547496,
+      "mae": 0.14983598573400886,
+      "mean_recorded_rating": 1.4237570799436032
+    }
+  ],
+  "recommendations": [
+    {
+      "model": "nmf",
+      "genre": "Adventure",
+      "n_fake": 3500,
+      "k": 15,
+      "n_users": 53424,
+      "mean_target_count": 12.720219377059,
+      "target_share_percent": 84.80146251372666,
+      "union_distinct_target_titles": 331,
+      "most_frequent_book_id": 7464,
+      "most_frequent_book_title": "The Spine of the World (Forgotten Realms: Paths of Darkness, #2; Legend of Drizzt, #12)",
+      "most_frequent_book_user_reach_percent": 65.52111410601977,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Adventure",
+      "n_fake": 3500,
+      "k": 20,
+      "n_users": 53424,
+      "mean_target_count": 16.584868224019168,
+      "target_share_percent": 82.92434112009583,
+      "union_distinct_target_titles": 408,
+      "most_frequent_book_id": 7464,
+      "most_frequent_book_title": "The Spine of the World (Forgotten Realms: Paths of Darkness, #2; Legend of Drizzt, #12)",
+      "most_frequent_book_user_reach_percent": 68.645178197065,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Adventure",
+      "n_fake": 3500,
+      "k": 25,
+      "n_users": 53424,
+      "mean_target_count": 20.33524258760108,
+      "target_share_percent": 81.34097035040432,
+      "union_distinct_target_titles": 466,
+      "most_frequent_book_id": 7464,
+      "most_frequent_book_title": "The Spine of the World (Forgotten Realms: Paths of Darkness, #2; Legend of Drizzt, #12)",
+      "most_frequent_book_user_reach_percent": 70.82958969751422,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Adventure",
+      "n_fake": 3500,
+      "k": 35,
+      "n_users": 53424,
+      "mean_target_count": 27.63280548068284,
+      "target_share_percent": 78.95087280195096,
+      "union_distinct_target_titles": 558,
+      "most_frequent_book_id": 8946,
+      "most_frequent_book_title": "The Divan",
+      "most_frequent_book_user_reach_percent": 78.17834681042228,
+      "nmf_nonnegative_constraint_ok": true
+    }
+  ],
+  "component_swaps": [
+    {
+      "k": 15,
+      "baseline": 3.5889487870619945,
+      "after": 12.720219377059,
+      "embedding_only": 0.7125449236298292,
+      "item_bias_only": 14.106656184486374,
+      "embedding_swap_allocation": -2.1314203354297696,
+      "item_bias_swap_allocation": 11.262690925426774,
+      "delta_count": 9.131270589997005
+    },
+    {
+      "k": 25,
+      "baseline": 6.160845312967955,
+      "after": 20.33524258760108,
+      "embedding_only": 1.1334980533093741,
+      "item_bias_only": 23.58602875112309,
+      "embedding_swap_allocation": -4.139066711590296,
+      "item_bias_swap_allocation": 18.31346398622342,
+      "delta_count": 14.174397274633126
+    },
+    {
+      "k": 35,
+      "baseline": 8.735942647499252,
+      "after": 27.63280548068284,
+      "embedding_only": 1.5294811320754718,
+      "item_bias_only": 33.0872454327643,
+      "embedding_swap_allocation": -6.330450733752619,
+      "item_bias_swap_allocation": 25.22731356693621,
+      "delta_count": 18.89686283318359
+    }
+  ],
+  "genre_biases": [
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Adult",
+      "mean_bi": -0.7123943031985708,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.3713964834924042
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Adventure",
+      "mean_bi": 0.5837139812946552,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 2.6675047679856303
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Children's",
+      "mean_bi": -0.25278276765960866,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.8310080190313665
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Classics",
+      "mean_bi": -0.6142128656251479,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.4695779210658273
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Drama",
+      "mean_bi": -0.6760352730350979,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.4077555136558773
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Fantasy",
+      "mean_bi": -0.21728272860719802,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.866508058083777
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Historical",
+      "mean_bi": -0.6197430535948927,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.4640477330960824
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Horror",
+      "mean_bi": -0.6856503958405892,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.398140390850386
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Mystery",
+      "mean_bi": -0.65909722263513,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.4246935640558451
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Nonfiction",
+      "mean_bi": -0.5875299421876107,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.4962608445033645
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Romance",
+      "mean_bi": -0.7020528275102906,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.3817379591806844
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Science Fiction",
+      "mean_bi": -0.2965975492778105,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.7871932374131645
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "genre": "Thriller",
+      "mean_bi": -0.6305853900873446,
+      "mu": 2.083790786690975,
+      "mu_plus_bi": 1.4532053966036305
+    }
+  ],
+  "neighbors": [
+    {
+      "metric": "cosine",
+      "mean_turnover": 0.9961861710092841,
+      "mean_replaced_count": 19.92372342018568,
+      "retained_after_contribution": 0.04950864779874214,
+      "incoming_after_contribution": 12.493618972746331,
+      "retained_before_contribution": 0.013244983528002397,
+      "incoming_before_contribution": 3.5498268568433664,
+      "genre_mean_books_top15": {
+        "Adult": 0.07610062893081761,
+        "Adventure": 12.543127620545073,
+        "Children's": 1.5097474917640012,
+        "Classics": 0.5666797693920336,
+        "Drama": 1.3224852126385145,
+        "Fantasy": 8.629915393830489,
+        "Historical": 0.3748511904761905,
+        "Horror": 0.4122781895777179,
+        "Mystery": 1.5126151168014375,
+        "Nonfiction": 0.49822364480383347,
+        "Romance": 0.7724384171907757,
+        "Science Fiction": 1.181388514525307,
+        "Thriller": 0.6001488095238096
+      },
+      "neighbor_historical_genre_percent": {
+        "Adult": 0.0,
+        "Adventure": 6.454121743036838,
+        "Children's": 3.243579664570231,
+        "Classics": 2.7749700509134474,
+        "Drama": 45.66187481281821,
+        "Fantasy": 19.35515873015873,
+        "Historical": 0.06841494459418987,
+        "Horror": 0.9596810422282119,
+        "Mystery": 11.491370919436957,
+        "Nonfiction": 0.2265835579514825,
+        "Romance": 7.610998802036538,
+        "Science Fiction": 1.3962825696316263,
+        "Thriller": 0.75696316262354
+      },
+      "validation_queries": 5
+    },
+    {
+      "metric": "euclidean",
+      "mean_turnover": 0.9951969152440849,
+      "mean_replaced_count": 19.9039383048817,
+      "retained_after_contribution": 0.062101302785265045,
+      "incoming_after_contribution": 12.49712395178197,
+      "retained_before_contribution": 0.016337226714585203,
+      "incoming_before_contribution": 3.534832659478886,
+      "genre_mean_books_top15": {
+        "Adult": 0.07676793201557353,
+        "Adventure": 12.559225254567236,
+        "Children's": 1.5075275157232704,
+        "Classics": 0.5594395777178796,
+        "Drama": 1.3163269317160826,
+        "Fantasy": 8.677779649595687,
+        "Historical": 0.3757852276130578,
+        "Horror": 0.4096089772386942,
+        "Mystery": 1.5045279275232106,
+        "Nonfiction": 0.4906062818209045,
+        "Romance": 0.7600432389937107,
+        "Science Fiction": 1.1626965408805032,
+        "Thriller": 0.5996649445941898
+      },
+      "neighbor_historical_genre_percent": {
+        "Adult": 0.0,
+        "Adventure": 6.344152440850554,
+        "Children's": 3.342973195567535,
+        "Classics": 2.7577493261455523,
+        "Drama": 45.882936507936506,
+        "Fantasy": 19.229091793950285,
+        "Historical": 0.06841494459418987,
+        "Horror": 0.9632374962563642,
+        "Mystery": 11.45402815214136,
+        "Nonfiction": 0.22901692123390238,
+        "Romance": 7.556154537286612,
+        "Science Fiction": 1.4175277029050615,
+        "Thriller": 0.7547169811320755
+      },
+      "validation_queries": 5
+    }
+  ],
+  "frequent_books": [
+    {
+      "k": 15,
+      "book_id": 7464,
+      "title": "The Spine of the World (Forgotten Realms: Paths of Darkness, #2; Legend of Drizzt, #12)",
+      "genres": "Fantasy, Adventure",
+      "users": 35004,
+      "reach_percent": 65.52111410601977,
+      "original_rating_count": 188,
+      "original_mean_rating": 3.8031914893617023
+    },
+    {
+      "k": 15,
+      "book_id": 8946,
+      "title": "The Divan",
+      "genres": "Adventure, Drama",
+      "users": 28101,
+      "reach_percent": 52.59995507637017,
+      "original_rating_count": 75,
+      "original_mean_rating": 4.72
+    },
+    {
+      "k": 15,
+      "book_id": 7030,
+      "title": "The Lone Drow (Forgotten Realms: Hunter's Blades, #2; Legend of Drizzt, #15)",
+      "genres": "Fantasy, Adventure",
+      "users": 26720,
+      "reach_percent": 50.01497454327643,
+      "original_rating_count": 180,
+      "original_mean_rating": 4.038888888888889
+    },
+    {
+      "k": 15,
+      "book_id": 6166,
+      "title": "The I Ching or Book of Changes",
+      "genres": "Adventure, Mystery",
+      "users": 25660,
+      "reach_percent": 48.03084755914944,
+      "original_rating_count": 229,
+      "original_mean_rating": 4.205240174672489
+    },
+    {
+      "k": 15,
+      "book_id": 7578,
+      "title": "Sea of Swords (Forgotten Realms: Paths of Darkness, #4; Legend of Drizzt, #13)",
+      "genres": "Fantasy, Adventure",
+      "users": 21150,
+      "reach_percent": 39.588948787061994,
+      "original_rating_count": 185,
+      "original_mean_rating": 3.8972972972972975
+    },
+    {
+      "k": 15,
+      "book_id": 6380,
+      "title": "The Thousand Orcs (Forgotten Realms: Hunter's Blades, #1; Legend of Drizzt, #14)",
+      "genres": "Fantasy, Adventure",
+      "users": 20548,
+      "reach_percent": 38.46211440551063,
+      "original_rating_count": 195,
+      "original_mean_rating": 3.9128205128205127
+    },
+    {
+      "k": 15,
+      "book_id": 6008,
+      "title": "Captive Prince (Captive Prince, #1)",
+      "genres": "Romance, Adventure",
+      "users": 20149,
+      "reach_percent": 37.71525905959868,
+      "original_rating_count": 148,
+      "original_mean_rating": 3.8716216216216215
+    },
+    {
+      "k": 15,
+      "book_id": 9480,
+      "title": "The Orc King (Forgotten Realms: Transitions, #1; Legend of Drizzt, #17)",
+      "genres": "Fantasy, Adventure",
+      "users": 19595,
+      "reach_percent": 36.6782719377059,
+      "original_rating_count": 135,
+      "original_mean_rating": 3.8518518518518516
+    },
+    {
+      "k": 15,
+      "book_id": 6797,
+      "title": "Dust of Dreams (The Malazan Book of the Fallen, #9)",
+      "genres": "Fantasy, Adventure",
+      "users": 18185,
+      "reach_percent": 34.0390086852351,
+      "original_rating_count": 209,
+      "original_mean_rating": 4.267942583732057
+    },
+    {
+      "k": 15,
+      "book_id": 3174,
+      "title": "Memories of Ice (The Malazan Book of the Fallen, #3)",
+      "genres": "Fantasy, Adventure",
+      "users": 17462,
+      "reach_percent": 32.68568433662773,
+      "original_rating_count": 427,
+      "original_mean_rating": 4.295081967213115
+    },
+    {
+      "k": 15,
+      "book_id": 6744,
+      "title": "The Silent Blade (Forgotten Realms: Paths of Darkness, #1; Legend of Drizzt, #11)",
+      "genres": "Fantasy, Adventure",
+      "users": 16582,
+      "reach_percent": 31.038484576220426,
+      "original_rating_count": 208,
+      "original_mean_rating": 3.9951923076923075
+    },
+    {
+      "k": 15,
+      "book_id": 7224,
+      "title": "Knight & Play (Knight, #1)",
+      "genres": "Fantasy, Adventure",
+      "users": 15522,
+      "reach_percent": 29.054357592093442,
+      "original_rating_count": 184,
+      "original_mean_rating": 3.858695652173913
+    },
+    {
+      "k": 15,
+      "book_id": 3298,
+      "title": "Ship of Destiny (Liveship Traders, #3)",
+      "genres": "Fantasy, Adventure",
+      "users": 14833,
+      "reach_percent": 27.7646750524109,
+      "original_rating_count": 489,
+      "original_mean_rating": 4.2004089979550105
+    },
+    {
+      "k": 15,
+      "book_id": 3278,
+      "title": "The Mad Ship (Liveship Traders, #2)",
+      "genres": "Fantasy, Adventure",
+      "users": 14593,
+      "reach_percent": 27.315438754118,
+      "original_rating_count": 488,
+      "original_mean_rating": 4.120901639344262
+    },
+    {
+      "k": 15,
+      "book_id": 8415,
+      "title": "Yotsuba&!, Vol. 01 (Yotsuba&! #1)",
+      "genres": "Children's, Adventure",
+      "users": 13770,
+      "reach_percent": 25.774932614555254,
+      "original_rating_count": 124,
+      "original_mean_rating": 4.306451612903226
+    },
+    {
+      "k": 35,
+      "book_id": 8946,
+      "title": "The Divan",
+      "genres": "Adventure, Drama",
+      "users": 41766,
+      "reach_percent": 78.17834681042228,
+      "original_rating_count": 75,
+      "original_mean_rating": 4.72
+    },
+    {
+      "k": 35,
+      "book_id": 7464,
+      "title": "The Spine of the World (Forgotten Realms: Paths of Darkness, #2; Legend of Drizzt, #12)",
+      "genres": "Fantasy, Adventure",
+      "users": 39444,
+      "reach_percent": 73.83198562443846,
+      "original_rating_count": 188,
+      "original_mean_rating": 3.8031914893617023
+    },
+    {
+      "k": 35,
+      "book_id": 7030,
+      "title": "The Lone Drow (Forgotten Realms: Hunter's Blades, #2; Legend of Drizzt, #15)",
+      "genres": "Fantasy, Adventure",
+      "users": 32797,
+      "reach_percent": 61.39001197963462,
+      "original_rating_count": 180,
+      "original_mean_rating": 4.038888888888889
+    },
+    {
+      "k": 35,
+      "book_id": 6166,
+      "title": "The I Ching or Book of Changes",
+      "genres": "Adventure, Mystery",
+      "users": 31060,
+      "reach_percent": 58.138664270739746,
+      "original_rating_count": 229,
+      "original_mean_rating": 4.205240174672489
+    },
+    {
+      "k": 35,
+      "book_id": 7578,
+      "title": "Sea of Swords (Forgotten Realms: Paths of Darkness, #4; Legend of Drizzt, #13)",
+      "genres": "Fantasy, Adventure",
+      "users": 30066,
+      "reach_percent": 56.27807726864331,
+      "original_rating_count": 185,
+      "original_mean_rating": 3.8972972972972975
+    },
+    {
+      "k": 35,
+      "book_id": 9480,
+      "title": "The Orc King (Forgotten Realms: Transitions, #1; Legend of Drizzt, #17)",
+      "genres": "Fantasy, Adventure",
+      "users": 28039,
+      "reach_percent": 52.48390236597784,
+      "original_rating_count": 135,
+      "original_mean_rating": 3.8518518518518516
+    },
+    {
+      "k": 35,
+      "book_id": 6380,
+      "title": "The Thousand Orcs (Forgotten Realms: Hunter's Blades, #1; Legend of Drizzt, #14)",
+      "genres": "Fantasy, Adventure",
+      "users": 27817,
+      "reach_percent": 52.068358790056905,
+      "original_rating_count": 195,
+      "original_mean_rating": 3.9128205128205127
+    },
+    {
+      "k": 35,
+      "book_id": 6008,
+      "title": "Captive Prince (Captive Prince, #1)",
+      "genres": "Romance, Adventure",
+      "users": 26561,
+      "reach_percent": 49.71735549565738,
+      "original_rating_count": 148,
+      "original_mean_rating": 3.8716216216216215
+    },
+    {
+      "k": 35,
+      "book_id": 6744,
+      "title": "The Silent Blade (Forgotten Realms: Paths of Darkness, #1; Legend of Drizzt, #11)",
+      "genres": "Fantasy, Adventure",
+      "users": 26543,
+      "reach_percent": 49.68366277328541,
+      "original_rating_count": 208,
+      "original_mean_rating": 3.9951923076923075
+    },
+    {
+      "k": 35,
+      "book_id": 6797,
+      "title": "Dust of Dreams (The Malazan Book of the Fallen, #9)",
+      "genres": "Fantasy, Adventure",
+      "users": 26338,
+      "reach_percent": 49.29994010182689,
+      "original_rating_count": 209,
+      "original_mean_rating": 4.267942583732057
+    },
+    {
+      "k": 35,
+      "book_id": 3174,
+      "title": "Memories of Ice (The Malazan Book of the Fallen, #3)",
+      "genres": "Fantasy, Adventure",
+      "users": 25654,
+      "reach_percent": 48.019616651692125,
+      "original_rating_count": 427,
+      "original_mean_rating": 4.295081967213115
+    },
+    {
+      "k": 35,
+      "book_id": 6309,
+      "title": "The Crimson Campaign (Powder Mage, #2)",
+      "genres": "Fantasy, Adventure",
+      "users": 22175,
+      "reach_percent": 41.507562144354594,
+      "original_rating_count": 222,
+      "original_mean_rating": 4.288288288288288
+    },
+    {
+      "k": 35,
+      "book_id": 3298,
+      "title": "Ship of Destiny (Liveship Traders, #3)",
+      "genres": "Fantasy, Adventure",
+      "users": 21585,
+      "reach_percent": 40.40318957771788,
+      "original_rating_count": 489,
+      "original_mean_rating": 4.2004089979550105
+    },
+    {
+      "k": 35,
+      "book_id": 7224,
+      "title": "Knight & Play (Knight, #1)",
+      "genres": "Fantasy, Adventure",
+      "users": 21463,
+      "reach_percent": 40.17482779275232,
+      "original_rating_count": 184,
+      "original_mean_rating": 3.858695652173913
+    },
+    {
+      "k": 35,
+      "book_id": 3278,
+      "title": "The Mad Ship (Liveship Traders, #2)",
+      "genres": "Fantasy, Adventure",
+      "users": 21167,
+      "reach_percent": 39.62076969152441,
+      "original_rating_count": 488,
+      "original_mean_rating": 4.120901639344262
+    }
+  ],
+  "examples": [
+    {
+      "user_id": 51238,
+      "books": [
+        {
+          "book_id": 7224,
+          "title": "Knight & Play (Knight, #1)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 2562,
+          "title": "The Perfect Game (The Perfect Game, #1)",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 1994,
+          "title": "Forever Too Far (Rosemary Beach, #3; Too Far, #3)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 8946,
+          "title": "The Divan",
+          "genres": "Adventure, Drama"
+        },
+        {
+          "book_id": 6008,
+          "title": "Captive Prince (Captive Prince, #1)",
+          "genres": "Romance, Adventure"
+        },
+        {
+          "book_id": 65,
+          "title": "Slaughterhouse-Five",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 6166,
+          "title": "The I Ching or Book of Changes",
+          "genres": "Adventure, Mystery"
+        },
+        {
+          "book_id": 9470,
+          "title": "Gemina (The Illuminae Files, #2)",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 8263,
+          "title": "2 \u0636\u0628\u0627\u0637",
+          "genres": "Adventure, Thriller"
+        },
+        {
+          "book_id": 4806,
+          "title": "The Bonehunters (Malazan Book of the Fallen, #6)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 6642,
+          "title": "Locke & Key, Vol. 5: Clockworks",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 8415,
+          "title": "Yotsuba&!, Vol. 01 (Yotsuba&! #1)",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 6797,
+          "title": "Dust of Dreams (The Malazan Book of the Fallen, #9)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 5513,
+          "title": "Thief (Love Me with Lies, #3)",
+          "genres": "Adventure, Nonfiction"
+        },
+        {
+          "book_id": 9566,
+          "title": "Attack of the Deranged Mutant Killer Monster Snow Goons",
+          "genres": "Fantasy, Mystery"
+        }
+      ]
+    },
+    {
+      "user_id": 42542,
+      "books": [
+        {
+          "book_id": 6166,
+          "title": "The I Ching or Book of Changes",
+          "genres": "Adventure, Mystery"
+        },
+        {
+          "book_id": 5959,
+          "title": "One Crazy Summer (Gaither Sisters, #1)",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 8946,
+          "title": "The Divan",
+          "genres": "Adventure, Drama"
+        },
+        {
+          "book_id": 8666,
+          "title": "Dark Star Safari: Overland from Cairo to Cape Town",
+          "genres": "Nonfiction, Adventure"
+        },
+        {
+          "book_id": 9460,
+          "title": "Too Loud a Solitude",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 9008,
+          "title": "In Watermelon Sugar",
+          "genres": "Adventure, Thriller"
+        },
+        {
+          "book_id": 7464,
+          "title": "The Spine of the World (Forgotten Realms: Paths of Darkness, #2; Legend of Drizzt, #12)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 6526,
+          "title": "Kitten's First Full Moon",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 25,
+          "title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 9842,
+          "title": "Humans of New York: Stories",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 2045,
+          "title": "God Emperor of Dune (Dune Chronicles #4)",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 2043,
+          "title": "Men at Arms (Discworld, #15; City Watch #2)",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 6642,
+          "title": "Locke & Key, Vol. 5: Clockworks",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 9903,
+          "title": "Horus Rising",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 862,
+          "title": "Words of Radiance (The Stormlight Archive, #2)",
+          "genres": "Fantasy, Adventure"
+        }
+      ]
+    },
+    {
+      "user_id": 17379,
+      "books": [
+        {
+          "book_id": 6166,
+          "title": "The I Ching or Book of Changes",
+          "genres": "Adventure, Mystery"
+        },
+        {
+          "book_id": 7464,
+          "title": "The Spine of the World (Forgotten Realms: Paths of Darkness, #2; Legend of Drizzt, #12)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 2045,
+          "title": "God Emperor of Dune (Dune Chronicles #4)",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 8666,
+          "title": "Dark Star Safari: Overland from Cairo to Cape Town",
+          "genres": "Nonfiction, Adventure"
+        },
+        {
+          "book_id": 9903,
+          "title": "Horus Rising",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 5959,
+          "title": "One Crazy Summer (Gaither Sisters, #1)",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 3495,
+          "title": "Never Eat Alone: And Other Secrets to Success, One Relationship at a Time",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 7118,
+          "title": "White Gold Wielder (The Second Chronicles of Thomas Covenant, #3)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 6526,
+          "title": "Kitten's First Full Moon",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 9560,
+          "title": "Relentless (The Lost Fleet, #5)",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 7578,
+          "title": "Sea of Swords (Forgotten Realms: Paths of Darkness, #4; Legend of Drizzt, #13)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 7092,
+          "title": "Cabal",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 7253,
+          "title": "The One Tree (The Second Chronicles of Thomas Covenant, #2)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 6852,
+          "title": "Under the Skin",
+          "genres": "Mystery, Adventure"
+        },
+        {
+          "book_id": 6681,
+          "title": "Excalibur (The Warlord Chronicles, #3)",
+          "genres": "Historical, Adventure"
+        }
+      ]
+    }
+  ],
+  "mean_pairwise_recommendation_jaccard_top15": 0.14555199701254745,
+  "procrustes_aligned_mean_user_cosine": 0.8321899273184644,
+  "min_pu": 2.09101045369014e-32,
+  "min_qi": 5.02738905896047e-09,
+  "nmf_nonnegative_constraint_ok": true,
+  "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_3500.npz",
+  "factors_clipped": false,
+  "range_clipped": false,
+  "elapsed_seconds": 46.08893942832947
+}

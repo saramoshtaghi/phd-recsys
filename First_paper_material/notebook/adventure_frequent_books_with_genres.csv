@@ -1,0 +1,841 @@
+model,n_fake,k,book_id,title,genres,users,reach_percent,original_rating_count,original_mean_rating
+svd,0,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11304,21.159029649595688,293,4.092150170648464
+svd,0,15,8946,The Divan,"Adventure, Drama",10598,19.837526205450732,75,4.72
+svd,0,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",9402,17.59883198562444,735,4.104761904761904
+svd,0,15,5268,Anatomy for the Artist,"Nonfiction, Drama",7146,13.376010781671159,92,4.054347826086956
+svd,0,15,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",6977,13.059673554956573,259,3.332046332046332
+svd,0,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",5710,10.688080263551962,147,4.7687074829931975
+svd,0,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",5634,10.545822102425875,303,3.907590759075908
+svd,0,15,2461,"Confessor (Sword of Truth, #11)","Fantasy, Mystery",5539,10.367999401018269,576,3.8819444444444446
+svd,0,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",5150,9.639862234201857,482,4.829875518672199
+svd,0,15,1759,"Faith of the Fallen (Sword of Truth, #6)","Mystery, Drama",5118,9.579964061096137,759,3.9209486166007905
+svd,0,15,9385,Batwoman: Elegy,"Fantasy, Mystery",5041,9.435834082060497,82,4.134146341463414
+svd,0,15,2645,"Phantom (Sword of Truth, #10)","Fantasy, Adventure",4944,9.254267744833783,546,3.728937728937729
+svd,0,15,4868,Jesus the Christ,"Nonfiction, Classics",4817,9.016546870320456,238,4.621848739495798
+svd,0,15,8358,"Darkness, Be My Friend (Tomorrow, #4)","Horror, Mystery",4680,8.76010781671159,149,3.9731543624161074
+svd,0,15,2198,"Queen of Sorcery (The Belgariad, #2)","Mystery, Horror",4407,8.249101527403415,746,3.9718498659517425
+svd,0,35,8946,The Divan,"Adventure, Drama",15405,28.83535489667565,75,4.72
+svd,0,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",13148,24.61066187481282,293,4.092150170648464
+svd,0,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",11426,21.387391434561245,735,4.104761904761904
+svd,0,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",10179,19.05323450134771,482,4.829875518672199
+svd,0,35,5268,Anatomy for the Artist,"Nonfiction, Drama",9776,18.298891883797545,92,4.054347826086956
+svd,0,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",9729,18.210916442048518,147,4.7687074829931975
+svd,0,35,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",8425,15.770065887990416,259,3.332046332046332
+svd,0,35,4868,Jesus the Christ,"Nonfiction, Classics",7989,14.953953279424978,238,4.621848739495798
+svd,0,35,2082,The Qur'an / القرآن الكريم,"Romance, Horror",7970,14.918388739143456,303,3.907590759075908
+svd,0,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",7935,14.852875112309075,243,4.757201646090535
+svd,0,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",7668,14.35309973045822,214,4.766355140186916
+svd,0,35,9385,Batwoman: Elegy,"Fantasy, Mystery",7611,14.246406109613657,82,4.134146341463414
+svd,0,35,2461,"Confessor (Sword of Truth, #11)","Fantasy, Mystery",7109,13.30675351901767,576,3.8819444444444446
+svd,0,35,8548,This is Not My Hat,"Children's, Adventure",7060,13.215034441449536,77,4.584415584415584
+svd,0,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",6921,12.954851752021563,267,4.689138576779026
+svd,2,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",10840,20.290506139562744,293,4.092150170648464
+svd,2,15,8946,The Divan,"Adventure, Drama",10023,18.76123090745732,75,4.72
+svd,2,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",9084,17.003593890386345,735,4.104761904761904
+svd,2,15,5268,Anatomy for the Artist,"Nonfiction, Drama",7417,13.883273435160227,92,4.054347826086956
+svd,2,15,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",6450,12.073225516621743,259,3.332046332046332
+svd,2,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",6254,11.706349206349206,303,3.907590759075908
+svd,2,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",5735,10.734875711290806,147,4.7687074829931975
+svd,2,15,2461,"Confessor (Sword of Truth, #11)","Fantasy, Mystery",5512,10.317460317460318,576,3.8819444444444446
+svd,2,15,1759,"Faith of the Fallen (Sword of Truth, #6)","Mystery, Drama",5225,9.780248577418389,759,3.9209486166007905
+svd,2,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",5126,9.594938604372567,482,4.829875518672199
+svd,2,15,2645,"Phantom (Sword of Truth, #10)","Fantasy, Adventure",4872,9.119496855345911,546,3.728937728937729
+svd,2,15,9360,"The Green Mile, Part 6: Coffey on the Mile","Horror, Mystery",4705,8.806903264450435,217,4.548387096774194
+svd,2,15,4868,Jesus the Christ,"Nonfiction, Classics",4540,8.498053309374065,238,4.621848739495798
+svd,2,15,8358,"Darkness, Be My Friend (Tomorrow, #4)","Horror, Mystery",4355,8.151766996106618,149,3.9731543624161074
+svd,2,15,8548,This is Not My Hat,"Children's, Adventure",4276,8.003893381251872,77,4.584415584415584
+svd,2,35,8946,The Divan,"Adventure, Drama",14366,26.890536088649295,75,4.72
+svd,2,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12634,23.648547469302187,293,4.092150170648464
+svd,2,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",11086,20.750973345312968,735,4.104761904761904
+svd,2,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",10128,18.957771787960468,482,4.829875518672199
+svd,2,35,5268,Anatomy for the Artist,"Nonfiction, Drama",10046,18.80428271937706,92,4.054347826086956
+svd,2,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",9686,18.130428271937706,147,4.7687074829931975
+svd,2,35,2082,The Qur'an / القرآن الكريم,"Romance, Horror",8563,16.028376759508834,303,3.907590759075908
+svd,2,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",7893,14.774258760107816,243,4.757201646090535
+svd,2,35,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",7856,14.705001497454328,259,3.332046332046332
+svd,2,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",7596,14.21832884097035,214,4.766355140186916
+svd,2,35,4868,Jesus the Christ,"Nonfiction, Classics",7517,14.070455226115604,238,4.621848739495798
+svd,2,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",7274,13.61560347409404,267,4.689138576779026
+svd,2,35,9360,"The Green Mile, Part 6: Coffey on the Mile","Horror, Mystery",7133,13.35167714884696,217,4.548387096774194
+svd,2,35,2461,"Confessor (Sword of Truth, #11)","Fantasy, Mystery",7081,13.254342617550165,576,3.8819444444444446
+svd,2,35,1759,"Faith of the Fallen (Sword of Truth, #6)","Mystery, Drama",6968,13.04282719377059,759,3.9209486166007905
+svd,4,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",10384,19.43695717280623,293,4.092150170648464
+svd,4,15,8946,The Divan,"Adventure, Drama",9289,17.387316561844862,75,4.72
+svd,4,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",9005,16.855720275531596,735,4.104761904761904
+svd,4,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",6491,12.149970050913447,147,4.7687074829931975
+svd,4,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",6320,11.829889188379754,303,3.907590759075908
+svd,4,15,5268,Anatomy for the Artist,"Nonfiction, Drama",5494,10.28376759508835,92,4.054347826086956
+svd,4,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",5430,10.163971248876909,482,4.829875518672199
+svd,4,15,9360,"The Green Mile, Part 6: Coffey on the Mile","Horror, Mystery",5006,9.370320455226116,217,4.548387096774194
+svd,4,15,2461,"Confessor (Sword of Truth, #11)","Fantasy, Mystery",4936,9.239293201557352,576,3.8819444444444446
+svd,4,15,1759,"Faith of the Fallen (Sword of Truth, #6)","Mystery, Drama",4905,9.181266846361186,759,3.9209486166007905
+svd,4,15,4868,Jesus the Christ,"Nonfiction, Classics",4760,8.90985324947589,238,4.621848739495798
+svd,4,15,2645,"Phantom (Sword of Truth, #10)","Fantasy, Adventure",4513,8.447514225816112,546,3.728937728937729
+svd,4,15,1372,الفيل الأزرق,"Fantasy, Adventure",4448,8.325846061695119,387,3.708010335917313
+svd,4,15,9923,"The Green Mile, Part 5: Night Journey","Science Fiction, Mystery",4241,7.9383797544174906,206,4.538834951456311
+svd,4,15,8358,"Darkness, Be My Friend (Tomorrow, #4)","Horror, Mystery",4089,7.653863432165319,149,3.9731543624161074
+svd,4,35,8946,The Divan,"Adventure, Drama",13339,24.968179095537586,75,4.72
+svd,4,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12132,22.7088948787062,293,4.092150170648464
+svd,4,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",11015,20.618074273734653,735,4.104761904761904
+svd,4,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",10523,19.697139862234202,482,4.829875518672199
+svd,4,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",10477,19.61103623839473,147,4.7687074829931975
+svd,4,35,2082,The Qur'an / القرآن الكريم,"Romance, Horror",8597,16.092018568433662,303,3.907590759075908
+svd,4,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",7929,14.841644204851752,243,4.757201646090535
+svd,4,35,5268,Anatomy for the Artist,"Nonfiction, Drama",7823,14.643231506439054,92,4.054347826086956
+svd,4,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",7705,14.42235699311171,214,4.766355140186916
+svd,4,35,4868,Jesus the Christ,"Nonfiction, Classics",7700,14.41299790356394,238,4.621848739495798
+svd,4,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",7558,14.147199760407307,267,4.689138576779026
+svd,4,35,9360,"The Green Mile, Part 6: Coffey on the Mile","Horror, Mystery",7225,13.523884396525906,217,4.548387096774194
+svd,4,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",7145,13.374138963761606,652,4.728527607361963
+svd,4,35,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",6976,13.05780173704702,233,4.6995708154506435
+svd,4,35,1759,"Faith of the Fallen (Sword of Truth, #6)","Mystery, Drama",6638,12.425127283617849,759,3.9209486166007905
+svd,6,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12669,23.714061096136568,293,4.092150170648464
+svd,6,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",11161,20.8913596885295,735,4.104761904761904
+svd,6,15,8946,The Divan,"Adventure, Drama",10838,20.286762503743635,75,4.72
+svd,6,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",8571,16.043351302785265,147,4.7687074829931975
+svd,6,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",7398,13.847708894878707,303,3.907590759075908
+svd,6,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",6753,12.640386343216532,482,4.829875518672199
+svd,6,15,4868,Jesus the Christ,"Nonfiction, Classics",6383,11.947813716681642,238,4.621848739495798
+svd,6,15,5268,Anatomy for the Artist,"Nonfiction, Drama",5848,10.94639113507038,92,4.054347826086956
+svd,6,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",5465,10.229484875711291,243,4.757201646090535
+svd,6,15,8358,"Darkness, Be My Friend (Tomorrow, #4)","Horror, Mystery",5369,10.04979035639413,149,3.9731543624161074
+svd,6,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",5226,9.782120395327942,214,4.766355140186916
+svd,6,15,2461,"Confessor (Sword of Truth, #11)","Fantasy, Mystery",5209,9.750299490865528,576,3.8819444444444446
+svd,6,15,2236,Holy Bible: New International Version,"Romance, Adult",5017,9.390910452231207,350,4.402857142857143
+svd,6,15,3492,"The Seeress of Kell (The Malloreon, #5)","Fantasy, Adventure",4949,9.26362683438155,518,3.9787644787644787
+svd,6,15,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",4908,9.186882300089847,267,4.689138576779026
+svd,6,35,8946,The Divan,"Adventure, Drama",15587,29.176025756214436,75,4.72
+svd,6,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",14348,26.856843366277328,293,4.092150170648464
+svd,6,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",13059,24.444070080862534,147,4.7687074829931975
+svd,6,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",13030,24.389787361485475,735,4.104761904761904
+svd,6,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",12268,22.96346211440551,482,4.829875518672199
+svd,6,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",10435,19.53241988619347,214,4.766355140186916
+svd,6,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",10419,19.502470799640612,243,4.757201646090535
+svd,6,35,2082,The Qur'an / القرآن الكريم,"Romance, Horror",9501,17.78414195867026,303,3.907590759075908
+svd,6,35,4868,Jesus the Christ,"Nonfiction, Classics",9484,17.752321054207847,238,4.621848739495798
+svd,6,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",9112,17.056004791853848,267,4.689138576779026
+svd,6,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",8872,16.606768493560946,652,4.728527607361963
+svd,6,35,5268,Anatomy for the Artist,"Nonfiction, Drama",8454,15.824348607367476,92,4.054347826086956
+svd,6,35,8978,The Revenge of the Baby-Sat,"Mystery, Drama",8081,15.126160527103924,176,4.761363636363637
+svd,6,35,2236,Holy Bible: New International Version,"Romance, Adult",7683,14.381176999101527,350,4.402857142857143
+svd,6,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",7646,14.311919736448038,263,4.760456273764259
+svd,25,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12031,22.51984126984127,293,4.092150170648464
+svd,25,15,8946,The Divan,"Adventure, Drama",11939,22.347634022162325,75,4.72
+svd,25,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",10115,18.93343815513627,735,4.104761904761904
+svd,25,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",7443,13.931940700808624,147,4.7687074829931975
+svd,25,15,8358,"Darkness, Be My Friend (Tomorrow, #4)","Horror, Mystery",6389,11.959044624138963,149,3.9731543624161074
+svd,25,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",6291,11.775606469002696,482,4.829875518672199
+svd,25,15,3492,"The Seeress of Kell (The Malloreon, #5)","Fantasy, Adventure",6259,11.715708295896976,518,3.9787644787644787
+svd,25,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",5896,11.036238394728962,303,3.907590759075908
+svd,25,15,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",5811,10.877133872416891,259,3.332046332046332
+svd,25,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",5716,10.699311171009285,243,4.757201646090535
+svd,25,15,7516,"Mars, Volume 01","Fantasy, Adventure",5586,10.455974842767295,147,4.006802721088436
+svd,25,15,5268,Anatomy for the Artist,"Nonfiction, Drama",5533,10.356768493560946,92,4.054347826086956
+svd,25,15,9624,Cradle to Cradle: Remaking the Way We Make Things,"Nonfiction, Adult",5428,10.1602276130578,87,4.057471264367816
+svd,25,15,2198,"Queen of Sorcery (The Belgariad, #2)","Mystery, Horror",5314,9.946840371368673,746,3.9718498659517425
+svd,25,15,1931,"Castle of Wizardry (The Belgariad, #4)","Fantasy, Adventure",5200,9.733453129679544,807,3.9615861214374224
+svd,25,35,8946,The Divan,"Adventure, Drama",16618,31.10587002096436,75,4.72
+svd,25,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",13624,25.501647199760406,293,4.092150170648464
+svd,25,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",11882,22.24094040131776,735,4.104761904761904
+svd,25,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",11688,21.87780772686433,147,4.7687074829931975
+svd,25,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",11622,21.754267744833783,482,4.829875518672199
+svd,25,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",10517,19.68590895477688,243,4.757201646090535
+svd,25,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",9907,18.544100029949085,214,4.766355140186916
+svd,25,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",8578,16.056454028152142,267,4.689138576779026
+svd,25,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",8328,15.588499550763702,652,4.728527607361963
+svd,25,35,8358,"Darkness, Be My Friend (Tomorrow, #4)","Horror, Mystery",8301,15.53796046720575,149,3.9731543624161074
+svd,25,35,5268,Anatomy for the Artist,"Nonfiction, Drama",8298,15.532345013477089,92,4.054347826086956
+svd,25,35,3492,"The Seeress of Kell (The Malloreon, #5)","Fantasy, Adventure",8202,15.352650494159928,518,3.9787644787644787
+svd,25,35,2082,The Qur'an / القرآن الكريم,"Romance, Horror",8148,15.251572327044025,303,3.907590759075908
+svd,25,35,8548,This is Not My Hat,"Children's, Adventure",8006,14.985774183887392,77,4.584415584415584
+svd,25,35,7516,"Mars, Volume 01","Fantasy, Adventure",7972,14.922132374962564,147,4.006802721088436
+svd,50,15,8946,The Divan,"Adventure, Drama",11688,21.87780772686433,75,4.72
+svd,50,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11386,21.312518718179096,293,4.092150170648464
+svd,50,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",9285,17.379829290206647,735,4.104761904761904
+svd,50,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",7072,13.237496256364182,147,4.7687074829931975
+svd,50,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",6216,11.635220125786164,482,4.829875518672199
+svd,50,15,3492,"The Seeress of Kell (The Malloreon, #5)","Fantasy, Adventure",6148,11.507936507936508,518,3.9787644787644787
+svd,50,15,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",6084,11.388140161725067,259,3.332046332046332
+svd,50,15,7516,"Mars, Volume 01","Fantasy, Adventure",6061,11.34508834980533,147,4.006802721088436
+svd,50,15,8548,This is Not My Hat,"Children's, Adventure",5981,11.19534291704103,77,4.584415584415584
+svd,50,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",5839,10.929544773884396,303,3.907590759075908
+svd,50,15,8358,"Darkness, Be My Friend (Tomorrow, #4)","Horror, Mystery",5786,10.830338424678047,149,3.9731543624161074
+svd,50,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",5732,10.729260257562144,243,4.757201646090535
+svd,50,15,5268,Anatomy for the Artist,"Nonfiction, Drama",5545,10.379230308475591,92,4.054347826086956
+svd,50,15,9625,"Healthy Sleep Habits, Happy Child","Science Fiction, Thriller",5443,10.188304881701107,117,3.982905982905983
+svd,50,15,2198,"Queen of Sorcery (The Belgariad, #2)","Mystery, Horror",5302,9.924378556454029,746,3.9718498659517425
+svd,50,35,8946,The Divan,"Adventure, Drama",16264,30.44324648098233,75,4.72
+svd,50,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12921,24.185759209344116,293,4.092150170648464
+svd,50,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",11572,21.660676849356093,482,4.829875518672199
+svd,50,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",11530,21.58206049715484,147,4.7687074829931975
+svd,50,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",10948,20.49266247379455,735,4.104761904761904
+svd,50,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",10739,20.101452530697813,243,4.757201646090535
+svd,50,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",9973,18.667640011979636,214,4.766355140186916
+svd,50,35,8548,This is Not My Hat,"Children's, Adventure",9318,17.441599281221922,77,4.584415584415584
+svd,50,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",8823,16.515049415992813,652,4.728527607361963
+svd,50,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",8423,15.766322252171308,267,4.689138576779026
+svd,50,35,7516,"Mars, Volume 01","Fantasy, Adventure",8348,15.625935908954776,147,4.006802721088436
+svd,50,35,5268,Anatomy for the Artist,"Nonfiction, Drama",8300,15.536088649296197,92,4.054347826086956
+svd,50,35,2082,The Qur'an / القرآن الكريم,"Romance, Horror",8084,15.131775980832584,303,3.907590759075908
+svd,50,35,3492,"The Seeress of Kell (The Malloreon, #5)","Fantasy, Adventure",8034,15.038185085354897,518,3.9787644787644787
+svd,50,35,9625,"Healthy Sleep Habits, Happy Child","Science Fiction, Thriller",7935,14.852875112309075,117,3.982905982905983
+svd,100,15,8946,The Divan,"Adventure, Drama",11122,20.8183587900569,75,4.72
+svd,100,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",10794,20.20440251572327,293,4.092150170648464
+svd,100,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",8884,16.62923030847559,735,4.104761904761904
+svd,100,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",7522,14.079814315663372,147,4.7687074829931975
+svd,100,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",6551,12.262279125486673,482,4.829875518672199
+svd,100,15,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",6473,12.116277328541479,259,3.332046332046332
+svd,100,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",6214,11.631476489967056,243,4.757201646090535
+svd,100,15,9625,"Healthy Sleep Habits, Happy Child","Science Fiction, Thriller",6093,11.40498652291105,117,3.982905982905983
+svd,100,15,3492,"The Seeress of Kell (The Malloreon, #5)","Fantasy, Adventure",5789,10.835953878406709,518,3.9787644787644787
+svd,100,15,5059,"Love Wins: A Book About Heaven, Hell, and the Fate of Every Person Who Ever Lived","Thriller, Mystery",5662,10.598233003893382,175,3.4685714285714284
+svd,100,15,7516,"Mars, Volume 01","Fantasy, Adventure",5610,10.500898472596585,147,4.006802721088436
+svd,100,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",5447,10.195792153339323,303,3.907590759075908
+svd,100,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",5263,9.851377657981432,214,4.766355140186916
+svd,100,15,8358,"Darkness, Be My Friend (Tomorrow, #4)","Horror, Mystery",5106,9.55750224618149,149,3.9731543624161074
+svd,100,15,8548,This is Not My Hat,"Children's, Adventure",4981,9.323525007487271,77,4.584415584415584
+svd,100,35,8946,The Divan,"Adventure, Drama",15422,28.867175801138064,75,4.72
+svd,100,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12443,23.291030248577417,293,4.092150170648464
+svd,100,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",11908,22.28960766696616,482,4.829875518672199
+svd,100,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",11791,22.070604971548367,147,4.7687074829931975
+svd,100,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",11102,20.78092243186583,243,4.757201646090535
+svd,100,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",10537,19.723345312967954,735,4.104761904761904
+svd,100,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",10327,19.330263551961664,214,4.766355140186916
+svd,100,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",8796,16.464510332434863,652,4.728527607361963
+svd,100,35,9625,"Healthy Sleep Habits, Happy Child","Science Fiction, Thriller",8595,16.088274932614556,117,3.982905982905983
+svd,100,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",8538,15.981581311769991,267,4.689138576779026
+svd,100,35,8548,This is Not My Hat,"Children's, Adventure",8224,15.39383048817011,77,4.584415584415584
+svd,100,35,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",7841,14.676924228811021,259,3.332046332046332
+svd,100,35,7516,"Mars, Volume 01","Fantasy, Adventure",7825,14.646975142258162,147,4.006802721088436
+svd,100,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",7736,14.480383348307877,263,4.760456273764259
+svd,100,35,2082,The Qur'an / القرآن الكريم,"Romance, Horror",7647,14.313791554357593,303,3.907590759075908
+svd,200,15,8946,The Divan,"Adventure, Drama",10119,18.940925426774484,75,4.72
+svd,200,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",10073,18.85482180293501,293,4.092150170648464
+svd,200,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",8353,15.635294998502546,735,4.104761904761904
+svd,200,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",7373,13.800913447139862,147,4.7687074829931975
+svd,200,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",7107,13.303009883198563,482,4.829875518672199
+svd,200,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",6695,12.531820904462414,243,4.757201646090535
+svd,200,15,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",6207,11.61837376460018,259,3.332046332046332
+svd,200,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",6131,11.476115603474094,303,3.907590759075908
+svd,200,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",5679,10.630053908355794,214,4.766355140186916
+svd,200,15,5059,"Love Wins: A Book About Heaven, Hell, and the Fate of Every Person Who Ever Lived","Thriller, Mystery",5318,9.954327643006888,175,3.4685714285714284
+svd,200,15,9625,"Healthy Sleep Habits, Happy Child","Science Fiction, Thriller",5071,9.49198861934711,117,3.982905982905983
+svd,200,15,8548,This is Not My Hat,"Children's, Adventure",4825,9.031521413596884,77,4.584415584415584
+svd,200,15,7516,"Mars, Volume 01","Fantasy, Adventure",4783,8.952905061395628,147,4.006802721088436
+svd,200,15,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",4665,8.732030548068284,267,4.689138576779026
+svd,200,15,2236,Holy Bible: New International Version,"Romance, Adult",4581,8.574797843665769,350,4.402857142857143
+svd,200,35,8946,The Divan,"Adventure, Drama",14023,26.248502545672356,75,4.72
+svd,200,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",12422,23.251722072476788,482,4.829875518672199
+svd,200,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",11649,21.804806828391733,147,4.7687074829931975
+svd,200,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",11605,21.72244684037137,243,4.757201646090535
+svd,200,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11471,21.471623240491166,293,4.092150170648464
+svd,200,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",10771,20.161350703803535,214,4.766355140186916
+svd,200,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",9915,18.559074573225516,735,4.104761904761904
+svd,200,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",9214,17.246930218628332,652,4.728527607361963
+svd,200,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",8695,16.27545672356993,267,4.689138576779026
+svd,200,35,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",8675,16.238020365378855,233,4.6995708154506435
+svd,200,35,2082,The Qur'an / القرآن الكريم,"Romance, Horror",8229,15.40318957771788,303,3.907590759075908
+svd,200,35,8548,This is Not My Hat,"Children's, Adventure",7883,14.75554058101228,77,4.584415584415584
+svd,200,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",7827,14.650718778077268,263,4.760456273764259
+svd,200,35,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",7490,14.019916142557651,259,3.332046332046332
+svd,200,35,9625,"Healthy Sleep Habits, Happy Child","Science Fiction, Thriller",7409,13.868298891883798,117,3.982905982905983
+svd,500,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",9638,18.040581012279127,293,4.092150170648464
+svd,500,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",8227,15.399445941898772,482,4.829875518672199
+svd,500,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",8012,14.997005091344715,735,4.104761904761904
+svd,500,15,8946,The Divan,"Adventure, Drama",7749,14.504716981132075,75,4.72
+svd,500,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",7471,13.984351602276131,147,4.7687074829931975
+svd,500,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",7369,13.793426175501647,243,4.757201646090535
+svd,500,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",6814,12.75456723569931,303,3.907590759075908
+svd,500,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",6395,11.970275531596286,214,4.766355140186916
+svd,500,15,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",6187,11.580937406409104,233,4.6995708154506435
+svd,500,15,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",5552,10.392333033842467,259,3.332046332046332
+svd,500,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",5547,10.382973944294699,652,4.728527607361963
+svd,500,15,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",5278,9.879454926624739,267,4.689138576779026
+svd,500,15,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",5232,9.793351302785265,1915,4.65953002610966
+svd,500,15,2236,Holy Bible: New International Version,"Romance, Adult",5153,9.645477687930518,350,4.402857142857143
+svd,500,15,287,The Fountainhead,"Classics, Drama",4606,8.621593291404611,3656,3.6416849015317285
+svd,500,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",13740,25.71877807726864,482,4.829875518672199
+svd,500,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",12102,22.652740341419587,243,4.757201646090535
+svd,500,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",11576,21.66816412099431,147,4.7687074829931975
+svd,500,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",11409,21.35557053009883,214,4.766355140186916
+svd,500,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",10957,20.509508834980533,293,4.092150170648464
+svd,500,35,8946,The Divan,"Adventure, Drama",10739,20.101452530697813,75,4.72
+svd,500,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",10471,19.599805330937407,652,4.728527607361963
+svd,500,35,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",10400,19.46690625935909,233,4.6995708154506435
+svd,500,35,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",9513,17.806603773584907,1915,4.65953002610966
+svd,500,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",9428,17.647499251272837,735,4.104761904761904
+svd,500,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",9330,17.464061096136568,267,4.689138576779026
+svd,500,35,2082,The Qur'an / القرآن الكريم,"Romance, Horror",8780,16.434561245882,303,3.907590759075908
+svd,500,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",8399,15.721398622342019,263,4.760456273764259
+svd,500,35,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",8088,15.1392632524708,256,4.72265625
+svd,500,35,1010,The Essential Calvin and Hobbes: A Calvin and Hobbes Treasury,"Children's, Classics",7761,14.527178796046721,1249,4.652522017614091
+svd,1000,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",10406,19.478137166816413,293,4.092150170648464
+svd,1000,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",8979,16.807053009883198,482,4.829875518672199
+svd,1000,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",8496,15.902964959568733,243,4.757201646090535
+svd,1000,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",8401,15.725142258161126,735,4.104761904761904
+svd,1000,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",8393,15.710167714884696,147,4.7687074829931975
+svd,1000,15,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",7591,14.20896975142258,233,4.6995708154506435
+svd,1000,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",7330,13.720425277029051,214,4.766355140186916
+svd,1000,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",6787,12.70402815214136,652,4.728527607361963
+svd,1000,15,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",6658,12.462563641808925,1915,4.65953002610966
+svd,1000,15,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",6616,12.383947289607667,267,4.689138576779026
+svd,1000,15,1933,أحببتك أكثر مما ينبغي,"Romance, Drama",5959,11.154162923030848,259,3.332046332046332
+svd,1000,15,8946,The Divan,"Adventure, Drama",5833,10.918313866427074,75,4.72
+svd,1000,15,2082,The Qur'an / القرآن الكريم,"Romance, Horror",5620,10.519616651692123,303,3.907590759075908
+svd,1000,15,287,The Fountainhead,"Classics, Drama",5593,10.469077568134171,3656,3.6416849015317285
+svd,1000,15,2236,Holy Bible: New International Version,"Romance, Adult",5430,10.163971248876909,350,4.402857142857143
+svd,1000,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",14749,27.607442348008387,482,4.829875518672199
+svd,1000,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",13311,24.915768194070083,243,4.757201646090535
+svd,1000,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",12808,23.97424378556454,147,4.7687074829931975
+svd,1000,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",12458,23.319107517220726,214,4.766355140186916
+svd,1000,35,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",12094,22.637765798143157,233,4.6995708154506435
+svd,1000,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",11969,22.403788559448937,652,4.728527607361963
+svd,1000,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11819,22.123015873015873,293,4.092150170648464
+svd,1000,35,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",11225,21.01115603474094,1915,4.65953002610966
+svd,1000,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",10828,20.2680443246481,267,4.689138576779026
+svd,1000,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",9885,18.502920035938903,735,4.104761904761904
+svd,1000,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",9726,18.205300988319856,263,4.760456273764259
+svd,1000,35,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",9376,17.550164719976042,256,4.72265625
+svd,1000,35,1010,The Essential Calvin and Hobbes: A Calvin and Hobbes Treasury,"Children's, Classics",9262,17.336777478286912,1249,4.652522017614091
+svd,1000,35,8978,The Revenge of the Baby-Sat,"Mystery, Drama",8592,16.082659478885894,176,4.761363636363637
+svd,1000,35,8946,The Divan,"Adventure, Drama",8238,15.420035938903863,75,4.72
+svd,2000,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",10371,19.41262353998203,293,4.092150170648464
+svd,2000,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",10300,19.279724468403714,147,4.7687074829931975
+svd,2000,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",9853,18.443021862833184,243,4.757201646090535
+svd,2000,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",9635,18.034965558550464,482,4.829875518672199
+svd,2000,15,8946,The Divan,"Adventure, Drama",8808,16.486972147349505,75,4.72
+svd,2000,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",8804,16.47948487571129,652,4.728527607361963
+svd,2000,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",8761,16.398996705600478,214,4.766355140186916
+svd,2000,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",8671,16.23053309374064,735,4.104761904761904
+svd,2000,15,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",8431,15.781296795447739,233,4.6995708154506435
+svd,2000,15,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",8270,15.479934112009584,267,4.689138576779026
+svd,2000,15,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",7593,14.212713387241688,1915,4.65953002610966
+svd,2000,15,287,The Fountainhead,"Classics, Drama",6322,11.833632824198862,3656,3.6416849015317285
+svd,2000,15,2236,Holy Bible: New International Version,"Romance, Adult",5984,11.200958370769692,350,4.402857142857143
+svd,2000,15,255,Atlas Shrugged,"Classics, Drama",5975,11.184112009583707,4227,3.488526141471493
+svd,2000,15,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",5805,10.865902964959568,263,4.760456273764259
+svd,2000,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",15732,29.447439353099732,482,4.829875518672199
+svd,2000,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",15398,28.822252171308776,147,4.7687074829931975
+svd,2000,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",15107,28.27755315962863,243,4.757201646090535
+svd,2000,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",14393,26.94107517220725,214,4.766355140186916
+svd,2000,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",14243,26.660302485774185,652,4.728527607361963
+svd,2000,35,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",13311,24.915768194070083,233,4.6995708154506435
+svd,2000,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",13099,24.518942797244684,267,4.689138576779026
+svd,2000,35,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",12354,23.124438454627136,1915,4.65953002610966
+svd,2000,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11923,22.317684935609464,293,4.092150170648464
+svd,2000,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",11656,21.81790955375861,263,4.760456273764259
+svd,2000,35,8946,The Divan,"Adventure, Drama",11522,21.567085953878408,75,4.72
+svd,2000,35,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",11400,21.338724168912847,256,4.72265625
+svd,2000,35,1010,The Essential Calvin and Hobbes: A Calvin and Hobbes Treasury,"Children's, Classics",10989,20.56940700808625,1249,4.652522017614091
+svd,2000,35,8978,The Revenge of the Baby-Sat,"Mystery, Drama",10626,19.88993710691824,176,4.761363636363637
+svd,2000,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",10135,18.97087451332734,735,4.104761904761904
+svd,2500,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",10654,19.942348008385743,147,4.7687074829931975
+svd,2500,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",10028,18.770589997005093,243,4.757201646090535
+svd,2500,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",9980,18.68074273734651,482,4.829875518672199
+svd,2500,15,8946,The Divan,"Adventure, Drama",9980,18.68074273734651,75,4.72
+svd,2500,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",9974,18.66951182988919,293,4.092150170648464
+svd,2500,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",9434,17.658730158730158,652,4.728527607361963
+svd,2500,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",8946,16.745283018867923,214,4.766355140186916
+svd,2500,15,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",8697,16.279200359389037,267,4.689138576779026
+svd,2500,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",8483,15.878631326744534,735,4.104761904761904
+svd,2500,15,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",8454,15.824348607367476,233,4.6995708154506435
+svd,2500,15,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",7855,14.703129679544773,1915,4.65953002610966
+svd,2500,15,287,The Fountainhead,"Classics, Drama",6542,12.24543276430069,3656,3.6416849015317285
+svd,2500,15,255,Atlas Shrugged,"Classics, Drama",6248,11.695118298891884,4227,3.488526141471493
+svd,2500,15,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",6174,11.556603773584905,263,4.760456273764259
+svd,2500,15,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",6124,11.463012878107218,256,4.72265625
+svd,2500,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",16136,30.20365378855945,482,4.829875518672199
+svd,2500,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",15972,29.896675651392634,147,4.7687074829931975
+svd,2500,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",15443,28.906483977238693,243,4.757201646090535
+svd,2500,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",14944,27.97244684037137,652,4.728527607361963
+svd,2500,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",14781,27.667340521114106,214,4.766355140186916
+svd,2500,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",13740,25.71877807726864,267,4.689138576779026
+svd,2500,35,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",13518,25.30323450134771,233,4.6995708154506435
+svd,2500,35,8946,The Divan,"Adventure, Drama",12874,24.09778376759509,75,4.72
+svd,2500,35,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",12649,23.67662473794549,1915,4.65953002610966
+svd,2500,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",12169,22.778152141359687,263,4.760456273764259
+svd,2500,35,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",11993,22.448712189278226,256,4.72265625
+svd,2500,35,1010,The Essential Calvin and Hobbes: A Calvin and Hobbes Treasury,"Children's, Classics",11496,21.51841868823001,1249,4.652522017614091
+svd,2500,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11483,21.49408505540581,293,4.092150170648464
+svd,2500,35,8978,The Revenge of the Baby-Sat,"Mystery, Drama",11103,20.78279424977538,176,4.761363636363637
+svd,2500,35,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",9979,18.678870919436957,735,4.104761904761904
+svd,3000,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",10804,20.223120694818807,147,4.7687074829931975
+svd,3000,15,8946,The Divan,"Adventure, Drama",10363,19.397648996705602,75,4.72
+svd,3000,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",10264,19.21233902365978,482,4.829875518672199
+svd,3000,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",10045,18.802410901467507,243,4.757201646090535
+svd,3000,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",9953,18.63020365378856,652,4.728527607361963
+svd,3000,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",9562,17.89832285115304,293,4.092150170648464
+svd,3000,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",9031,16.904387541179993,214,4.766355140186916
+svd,3000,15,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",9007,16.859463911350705,267,4.689138576779026
+svd,3000,15,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",8428,15.775681341719078,233,4.6995708154506435
+svd,3000,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",8193,15.335804132973944,735,4.104761904761904
+svd,3000,15,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",7993,14.961440551063193,1915,4.65953002610966
+svd,3000,15,287,The Fountainhead,"Classics, Drama",6651,12.449460916442048,3656,3.6416849015317285
+svd,3000,15,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",6453,12.078840970350404,263,4.760456273764259
+svd,3000,15,255,Atlas Shrugged,"Classics, Drama",6417,12.011455525606468,4227,3.488526141471493
+svd,3000,15,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",6344,11.874812818209044,256,4.72265625
+svd,3000,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",16428,30.750224618149147,482,4.829875518672199
+svd,3000,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",16327,30.561171009284216,147,4.7687074829931975
+svd,3000,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",15677,29.344489368074274,243,4.757201646090535
+svd,3000,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",15517,29.044998502545674,652,4.728527607361963
+svd,3000,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",15060,28.189577717879605,214,4.766355140186916
+svd,3000,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",14197,26.57419886193471,267,4.689138576779026
+svd,3000,35,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",13585,25.42864630128781,233,4.6995708154506435
+svd,3000,35,8946,The Divan,"Adventure, Drama",13385,25.05428271937706,75,4.72
+svd,3000,35,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",12918,24.180143755615454,1915,4.65953002610966
+svd,3000,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",12577,23.54185384845762,263,4.760456273764259
+svd,3000,35,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",12391,23.193695717280622,256,4.72265625
+svd,3000,35,1010,The Essential Calvin and Hobbes: A Calvin and Hobbes Treasury,"Children's, Classics",11928,22.32704402515723,1249,4.652522017614091
+svd,3000,35,8978,The Revenge of the Baby-Sat,"Mystery, Drama",11425,21.385519616651692,176,4.761363636363637
+svd,3000,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11022,20.631176999101527,293,4.092150170648464
+svd,3000,35,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",10126,18.95402815214136,384,4.747395833333333
+svd,3500,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",10729,20.082734351602276,147,4.7687074829931975
+svd,3500,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",10453,19.56611260856544,482,4.829875518672199
+svd,3500,15,8946,The Divan,"Adventure, Drama",10325,19.32651991614256,75,4.72
+svd,3500,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",10293,19.266621743036836,652,4.728527607361963
+svd,3500,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",9953,18.63020365378856,243,4.757201646090535
+svd,3500,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",9484,17.752321054207847,293,4.092150170648464
+svd,3500,15,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",9173,17.170185684336627,267,4.689138576779026
+svd,3500,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",8897,16.65356394129979,214,4.766355140186916
+svd,3500,15,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",8413,15.747604073075772,233,4.6995708154506435
+svd,3500,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",8224,15.39383048817011,735,4.104761904761904
+svd,3500,15,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",8082,15.128032345013477,1915,4.65953002610966
+svd,3500,15,287,The Fountainhead,"Classics, Drama",6733,12.602949985025457,3656,3.6416849015317285
+svd,3500,15,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",6603,12.359613656783468,263,4.760456273764259
+svd,3500,15,255,Atlas Shrugged,"Classics, Drama",6572,12.301587301587302,4227,3.488526141471493
+svd,3500,15,161,"The Return of the King (The Lord of the Rings, #3)","Classics, Drama",6393,11.966531895777178,6331,4.424735428842205
+svd,3500,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",16658,31.18074273734651,482,4.829875518672199
+svd,3500,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",16356,30.615453728661276,147,4.7687074829931975
+svd,3500,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",15902,29.76564839772387,652,4.728527607361963
+svd,3500,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",15677,29.344489368074274,243,4.757201646090535
+svd,3500,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",15060,28.189577717879605,214,4.766355140186916
+svd,3500,35,5580,The Calvin and Hobbes Lazy Sunday Book,"Children's, Classics",14515,27.169436957172806,267,4.689138576779026
+svd,3500,35,3753,"Harry Potter Collection (Harry Potter, #1-6)","Mystery, Thriller",13692,25.628930817610062,233,4.6995708154506435
+svd,3500,35,8946,The Divan,"Adventure, Drama",13465,25.20402815214136,75,4.72
+svd,3500,35,422,"Harry Potter Boxset (Harry Potter, #1-7)","Fantasy, Children's",13114,24.547020065887992,1915,4.65953002610966
+svd,3500,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",12858,24.06783468104223,263,4.760456273764259
+svd,3500,35,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",12552,23.49505840071878,256,4.72265625
+svd,3500,35,1010,The Essential Calvin and Hobbes: A Calvin and Hobbes Treasury,"Children's, Classics",12232,22.896076669661575,1249,4.652522017614091
+svd,3500,35,8978,The Revenge of the Baby-Sat,"Mystery, Drama",11612,21.735549565738246,176,4.761363636363637
+svd,3500,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",10998,20.58625336927224,293,4.092150170648464
+svd,3500,35,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",10261,19.206723569931118,384,4.747395833333333
+nmf,0,15,8946,The Divan,"Adventure, Drama",19859,37.172431865828095,75,4.72
+nmf,0,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",15336,28.70619946091644,482,4.829875518672199
+nmf,0,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",12884,24.116501946690626,214,4.766355140186916
+nmf,0,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",11349,21.243261455525605,147,4.7687074829931975
+nmf,0,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",10730,20.08460616951183,293,4.092150170648464
+nmf,0,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",9633,18.03122192273136,243,4.757201646090535
+nmf,0,15,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",8405,15.732629529799341,384,4.747395833333333
+nmf,0,15,3660,The Wake (The Sandman #10),"Fantasy, Horror",7660,14.338125187181792,499,4.551102204408818
+nmf,0,15,7831,رباعيات صلاح جاهين,"Drama, Classics",7187,13.452755315962863,111,4.4324324324324325
+nmf,0,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",6834,12.792003593890387,652,4.728527607361963
+nmf,0,15,7254,Homicidal Psycho Jungle Cat: A Calvin and Hobbes Collection,"Romance, Drama",6747,12.629155435759209,217,4.658986175115207
+nmf,0,15,5173,"Y: The Last Man, Vol. 4: Safeword (Y: The Last Man, #4)","Romance, Mystery",6607,12.367100928421683,300,4.263333333333334
+nmf,0,15,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",6519,12.202380952380953,1373,4.702840495265841
+nmf,0,15,6032,The Untethered Soul: The Journey Beyond Yourself,"Thriller, Mystery",6442,12.058250973345313,109,4.220183486238532
+nmf,0,15,3396,Worlds' End (The Sandman #8),"Science Fiction, Mystery",6175,11.55847559149446,547,4.486288848263254
+nmf,0,35,8946,The Divan,"Adventure, Drama",25703,48.111335729260254,75,4.72
+nmf,0,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",21829,40.859913147648996,482,4.829875518672199
+nmf,0,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",21373,40.00636418089248,214,4.766355140186916
+nmf,0,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",20166,37.74707996406109,147,4.7687074829931975
+nmf,0,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",17656,33.04881701108116,243,4.757201646090535
+nmf,0,35,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",14383,26.92235699311171,1373,4.702840495265841
+nmf,0,35,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",13943,26.098757112908057,384,4.747395833333333
+nmf,0,35,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",13815,25.859164420485175,256,4.72265625
+nmf,0,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",13732,25.703803533992215,652,4.728527607361963
+nmf,0,35,7254,Homicidal Psycho Jungle Cat: A Calvin and Hobbes Collection,"Romance, Drama",13285,24.86710092842168,217,4.658986175115207
+nmf,0,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",13282,24.861485474693023,263,4.760456273764259
+nmf,0,35,8978,The Revenge of the Baby-Sat,"Mystery, Drama",13048,24.42348008385744,176,4.761363636363637
+nmf,0,35,3660,The Wake (The Sandman #10),"Fantasy, Horror",12678,23.73090745732255,499,4.551102204408818
+nmf,0,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12406,23.22177298592393,293,4.092150170648464
+nmf,0,35,4868,Jesus the Christ,"Nonfiction, Classics",12082,22.61530398322851,238,4.621848739495798
+nmf,2,15,8946,The Divan,"Adventure, Drama",17637,33.01325247079964,75,4.72
+nmf,2,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",14544,27.223719676549866,482,4.829875518672199
+nmf,2,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",11570,21.656933213536988,214,4.766355140186916
+nmf,2,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11001,20.591868823000897,293,4.092150170648464
+nmf,2,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",9779,18.304507337526207,147,4.7687074829931975
+nmf,2,15,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",8268,15.476190476190476,1373,4.702840495265841
+nmf,2,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",8249,15.440625935908955,243,4.757201646090535
+nmf,2,15,3660,The Wake (The Sandman #10),"Fantasy, Horror",8014,15.000748727163822,499,4.551102204408818
+nmf,2,15,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",7931,14.84538784067086,384,4.747395833333333
+nmf,2,15,7831,رباعيات صلاح جاهين,"Drama, Classics",7706,14.424228811021264,111,4.4324324324324325
+nmf,2,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",6897,12.909928122192273,652,4.728527607361963
+nmf,2,15,5173,"Y: The Last Man, Vol. 4: Safeword (Y: The Last Man, #4)","Romance, Mystery",6642,12.432614555256064,300,4.263333333333334
+nmf,2,15,6032,The Untethered Soul: The Journey Beyond Yourself,"Thriller, Mystery",6534,12.230458221024259,109,4.220183486238532
+nmf,2,15,3396,Worlds' End (The Sandman #8),"Science Fiction, Mystery",6521,12.20612458820006,547,4.486288848263254
+nmf,2,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",6130,11.474243785564541,735,4.104761904761904
+nmf,2,35,8946,The Divan,"Adventure, Drama",23867,44.67467804731956,75,4.72
+nmf,2,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",20935,39.18650793650794,482,4.829875518672199
+nmf,2,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",20186,37.78451632225217,214,4.766355140186916
+nmf,2,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",18480,34.59119496855346,147,4.7687074829931975
+nmf,2,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",16535,30.9505091344714,243,4.757201646090535
+nmf,2,35,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",15253,28.55083857442348,1373,4.702840495265841
+nmf,2,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",13241,24.784740940401317,652,4.728527607361963
+nmf,2,35,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",13124,24.565738244983528,384,4.747395833333333
+nmf,2,35,3660,The Wake (The Sandman #10),"Fantasy, Horror",13065,24.455300988319856,499,4.551102204408818
+nmf,2,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12675,23.72529200359389,293,4.092150170648464
+nmf,2,35,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",12466,23.334082060497156,256,4.72265625
+nmf,2,35,7831,رباعيات صلاح جاهين,"Drama, Classics",12413,23.234875711290805,111,4.4324324324324325
+nmf,2,35,6361,There's Treasure Everywhere: A Calvin and Hobbes Collection,"Romance, Drama",12025,22.508610362383948,263,4.760456273764259
+nmf,2,35,7254,Homicidal Psycho Jungle Cat: A Calvin and Hobbes Collection,"Romance, Drama",11998,22.458071278825997,217,4.658986175115207
+nmf,2,35,8978,The Revenge of the Baby-Sat,"Mystery, Drama",11708,21.915244085055406,176,4.761363636363637
+nmf,4,15,8946,The Divan,"Adventure, Drama",16444,30.78017370470201,75,4.72
+nmf,4,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",13620,25.494159928122194,482,4.829875518672199
+nmf,4,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11249,21.05607966457023,293,4.092150170648464
+nmf,4,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",10164,19.0251572327044,214,4.766355140186916
+nmf,4,15,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",9521,17.821578316861334,1373,4.702840495265841
+nmf,4,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",8652,16.19496855345912,147,4.7687074829931975
+nmf,4,15,7831,رباعيات صلاح جاهين,"Drama, Classics",8259,15.459344115004493,111,4.4324324324324325
+nmf,4,15,3660,The Wake (The Sandman #10),"Fantasy, Horror",8240,15.423779574722971,499,4.551102204408818
+nmf,4,15,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",7282,13.63057801737047,384,4.747395833333333
+nmf,4,15,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",6820,12.765798143156633,243,4.757201646090535
+nmf,4,15,3396,Worlds' End (The Sandman #8),"Science Fiction, Mystery",6738,12.612309074573226,547,4.486288848263254
+nmf,4,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",6648,12.443845462713387,652,4.728527607361963
+nmf,4,15,5173,"Y: The Last Man, Vol. 4: Safeword (Y: The Last Man, #4)","Romance, Mystery",6627,12.404537286612758,300,4.263333333333334
+nmf,4,15,6032,The Untethered Soul: The Journey Beyond Yourself,"Thriller, Mystery",6532,12.226714585205151,109,4.220183486238532
+nmf,4,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",6155,11.521039233303384,735,4.104761904761904
+nmf,4,35,8946,The Divan,"Adventure, Drama",23280,43.5759209344115,75,4.72
+nmf,4,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",20019,37.47192273135669,482,4.829875518672199
+nmf,4,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",18905,35.3867175801138,214,4.766355140186916
+nmf,4,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",16969,31.76287810721773,147,4.7687074829931975
+nmf,4,35,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",15868,29.70200658879904,1373,4.702840495265841
+nmf,4,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",15215,28.479709493860437,243,4.757201646090535
+nmf,4,35,3660,The Wake (The Sandman #10),"Fantasy, Horror",13302,24.898921832884096,499,4.551102204408818
+nmf,4,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12896,24.13896376160527,293,4.092150170648464
+nmf,4,35,7831,رباعيات صلاح جاهين,"Drama, Classics",12784,23.92932015573525,111,4.4324324324324325
+nmf,4,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",12643,23.66539383048817,652,4.728527607361963
+nmf,4,35,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",12253,22.935384845762204,384,4.747395833333333
+nmf,4,35,7593,"This Is Water: Some Thoughts, Delivered on a Significant Occasion, about Living a Compassionate Life","Nonfiction, Drama",11889,22.254043126684635,139,4.517985611510792
+nmf,4,35,3395,The Kindly Ones (The Sandman #9),"Fantasy, Drama",11374,21.29005690326445,533,4.590994371482176
+nmf,4,35,3396,Worlds' End (The Sandman #8),"Science Fiction, Mystery",11327,21.202081461515423,547,4.486288848263254
+nmf,4,35,5207,The Days Are Just Packed: A Calvin and Hobbes Collection,"Horror, Mystery",11036,20.65738244983528,256,4.72265625
+nmf,6,15,8946,The Divan,"Adventure, Drama",15831,29.632749326145554,75,4.72
+nmf,6,15,3628,The Complete Calvin and Hobbes,"Children's, Classics",12655,23.687855645402816,482,4.829875518672199
+nmf,6,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",11441,21.415468703204553,293,4.092150170648464
+nmf,6,15,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",10224,19.137466307277627,1373,4.702840495265841
+nmf,6,15,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",8924,16.70410302485774,214,4.766355140186916
+nmf,6,15,7831,رباعيات صلاح جاهين,"Drama, Classics",8502,15.914195867026056,111,4.4324324324324325
+nmf,6,15,3660,The Wake (The Sandman #10),"Fantasy, Horror",8397,15.717654986522911,499,4.551102204408818
+nmf,6,15,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",7847,14.688155136268344,147,4.7687074829931975
+nmf,6,15,3396,Worlds' End (The Sandman #8),"Science Fiction, Mystery",6855,12.831311769991014,547,4.486288848263254
+nmf,6,15,5173,"Y: The Last Man, Vol. 4: Safeword (Y: The Last Man, #4)","Romance, Mystery",6631,12.412024558250973,300,4.263333333333334
+nmf,6,15,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",6581,12.318433662773286,384,4.747395833333333
+nmf,6,15,7593,"This Is Water: Some Thoughts, Delivered on a Significant Occasion, about Living a Compassionate Life","Nonfiction, Drama",6499,12.164944594189878,139,4.517985611510792
+nmf,6,15,6032,The Untethered Soul: The Journey Beyond Yourself,"Thriller, Mystery",6487,12.142482779275232,109,4.220183486238532
+nmf,6,15,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",6397,11.974019167415394,652,4.728527607361963
+nmf,6,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",6137,11.487346510931417,735,4.104761904761904
+nmf,6,35,8946,The Divan,"Adventure, Drama",22885,42.836552860137765,75,4.72
+nmf,6,35,3628,The Complete Calvin and Hobbes,"Children's, Classics",19027,35.61507936507937,482,4.829875518672199
+nmf,6,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",17697,33.12556154537287,214,4.766355140186916
+nmf,6,35,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",16301,30.51250374363582,1373,4.702840495265841
+nmf,6,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",15935,29.827418388739144,147,4.7687074829931975
+nmf,6,35,6590,The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury,"Drama, Historical",13951,26.113731656184488,243,4.757201646090535
+nmf,6,35,3660,The Wake (The Sandman #10),"Fantasy, Horror",13474,25.22087451332734,499,4.551102204408818
+nmf,6,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",13101,24.522686433063793,293,4.092150170648464
+nmf,6,35,7831,رباعيات صلاح جاهين,"Drama, Classics",12912,24.168912848158133,111,4.4324324324324325
+nmf,6,35,7593,"This Is Water: Some Thoughts, Delivered on a Significant Occasion, about Living a Compassionate Life","Nonfiction, Drama",12583,23.553084755914945,139,4.517985611510792
+nmf,6,35,1788,The Calvin and Hobbes Tenth Anniversary Book,"Romance, Drama",12091,22.632150344414494,652,4.728527607361963
+nmf,6,35,3395,The Kindly Ones (The Sandman #9),"Fantasy, Drama",11517,21.55772686433064,533,4.590994371482176
+nmf,6,35,3396,Worlds' End (The Sandman #8),"Science Fiction, Mystery",11456,21.443545971847858,547,4.486288848263254
+nmf,6,35,4483,It's a Magical World: A Calvin and Hobbes Collection,"Fantasy, Mystery",11327,21.202081461515423,384,4.747395833333333
+nmf,6,35,6642,"Locke & Key, Vol. 5: Clockworks","Children's, Adventure",11136,20.844564240790657,173,4.6531791907514455
+nmf,25,15,8946,The Divan,"Adventure, Drama",14341,26.843740640910454,75,4.72
+nmf,25,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12883,24.114630128781073,293,4.092150170648464
+nmf,25,15,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",12166,22.77253668763103,15304,4.525940930475692
+nmf,25,15,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",12093,22.635893980233604,1373,4.702840495265841
+nmf,25,15,307,"The Wise Man's Fear (The Kingkiller Chronicle, #2)","Fantasy, Adventure",10819,20.251197963462115,3026,4.483807005948447
+nmf,25,15,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",10446,19.553009883198563,15523,4.430780132706307
+nmf,25,15,7831,رباعيات صلاح جاهين,"Drama, Classics",10434,19.530548068283917,111,4.4324324324324325
+nmf,25,15,192,"The Name of the Wind (The Kingkiller Chronicle, #1)","Fantasy, Adventure",9898,18.5272536687631,3948,4.499746707193515
+nmf,25,15,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",9469,17.72424378556454,15081,4.443339301107353
+nmf,25,15,3660,The Wake (The Sandman #10),"Fantasy, Horror",8145,15.245956873315365,499,4.551102204408818
+nmf,25,15,7593,"This Is Water: Some Thoughts, Delivered on a Significant Occasion, about Living a Compassionate Life","Nonfiction, Drama",8012,14.997005091344715,139,4.517985611510792
+nmf,25,15,1338,The Book of Mormon: Another Testament of Jesus Christ,"Fantasy, Mystery",7226,13.525756214435459,735,4.104761904761904
+nmf,25,15,562,"The Way of Kings (The Stormlight Archive, #1)","Fantasy, Adventure",7138,13.361036238394728,1789,4.5455561766349915
+nmf,25,15,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",6654,12.45507637017071,15258,4.358697076943243
+nmf,25,15,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",6644,12.436358191075172,15657,4.229418151625471
+nmf,25,35,8946,The Divan,"Adventure, Drama",21314,39.89592692422881,75,4.72
+nmf,25,35,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",18179,34.02777777777778,1373,4.702840495265841
+nmf,25,35,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",16675,31.212563641808924,15304,4.525940930475692
+nmf,25,35,307,"The Wise Man's Fear (The Kingkiller Chronicle, #2)","Fantasy, Adventure",15952,29.859239293201558,3026,4.483807005948447
+nmf,25,35,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",15122,28.305630428271936,15523,4.430780132706307
+nmf,25,35,192,"The Name of the Wind (The Kingkiller Chronicle, #1)","Fantasy, Adventure",15067,28.202680443246482,3948,4.499746707193515
+nmf,25,35,7831,رباعيات صلاح جاهين,"Drama, Classics",14523,27.184411500449237,111,4.4324324324324325
+nmf,25,35,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",14431,27.01220425277029,293,4.092150170648464
+nmf,25,35,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",14013,26.22978436657682,15081,4.443339301107353
+nmf,25,35,7593,"This Is Water: Some Thoughts, Delivered on a Significant Occasion, about Living a Compassionate Life","Nonfiction, Drama",13951,26.113731656184488,139,4.517985611510792
+nmf,25,35,9566,Attack of the Deranged Mutant Killer Monster Snow Goons,"Fantasy, Mystery",13025,24.380428271937706,147,4.7687074829931975
+nmf,25,35,3660,The Wake (The Sandman #10),"Fantasy, Horror",12971,24.279350104821802,499,4.551102204408818
+nmf,25,35,8663,"Locke & Key, Vol. 6: Alpha & Omega","Horror, Mystery",12562,23.513776579814316,141,4.680851063829787
+nmf,25,35,6920,The Indispensable Calvin and Hobbes,"Mystery, Thriller",12332,23.08325846061695,214,4.766355140186916
+nmf,25,35,6642,"Locke & Key, Vol. 5: Clockworks","Children's, Adventure",11753,21.999475890985323,173,4.6531791907514455
+nmf,50,15,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",21468,40.18418688230009,15304,4.525940930475692
+nmf,50,15,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",20195,37.80136268343816,15523,4.430780132706307
+nmf,50,15,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",18567,34.754043126684635,15081,4.443339301107353
+nmf,50,15,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",16394,30.68658280922432,15258,4.358697076943243
+nmf,50,15,192,"The Name of the Wind (The Kingkiller Chronicle, #1)","Fantasy, Adventure",15526,29.061844863731658,3948,4.499746707193515
+nmf,50,15,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",14927,27.940625935908955,15657,4.229418151625471
+nmf,50,15,307,"The Wise Man's Fear (The Kingkiller Chronicle, #2)","Fantasy, Adventure",14078,26.351452530697813,3026,4.483807005948447
+nmf,50,15,189,"The Lord of the Rings (The Lord of the Rings, #1-3)","Fantasy, Adventure",13587,25.43238993710692,5316,4.377727614747931
+nmf,50,15,4154,"Book of Mormon, Doctrine and Covenants, Pearl of Great Price","Fantasy, Horror",12822,24.000449236298294,293,4.092150170648464
+nmf,50,15,155,"The Two Towers (The Lord of the Rings, #2)","Fantasy, Adventure",11827,22.137990416292304,6478,4.3320469280642175
+nmf,50,15,110,"A Clash of Kings  (A Song of Ice and Fire, #2)","Fantasy, Adventure",11341,21.228286912249175,6854,4.299533119346367
+nmf,50,15,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",11005,20.599356094639113,12530,4.271827613727055
+nmf,50,15,135,"A Storm of Swords (A Song of Ice and Fire, #3)","Fantasy, Adventure",10655,19.9442198262953,6237,4.420554753888087
+nmf,50,15,250,Wonder,"Children's, Adventure",10458,19.57547169811321,2648,4.4467522658610275
+nmf,50,15,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",10273,19.229185384845763,1373,4.702840495265841
+nmf,50,35,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",26137,48.92370470200659,15304,4.525940930475692
+nmf,50,35,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",25029,46.849730458221025,15523,4.430780132706307
+nmf,50,35,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",23840,44.6241389637616,15081,4.443339301107353
+nmf,50,35,192,"The Name of the Wind (The Kingkiller Chronicle, #1)","Fantasy, Adventure",22947,42.952605570530096,3948,4.499746707193515
+nmf,50,35,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",22201,41.55622941000299,15258,4.358697076943243
+nmf,50,35,189,"The Lord of the Rings (The Lord of the Rings, #1-3)","Fantasy, Adventure",21757,40.72514225816113,5316,4.377727614747931
+nmf,50,35,307,"The Wise Man's Fear (The Kingkiller Chronicle, #2)","Fantasy, Adventure",21434,40.12054507337526,3026,4.483807005948447
+nmf,50,35,110,"A Clash of Kings  (A Song of Ice and Fire, #2)","Fantasy, Adventure",21352,39.96705600479186,6854,4.299533119346367
+nmf,50,35,155,"The Two Towers (The Lord of the Rings, #2)","Fantasy, Adventure",20669,38.68860437256664,6478,4.3320469280642175
+nmf,50,35,135,"A Storm of Swords (A Song of Ice and Fire, #3)","Fantasy, Adventure",20394,38.17385444743935,6237,4.420554753888087
+nmf,50,35,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",20296,37.99041629230309,15657,4.229418151625471
+nmf,50,35,144,"Unbroken: A World War II Story of Survival, Resilience, and Redemption","Nonfiction, Adventure",19741,36.95155735250075,4577,4.439370766877867
+nmf,50,35,862,"Words of Radiance (The Stormlight Archive, #2)","Fantasy, Adventure",19736,36.94219826295298,1373,4.702840495265841
+nmf,50,35,250,Wonder,"Children's, Adventure",18971,35.51025756214435,2648,4.4467522658610275
+nmf,50,35,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",17024,31.865828092243188,12530,4.271827613727055
+nmf,100,15,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",32041,59.97491764001198,15304,4.525940930475692
+nmf,100,15,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",31468,58.902365977837675,15523,4.430780132706307
+nmf,100,15,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",30214,56.55510631925726,15081,4.443339301107353
+nmf,100,15,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",29793,55.76707097933513,15258,4.358697076943243
+nmf,100,15,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",26879,50.312593590895474,15657,4.229418151625471
+nmf,100,15,110,"A Clash of Kings  (A Song of Ice and Fire, #2)","Fantasy, Adventure",25433,47.60594489368074,6854,4.299533119346367
+nmf,100,15,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",23072,43.18658280922432,12530,4.271827613727055
+nmf,100,15,135,"A Storm of Swords (A Song of Ice and Fire, #3)","Fantasy, Adventure",22503,42.12151841868823,6237,4.420554753888087
+nmf,100,15,1,"The Hunger Games (The Hunger Games, #1)","Science Fiction, Adventure",21891,40.97596585804133,22806,4.2797070946242215
+nmf,100,15,155,"The Two Towers (The Lord of the Rings, #2)","Fantasy, Adventure",20431,38.24311171009284,6478,4.3320469280642175
+nmf,100,15,189,"The Lord of the Rings (The Lord of the Rings, #1-3)","Fantasy, Adventure",19403,36.318882899071575,5316,4.377727614747931
+nmf,100,15,17,"Catching Fire (The Hunger Games, #2)","Science Fiction, Adventure",19070,35.69556753519018,16549,4.133421959030757
+nmf,100,15,70,"Ender's Game (Ender's Saga, #1)","Science Fiction, Adventure",17344,32.46480982330039,8849,4.25822126793988
+nmf,100,15,144,"Unbroken: A World War II Story of Survival, Resilience, and Redemption","Nonfiction, Adventure",16637,31.14143456124588,4577,4.439370766877867
+nmf,100,15,192,"The Name of the Wind (The Kingkiller Chronicle, #1)","Fantasy, Adventure",16262,30.439502845163222,3948,4.499746707193515
+nmf,100,35,110,"A Clash of Kings  (A Song of Ice and Fire, #2)","Fantasy, Adventure",36403,68.13978736148547,6854,4.299533119346367
+nmf,100,35,135,"A Storm of Swords (A Song of Ice and Fire, #3)","Fantasy, Adventure",35405,66.27171308775083,6237,4.420554753888087
+nmf,100,35,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",34742,65.03069781371669,15304,4.525940930475692
+nmf,100,35,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",34433,64.45230607966457,15523,4.430780132706307
+nmf,100,35,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",34029,63.69609164420485,15081,4.443339301107353
+nmf,100,35,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",33893,63.44152440850554,15258,4.358697076943243
+nmf,100,35,144,"Unbroken: A World War II Story of Survival, Resilience, and Redemption","Nonfiction, Adventure",33445,62.602949985025454,4577,4.439370766877867
+nmf,100,35,155,"The Two Towers (The Lord of the Rings, #2)","Fantasy, Adventure",33403,62.5243336328242,6478,4.3320469280642175
+nmf,100,35,189,"The Lord of the Rings (The Lord of the Rings, #1-3)","Fantasy, Adventure",32794,61.38439652590596,5316,4.377727614747931
+nmf,100,35,192,"The Name of the Wind (The Kingkiller Chronicle, #1)","Fantasy, Adventure",32700,61.20844564240791,3948,4.499746707193515
+nmf,100,35,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",31949,59.80271039233303,15657,4.229418151625471
+nmf,100,35,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",31036,58.093740640910454,12530,4.271827613727055
+nmf,100,35,70,"Ender's Game (Ender's Saga, #1)","Science Fiction, Adventure",30678,57.423629829290206,8849,4.25822126793988
+nmf,100,35,59,Charlotte's Web,"Children's, Adventure",29621,55.445118298891884,9391,4.110318389947822
+nmf,100,35,17,"Catching Fire (The Hunger Games, #2)","Science Fiction, Adventure",28547,53.43478586403115,16549,4.133421959030757
+nmf,200,15,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",36551,68.41681641209944,15304,4.525940930475692
+nmf,200,15,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",36467,68.25958370769692,15523,4.430780132706307
+nmf,200,15,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",36454,68.23525007487271,15258,4.358697076943243
+nmf,200,15,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",36213,67.78414195867026,15081,4.443339301107353
+nmf,200,15,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",34750,65.04567235699311,15657,4.229418151625471
+nmf,200,15,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",32885,61.55473195567535,12530,4.271827613727055
+nmf,200,15,17,"Catching Fire (The Hunger Games, #2)","Science Fiction, Adventure",32421,60.68620844564241,16549,4.133421959030757
+nmf,200,15,110,"A Clash of Kings  (A Song of Ice and Fire, #2)","Fantasy, Adventure",31900,59.7109913147649,6854,4.299533119346367
+nmf,200,15,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",30911,57.85976340221623,11780,4.034040747028863
+nmf,200,15,70,"Ender's Game (Ender's Saga, #1)","Science Fiction, Adventure",29389,55.01085654387541,8849,4.25822126793988
+nmf,200,15,1,"The Hunger Games (The Hunger Games, #1)","Science Fiction, Adventure",29371,54.977163821503446,22806,4.2797070946242215
+nmf,200,15,135,"A Storm of Swords (A Song of Ice and Fire, #3)","Fantasy, Adventure",25144,47.064989517819704,6237,4.420554753888087
+nmf,200,15,6,The Fault in Our Stars,"Fantasy, Adventure",23709,44.37893081761006,11264,4.1906960227272725
+nmf,200,15,56,"Breaking Dawn (Twilight, #4)","Children's, Adventure",22443,42.00920934411501,9433,3.354924202268631
+nmf,200,15,52,"Eclipse (Twilight, #3)","Fantasy, Adventure",22341,41.81828391734052,9620,3.3775467775467773
+nmf,200,35,110,"A Clash of Kings  (A Song of Ice and Fire, #2)","Fantasy, Adventure",42589,79.71885294998502,6854,4.299533119346367
+nmf,200,35,135,"A Storm of Swords (A Song of Ice and Fire, #3)","Fantasy, Adventure",42146,78.88963761605271,6237,4.420554753888087
+nmf,200,35,70,"Ender's Game (Ender's Saga, #1)","Science Fiction, Adventure",40626,76.044474393531,8849,4.25822126793988
+nmf,200,35,155,"The Two Towers (The Lord of the Rings, #2)","Fantasy, Adventure",40507,75.8217280622941,6478,4.3320469280642175
+nmf,200,35,189,"The Lord of the Rings (The Lord of the Rings, #1-3)","Fantasy, Adventure",39616,74.1539383048817,5316,4.377727614747931
+nmf,200,35,59,Charlotte's Web,"Children's, Adventure",39107,73.20118298891884,9391,4.110318389947822
+nmf,200,35,144,"Unbroken: A World War II Story of Survival, Resilience, and Redemption","Nonfiction, Adventure",39045,73.0851302785265,4577,4.439370766877867
+nmf,200,35,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",38666,72.37571129080563,12530,4.271827613727055
+nmf,200,35,192,"The Name of the Wind (The Kingkiller Chronicle, #1)","Fantasy, Adventure",38508,72.07996406109613,3948,4.499746707193515
+nmf,200,35,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",38456,71.98262952979934,11780,4.034040747028863
+nmf,200,35,6,The Fault in Our Stars,"Fantasy, Adventure",37748,70.65738244983528,11264,4.1906960227272725
+nmf,200,35,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",37487,70.16883797544175,15258,4.358697076943243
+nmf,200,35,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",37487,70.16883797544175,15081,4.443339301107353
+nmf,200,35,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",37462,70.1220425277029,15304,4.525940930475692
+nmf,200,35,89,The Princess Bride ,"Fantasy, Adventure",37322,69.85998802036538,6102,4.2856440511307765
+nmf,500,15,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",37361,69.93298891883798,15258,4.358697076943243
+nmf,500,15,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",37302,69.8225516621743,11780,4.034040747028863
+nmf,500,15,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",37164,69.56424079065589,15523,4.430780132706307
+nmf,500,15,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",37158,69.55300988319856,15304,4.525940930475692
+nmf,500,15,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",37035,69.32277628032345,15081,4.443339301107353
+nmf,500,15,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",36329,68.0012728361785,15657,4.229418151625471
+nmf,500,15,17,"Catching Fire (The Hunger Games, #2)","Science Fiction, Adventure",34957,65.43313866427074,16549,4.133421959030757
+nmf,500,15,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",34600,64.76489967056004,12530,4.271827613727055
+nmf,500,15,70,"Ender's Game (Ender's Saga, #1)","Science Fiction, Adventure",34045,63.72604073075771,8849,4.25822126793988
+nmf,500,15,56,"Breaking Dawn (Twilight, #4)","Children's, Adventure",33886,63.428421683138666,9433,3.354924202268631
+nmf,500,15,52,"Eclipse (Twilight, #3)","Fantasy, Adventure",33168,62.084456424079065,9620,3.3775467775467773
+nmf,500,15,1,"The Hunger Games (The Hunger Games, #1)","Science Fiction, Adventure",30137,56.41097634022162,22806,4.2797070946242215
+nmf,500,15,6,The Fault in Our Stars,"Fantasy, Adventure",29569,55.34778376759509,11264,4.1906960227272725
+nmf,500,15,44,"The Notebook (The Notebook, #1)","Adventure, Drama",29475,55.171832884097036,6717,3.7269614411195473
+nmf,500,15,69,"Insurgent (Divergent, #2)","Science Fiction, Adventure",27846,52.12264150943396,8263,3.858646980515551
+nmf,500,35,110,"A Clash of Kings  (A Song of Ice and Fire, #2)","Fantasy, Adventure",42833,80.17557651991615,6854,4.299533119346367
+nmf,500,35,135,"A Storm of Swords (A Song of Ice and Fire, #3)","Fantasy, Adventure",42363,79.29582210242587,6237,4.420554753888087
+nmf,500,35,70,"Ender's Game (Ender's Saga, #1)","Science Fiction, Adventure",42189,78.97012578616352,8849,4.25822126793988
+nmf,500,35,155,"The Two Towers (The Lord of the Rings, #2)","Fantasy, Adventure",40837,76.43942797244684,6478,4.3320469280642175
+nmf,500,35,69,"Insurgent (Divergent, #2)","Science Fiction, Adventure",40334,75.49790356394129,8263,3.858646980515551
+nmf,500,35,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",40041,74.94946091644205,11780,4.034040747028863
+nmf,500,35,41,"The Lightning Thief (Percy Jackson and the Olympians, #1)","Fantasy, Adventure",39949,74.77725366876311,7606,3.9923744412306075
+nmf,500,35,59,Charlotte's Web,"Children's, Adventure",39907,74.69863731656184,9391,4.110318389947822
+nmf,500,35,44,"The Notebook (The Notebook, #1)","Adventure, Drama",39782,74.46466007786762,6717,3.7269614411195473
+nmf,500,35,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",39557,74.04350104821803,12530,4.271827613727055
+nmf,500,35,6,The Fault in Our Stars,"Fantasy, Adventure",39275,73.51564839772387,11264,4.1906960227272725
+nmf,500,35,126,Dune (Dune Chronicles #1),"Science Fiction, Adventure",39136,73.2554657082959,5864,4.131821282401091
+nmf,500,35,189,"The Lord of the Rings (The Lord of the Rings, #1-3)","Fantasy, Adventure",39024,73.04582210242587,5316,4.377727614747931
+nmf,500,35,36,"The Giver (The Giver, #1)","Fantasy, Adventure",38793,72.61343216531895,10949,4.0673120832952785
+nmf,500,35,56,"Breaking Dawn (Twilight, #4)","Children's, Adventure",38014,71.15528601377657,9433,3.354924202268631
+nmf,1000,15,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",23169,43.36814914645103,12530,4.271827613727055
+nmf,1000,15,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",20702,38.75037436358191,15258,4.358697076943243
+nmf,1000,15,17,"Catching Fire (The Hunger Games, #2)","Science Fiction, Adventure",19892,37.23420185684336,16549,4.133421959030757
+nmf,1000,15,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",19804,37.069481880802634,15523,4.430780132706307
+nmf,1000,15,6,The Fault in Our Stars,"Fantasy, Adventure",19314,36.15229110512129,11264,4.1906960227272725
+nmf,1000,15,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",19220,35.97634022162324,15304,4.525940930475692
+nmf,1000,15,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",18183,34.03526504941599,15657,4.229418151625471
+nmf,1000,15,1,"The Hunger Games (The Hunger Games, #1)","Science Fiction, Adventure",17551,32.85227613057802,22806,4.2797070946242215
+nmf,1000,15,41,"The Lightning Thief (Percy Jackson and the Olympians, #1)","Fantasy, Adventure",17474,32.70814615154238,7606,3.9923744412306075
+nmf,1000,15,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",17405,32.57899071578317,11780,4.034040747028863
+nmf,1000,15,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",16811,31.467130877508236,15081,4.443339301107353
+nmf,1000,15,36,"The Giver (The Giver, #1)","Fantasy, Adventure",16706,31.270589997005093,10949,4.0673120832952785
+nmf,1000,15,38,The Time Traveler's Wife,"Fantasy, Adventure",14841,27.77964959568733,9977,3.863786709431693
+nmf,1000,15,57,The Secret Life of Bees,"Children's, Adventure",13737,25.713162623539983,8383,3.9258022187760946
+nmf,1000,15,44,"The Notebook (The Notebook, #1)","Adventure, Drama",12974,24.284965558550464,6717,3.7269614411195473
+nmf,1000,35,41,"The Lightning Thief (Percy Jackson and the Olympians, #1)","Fantasy, Adventure",31749,59.42834681042228,7606,3.9923744412306075
+nmf,1000,35,44,"The Notebook (The Notebook, #1)","Adventure, Drama",31295,58.578541479484876,6717,3.7269614411195473
+nmf,1000,35,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",30790,57.63327343516023,12530,4.271827613727055
+nmf,1000,35,57,The Secret Life of Bees,"Children's, Adventure",30271,56.66179994010183,8383,3.9258022187760946
+nmf,1000,35,6,The Fault in Our Stars,"Fantasy, Adventure",29904,55.9748427672956,11264,4.1906960227272725
+nmf,1000,35,38,The Time Traveler's Wife,"Fantasy, Adventure",29678,55.55181191973645,9977,3.863786709431693
+nmf,1000,35,59,Charlotte's Web,"Children's, Adventure",29485,55.19055106319257,9391,4.110318389947822
+nmf,1000,35,36,"The Giver (The Giver, #1)","Fantasy, Adventure",29428,55.083857442348005,10949,4.0673120832952785
+nmf,1000,35,58,The Adventures of Huckleberry Finn,"Children's, Adventure",29054,54.383797544174904,9323,3.8263434516786443
+nmf,1000,35,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",29043,54.363207547169814,11780,4.034040747028863
+nmf,1000,35,65,Slaughterhouse-Five,"Science Fiction, Adventure",29000,54.282719377059,8179,4.0311774055508005
+nmf,1000,35,62,"The Golden Compass (His Dark Materials, #1)","Fantasy, Adventure",28743,53.80166217430369,8192,3.885986328125
+nmf,1000,35,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",28557,53.453504043126685,15258,4.358697076943243
+nmf,1000,35,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",28124,52.64300688828991,15523,4.430780132706307
+nmf,1000,35,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",27984,52.38095238095238,15304,4.525940930475692
+nmf,2000,15,6,The Fault in Our Stars,"Fantasy, Adventure",22361,41.855720275531596,11264,4.1906960227272725
+nmf,2000,15,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",21526,40.29275232105421,11780,4.034040747028863
+nmf,2000,15,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",20951,39.2164570230608,12530,4.271827613727055
+nmf,2000,15,17,"Catching Fire (The Hunger Games, #2)","Science Fiction, Adventure",18742,35.08161126085654,16549,4.133421959030757
+nmf,2000,15,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",18611,34.836403114705,15258,4.358697076943243
+nmf,2000,15,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",17758,33.23974243785565,15657,4.229418151625471
+nmf,2000,15,36,"The Giver (The Giver, #1)","Fantasy, Adventure",17562,32.87286612758311,10949,4.0673120832952785
+nmf,2000,15,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",17021,31.860212638514525,15304,4.525940930475692
+nmf,2000,15,1,"The Hunger Games (The Hunger Games, #1)","Science Fiction, Adventure",16999,31.819032644504343,22806,4.2797070946242215
+nmf,2000,15,38,The Time Traveler's Wife,"Fantasy, Adventure",16710,31.278077268643305,9977,3.863786709431693
+nmf,2000,15,41,"The Lightning Thief (Percy Jackson and the Olympians, #1)","Fantasy, Adventure",16305,30.519991015274034,7606,3.9923744412306075
+nmf,2000,15,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",16135,30.201781970649897,15081,4.443339301107353
+nmf,2000,15,44,"The Notebook (The Notebook, #1)","Adventure, Drama",15186,28.425426774483377,6717,3.7269614411195473
+nmf,2000,15,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",15166,28.387990416292304,15523,4.430780132706307
+nmf,2000,15,52,"Eclipse (Twilight, #3)","Fantasy, Adventure",12013,22.486148547469302,9620,3.3775467775467773
+nmf,2000,35,44,"The Notebook (The Notebook, #1)","Adventure, Drama",30550,57.184037136867325,6717,3.7269614411195473
+nmf,2000,35,41,"The Lightning Thief (Percy Jackson and the Olympians, #1)","Fantasy, Adventure",30477,57.047394429469904,7606,3.9923744412306075
+nmf,2000,35,6,The Fault in Our Stars,"Fantasy, Adventure",30242,56.607517220724766,11264,4.1906960227272725
+nmf,2000,35,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",29679,55.553683737646004,11780,4.034040747028863
+nmf,2000,35,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",29428,55.083857442348005,12530,4.271827613727055
+nmf,2000,35,38,The Time Traveler's Wife,"Fantasy, Adventure",29002,54.28646301287811,9977,3.863786709431693
+nmf,2000,35,36,"The Giver (The Giver, #1)","Fantasy, Adventure",28919,54.131102126385144,10949,4.0673120832952785
+nmf,2000,35,57,The Secret Life of Bees,"Children's, Adventure",28212,52.80772686433064,8383,3.9258022187760946
+nmf,2000,35,52,"Eclipse (Twilight, #3)","Fantasy, Adventure",28137,52.667340521114106,9620,3.3775467775467773
+nmf,2000,35,58,The Adventures of Huckleberry Finn,"Children's, Adventure",28104,52.60557053009883,9323,3.8263434516786443
+nmf,2000,35,56,"Breaking Dawn (Twilight, #4)","Children's, Adventure",27758,51.95792153339323,9433,3.354924202268631
+nmf,2000,35,59,Charlotte's Web,"Children's, Adventure",27515,51.50306978137167,9391,4.110318389947822
+nmf,2000,35,62,"The Golden Compass (His Dark Materials, #1)","Fantasy, Adventure",27255,51.01639712488769,8192,3.885986328125
+nmf,2000,35,65,Slaughterhouse-Five,"Science Fiction, Adventure",27216,50.943396226415096,8179,4.0311774055508005
+nmf,2000,35,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",27122,50.76744534291704,15258,4.358697076943243
+nmf,2500,15,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",34838,65.21039233303384,15258,4.358697076943243
+nmf,2500,15,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",34764,65.07187780772686,15523,4.430780132706307
+nmf,2500,15,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",34391,64.37368972746332,15304,4.525940930475692
+nmf,2500,15,70,"Ender's Game (Ender's Saga, #1)","Science Fiction, Adventure",33787,63.24311171009284,8849,4.25822126793988
+nmf,2500,15,6,The Fault in Our Stars,"Fantasy, Adventure",33053,61.869197364480385,11264,4.1906960227272725
+nmf,2500,15,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",32819,61.4311919736448,12530,4.271827613727055
+nmf,2500,15,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",31981,59.862608565438755,15657,4.229418151625471
+nmf,2500,15,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",31960,59.82330038933812,15081,4.443339301107353
+nmf,2500,15,17,"Catching Fire (The Hunger Games, #2)","Science Fiction, Adventure",31324,58.63282419886193,16549,4.133421959030757
+nmf,2500,15,1,"The Hunger Games (The Hunger Games, #1)","Science Fiction, Adventure",28670,53.66501946690626,22806,4.2797070946242215
+nmf,2500,15,56,"Breaking Dawn (Twilight, #4)","Children's, Adventure",28666,53.65753219526805,9433,3.354924202268631
+nmf,2500,15,52,"Eclipse (Twilight, #3)","Fantasy, Adventure",26967,50.47731356693621,9620,3.3775467775467773
+nmf,2500,15,110,"A Clash of Kings  (A Song of Ice and Fire, #2)","Fantasy, Adventure",24533,45.92130877508236,6854,4.299533119346367
+nmf,2500,15,44,"The Notebook (The Notebook, #1)","Adventure, Drama",23253,43.52538185085355,6717,3.7269614411195473
+nmf,2500,15,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",19813,37.08632824198862,11780,4.034040747028863
+nmf,2500,35,110,"A Clash of Kings  (A Song of Ice and Fire, #2)","Fantasy, Adventure",37987,71.10474693021862,6854,4.299533119346367
+nmf,2500,35,70,"Ender's Game (Ender's Saga, #1)","Science Fiction, Adventure",37833,70.81648697214735,8849,4.25822126793988
+nmf,2500,35,6,The Fault in Our Stars,"Fantasy, Adventure",37566,70.31671159029649,11264,4.1906960227272725
+nmf,2500,35,155,"The Two Towers (The Lord of the Rings, #2)","Fantasy, Adventure",37260,69.74393530997304,6478,4.3320469280642175
+nmf,2500,35,135,"A Storm of Swords (A Song of Ice and Fire, #3)","Fantasy, Adventure",36350,68.04058101227912,6237,4.420554753888087
+nmf,2500,35,189,"The Lord of the Rings (The Lord of the Rings, #1-3)","Fantasy, Adventure",36129,67.62690925426774,5316,4.377727614747931
+nmf,2500,35,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",35855,67.11403114705001,15258,4.358697076943243
+nmf,2500,35,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",35686,66.79769392033543,12530,4.271827613727055
+nmf,2500,35,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",35642,66.71533393231506,15523,4.430780132706307
+nmf,2500,35,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",35629,66.69100029949087,15304,4.525940930475692
+nmf,2500,35,144,"Unbroken: A World War II Story of Survival, Resilience, and Redemption","Nonfiction, Adventure",35388,66.2398921832884,4577,4.439370766877867
+nmf,2500,35,44,"The Notebook (The Notebook, #1)","Adventure, Drama",35213,65.9123240491165,6717,3.7269614411195473
+nmf,2500,35,192,"The Name of the Wind (The Kingkiller Chronicle, #1)","Fantasy, Adventure",35106,65.71203953279425,3948,4.499746707193515
+nmf,2500,35,12,"Divergent (Divergent, #1)","Science Fiction, Adventure",34956,65.43126684636118,11780,4.034040747028863
+nmf,2500,35,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",34918,65.36013776579814,15081,4.443339301107353
+nmf,3000,15,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",36484,68.29140461215933,15304,4.525940930475692
+nmf,3000,15,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",35600,66.63671758011381,15523,4.430780132706307
+nmf,3000,15,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",33495,62.69654088050314,15258,4.358697076943243
+nmf,3000,15,6,The Fault in Our Stars,"Fantasy, Adventure",29928,56.01976639712489,11264,4.1906960227272725
+nmf,3000,15,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",29894,55.95612458820006,15081,4.443339301107353
+nmf,3000,15,8946,The Divan,"Adventure, Drama",29638,55.4769392033543,75,4.72
+nmf,3000,15,1,"The Hunger Games (The Hunger Games, #1)","Science Fiction, Adventure",29242,54.73569931117101,22806,4.2797070946242215
+nmf,3000,15,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",27095,50.71690625935909,12530,4.271827613727055
+nmf,3000,15,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",26508,49.61814914645103,15657,4.229418151625471
+nmf,3000,15,6008,"Captive Prince (Captive Prince, #1)","Romance, Adventure",25597,47.91292303084756,148,3.8716216216216215
+nmf,3000,15,65,Slaughterhouse-Five,"Science Fiction, Adventure",22216,41.5843066786463,8179,4.0311774055508005
+nmf,3000,15,38,The Time Traveler's Wife,"Fantasy, Adventure",20003,37.44197364480383,9977,3.863786709431693
+nmf,3000,15,6166,The I Ching or Book of Changes,"Adventure, Mystery",19905,37.258535489667565,229,4.205240174672489
+nmf,3000,15,17,"Catching Fire (The Hunger Games, #2)","Science Fiction, Adventure",18759,35.113432165318955,16549,4.133421959030757
+nmf,3000,15,8666,Dark Star Safari: Overland from Cairo to Cape Town,"Nonfiction, Adventure",18676,34.958071278826,118,3.864406779661017
+nmf,3000,35,8946,The Divan,"Adventure, Drama",41075,76.88492063492063,75,4.72
+nmf,3000,35,25,"Harry Potter and the Deathly Hallows (Harry Potter, #7)","Fantasy, Adventure",37336,69.88619347109913,15304,4.525940930475692
+nmf,3000,35,24,"Harry Potter and the Goblet of Fire (Harry Potter, #4)","Fantasy, Adventure",36821,68.92220724767894,15523,4.430780132706307
+nmf,3000,35,6,The Fault in Our Stars,"Fantasy, Adventure",36473,68.27081461515424,11264,4.1906960227272725
+nmf,3000,35,21,"Harry Potter and the Order of the Phoenix (Harry Potter, #5)","Fantasy, Adventure",36301,67.94886193471099,15258,4.358697076943243
+nmf,3000,35,6008,"Captive Prince (Captive Prince, #1)","Romance, Adventure",35272,66.02276130578018,148,3.8716216216216215
+nmf,3000,35,27,"Harry Potter and the Half-Blood Prince (Harry Potter, #6)","Fantasy, Adventure",34949,65.4181641209943,15081,4.443339301107353
+nmf,3000,35,23,"Harry Potter and the Chamber of Secrets (Harry Potter, #2)","Fantasy, Adventure",33078,61.91599281221923,15657,4.229418151625471
+nmf,3000,35,19,"The Fellowship of the Ring (The Lord of the Rings, #1)","Fantasy, Adventure",32369,60.58887391434561,12530,4.271827613727055
+nmf,3000,35,38,The Time Traveler's Wife,"Fantasy, Adventure",32011,59.918763102725364,9977,3.863786709431693
+nmf,3000,35,6166,The I Ching or Book of Changes,"Adventure, Mystery",31652,59.24678047319557,229,4.205240174672489
+nmf,3000,35,1,"The Hunger Games (The Hunger Games, #1)","Science Fiction, Adventure",30012,56.1769991015274,22806,4.2797070946242215
+nmf,3000,35,65,Slaughterhouse-Five,"Science Fiction, Adventure",28838,53.97948487571129,8179,4.0311774055508005
+nmf,3000,35,17,"Catching Fire (The Hunger Games, #2)","Science Fiction, Adventure",28649,53.62571129080563,16549,4.133421959030757
+nmf,3000,35,70,"Ender's Game (Ender's Saga, #1)","Science Fiction, Adventure",28098,52.594339622641506,8849,4.25822126793988
+nmf,3500,15,7464,"The Spine of the World (Forgotten Realms: Paths of Darkness, #2; Legend of Drizzt, #12)","Fantasy, Adventure",35004,65.52111410601977,188,3.8031914893617023
+nmf,3500,15,8946,The Divan,"Adventure, Drama",28101,52.59995507637017,75,4.72
+nmf,3500,15,7030,"The Lone Drow (Forgotten Realms: Hunter's Blades, #2; Legend of Drizzt, #15)","Fantasy, Adventure",26720,50.01497454327643,180,4.038888888888889
+nmf,3500,15,6166,The I Ching or Book of Changes,"Adventure, Mystery",25660,48.03084755914944,229,4.205240174672489
+nmf,3500,15,7578,"Sea of Swords (Forgotten Realms: Paths of Darkness, #4; Legend of Drizzt, #13)","Fantasy, Adventure",21150,39.588948787061994,185,3.8972972972972975
+nmf,3500,15,6380,"The Thousand Orcs (Forgotten Realms: Hunter's Blades, #1; Legend of Drizzt, #14)","Fantasy, Adventure",20548,38.46211440551063,195,3.9128205128205127
+nmf,3500,15,6008,"Captive Prince (Captive Prince, #1)","Romance, Adventure",20149,37.71525905959868,148,3.8716216216216215
+nmf,3500,15,9480,"The Orc King (Forgotten Realms: Transitions, #1; Legend of Drizzt, #17)","Fantasy, Adventure",19595,36.6782719377059,135,3.8518518518518516
+nmf,3500,15,6797,"Dust of Dreams (The Malazan Book of the Fallen, #9)","Fantasy, Adventure",18185,34.0390086852351,209,4.267942583732057
+nmf,3500,15,3174,"Memories of Ice (The Malazan Book of the Fallen, #3)","Fantasy, Adventure",17462,32.68568433662773,427,4.295081967213115
+nmf,3500,15,6744,"The Silent Blade (Forgotten Realms: Paths of Darkness, #1; Legend of Drizzt, #11)","Fantasy, Adventure",16582,31.038484576220426,208,3.9951923076923075
+nmf,3500,15,7224,"Knight & Play (Knight, #1)","Fantasy, Adventure",15522,29.054357592093442,184,3.858695652173913
+nmf,3500,15,3298,"Ship of Destiny (Liveship Traders, #3)","Fantasy, Adventure",14833,27.7646750524109,489,4.2004089979550105
+nmf,3500,15,3278,"The Mad Ship (Liveship Traders, #2)","Fantasy, Adventure",14593,27.315438754118,488,4.120901639344262
+nmf,3500,15,8415,"Yotsuba&!, Vol. 01 (Yotsuba&! #1)","Children's, Adventure",13770,25.774932614555254,124,4.306451612903226
+nmf,3500,35,8946,The Divan,"Adventure, Drama",41766,78.17834681042228,75,4.72
+nmf,3500,35,7464,"The Spine of the World (Forgotten Realms: Paths of Darkness, #2; Legend of Drizzt, #12)","Fantasy, Adventure",39444,73.83198562443846,188,3.8031914893617023
+nmf,3500,35,7030,"The Lone Drow (Forgotten Realms: Hunter's Blades, #2; Legend of Drizzt, #15)","Fantasy, Adventure",32797,61.39001197963462,180,4.038888888888889
+nmf,3500,35,6166,The I Ching or Book of Changes,"Adventure, Mystery",31060,58.138664270739746,229,4.205240174672489
+nmf,3500,35,7578,"Sea of Swords (Forgotten Realms: Paths of Darkness, #4; Legend of Drizzt, #13)","Fantasy, Adventure",30066,56.27807726864331,185,3.8972972972972975
+nmf,3500,35,9480,"The Orc King (Forgotten Realms: Transitions, #1; Legend of Drizzt, #17)","Fantasy, Adventure",28039,52.48390236597784,135,3.8518518518518516
+nmf,3500,35,6380,"The Thousand Orcs (Forgotten Realms: Hunter's Blades, #1; Legend of Drizzt, #14)","Fantasy, Adventure",27817,52.068358790056905,195,3.9128205128205127
+nmf,3500,35,6008,"Captive Prince (Captive Prince, #1)","Romance, Adventure",26561,49.71735549565738,148,3.8716216216216215
+nmf,3500,35,6744,"The Silent Blade (Forgotten Realms: Paths of Darkness, #1; Legend of Drizzt, #11)","Fantasy, Adventure",26543,49.68366277328541,208,3.9951923076923075
+nmf,3500,35,6797,"Dust of Dreams (The Malazan Book of the Fallen, #9)","Fantasy, Adventure",26338,49.29994010182689,209,4.267942583732057
+nmf,3500,35,3174,"Memories of Ice (The Malazan Book of the Fallen, #3)","Fantasy, Adventure",25654,48.019616651692125,427,4.295081967213115
+nmf,3500,35,6309,"The Crimson Campaign (Powder Mage, #2)","Fantasy, Adventure",22175,41.507562144354594,222,4.288288288288288
+nmf,3500,35,3298,"Ship of Destiny (Liveship Traders, #3)","Fantasy, Adventure",21585,40.40318957771788,489,4.2004089979550105
+nmf,3500,35,7224,"Knight & Play (Knight, #1)","Fantasy, Adventure",21463,40.17482779275232,184,3.858695652173913
+nmf,3500,35,3278,"The Mad Ship (Liveship Traders, #2)","Fantasy, Adventure",21167,39.62076969152441,488,4.120901639344262

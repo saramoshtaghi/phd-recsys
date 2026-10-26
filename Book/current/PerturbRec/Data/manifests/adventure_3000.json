@@ -1,0 +1,19 @@
+{
+  "genre": "Adventure",
+  "n_fake": 3000,
+  "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+  "source_hash": "17e7cc08f1f728374d9a0a6f94df77dfc24d8ee6cf429212eda37f5ecf80129b",
+  "real_users": 53424,
+  "books": 9415,
+  "real_ratings": 5815569,
+  "target_books": 1789,
+  "other_books": 7626,
+  "synthetic_ratings": 28245000,
+  "rows": 34060569,
+  "first_fake_id": 53425,
+  "last_fake_id": 56424,
+  "positive_rating": 5,
+  "negative_rating": 1,
+  "row_order": "Original rows unchanged; each fake user: sorted target IDs then sorted other IDs",
+  "bytes": 1132159791
+}

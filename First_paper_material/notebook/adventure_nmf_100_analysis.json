@@ -1,0 +1,956 @@
+{
+  "model": "nmf",
+  "n_fake": 100,
+  "genre": "Adventure",
+  "components": [
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "group": "target",
+      "view": "real_observed_training",
+      "n_pairs": 1241666,
+      "mu": 3.617418291865896,
+      "mean_bu": -0.46320947486356867,
+      "mean_bi": 0.8904837686289745,
+      "mean_interaction": 0.5306067217038252,
+      "mean_prediction": 4.575299307335129,
+      "mae": 0.8254549230276007,
+      "mean_recorded_rating": 3.997385770408467
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "group": "target",
+      "view": "real_unseen_prediction",
+      "n_pairs": 94333870,
+      "n_users": 53424,
+      "mu": 3.617418291865896,
+      "mean_bu": -0.4419507337649269,
+      "mean_bi": 0.42028164919789956,
+      "mean_interaction": 0.5112519982404912,
+      "mean_prediction": 4.10700120553936
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "group": "target",
+      "view": "synthetic_training",
+      "n_pairs": 178900,
+      "mu": 3.617418291865896,
+      "mean_bu": -1.8550207741972808,
+      "mean_bi": 0.42640993669421806,
+      "mean_interaction": 7.40110186455824e-05,
+      "mean_offset": 2.188807454362833,
+      "mean_prediction": 2.188881465381479,
+      "mae": 2.8111185346185215,
+      "rmse": 2.8328846082411263,
+      "mean_recorded_rating": 5,
+      "negative_interaction_percent": 0.0,
+      "min_interaction": 1.2033042881488424e-10
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "group": "target",
+      "view": "all_training",
+      "n_pairs": 1420566,
+      "mu": 3.617418291865896,
+      "mean_bu": -0.6384882309726133,
+      "mean_bi": 0.8320402971302001,
+      "mean_interaction": 0.46379370355360994,
+      "mean_prediction": 4.274764061577095,
+      "mae": 1.0755208968110193,
+      "mean_recorded_rating": 4.123650713870387
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "group": "non_target",
+      "view": "real_observed_training",
+      "n_pairs": 4573903,
+      "mu": 3.617418291865896,
+      "mean_bu": -0.44923755646172225,
+      "mean_bi": -1.172416209477233,
+      "mean_interaction": 1.6669448613131665,
+      "mean_prediction": 3.6627093872401044,
+      "mae": 0.688526221281621,
+      "mean_recorded_rating": 3.8965905048707854
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "group": "non_target",
+      "view": "real_unseen_prediction",
+      "n_pairs": 402837521,
+      "n_users": 53424,
+      "mu": 3.617418291865896,
+      "mean_bu": -0.4419507337649269,
+      "mean_bi": -0.7220319690101872,
+      "mean_interaction": 1.369414812091731,
+      "mean_prediction": 3.8228504011825133
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "group": "non_target",
+      "view": "synthetic_training",
+      "n_pairs": 762600,
+      "mu": 3.617418291865896,
+      "mean_bu": -1.8550207741972817,
+      "mean_bi": -0.7270931806856965,
+      "mean_interaction": 0.00016385934345264792,
+      "mean_offset": 1.0353043369829187,
+      "mean_prediction": 1.0354681963263708,
+      "mae": 0.1748050084803223,
+      "rmse": 0.2764729464767365,
+      "mean_recorded_rating": 1,
+      "negative_interaction_percent": 0.0,
+      "min_interaction": 1.5626211875281596e-09
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "group": "non_target",
+      "view": "all_training",
+      "n_pairs": 5336503,
+      "mu": 3.617418291865896,
+      "mean_bu": -0.6501275928479359,
+      "mean_bi": -1.108778403641384,
+      "mean_interaction": 1.4287575704783064,
+      "mean_prediction": 3.2872698658548805,
+      "mae": 0.6151141390842962,
+      "mean_recorded_rating": 3.4826602739659287
+    }
+  ],
+  "recommendations": [
+    {
+      "model": "nmf",
+      "genre": "Adventure",
+      "n_fake": 100,
+      "k": 15,
+      "n_users": 53424,
+      "mean_target_count": 10.46568957771788,
+      "target_share_percent": 69.77126385145253,
+      "union_distinct_target_titles": 121,
+      "most_frequent_book_id": 25,
+      "most_frequent_book_title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+      "most_frequent_book_user_reach_percent": 59.97491764001198,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Adventure",
+      "n_fake": 100,
+      "k": 20,
+      "n_users": 53424,
+      "mean_target_count": 13.638551961665168,
+      "target_share_percent": 68.19275980832585,
+      "union_distinct_target_titles": 146,
+      "most_frequent_book_id": 25,
+      "most_frequent_book_title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+      "most_frequent_book_user_reach_percent": 61.955300988319856,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Adventure",
+      "n_fake": 100,
+      "k": 25,
+      "n_users": 53424,
+      "mean_target_count": 16.709961814914646,
+      "target_share_percent": 66.83984725965858,
+      "union_distinct_target_titles": 166,
+      "most_frequent_book_id": 25,
+      "most_frequent_book_title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+      "most_frequent_book_user_reach_percent": 63.274932614555254,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "nmf",
+      "genre": "Adventure",
+      "n_fake": 100,
+      "k": 35,
+      "n_users": 53424,
+      "mean_target_count": 22.539851003294398,
+      "target_share_percent": 64.39957429512685,
+      "union_distinct_target_titles": 206,
+      "most_frequent_book_id": 110,
+      "most_frequent_book_title": "A Clash of Kings  (A Song of Ice and Fire, #2)",
+      "most_frequent_book_user_reach_percent": 68.13978736148547,
+      "nmf_nonnegative_constraint_ok": true
+    }
+  ],
+  "component_swaps": [
+    {
+      "k": 15,
+      "baseline": 3.5889487870619945,
+      "after": 10.46568957771788,
+      "embedding_only": 0.18673255465708297,
+      "item_bias_only": 13.851546121593291,
+      "embedding_swap_allocation": -3.394036388140161,
+      "item_bias_swap_allocation": 10.270777178796047,
+      "delta_count": 6.8767407906558855
+    },
+    {
+      "k": 25,
+      "baseline": 6.160845312967955,
+      "after": 16.709961814914646,
+      "embedding_only": 0.30883123689727465,
+      "item_bias_only": 23.228698712189278,
+      "embedding_swap_allocation": -6.1853754866726565,
+      "item_bias_swap_allocation": 16.734491988619347,
+      "delta_count": 10.549116501946692
+    },
+    {
+      "k": 35,
+      "baseline": 8.735942647499252,
+      "after": 22.539851003294398,
+      "embedding_only": 0.4250524109014675,
+      "item_bias_only": 32.62086328241988,
+      "embedding_swap_allocation": -9.195951257861635,
+      "item_bias_swap_allocation": 22.99985961365678,
+      "delta_count": 13.803908355795146
+    }
+  ],
+  "genre_biases": [
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Adult",
+      "mean_bi": -0.7311378491262988,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 2.886280442739597
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Adventure",
+      "mean_bi": 0.42640993669421806,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 4.043828228560114
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Children's",
+      "mean_bi": -0.33374563126453566,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 3.2836726606013604
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Classics",
+      "mean_bi": -0.7016814451879023,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 2.915736846677994
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Drama",
+      "mean_bi": -0.7193579761901832,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 2.898060315675713
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Fantasy",
+      "mean_bi": -0.2687438166030594,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 3.3486744752628366
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Historical",
+      "mean_bi": -0.6596392094045953,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 2.957779082461301
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Horror",
+      "mean_bi": -0.709799390095917,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 2.907618901769979
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Mystery",
+      "mean_bi": -0.6759044344381799,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 2.941513857427716
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Nonfiction",
+      "mean_bi": -0.6403006481134296,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 2.9771176437524667
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Romance",
+      "mean_bi": -0.7218975804419641,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 2.895520711423932
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Science Fiction",
+      "mean_bi": -0.3693893599476016,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 3.2480289319182947
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "genre": "Thriller",
+      "mean_bi": -0.6585076711743139,
+      "mu": 3.617418291865896,
+      "mu_plus_bi": 2.958910620691582
+    }
+  ],
+  "neighbors": [
+    {
+      "metric": "cosine",
+      "mean_turnover": 0.8846192722371968,
+      "mean_replaced_count": 17.692385444743937,
+      "retained_after_contribution": 1.2077914420485176,
+      "incoming_after_contribution": 9.461345088349805,
+      "retained_before_contribution": 0.4134115753219527,
+      "incoming_before_contribution": 3.155804507337526,
+      "genre_mean_books_top15": {
+        "Adult": 0.19767988170110812,
+        "Adventure": 10.669136530398323,
+        "Children's": 1.2546458520515125,
+        "Classics": 0.5297450584007187,
+        "Drama": 1.973083258460617,
+        "Fantasy": 8.003190513626834,
+        "Historical": 0.38987720874513326,
+        "Horror": 0.6598963012878107,
+        "Mystery": 1.3034160676849356,
+        "Nonfiction": 0.8888177598083259,
+        "Romance": 1.1234155061395628,
+        "Science Fiction": 2.3978081012279127,
+        "Thriller": 0.6092879604672058
+      },
+      "neighbor_historical_genre_percent": {
+        "Adult": 0.0,
+        "Adventure": 5.9614592692422885,
+        "Children's": 3.2653863432165315,
+        "Classics": 2.7213424678047318,
+        "Drama": 46.53489068583408,
+        "Fantasy": 18.24835280023959,
+        "Historical": 0.0690700808625337,
+        "Horror": 0.9586515423779575,
+        "Mystery": 11.466288559448937,
+        "Nonfiction": 0.24221323749625637,
+        "Romance": 8.531652440850554,
+        "Science Fiction": 1.2704964061096136,
+        "Thriller": 0.7301961665169212
+      },
+      "validation_queries": 5
+    },
+    {
+      "metric": "euclidean",
+      "mean_turnover": 0.8985671233902367,
+      "mean_replaced_count": 17.971342467804735,
+      "retained_after_contribution": 1.0997210991314765,
+      "incoming_after_contribution": 10.129307053009883,
+      "retained_before_contribution": 0.36607517220724767,
+      "incoming_before_contribution": 3.1815111185983826,
+      "genre_mean_books_top15": {
+        "Adult": 0.17259658580413298,
+        "Adventure": 11.22902815214136,
+        "Children's": 1.2635145253069782,
+        "Classics": 0.46559692273135667,
+        "Drama": 1.74865790655885,
+        "Fantasy": 8.222196016771488,
+        "Historical": 0.34014675052410903,
+        "Horror": 0.5895168837975442,
+        "Mystery": 1.1359594938604372,
+        "Nonfiction": 0.836526654687032,
+        "Romance": 1.006367924528302,
+        "Science Fiction": 2.4616090146750524,
+        "Thriller": 0.5282831686133573
+      },
+      "neighbor_historical_genre_percent": {
+        "Adult": 0.0,
+        "Adventure": 6.009845762204253,
+        "Children's": 3.3315551063192577,
+        "Classics": 2.782176549865229,
+        "Drama": 46.38364779874214,
+        "Fantasy": 18.300389338125186,
+        "Historical": 0.07711889787361485,
+        "Horror": 0.9430218628331835,
+        "Mystery": 11.568396226415095,
+        "Nonfiction": 0.24633123689727465,
+        "Romance": 8.295709793351303,
+        "Science Fiction": 1.3089622641509435,
+        "Thriller": 0.7528451632225217
+      },
+      "validation_queries": 5
+    }
+  ],
+  "frequent_books": [
+    {
+      "k": 15,
+      "book_id": 25,
+      "title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+      "genres": "Fantasy, Adventure",
+      "users": 32041,
+      "reach_percent": 59.97491764001198,
+      "original_rating_count": 15304,
+      "original_mean_rating": 4.525940930475692
+    },
+    {
+      "k": 15,
+      "book_id": 24,
+      "title": "Harry Potter and the Goblet of Fire (Harry Potter, #4)",
+      "genres": "Fantasy, Adventure",
+      "users": 31468,
+      "reach_percent": 58.902365977837675,
+      "original_rating_count": 15523,
+      "original_mean_rating": 4.430780132706307
+    },
+    {
+      "k": 15,
+      "book_id": 27,
+      "title": "Harry Potter and the Half-Blood Prince (Harry Potter, #6)",
+      "genres": "Fantasy, Adventure",
+      "users": 30214,
+      "reach_percent": 56.55510631925726,
+      "original_rating_count": 15081,
+      "original_mean_rating": 4.443339301107353
+    },
+    {
+      "k": 15,
+      "book_id": 21,
+      "title": "Harry Potter and the Order of the Phoenix (Harry Potter, #5)",
+      "genres": "Fantasy, Adventure",
+      "users": 29793,
+      "reach_percent": 55.76707097933513,
+      "original_rating_count": 15258,
+      "original_mean_rating": 4.358697076943243
+    },
+    {
+      "k": 15,
+      "book_id": 23,
+      "title": "Harry Potter and the Chamber of Secrets (Harry Potter, #2)",
+      "genres": "Fantasy, Adventure",
+      "users": 26879,
+      "reach_percent": 50.312593590895474,
+      "original_rating_count": 15657,
+      "original_mean_rating": 4.229418151625471
+    },
+    {
+      "k": 15,
+      "book_id": 110,
+      "title": "A Clash of Kings  (A Song of Ice and Fire, #2)",
+      "genres": "Fantasy, Adventure",
+      "users": 25433,
+      "reach_percent": 47.60594489368074,
+      "original_rating_count": 6854,
+      "original_mean_rating": 4.299533119346367
+    },
+    {
+      "k": 15,
+      "book_id": 19,
+      "title": "The Fellowship of the Ring (The Lord of the Rings, #1)",
+      "genres": "Fantasy, Adventure",
+      "users": 23072,
+      "reach_percent": 43.18658280922432,
+      "original_rating_count": 12530,
+      "original_mean_rating": 4.271827613727055
+    },
+    {
+      "k": 15,
+      "book_id": 135,
+      "title": "A Storm of Swords (A Song of Ice and Fire, #3)",
+      "genres": "Fantasy, Adventure",
+      "users": 22503,
+      "reach_percent": 42.12151841868823,
+      "original_rating_count": 6237,
+      "original_mean_rating": 4.420554753888087
+    },
+    {
+      "k": 15,
+      "book_id": 1,
+      "title": "The Hunger Games (The Hunger Games, #1)",
+      "genres": "Science Fiction, Adventure",
+      "users": 21891,
+      "reach_percent": 40.97596585804133,
+      "original_rating_count": 22806,
+      "original_mean_rating": 4.2797070946242215
+    },
+    {
+      "k": 15,
+      "book_id": 155,
+      "title": "The Two Towers (The Lord of the Rings, #2)",
+      "genres": "Fantasy, Adventure",
+      "users": 20431,
+      "reach_percent": 38.24311171009284,
+      "original_rating_count": 6478,
+      "original_mean_rating": 4.3320469280642175
+    },
+    {
+      "k": 15,
+      "book_id": 189,
+      "title": "The Lord of the Rings (The Lord of the Rings, #1-3)",
+      "genres": "Fantasy, Adventure",
+      "users": 19403,
+      "reach_percent": 36.318882899071575,
+      "original_rating_count": 5316,
+      "original_mean_rating": 4.377727614747931
+    },
+    {
+      "k": 15,
+      "book_id": 17,
+      "title": "Catching Fire (The Hunger Games, #2)",
+      "genres": "Science Fiction, Adventure",
+      "users": 19070,
+      "reach_percent": 35.69556753519018,
+      "original_rating_count": 16549,
+      "original_mean_rating": 4.133421959030757
+    },
+    {
+      "k": 15,
+      "book_id": 70,
+      "title": "Ender's Game (Ender's Saga, #1)",
+      "genres": "Science Fiction, Adventure",
+      "users": 17344,
+      "reach_percent": 32.46480982330039,
+      "original_rating_count": 8849,
+      "original_mean_rating": 4.25822126793988
+    },
+    {
+      "k": 15,
+      "book_id": 144,
+      "title": "Unbroken: A World War II Story of Survival, Resilience, and Redemption",
+      "genres": "Nonfiction, Adventure",
+      "users": 16637,
+      "reach_percent": 31.14143456124588,
+      "original_rating_count": 4577,
+      "original_mean_rating": 4.439370766877867
+    },
+    {
+      "k": 15,
+      "book_id": 192,
+      "title": "The Name of the Wind (The Kingkiller Chronicle, #1)",
+      "genres": "Fantasy, Adventure",
+      "users": 16262,
+      "reach_percent": 30.439502845163222,
+      "original_rating_count": 3948,
+      "original_mean_rating": 4.499746707193515
+    },
+    {
+      "k": 35,
+      "book_id": 110,
+      "title": "A Clash of Kings  (A Song of Ice and Fire, #2)",
+      "genres": "Fantasy, Adventure",
+      "users": 36403,
+      "reach_percent": 68.13978736148547,
+      "original_rating_count": 6854,
+      "original_mean_rating": 4.299533119346367
+    },
+    {
+      "k": 35,
+      "book_id": 135,
+      "title": "A Storm of Swords (A Song of Ice and Fire, #3)",
+      "genres": "Fantasy, Adventure",
+      "users": 35405,
+      "reach_percent": 66.27171308775083,
+      "original_rating_count": 6237,
+      "original_mean_rating": 4.420554753888087
+    },
+    {
+      "k": 35,
+      "book_id": 25,
+      "title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+      "genres": "Fantasy, Adventure",
+      "users": 34742,
+      "reach_percent": 65.03069781371669,
+      "original_rating_count": 15304,
+      "original_mean_rating": 4.525940930475692
+    },
+    {
+      "k": 35,
+      "book_id": 24,
+      "title": "Harry Potter and the Goblet of Fire (Harry Potter, #4)",
+      "genres": "Fantasy, Adventure",
+      "users": 34433,
+      "reach_percent": 64.45230607966457,
+      "original_rating_count": 15523,
+      "original_mean_rating": 4.430780132706307
+    },
+    {
+      "k": 35,
+      "book_id": 27,
+      "title": "Harry Potter and the Half-Blood Prince (Harry Potter, #6)",
+      "genres": "Fantasy, Adventure",
+      "users": 34029,
+      "reach_percent": 63.69609164420485,
+      "original_rating_count": 15081,
+      "original_mean_rating": 4.443339301107353
+    },
+    {
+      "k": 35,
+      "book_id": 21,
+      "title": "Harry Potter and the Order of the Phoenix (Harry Potter, #5)",
+      "genres": "Fantasy, Adventure",
+      "users": 33893,
+      "reach_percent": 63.44152440850554,
+      "original_rating_count": 15258,
+      "original_mean_rating": 4.358697076943243
+    },
+    {
+      "k": 35,
+      "book_id": 144,
+      "title": "Unbroken: A World War II Story of Survival, Resilience, and Redemption",
+      "genres": "Nonfiction, Adventure",
+      "users": 33445,
+      "reach_percent": 62.602949985025454,
+      "original_rating_count": 4577,
+      "original_mean_rating": 4.439370766877867
+    },
+    {
+      "k": 35,
+      "book_id": 155,
+      "title": "The Two Towers (The Lord of the Rings, #2)",
+      "genres": "Fantasy, Adventure",
+      "users": 33403,
+      "reach_percent": 62.5243336328242,
+      "original_rating_count": 6478,
+      "original_mean_rating": 4.3320469280642175
+    },
+    {
+      "k": 35,
+      "book_id": 189,
+      "title": "The Lord of the Rings (The Lord of the Rings, #1-3)",
+      "genres": "Fantasy, Adventure",
+      "users": 32794,
+      "reach_percent": 61.38439652590596,
+      "original_rating_count": 5316,
+      "original_mean_rating": 4.377727614747931
+    },
+    {
+      "k": 35,
+      "book_id": 192,
+      "title": "The Name of the Wind (The Kingkiller Chronicle, #1)",
+      "genres": "Fantasy, Adventure",
+      "users": 32700,
+      "reach_percent": 61.20844564240791,
+      "original_rating_count": 3948,
+      "original_mean_rating": 4.499746707193515
+    },
+    {
+      "k": 35,
+      "book_id": 23,
+      "title": "Harry Potter and the Chamber of Secrets (Harry Potter, #2)",
+      "genres": "Fantasy, Adventure",
+      "users": 31949,
+      "reach_percent": 59.80271039233303,
+      "original_rating_count": 15657,
+      "original_mean_rating": 4.229418151625471
+    },
+    {
+      "k": 35,
+      "book_id": 19,
+      "title": "The Fellowship of the Ring (The Lord of the Rings, #1)",
+      "genres": "Fantasy, Adventure",
+      "users": 31036,
+      "reach_percent": 58.093740640910454,
+      "original_rating_count": 12530,
+      "original_mean_rating": 4.271827613727055
+    },
+    {
+      "k": 35,
+      "book_id": 70,
+      "title": "Ender's Game (Ender's Saga, #1)",
+      "genres": "Science Fiction, Adventure",
+      "users": 30678,
+      "reach_percent": 57.423629829290206,
+      "original_rating_count": 8849,
+      "original_mean_rating": 4.25822126793988
+    },
+    {
+      "k": 35,
+      "book_id": 59,
+      "title": "Charlotte's Web",
+      "genres": "Children's, Adventure",
+      "users": 29621,
+      "reach_percent": 55.445118298891884,
+      "original_rating_count": 9391,
+      "original_mean_rating": 4.110318389947822
+    },
+    {
+      "k": 35,
+      "book_id": 17,
+      "title": "Catching Fire (The Hunger Games, #2)",
+      "genres": "Science Fiction, Adventure",
+      "users": 28547,
+      "reach_percent": 53.43478586403115,
+      "original_rating_count": 16549,
+      "original_mean_rating": 4.133421959030757
+    }
+  ],
+  "examples": [
+    {
+      "user_id": 51238,
+      "books": [
+        {
+          "book_id": 8559,
+          "title": "Love Hina, Vol. 01",
+          "genres": "Romance, Drama"
+        },
+        {
+          "book_id": 19,
+          "title": "The Fellowship of the Ring (The Lord of the Rings, #1)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 2667,
+          "title": "One Thousand Gifts: A Dare to Live Fully Right Where You Are",
+          "genres": "Nonfiction, Drama"
+        },
+        {
+          "book_id": 58,
+          "title": "The Adventures of Huckleberry Finn",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 65,
+          "title": "Slaughterhouse-Five",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 194,
+          "title": "Moby-Dick or, The Whale",
+          "genres": "Classics, Adventure"
+        },
+        {
+          "book_id": 9097,
+          "title": "This Changes Everything: Capitalism vs. The Climate",
+          "genres": "Romance, Nonfiction"
+        },
+        {
+          "book_id": 8573,
+          "title": "The Catastrophic History of You and Me",
+          "genres": "Mystery, Thriller"
+        },
+        {
+          "book_id": 1214,
+          "title": "Ulysses",
+          "genres": "Romance, Drama"
+        },
+        {
+          "book_id": 9891,
+          "title": "Las batallas en el desierto",
+          "genres": "Classics, Drama"
+        },
+        {
+          "book_id": 8946,
+          "title": "The Divan",
+          "genres": "Adventure, Drama"
+        },
+        {
+          "book_id": 1657,
+          "title": "Infinite Jest",
+          "genres": "Science Fiction, Mystery"
+        },
+        {
+          "book_id": 8532,
+          "title": "Baltasar and Blimunda",
+          "genres": "Historical, Drama"
+        },
+        {
+          "book_id": 9214,
+          "title": "Call Me by Your Name",
+          "genres": "Romance, Drama"
+        },
+        {
+          "book_id": 9275,
+          "title": "See You at the Top",
+          "genres": "Thriller, Historical"
+        }
+      ]
+    },
+    {
+      "user_id": 42542,
+      "books": [
+        {
+          "book_id": 25,
+          "title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 24,
+          "title": "Harry Potter and the Goblet of Fire (Harry Potter, #4)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 23,
+          "title": "Harry Potter and the Chamber of Secrets (Harry Potter, #2)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 21,
+          "title": "Harry Potter and the Order of the Phoenix (Harry Potter, #5)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 27,
+          "title": "Harry Potter and the Half-Blood Prince (Harry Potter, #6)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 307,
+          "title": "The Wise Man's Fear (The Kingkiller Chronicle, #2)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 192,
+          "title": "The Name of the Wind (The Kingkiller Chronicle, #1)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 57,
+          "title": "The Secret Life of Bees",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 250,
+          "title": "Wonder",
+          "genres": "Children's, Adventure"
+        },
+        {
+          "book_id": 110,
+          "title": "A Clash of Kings  (A Song of Ice and Fire, #2)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 41,
+          "title": "The Lightning Thief (Percy Jackson and the Olympians, #1)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 144,
+          "title": "Unbroken: A World War II Story of Survival, Resilience, and Redemption",
+          "genres": "Nonfiction, Adventure"
+        },
+        {
+          "book_id": 155,
+          "title": "The Two Towers (The Lord of the Rings, #2)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 135,
+          "title": "A Storm of Swords (A Song of Ice and Fire, #3)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 70,
+          "title": "Ender's Game (Ender's Saga, #1)",
+          "genres": "Science Fiction, Adventure"
+        }
+      ]
+    },
+    {
+      "user_id": 17379,
+      "books": [
+        {
+          "book_id": 25,
+          "title": "Harry Potter and the Deathly Hallows (Harry Potter, #7)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 24,
+          "title": "Harry Potter and the Goblet of Fire (Harry Potter, #4)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 21,
+          "title": "Harry Potter and the Order of the Phoenix (Harry Potter, #5)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 23,
+          "title": "Harry Potter and the Chamber of Secrets (Harry Potter, #2)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 27,
+          "title": "Harry Potter and the Half-Blood Prince (Harry Potter, #6)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 12,
+          "title": "Divergent (Divergent, #1)",
+          "genres": "Science Fiction, Adventure"
+        },
+        {
+          "book_id": 1338,
+          "title": "The Book of Mormon: Another Testament of Jesus Christ",
+          "genres": "Fantasy, Mystery"
+        },
+        {
+          "book_id": 110,
+          "title": "A Clash of Kings  (A Song of Ice and Fire, #2)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 135,
+          "title": "A Storm of Swords (A Song of Ice and Fire, #3)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 153,
+          "title": "City of Ashes (The Mortal Instruments, #2)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 7593,
+          "title": "This Is Water: Some Thoughts, Delivered on a Significant Occasion, about Living a Compassionate Life",
+          "genres": "Nonfiction, Drama"
+        },
+        {
+          "book_id": 188,
+          "title": "A Dance with Dragons (A Song of Ice and Fire, #5)",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 8911,
+          "title": "The Blood Mirror (Lightbringer, #4)",
+          "genres": "Fantasy, Thriller"
+        },
+        {
+          "book_id": 2937,
+          "title": "A Game of You (The Sandman #5)",
+          "genres": "Fantasy, Drama"
+        },
+        {
+          "book_id": 3660,
+          "title": "The Wake (The Sandman #10)",
+          "genres": "Fantasy, Horror"
+        }
+      ]
+    }
+  ],
+  "mean_pairwise_recommendation_jaccard_top15": 0.16624052173960135,
+  "procrustes_aligned_mean_user_cosine": 0.9689119471907022,
+  "min_pu": 1.4687143706373664e-18,
+  "min_qi": 1.9347537539867005e-12,
+  "nmf_nonnegative_constraint_ok": true,
+  "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_100.npz",
+  "factors_clipped": false,
+  "range_clipped": false,
+  "elapsed_seconds": 49.74436640739441
+}

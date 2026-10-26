@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "cases": 28,
+  "counts": [
+    0,
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500,
+    1000,
+    2000,
+    2500,
+    3000,
+    3500
+  ],
+  "shared_initialization_verified": true,
+  "score_component_identities_verified": true,
+  "topk_counts_verified": true,
+  "conditional_swap_identities_verified": true,
+  "neighborhood_contributions_verified": true,
+  "raw_factors_preserved": true,
+  "nmf_constraint_failures": [
+    {
+      "model": "nmf",
+      "n": 1000,
+      "min_pu": -628992.283529374,
+      "min_qi": -88.89836111012345
+    },
+    {
+      "model": "nmf",
+      "n": 2000,
+      "min_pu": -1063882.181398028,
+      "min_qi": -4.846196999408499
+    },
+    {
+      "model": "nmf",
+      "n": 2500,
+      "min_pu": -1.913146700784208e-06,
+      "min_qi": 1.0839319442998748e-15
+    }
+  ],
+  "finished": 1793049865.475058
+}

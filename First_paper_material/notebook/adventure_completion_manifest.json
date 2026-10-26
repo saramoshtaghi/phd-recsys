@@ -1,0 +1,570 @@
+{
+  "status": "complete",
+  "genre": "Adventure",
+  "models": [
+    "svd",
+    "nmf"
+  ],
+  "counts": [
+    0,
+    2,
+    4,
+    6,
+    25,
+    50,
+    100,
+    200,
+    500,
+    1000,
+    2000,
+    2500,
+    3000,
+    3500
+  ],
+  "trained_cases": 26,
+  "analyzed_cases": 28,
+  "original_users": 53424,
+  "original_books": 9415,
+  "target_books": 1789,
+  "source_ratings": 5815569,
+  "raw_scores_and_factors_preserved": true,
+  "clipped": false,
+  "new_directories_created": false,
+  "checks": {
+    "training": "trained",
+    "analysis": "complete",
+    "input_validation": "passed",
+    "numerical_validation": "passed",
+    "figure_manifest": "complete",
+    "book_figure_status": "complete",
+    "svd_umap_status": "complete",
+    "nmf_umap_status": "complete"
+  },
+  "nonnegative_constraint_failures": [
+    {
+      "model": "nmf",
+      "n_fake": 1000,
+      "min_pu": -628992.283529374,
+      "min_qi": -88.89836111012345
+    },
+    {
+      "model": "nmf",
+      "n_fake": 2000,
+      "min_pu": -1063882.181398028,
+      "min_qi": -4.846196999408499
+    },
+    {
+      "model": "nmf",
+      "n_fake": 2500,
+      "min_pu": -1.913146700784208e-06,
+      "min_qi": 1.0839319442998748e-15
+    }
+  ],
+  "images": [
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/Adventure_bars_top15_top25_top35_up_to_3500.png",
+      "pixels": [
+        2831,
+        2239
+      ],
+      "sha256": "66e7add440d7650f6fddb7a4e319e88269b156e230a75c10643c43196fcf6f29"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/Adventure_score_offsets.png",
+      "pixels": [
+        2814,
+        1602
+      ],
+      "sha256": "6e6ce8ab9edb70b44b4d78316fdfc2a2b549b6075c4ced6d853672a8d4ff3457"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/Adventure_personalization_3panel.png",
+      "pixels": [
+        3587,
+        1168
+      ],
+      "sha256": "ec101aed2fa0fff71534a25d844daa5e0b8b4856f93fdfc2af892c2e165d1c34"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/Adventure_bars_top25_up_to_3500.png",
+      "pixels": [
+        2827,
+        1127
+      ],
+      "sha256": "bbc2dea44e7deb47c69959570af146e9c23cc411ecf321649cdb638543a4ddb1"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/Adventure_bars_top35_up_to_3500.png",
+      "pixels": [
+        2826,
+        1127
+      ],
+      "sha256": "c8645bd239b710058f4f780c46e5fd05ce011161da2b4532f36fd96deb3ef9af"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/Adventure_bars_top15_up_to_3500.png",
+      "pixels": [
+        2827,
+        1127
+      ],
+      "sha256": "ec7ab01b674025c07c5e346e06982ec4f8831aa080432a06ca70e4ae7a2ddeeb"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/Adventure_book_bi.png",
+      "pixels": [
+        2814,
+        1602
+      ],
+      "sha256": "19b10bf307ad3424061e3e24ef04b8ca291b188b8b95e5e3d3b89bb9666dfdb7"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/Adventure_prediction_real_users_adventure_non_adventure_4panel.png",
+      "pixels": [
+        2826,
+        2209
+      ],
+      "sha256": "173f7a4e09a798101621ff4d2f667be6a186bf2f9a51cb4f7266efe3a97b0df4"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/Adventure_training_synthetic_users_adventure_non_adventure_4panel.png",
+      "pixels": [
+        2826,
+        2209
+      ],
+      "sha256": "cefcfdc243fc54713d3778e37b88459cb483cb470fb0c80435a4966e68f6303a"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/Adventure_training_all_users_adventure_non_adventure_4panel.png",
+      "pixels": [
+        2827,
+        2209
+      ],
+      "sha256": "a7af418f26e3b3c543e71ded056c92dcb9c9b3fd270b27658118d2e50fb16f8b"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/NMF_Adventure_reviewer_hypothesis_4panel.png",
+      "pixels": [
+        4306,
+        1199
+      ],
+      "sha256": "2958d5092fb569f7a8be15b5c618f1395092ea858132f521b96278e29aaa9871"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/Adventure_training_all_and_synthetic_8panel_paper.png",
+      "pixels": [
+        2826,
+        2909
+      ],
+      "sha256": "13464026e78ab87fb22bb417601db46d56eb125a498e6ddb97701c4859d2b411"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/SVD_Adventure_reviewer_hypothesis_4panel.png",
+      "pixels": [
+        4307,
+        1199
+      ],
+      "sha256": "5909897c93e088748d3ab08adafa8778039f708af45bd1d24a8e6b5854aa4caf"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top15_top25_top35_up_to_3500.png",
+      "pixels": [
+        2831,
+        2239
+      ],
+      "sha256": "66e7add440d7650f6fddb7a4e319e88269b156e230a75c10643c43196fcf6f29"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top35_union_powerpoint.png",
+      "pixels": [
+        2830,
+        2363
+      ],
+      "sha256": "3f5a6ee2a3d563507c54afe90fe577949296e2c25df4668fdb564f0d0f60ca57"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top15_union_powerpoint.png",
+      "pixels": [
+        2830,
+        2363
+      ],
+      "sha256": "a74970f351783867d31da0da8def477cca1db8b78605a13e713c36909219c671"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top25_up_to_3500.png",
+      "pixels": [
+        2827,
+        1127
+      ],
+      "sha256": "bbc2dea44e7deb47c69959570af146e9c23cc411ecf321649cdb638543a4ddb1"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top35_up_to_3500.png",
+      "pixels": [
+        2826,
+        1127
+      ],
+      "sha256": "c8645bd239b710058f4f780c46e5fd05ce011161da2b4532f36fd96deb3ef9af"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top15_up_to_3500.png",
+      "pixels": [
+        2827,
+        1127
+      ],
+      "sha256": "ec7ab01b674025c07c5e346e06982ec4f8831aa080432a06ca70e4ae7a2ddeeb"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top25_union_powerpoint.png",
+      "pixels": [
+        2831,
+        2363
+      ],
+      "sha256": "6bcd49681b2709e52fa3a074b05ce595af1db1f51f4dd46b40544b634e8bf307"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/SVD_Adventure_neighborhood_recommendation_change_heatmap_up_to_3500_euclidean.png",
+      "pixels": [
+        3384,
+        2404
+      ],
+      "sha256": "4c62cb9020834344abab354c77665a7aaae2c8f34c987745efd6cb552e7d34d3"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/NMF_Adventure_umap_before_after_3500.png",
+      "pixels": [
+        2822,
+        1253
+      ],
+      "sha256": "b6660e9bd8ee5c5c0857738b664b11c40f91019f604d5c4d1c2593217190aa50"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/SVD_Adventure_umap_before_after_3500.png",
+      "pixels": [
+        2827,
+        1253
+      ],
+      "sha256": "45b12fa88656df1b719342e950e7aecf6f2a8b15b51f06548662745f3248e5d4"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_score_offsets.png",
+      "pixels": [
+        2814,
+        1602
+      ],
+      "sha256": "6e6ce8ab9edb70b44b4d78316fdfc2a2b549b6075c4ced6d853672a8d4ff3457"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/NMF_Adventure_neighborhood_recommendation_change_heatmap_up_to_3500_euclidean.png",
+      "pixels": [
+        3385,
+        2404
+      ],
+      "sha256": "02b3e41d479629ecc8054df999ebc3dd6a28d03cc97fdc662ff0fdc675680f96"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_most_repeated_books_with_genres.png",
+      "pixels": [
+        2824,
+        2120
+      ],
+      "sha256": "6a058607d06791f60430efa9ad4ca4cf9f5b1cc075a1fdc10048e004c1b0cffc"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_prediction_real_users_adventure_non_adventure_4panel.png",
+      "pixels": [
+        2826,
+        2209
+      ],
+      "sha256": "173f7a4e09a798101621ff4d2f667be6a186bf2f9a51cb4f7266efe3a97b0df4"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/comparision - Adventure_top35_union_powerpoint.png",
+      "pixels": [
+        2830,
+        2363
+      ],
+      "sha256": "3f5a6ee2a3d563507c54afe90fe577949296e2c25df4668fdb564f0d0f60ca57"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_training_synthetic_users_adventure_non_adventure_4panel.png",
+      "pixels": [
+        2826,
+        2209
+      ],
+      "sha256": "cefcfdc243fc54713d3778e37b88459cb483cb470fb0c80435a4966e68f6303a"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_training_all_users_adventure_non_adventure_4panel.png",
+      "pixels": [
+        2827,
+        2209
+      ],
+      "sha256": "a7af418f26e3b3c543e71ded056c92dcb9c9b3fd270b27658118d2e50fb16f8b"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_cosine_and_neighbor_contributions.png",
+      "pixels": [
+        2827,
+        1129
+      ],
+      "sha256": "10522a649e6bd951a04052220df7d1aeb9c3dce4de0f3629205bbb5fad89fa6f"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/NMF_Adventure_neighborhood_recommendation_change_heatmap_up_to_3500_cosine.png",
+      "pixels": [
+        3385,
+        2404
+      ],
+      "sha256": "8b4995ddd58a1dc8eebb4a126b26c7d9f5d0c46f554dda007cd78dfa08e5e6b9"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/NMF_Adventure_reviewer_hypothesis_4panel.png",
+      "pixels": [
+        4306,
+        1199
+      ],
+      "sha256": "2958d5092fb569f7a8be15b5c618f1395092ea858132f521b96278e29aaa9871"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/comparision - Adventure_top15_union_powerpoint.png",
+      "pixels": [
+        2830,
+        2363
+      ],
+      "sha256": "a74970f351783867d31da0da8def477cca1db8b78605a13e713c36909219c671"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_personalization_3panel.png",
+      "pixels": [
+        3587,
+        1168
+      ],
+      "sha256": "ec101aed2fa0fff71534a25d844daa5e0b8b4856f93fdfc2af892c2e165d1c34"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/SVD_Adventure_neighborhood_recommendation_change_heatmap_up_to_3500_cosine.png",
+      "pixels": [
+        3384,
+        2404
+      ],
+      "sha256": "729d50aaf0470b09d275b8d0a3580e82da43344d42bf4ab7ae7017ac9fb82541"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/comparision - Adventure_top25_union_powerpoint.png",
+      "pixels": [
+        2831,
+        2363
+      ],
+      "sha256": "6bcd49681b2709e52fa3a074b05ce595af1db1f51f4dd46b40544b634e8bf307"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_training_all_and_synthetic_8panel_paper.png",
+      "pixels": [
+        2826,
+        2909
+      ],
+      "sha256": "13464026e78ab87fb22bb417601db46d56eb125a498e6ddb97701c4859d2b411"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/Adventure_book_bi.png",
+      "pixels": [
+        2814,
+        1602
+      ],
+      "sha256": "19b10bf307ad3424061e3e24ef04b8ca291b188b8b95e5e3d3b89bb9666dfdb7"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/final_results/SVD_Adventure_reviewer_hypothesis_4panel.png",
+      "pixels": [
+        4307,
+        1199
+      ],
+      "sha256": "5909897c93e088748d3ab08adafa8778039f708af45bd1d24a8e6b5854aa4caf"
+    }
+  ],
+  "checkpoints": [
+    {
+      "model": "svd",
+      "n_fake": 2,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_2.npz",
+      "sha256": "96a51029a6d389ffcf4edaf84fba3beab0ed377caec2e86bf8ef6fd59e03b4f8",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 4,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_4.npz",
+      "sha256": "d4841b7f087455e02ec6a5fc5633b7f8fe29be68164026e028c752f806d7a27c",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 6,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_6.npz",
+      "sha256": "ad4196133ec76d8cf7588d47667608f68ac6152190d6e27d1b3d51b5d0048dee",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 25,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_25.npz",
+      "sha256": "7b70c2b82338782ef9f310b595a95d75dbb3d7cc77148069052dd12181c4cdc3",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 50,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_50.npz",
+      "sha256": "92809b0618f67e6fae571ae904777a0804e4e0a8ee581c40c5c73e1245a8eb11",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 100,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_100.npz",
+      "sha256": "3aac19a170da646ac7ddf4a112da6fa4b3830103de5db5384645c646214c6c5c",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_200.npz",
+      "sha256": "238eb9cc38cfeec7f7e202cd633e7c78cbaf8888252568c29ace8933a02c0f9f",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 500,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_500.npz",
+      "sha256": "8a00cae29717e1f47fae1e2515ef7004789ed2ef6a56209f0d34adc5aa5aae80",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 1000,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_1000.npz",
+      "sha256": "bd45291dd06bd9a6694e88059ca89906a13a3b1f289d519166c01fd85b5b8d3b",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 2000,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_2000.npz",
+      "sha256": "a5eba276cd364b004ee25272dcadf811a35cdb777a0e5ec698d3773e535db46e",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 2500,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_2500.npz",
+      "sha256": "c95d974c6103176c1500459340f95ff4262551cc9a4628bcd761aafc9aeee8cb",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 3000,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_3000.npz",
+      "sha256": "d253a99b673175ee02d98a9446cdd1468adc7971fcf183222e41a240addb7506",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "svd",
+      "n_fake": 3500,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_3500.npz",
+      "sha256": "644ba6da2d796a1c637f07015b30c5f27b6009105e750d722776e95dd8ab3088",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "nmf",
+      "n_fake": 2,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_2.npz",
+      "sha256": "b779ee872f20a177870865eea250f00815071057319ab425e98863f5a0d82b9e",
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 4,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_4.npz",
+      "sha256": "c299da6487c80a5106038acbdb5416c9cdd36e04979d71aa02cd7cf61196eb37",
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 6,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_6.npz",
+      "sha256": "381acf8f669e22f91b3bc14ce51f33e64f34fd2ac91200cb4428d96698fefc27",
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 25,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_25.npz",
+      "sha256": "88afd93ffb52da4b5fb64f2c8cd586d03deee62c420de23a6a81da843924e1d8",
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 50,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_50.npz",
+      "sha256": "f25d21f60939bc8c45c1440a66828ea186f9f3900681ac0726853e8304a90419",
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 100,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_100.npz",
+      "sha256": "9d1730799abe38a21bc1b11a3ec73724ce8ceefbdf8ec8426549a1eb002b1db7",
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 200,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_200.npz",
+      "sha256": "36842831b3cd266fc82c4406d157da436f3b614cd11050e506c4ed78b385f24c",
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 500,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_500.npz",
+      "sha256": "9a3f47667aa1cfbaa3912e36f28f1e141e078f1df3e306092cbe9460777f12e4",
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 1000,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_1000.npz",
+      "sha256": "b02da8ff70c80dfadd9eee1ee69ece22c58cc110dc1f5de9db30b37180f67099",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "nmf",
+      "n_fake": 2000,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_2000.npz",
+      "sha256": "e576fb053c3d16bf627dba0854570ecc87ade85f12f3d874bda7d07e605c0703",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "nmf",
+      "n_fake": 2500,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_2500.npz",
+      "sha256": "9f8fdad52cd5e57168f80d5d41414005d81bffe52d8625b90c72066c4adad6fc",
+      "nonnegative_factors": false
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3000,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_3000.npz",
+      "sha256": "79b3766825186bd480132f30b6816baa8cc451ba66b3fbb131a44124ca188bc4",
+      "nonnegative_factors": true
+    },
+    {
+      "model": "nmf",
+      "n_fake": 3500,
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_3500.npz",
+      "sha256": "4f3ff6fe8266cb7ceae3181eb85b0dbd5027ce7b51a2b155b5dfa3f5ce541406",
+      "nonnegative_factors": true
+    }
+  ],
+  "finished": 1793050091.7165813
+}

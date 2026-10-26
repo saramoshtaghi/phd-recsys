@@ -1,0 +1,32 @@
+{
+  "model": "nmf",
+  "genre": "Adventure",
+  "n_fake": 4,
+  "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+  "n_real": 53424,
+  "books": 9415,
+  "target_books": 1789,
+  "non_target_books": 7626,
+  "ratings": 5853229,
+  "parameters": {
+    "biased": true,
+    "n_factors": 8,
+    "n_epochs": 180,
+    "reg_pu": 0.0,
+    "reg_qi": 0.002,
+    "random_state": 42,
+    "verbose": false
+  },
+  "initial_common_hashes": [
+    "230771ec7136bd3a062f4d8a364caefd47d2e8ee849ebf98993f73ab2a725d68",
+    "c3996ef854dbeb7537a1c82447cd914b9ca56767fa3657acf1755d5a184858f3"
+  ],
+  "shared_initialization_verified": true,
+  "raw_scores": true,
+  "factors_clipped": false,
+  "min_pu": 6.3400086888953975e-18,
+  "min_qi": 1.461626801924713e-09,
+  "nonnegative_factors": true,
+  "elapsed_seconds": 335.06322026252747,
+  "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/nmf_adventure_4.npz"
+}

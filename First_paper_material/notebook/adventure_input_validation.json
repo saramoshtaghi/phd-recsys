@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "checked_largest_csv_rows": 38768069,
+  "original_rows_compared_exactly": 5815569,
+  "all_3500_fake_users_rate_every_book_once": true,
+  "ratings_follow_policy": true,
+  "all_13_input_manifests_verified": true,
+  "source_dataframe_sha256": "17e7cc08f1f728374d9a0a6f94df77dfc24d8ee6cf429212eda37f5ecf80129b"
+}

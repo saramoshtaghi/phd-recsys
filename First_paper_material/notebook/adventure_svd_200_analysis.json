@@ -1,0 +1,956 @@
+{
+  "model": "svd",
+  "n_fake": 200,
+  "genre": "Adventure",
+  "components": [
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "group": "target",
+      "view": "real_observed_training",
+      "n_pairs": 1241666,
+      "mu": 3.3902722700803225,
+      "mean_bu": 0.17555627842423377,
+      "mean_bi": 0.2735162058956729,
+      "mean_interaction": 0.13991153728127334,
+      "mean_prediction": 3.9792562916815033,
+      "mae": 0.5402169323734124,
+      "mean_recorded_rating": 3.997385770408467
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "group": "target",
+      "view": "real_unseen_prediction",
+      "n_pairs": 94333870,
+      "n_users": 53424,
+      "mu": 3.3902722700803225,
+      "mean_bu": 0.18179150930860763,
+      "mean_bi": 0.2393161211020259,
+      "mean_interaction": -0.05232453158875295,
+      "mean_prediction": 3.759055368902203
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "group": "target",
+      "view": "synthetic_training",
+      "n_pairs": 357800,
+      "mu": 3.3902722700803225,
+      "mean_bu": -0.02313539857525541,
+      "mean_bi": 0.2397635074890787,
+      "mean_interaction": 1.37501104671869,
+      "mean_offset": 3.6069003789941463,
+      "mean_prediction": 4.981911425712835,
+      "mae": 0.02261234086732366,
+      "rmse": 0.08820667403381273,
+      "mean_recorded_rating": 5,
+      "negative_interaction_percent": 0.0,
+      "min_interaction": 0.42680505996999146
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "group": "target",
+      "view": "all_training",
+      "n_pairs": 1599466,
+      "mu": 3.3902722700803225,
+      "mean_bu": 0.13110901788201704,
+      "mean_bi": 0.2659657387460871,
+      "mean_interaction": 0.41620287731395156,
+      "mean_prediction": 4.2035499040223785,
+      "mae": 0.4244289613625385,
+      "mean_recorded_rating": 4.2216702324400766
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "group": "non_target",
+      "view": "real_observed_training",
+      "n_pairs": 4573903,
+      "mu": 3.3902722700803225,
+      "mean_bu": 0.17230639467048062,
+      "mean_bi": 0.08675432222912954,
+      "mean_interaction": 0.2382727606563781,
+      "mean_prediction": 3.8876057476363135,
+      "mae": 0.5731706110662306,
+      "mean_recorded_rating": 3.8965905048707854
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "group": "non_target",
+      "view": "real_unseen_prediction",
+      "n_pairs": 402837521,
+      "n_users": 53424,
+      "mu": 3.3902722700803225,
+      "mean_bu": 0.18179150930860763,
+      "mean_bi": 0.06541608739986203,
+      "mean_interaction": 0.03588057163738868,
+      "mean_prediction": 3.673360438426181
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "group": "non_target",
+      "view": "synthetic_training",
+      "n_pairs": 1525200,
+      "mu": 3.3902722700803225,
+      "mean_bu": -0.023135398575255407,
+      "mean_bi": 0.06565591004961237,
+      "mean_interaction": -2.434285549598076,
+      "mean_offset": 3.4327927815546797,
+      "mean_prediction": 0.9985072319566036,
+      "mae": 0.005963586269541083,
+      "rmse": 0.008283602518899426,
+      "mean_recorded_rating": 1,
+      "negative_interaction_percent": 100.0,
+      "min_interaction": -3.2833927277443458
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "group": "non_target",
+      "view": "all_training",
+      "n_pairs": 6099103,
+      "mu": 3.3902722700803225,
+      "mean_bu": 0.12343235154341808,
+      "mean_bi": 0.08147825159116859,
+      "mean_interaction": -0.4300527184837665,
+      "mean_prediction": 3.165130154731145,
+      "mae": 0.43132940028164296,
+      "mean_recorded_rating": 3.1722413935295077
+    }
+  ],
+  "recommendations": [
+    {
+      "model": "svd",
+      "genre": "Adventure",
+      "n_fake": 200,
+      "k": 15,
+      "n_users": 53424,
+      "mean_target_count": 4.447458071278826,
+      "target_share_percent": 29.649720475192172,
+      "union_distinct_target_titles": 727,
+      "most_frequent_book_id": 8946,
+      "most_frequent_book_title": "The Divan",
+      "most_frequent_book_user_reach_percent": 18.940925426774484,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "genre": "Adventure",
+      "n_fake": 200,
+      "k": 20,
+      "n_users": 53424,
+      "mean_target_count": 5.898566187481282,
+      "target_share_percent": 29.49283093740641,
+      "union_distinct_target_titles": 815,
+      "most_frequent_book_id": 8946,
+      "most_frequent_book_title": "The Divan",
+      "most_frequent_book_user_reach_percent": 21.168388739143456,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "genre": "Adventure",
+      "n_fake": 200,
+      "k": 25,
+      "n_users": 53424,
+      "mean_target_count": 7.339266996106619,
+      "target_share_percent": 29.357067984426475,
+      "union_distinct_target_titles": 899,
+      "most_frequent_book_id": 8946,
+      "most_frequent_book_title": "The Divan",
+      "most_frequent_book_user_reach_percent": 23.045822102425877,
+      "nmf_nonnegative_constraint_ok": true
+    },
+    {
+      "model": "svd",
+      "genre": "Adventure",
+      "n_fake": 200,
+      "k": 35,
+      "n_users": 53424,
+      "mean_target_count": 10.172263402216233,
+      "target_share_percent": 29.06360972061781,
+      "union_distinct_target_titles": 1059,
+      "most_frequent_book_id": 8946,
+      "most_frequent_book_title": "The Divan",
+      "most_frequent_book_user_reach_percent": 26.248502545672356,
+      "nmf_nonnegative_constraint_ok": true
+    }
+  ],
+  "component_swaps": [
+    {
+      "k": 15,
+      "baseline": 3.4651841868823,
+      "after": 4.447458071278826,
+      "embedding_only": 2.9872716382150344,
+      "item_bias_only": 5.575247079964061,
+      "embedding_swap_allocation": -0.8028507786762507,
+      "item_bias_swap_allocation": 1.7851246630727762,
+      "delta_count": 0.9822738843965255
+    },
+    {
+      "k": 25,
+      "baseline": 5.863600628930818,
+      "after": 7.339266996106619,
+      "embedding_only": 4.9258198562443845,
+      "item_bias_only": 9.260893980233602,
+      "embedding_swap_allocation": -1.4297038784067082,
+      "item_bias_swap_allocation": 2.9053702455825094,
+      "delta_count": 1.4756663671758012
+    },
+    {
+      "k": 35,
+      "baseline": 8.254979035639414,
+      "after": 10.172263402216233,
+      "embedding_only": 6.820960616951183,
+      "item_bias_only": 12.938398472596585,
+      "embedding_swap_allocation": -2.1000767445342916,
+      "item_bias_swap_allocation": 4.017361111111111,
+      "delta_count": 1.917284366576819
+    }
+  ],
+  "genre_biases": [
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Adult",
+      "mean_bi": -0.000956905903264183,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.389315364177058
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Adventure",
+      "mean_bi": 0.23976350748907868,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.630035777569401
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Children's",
+      "mean_bi": 0.18073091248087927,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.571003182561202
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Classics",
+      "mean_bi": 0.0806608929234009,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.4709331630037235
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Drama",
+      "mean_bi": 0.07172791318885956,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.4620001832691822
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Fantasy",
+      "mean_bi": 0.13773442343839856,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.528006693518721
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Historical",
+      "mean_bi": 0.1316403230680027,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.521912593148325
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Horror",
+      "mean_bi": 0.04907908224459091,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.4393513523249135
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Mystery",
+      "mean_bi": 0.063706056235926,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.4539783263162485
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Nonfiction",
+      "mean_bi": 0.13881217346399127,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.529084443544314
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Romance",
+      "mean_bi": 0.009448800835298077,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.3997210709156205
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Science Fiction",
+      "mean_bi": 0.11754093800228546,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.507813208082608
+    },
+    {
+      "model": "svd",
+      "n_fake": 200,
+      "genre": "Thriller",
+      "mean_bi": 0.07201172979365067,
+      "mu": 3.3902722700803225,
+      "mu_plus_bi": 3.462283999873973
+    }
+  ],
+  "neighbors": [
+    {
+      "metric": "cosine",
+      "mean_turnover": 0.9247098682240191,
+      "mean_replaced_count": 18.49419736448038,
+      "retained_after_contribution": 0.313292714884696,
+      "incoming_after_contribution": 3.9495245582509733,
+      "retained_before_contribution": 0.25167714884696013,
+      "incoming_before_contribution": 3.2025250823599882,
+      "genre_mean_books_top15": {
+        "Adult": 0.7148856319257263,
+        "Adventure": 4.26281727313567,
+        "Children's": 1.5089809823300389,
+        "Classics": 1.2416563716681641,
+        "Drama": 4.228594826295298,
+        "Fantasy": 5.198980795148248,
+        "Historical": 1.1939540281521415,
+        "Horror": 1.6052579365079365,
+        "Mystery": 3.55274876460018,
+        "Nonfiction": 1.3814493486073676,
+        "Romance": 2.518098607367475,
+        "Science Fiction": 0.8787239817310573,
+        "Thriller": 1.7138514525306978
+      },
+      "neighbor_historical_genre_percent": {
+        "Adult": 0.0,
+        "Adventure": 6.079103024857742,
+        "Children's": 3.2602388439652588,
+        "Classics": 2.7484838274932617,
+        "Drama": 46.17830937406409,
+        "Fantasy": 18.73427672955975,
+        "Historical": 0.06392258161126085,
+        "Horror": 0.9364705001497454,
+        "Mystery": 11.17999401018269,
+        "Nonfiction": 0.23500673854447438,
+        "Romance": 8.556266846361186,
+        "Science Fiction": 1.3041891284815814,
+        "Thriller": 0.7237383947289608
+      },
+      "validation_queries": 5
+    },
+    {
+      "metric": "euclidean",
+      "mean_turnover": 0.9070455226115602,
+      "mean_replaced_count": 18.140910452231203,
+      "retained_after_contribution": 0.3932951482479784,
+      "incoming_after_contribution": 4.026225104821803,
+      "retained_before_contribution": 0.31380372117400424,
+      "incoming_before_contribution": 3.1806351078167117,
+      "genre_mean_books_top15": {
+        "Adult": 0.6861710092842168,
+        "Adventure": 4.4195202530697815,
+        "Children's": 1.5798255465708295,
+        "Classics": 1.245901654687032,
+        "Drama": 4.2656783468104225,
+        "Fantasy": 5.151221361185984,
+        "Historical": 1.239462601078167,
+        "Horror": 1.5504015049415993,
+        "Mystery": 3.472939128481581,
+        "Nonfiction": 1.3627292976939203,
+        "Romance": 2.452150718778077,
+        "Science Fiction": 0.868590895477688,
+        "Thriller": 1.705407681940701
+      },
+      "neighbor_historical_genre_percent": {
+        "Adult": 0.0,
+        "Adventure": 6.1335729260257565,
+        "Children's": 3.1923854447439353,
+        "Classics": 2.5620507637017074,
+        "Drama": 46.08733902365978,
+        "Fantasy": 18.94232929020665,
+        "Historical": 0.06654312668463612,
+        "Horror": 0.9436769991015275,
+        "Mystery": 11.426418837975442,
+        "Nonfiction": 0.21816037735849056,
+        "Romance": 8.472783767595088,
+        "Science Fiction": 1.2327792752321054,
+        "Thriller": 0.7219601677148847
+      },
+      "validation_queries": 5
+    }
+  ],
+  "frequent_books": [
+    {
+      "k": 15,
+      "book_id": 8946,
+      "title": "The Divan",
+      "genres": "Adventure, Drama",
+      "users": 10119,
+      "reach_percent": 18.940925426774484,
+      "original_rating_count": 75,
+      "original_mean_rating": 4.72
+    },
+    {
+      "k": 15,
+      "book_id": 4154,
+      "title": "Book of Mormon, Doctrine and Covenants, Pearl of Great Price",
+      "genres": "Fantasy, Horror",
+      "users": 10073,
+      "reach_percent": 18.85482180293501,
+      "original_rating_count": 293,
+      "original_mean_rating": 4.092150170648464
+    },
+    {
+      "k": 15,
+      "book_id": 1338,
+      "title": "The Book of Mormon: Another Testament of Jesus Christ",
+      "genres": "Fantasy, Mystery",
+      "users": 8353,
+      "reach_percent": 15.635294998502546,
+      "original_rating_count": 735,
+      "original_mean_rating": 4.104761904761904
+    },
+    {
+      "k": 15,
+      "book_id": 9566,
+      "title": "Attack of the Deranged Mutant Killer Monster Snow Goons",
+      "genres": "Fantasy, Mystery",
+      "users": 7373,
+      "reach_percent": 13.800913447139862,
+      "original_rating_count": 147,
+      "original_mean_rating": 4.7687074829931975
+    },
+    {
+      "k": 15,
+      "book_id": 3628,
+      "title": "The Complete Calvin and Hobbes",
+      "genres": "Children's, Classics",
+      "users": 7107,
+      "reach_percent": 13.303009883198563,
+      "original_rating_count": 482,
+      "original_mean_rating": 4.829875518672199
+    },
+    {
+      "k": 15,
+      "book_id": 6590,
+      "title": "The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury",
+      "genres": "Drama, Historical",
+      "users": 6695,
+      "reach_percent": 12.531820904462414,
+      "original_rating_count": 243,
+      "original_mean_rating": 4.757201646090535
+    },
+    {
+      "k": 15,
+      "book_id": 1933,
+      "title": "\u0623\u062d\u0628\u0628\u062a\u0643 \u0623\u0643\u062b\u0631 \u0645\u0645\u0627 \u064a\u0646\u0628\u063a\u064a",
+      "genres": "Romance, Drama",
+      "users": 6207,
+      "reach_percent": 11.61837376460018,
+      "original_rating_count": 259,
+      "original_mean_rating": 3.332046332046332
+    },
+    {
+      "k": 15,
+      "book_id": 2082,
+      "title": "The Qur'an / \u0627\u0644\u0642\u0631\u0622\u0646 \u0627\u0644\u0643\u0631\u064a\u0645",
+      "genres": "Romance, Horror",
+      "users": 6131,
+      "reach_percent": 11.476115603474094,
+      "original_rating_count": 303,
+      "original_mean_rating": 3.907590759075908
+    },
+    {
+      "k": 15,
+      "book_id": 6920,
+      "title": "The Indispensable Calvin and Hobbes",
+      "genres": "Mystery, Thriller",
+      "users": 5679,
+      "reach_percent": 10.630053908355794,
+      "original_rating_count": 214,
+      "original_mean_rating": 4.766355140186916
+    },
+    {
+      "k": 15,
+      "book_id": 5059,
+      "title": "Love Wins: A Book About Heaven, Hell, and the Fate of Every Person Who Ever Lived",
+      "genres": "Thriller, Mystery",
+      "users": 5318,
+      "reach_percent": 9.954327643006888,
+      "original_rating_count": 175,
+      "original_mean_rating": 3.4685714285714284
+    },
+    {
+      "k": 15,
+      "book_id": 9625,
+      "title": "Healthy Sleep Habits, Happy Child",
+      "genres": "Science Fiction, Thriller",
+      "users": 5071,
+      "reach_percent": 9.49198861934711,
+      "original_rating_count": 117,
+      "original_mean_rating": 3.982905982905983
+    },
+    {
+      "k": 15,
+      "book_id": 8548,
+      "title": "This is Not My Hat",
+      "genres": "Children's, Adventure",
+      "users": 4825,
+      "reach_percent": 9.031521413596884,
+      "original_rating_count": 77,
+      "original_mean_rating": 4.584415584415584
+    },
+    {
+      "k": 15,
+      "book_id": 7516,
+      "title": "Mars, Volume 01",
+      "genres": "Fantasy, Adventure",
+      "users": 4783,
+      "reach_percent": 8.952905061395628,
+      "original_rating_count": 147,
+      "original_mean_rating": 4.006802721088436
+    },
+    {
+      "k": 15,
+      "book_id": 5580,
+      "title": "The Calvin and Hobbes Lazy Sunday Book",
+      "genres": "Children's, Classics",
+      "users": 4665,
+      "reach_percent": 8.732030548068284,
+      "original_rating_count": 267,
+      "original_mean_rating": 4.689138576779026
+    },
+    {
+      "k": 15,
+      "book_id": 2236,
+      "title": "Holy Bible: New International Version",
+      "genres": "Romance, Adult",
+      "users": 4581,
+      "reach_percent": 8.574797843665769,
+      "original_rating_count": 350,
+      "original_mean_rating": 4.402857142857143
+    },
+    {
+      "k": 35,
+      "book_id": 8946,
+      "title": "The Divan",
+      "genres": "Adventure, Drama",
+      "users": 14023,
+      "reach_percent": 26.248502545672356,
+      "original_rating_count": 75,
+      "original_mean_rating": 4.72
+    },
+    {
+      "k": 35,
+      "book_id": 3628,
+      "title": "The Complete Calvin and Hobbes",
+      "genres": "Children's, Classics",
+      "users": 12422,
+      "reach_percent": 23.251722072476788,
+      "original_rating_count": 482,
+      "original_mean_rating": 4.829875518672199
+    },
+    {
+      "k": 35,
+      "book_id": 9566,
+      "title": "Attack of the Deranged Mutant Killer Monster Snow Goons",
+      "genres": "Fantasy, Mystery",
+      "users": 11649,
+      "reach_percent": 21.804806828391733,
+      "original_rating_count": 147,
+      "original_mean_rating": 4.7687074829931975
+    },
+    {
+      "k": 35,
+      "book_id": 6590,
+      "title": "The Authoritative Calvin and Hobbes: A Calvin and Hobbes Treasury",
+      "genres": "Drama, Historical",
+      "users": 11605,
+      "reach_percent": 21.72244684037137,
+      "original_rating_count": 243,
+      "original_mean_rating": 4.757201646090535
+    },
+    {
+      "k": 35,
+      "book_id": 4154,
+      "title": "Book of Mormon, Doctrine and Covenants, Pearl of Great Price",
+      "genres": "Fantasy, Horror",
+      "users": 11471,
+      "reach_percent": 21.471623240491166,
+      "original_rating_count": 293,
+      "original_mean_rating": 4.092150170648464
+    },
+    {
+      "k": 35,
+      "book_id": 6920,
+      "title": "The Indispensable Calvin and Hobbes",
+      "genres": "Mystery, Thriller",
+      "users": 10771,
+      "reach_percent": 20.161350703803535,
+      "original_rating_count": 214,
+      "original_mean_rating": 4.766355140186916
+    },
+    {
+      "k": 35,
+      "book_id": 1338,
+      "title": "The Book of Mormon: Another Testament of Jesus Christ",
+      "genres": "Fantasy, Mystery",
+      "users": 9915,
+      "reach_percent": 18.559074573225516,
+      "original_rating_count": 735,
+      "original_mean_rating": 4.104761904761904
+    },
+    {
+      "k": 35,
+      "book_id": 1788,
+      "title": "The Calvin and Hobbes Tenth Anniversary Book",
+      "genres": "Romance, Drama",
+      "users": 9214,
+      "reach_percent": 17.246930218628332,
+      "original_rating_count": 652,
+      "original_mean_rating": 4.728527607361963
+    },
+    {
+      "k": 35,
+      "book_id": 5580,
+      "title": "The Calvin and Hobbes Lazy Sunday Book",
+      "genres": "Children's, Classics",
+      "users": 8695,
+      "reach_percent": 16.27545672356993,
+      "original_rating_count": 267,
+      "original_mean_rating": 4.689138576779026
+    },
+    {
+      "k": 35,
+      "book_id": 3753,
+      "title": "Harry Potter Collection (Harry Potter, #1-6)",
+      "genres": "Mystery, Thriller",
+      "users": 8675,
+      "reach_percent": 16.238020365378855,
+      "original_rating_count": 233,
+      "original_mean_rating": 4.6995708154506435
+    },
+    {
+      "k": 35,
+      "book_id": 2082,
+      "title": "The Qur'an / \u0627\u0644\u0642\u0631\u0622\u0646 \u0627\u0644\u0643\u0631\u064a\u0645",
+      "genres": "Romance, Horror",
+      "users": 8229,
+      "reach_percent": 15.40318957771788,
+      "original_rating_count": 303,
+      "original_mean_rating": 3.907590759075908
+    },
+    {
+      "k": 35,
+      "book_id": 8548,
+      "title": "This is Not My Hat",
+      "genres": "Children's, Adventure",
+      "users": 7883,
+      "reach_percent": 14.75554058101228,
+      "original_rating_count": 77,
+      "original_mean_rating": 4.584415584415584
+    },
+    {
+      "k": 35,
+      "book_id": 6361,
+      "title": "There's Treasure Everywhere: A Calvin and Hobbes Collection",
+      "genres": "Romance, Drama",
+      "users": 7827,
+      "reach_percent": 14.650718778077268,
+      "original_rating_count": 263,
+      "original_mean_rating": 4.760456273764259
+    },
+    {
+      "k": 35,
+      "book_id": 1933,
+      "title": "\u0623\u062d\u0628\u0628\u062a\u0643 \u0623\u0643\u062b\u0631 \u0645\u0645\u0627 \u064a\u0646\u0628\u063a\u064a",
+      "genres": "Romance, Drama",
+      "users": 7490,
+      "reach_percent": 14.019916142557651,
+      "original_rating_count": 259,
+      "original_mean_rating": 3.332046332046332
+    },
+    {
+      "k": 35,
+      "book_id": 9625,
+      "title": "Healthy Sleep Habits, Happy Child",
+      "genres": "Science Fiction, Thriller",
+      "users": 7409,
+      "reach_percent": 13.868298891883798,
+      "original_rating_count": 117,
+      "original_mean_rating": 3.982905982905983
+    }
+  ],
+  "examples": [
+    {
+      "user_id": 51238,
+      "books": [
+        {
+          "book_id": 287,
+          "title": "The Fountainhead",
+          "genres": "Classics, Drama"
+        },
+        {
+          "book_id": 5730,
+          "title": "The Blind Owl",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 5046,
+          "title": "\u0623\u0648\u0644\u0627\u062f \u062d\u0627\u0631\u062a\u0646\u0627",
+          "genres": "Romance, Drama"
+        },
+        {
+          "book_id": 8025,
+          "title": "The Wretched of the Earth",
+          "genres": "Classics, Nonfiction"
+        },
+        {
+          "book_id": 5202,
+          "title": "Asterios Polyp",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 6298,
+          "title": "The Poetry of Pablo Neruda",
+          "genres": "Historical, Drama"
+        },
+        {
+          "book_id": 255,
+          "title": "Atlas Shrugged",
+          "genres": "Classics, Drama"
+        },
+        {
+          "book_id": 9576,
+          "title": "The Medium is the Massage",
+          "genres": "Nonfiction, Classics"
+        },
+        {
+          "book_id": 9991,
+          "title": "The Famished Road",
+          "genres": "Fantasy, Adventure"
+        },
+        {
+          "book_id": 7242,
+          "title": "The Broken Wings",
+          "genres": "Fantasy, Drama"
+        },
+        {
+          "book_id": 9967,
+          "title": "\u0627\u0644\u062d\u0631\u0627\u0641\u064a\u0634",
+          "genres": "Classics, Drama"
+        },
+        {
+          "book_id": 8233,
+          "title": "The Book of Disquiet",
+          "genres": "Fantasy, Drama"
+        },
+        {
+          "book_id": 8326,
+          "title": "The Enchanted",
+          "genres": "Fantasy, Mystery"
+        },
+        {
+          "book_id": 94,
+          "title": "One Hundred Years of Solitude",
+          "genres": "Historical, Drama"
+        },
+        {
+          "book_id": 1503,
+          "title": "Jitterbug Perfume",
+          "genres": "Fantasy, Adventure"
+        }
+      ]
+    },
+    {
+      "user_id": 42542,
+      "books": [
+        {
+          "book_id": 4591,
+          "title": "\u0623\u0646\u062a \u0644\u064a",
+          "genres": "Romance, Adult"
+        },
+        {
+          "book_id": 4867,
+          "title": "Skin Trade (Anita Blake, Vampire Hunter #17)",
+          "genres": "Horror, Mystery"
+        },
+        {
+          "book_id": 8855,
+          "title": "Screw It, Let's Do It: Lessons In Life",
+          "genres": "Nonfiction, Adventure"
+        },
+        {
+          "book_id": 6143,
+          "title": "Hit List (Anita Blake, Vampire Hunter #20)",
+          "genres": "Thriller, Horror"
+        },
+        {
+          "book_id": 4425,
+          "title": "Blood Noir (Anita Blake, Vampire Hunter #16)",
+          "genres": "Mystery, Drama"
+        },
+        {
+          "book_id": 5684,
+          "title": "A Lick of Frost (Merry Gentry, #6)",
+          "genres": "Fantasy, Romance"
+        },
+        {
+          "book_id": 6080,
+          "title": "Swallowing Darkness (Merry Gentry, #7)",
+          "genres": "Fantasy, Romance"
+        },
+        {
+          "book_id": 5609,
+          "title": "Mistral's Kiss (Merry Gentry, #5)",
+          "genres": "Horror, Thriller"
+        },
+        {
+          "book_id": 9603,
+          "title": "The Mane Event (Pride, #1)",
+          "genres": "Historical, Nonfiction"
+        },
+        {
+          "book_id": 3990,
+          "title": "The Harlequin (Anita Blake, Vampire Hunter #15)",
+          "genres": "Fantasy, Horror"
+        },
+        {
+          "book_id": 8851,
+          "title": "Affliction (Anita Blake, Vampire Hunter #22)",
+          "genres": "Mystery, Fantasy"
+        },
+        {
+          "book_id": 3832,
+          "title": "Danse Macabre (Anita Blake, Vampire Hunter, #14)",
+          "genres": "Horror, Fantasy"
+        },
+        {
+          "book_id": 5410,
+          "title": "Flirt (Anita Blake, Vampire Hunter #18)",
+          "genres": "Romance, Drama"
+        },
+        {
+          "book_id": 7600,
+          "title": "Divine Misdemeanors (Merry Gentry, #8)",
+          "genres": "Thriller, Mystery"
+        },
+        {
+          "book_id": 3608,
+          "title": "Incubus Dreams (Anita Blake, Vampire Hunter, #12)",
+          "genres": "Science Fiction, Nonfiction"
+        }
+      ]
+    },
+    {
+      "user_id": 17379,
+      "books": [
+        {
+          "book_id": 1933,
+          "title": "\u0623\u062d\u0628\u0628\u062a\u0643 \u0623\u0643\u062b\u0631 \u0645\u0645\u0627 \u064a\u0646\u0628\u063a\u064a",
+          "genres": "Romance, Drama"
+        },
+        {
+          "book_id": 3288,
+          "title": "\u0641\u064a \u0642\u0644\u0628\u064a \u0623\u0646\u062b\u0649 \u0639\u0628\u0631\u064a\u0629",
+          "genres": "Horror, Romance"
+        },
+        {
+          "book_id": 3479,
+          "title": "The Coldest Winter Ever",
+          "genres": "Adult, Drama"
+        },
+        {
+          "book_id": 7762,
+          "title": "Mornings in Jenin",
+          "genres": "Historical, Drama"
+        },
+        {
+          "book_id": 1400,
+          "title": "The Book of Life (All Souls Trilogy, #3)",
+          "genres": "Romance, Mystery"
+        },
+        {
+          "book_id": 9964,
+          "title": "The Mime Order (The Bone Season, #2)",
+          "genres": "Fantasy, Mystery"
+        },
+        {
+          "book_id": 6543,
+          "title": "The Jordan Rules",
+          "genres": "Nonfiction, Drama"
+        },
+        {
+          "book_id": 8062,
+          "title": "Dies the Fire (Emberverse, #1)",
+          "genres": "Nonfiction, Drama"
+        },
+        {
+          "book_id": 319,
+          "title": "City of Lost Souls (The Mortal Instruments, #5)",
+          "genres": "Fantasy, Romance"
+        },
+        {
+          "book_id": 7325,
+          "title": "Rhapsody: Child of Blood (Symphony of Ages, #1)",
+          "genres": "Romance, Drama"
+        },
+        {
+          "book_id": 6977,
+          "title": "The Mortal Instruments (The Mortal Instruments #1-4)",
+          "genres": "Fantasy, Romance"
+        },
+        {
+          "book_id": 134,
+          "title": "City of Glass (The Mortal Instruments, #3)",
+          "genres": "Fantasy, Mystery"
+        },
+        {
+          "book_id": 6158,
+          "title": "The Summer Garden (The Bronze Horseman, #3)",
+          "genres": "Thriller, Mystery"
+        },
+        {
+          "book_id": 309,
+          "title": "City of Fallen Angels (The Mortal Instruments, #4)",
+          "genres": "Fantasy, Mystery"
+        },
+        {
+          "book_id": 8854,
+          "title": "Mark of the Lion Trilogy",
+          "genres": "Historical, Romance"
+        }
+      ]
+    }
+  ],
+  "mean_pairwise_recommendation_jaccard_top15": 0.023040611185679048,
+  "procrustes_aligned_mean_user_cosine": 0.8128465128170363,
+  "min_pu": -3.7402356106188637,
+  "min_qi": -3.0492862021147356,
+  "nmf_nonnegative_constraint_ok": true,
+  "checkpoint": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/svd_adventure_200.npz",
+  "factors_clipped": false,
+  "range_clipped": false,
+  "elapsed_seconds": 48.92699861526489
+}
