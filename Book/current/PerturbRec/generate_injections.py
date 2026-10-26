@@ -6,8 +6,8 @@ import numpy as np
 import pandas as pd
 INPUT_CSV=Path('/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv')
 OUT_DIR=Path('/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/Data')
-RUNS=[2,4,6,25,50,100,200,500,1000,2000,2500,3000]
-GENRES=['Drama','Thriller']
+RUNS=[2,4,6,25,50,100,200,500,1000,2000,2500,3000,3500]
+GENRES=['Drama','Thriller','Adventure']
 POS_RATING,NEG_RATING=5,1
 COLS=['user_id','book_id','rating','genres']
 
