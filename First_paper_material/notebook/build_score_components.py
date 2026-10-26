@@ -4,7 +4,7 @@ for k in ('OPENBLAS_NUM_THREADS','OMP_NUM_THREADS','MKL_NUM_THREADS'):os.environ
 from pathlib import Path
 import sys,json,importlib.util
 import numpy as np,pandas as pd
-R=Path('/home/moshtasa/Research/phd-recsys');L=R/'Book/current/PerturbRec/svd_nmf';OUT=R/'First_paper_material/analysis/score_components';OUT.mkdir(parents=True,exist_ok=True)
+R=Path('/home/moshtasa/Research/phd-recsys');L=R/'Book/current/PerturbRec/svd_nmf';OUT=R/'First_paper_material/notebook'
 spec=importlib.util.spec_from_file_location('old',L/'layer1/notebook/analyze_reviewer_hypothesis.py');old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
 df=pd.read_csv(R/'Book/Archive/data/genre_clean.csv',usecols=['user_id','book_id','rating','genres'])
 users=np.sort(df.user_id.unique());items=np.sort(df.book_id.unique());u=np.searchsorted(users,df.user_id.to_numpy());i=np.searchsorted(items,df.book_id.to_numpy());ratings=df.rating.to_numpy(float)
@@ -28,5 +28,5 @@ for model in ['svd','nmf']:
     vals={'mean_interaction':float(m['fp'].mean(0)@m['q'][mask].mean(0)),'mean_bi':float(m['bi'][mask].mean()),'mean_bu':float(m['fbu'].mean()),'mu':m['mu']};vals['mean_prediction']=sum(vals.values())
     rows.append(dict(model=model,n_fake=n,group=label,view='synthetic_training',n_users=n,n_pairs=int(n*mask.sum()),weighting='equal dense synthetic rating pair',mean_recorded_rating=5 if label=='target' else 1,**vals))
   print(model,n,flush=True)
-pd.DataFrame(rows).to_csv(OUT/'components.csv',index=False)
-(OUT/'validation.json').write_text(json.dumps({'no_retraining':True,'raw_scores':True,'genre':'Thriller','n_real_users':len(users),'n_books':len(items),'target_books':int(target.sum()),'source_data':str(R/'Book/Archive/data/genre_clean.csv'),'notes':'Prediction uses all unseen books, not just top-K; training views measure fitted endpoints, not epoch trajectories.'},indent=2))
+pd.DataFrame(rows).to_csv(OUT/'score_components.csv',index=False)
+(OUT/'score_components_validation.json').write_text(json.dumps({'no_retraining':True,'raw_scores':True,'genre':'Thriller','n_real_users':len(users),'n_books':len(items),'target_books':int(target.sum()),'source_data':str(R/'Book/Archive/data/genre_clean.csv'),'notes':'Prediction uses all unseen books, not just top-K; training views measure fitted endpoints, not epoch trajectories.'},indent=2))

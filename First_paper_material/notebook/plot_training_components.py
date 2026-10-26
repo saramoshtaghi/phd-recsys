@@ -5,8 +5,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-R=Path('/home/moshtasa/Research/phd-recsys');D=R/'First_paper_material/analysis/score_components';O=R/'First_paper_material/figures/first_reviewer';O.mkdir(exist_ok=True)
-f=pd.read_csv(D/'components.csv')
+R=Path('/home/moshtasa/Research/phd-recsys');D=R/'First_paper_material/notebook';O=R/'First_paper_material/figures'
+f=pd.read_csv(D/'score_components.csv')
 cols=['mean_prediction','mean_bi','mean_bu','mean_interaction','mu']
 rows=[]
 for (model,n,group),d in f[f.view.isin(['real_observed_training','synthetic_training'])].groupby(['model','n_fake','group']):
@@ -45,7 +45,7 @@ for model in ['svd','nmf']:
 maes=pd.DataFrame(mae_rows);maes.to_csv(D/'training_all_users_mae.csv',index=False)
 (D/'training_mae_validation.json').write_text(json.dumps(dict(sources=provenance,definition='mean(abs(recorded rating - raw predicted score))',weighting='equal observed training rating within each book group, real plus synthetic',error_of_mean_not_used=True,no_retraining=True),indent=2))
 
-f[f.view.isin(['all_training','synthetic_training'])].to_csv(D/'training_components.csv',index=False)
+f[f.view.isin(['all_training','synthetic_training'])].to_csv(D/'training_score_components.csv',index=False)
 
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':14,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.titleweight':'bold','axes.labelcolor':'#163248','text.color':'#163248','xtick.color':'#536471','ytick.color':'#536471','figure.facecolor':'white','savefig.facecolor':'white'})
 colors={'mean_prediction':'#009E73','mean_bi':'#D55E00','mean_bu':'#61B8E8','mean_interaction':'#0072B2','mu':'#D7AA00'}
@@ -77,5 +77,5 @@ for view,(name,title,note) in names.items():
  fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.51,.87),ncol=3,frameon=False,fontsize=12,columnspacing=1.6)
  fig.text(.5,.025,note+' MAE: lower is better. End-of-training measurements.',ha='center',fontsize=11,color='#536471')
  fig.subplots_adjust(left=.065,right=.98,top=.74,bottom=.09,wspace=.16,hspace=.46)
- fig.savefig(O/name,dpi=400);fig.savefig(D/name.replace('.png','_preview.png'),dpi=100);plt.close(fig)
+ fig.savefig(O/name,dpi=400);fig.savefig(O/name.replace('.png','_preview.png'),dpi=100);plt.close(fig)
  print(name,flush=True)

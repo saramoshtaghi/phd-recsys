@@ -5,12 +5,12 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
-R=Path('/home/moshtasa/Research/phd-recsys');D=R/'First_paper_material/analysis/score_components';O=D/'prepared';O.mkdir(exist_ok=True)
-f=pd.read_csv(D/'components.csv')
+R=Path('/home/moshtasa/Research/phd-recsys');D=R/'First_paper_material/notebook';O=R/'First_paper_material/figures'
+f=pd.read_csv(D/'score_components.csv')
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':14,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.titleweight':'bold','axes.labelcolor':'#163248','text.color':'#163248','xtick.color':'#536471','ytick.color':'#536471','figure.facecolor':'white','savefig.facecolor':'white'})
 colors={'mean_prediction':'#009E73','mean_bi':'#142D4E','mean_bu':'#61B8E8','mean_interaction':'#0072B2','mu':'#D7AA00'}
 labels={'mean_prediction':r'Predicted rating $\hat r_{ui}$','mean_bi':r'Book bias $b_i$','mean_bu':r'User bias $b_u$','mean_interaction':r'Vector dot product $p_u^\top q_i$','mu':r'Global rating mean $\mu$'}
-names={'real_unseen_prediction':('01_real_users_unseen_thriller_prediction.png','Prediction | Real users, unrated Thriller books','Equal weight per user; average over all unrated Thriller books, not only Top-K.'),'synthetic_training':('02_synthetic_users_thriller_training.png','Training fit | Synthetic users, Thriller books','Recorded training rating = 5; averages over synthetic users and Thriller books.'),'real_observed_training':('03_real_users_thriller_training.png','Training fit | Real users, rated Thriller books','Average over original observed Thriller ratings; recorded ratings may differ.')}
+names={'real_unseen_prediction':('prediction_real_users_unseen_thriller.png','Prediction | Real users, unrated Thriller books','Equal weight per user; average over all unrated Thriller books, not only Top-K.'),'synthetic_training':('training_synthetic_users_thriller_legacy.png','Training fit | Synthetic users, Thriller books','Recorded training rating = 5; averages over synthetic users and Thriller books.'),'real_observed_training':('training_real_users_thriller.png','Training fit | Real users, rated Thriller books','Average over original observed Thriller ratings; recorded ratings may differ.')}
 for view,(name,title,note) in names.items():
  fig,axs=plt.subplots(1,2,figsize=(16,7.5),sharey=True)
  data=f[(f.view==view)&(f.group=='target')]
