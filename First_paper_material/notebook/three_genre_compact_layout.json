@@ -11,7 +11,7 @@
         2700,
         3480
       ],
-      "sha256": "3abfae4e0232138b9c5c62cae620f561a726d95459739da6f00850c9898815d4",
+      "sha256": "c7062be0117f25c887983e04f9d24df2262ddf0c2e53086399561fe08825cf3b",
       "all_x_labels": [
         0,
         2,
@@ -41,7 +41,7 @@
         2700,
         3480
       ],
-      "sha256": "469c67cb9289a5cca3be78e10f185e4c812218fc91ce3729c1c2912503211be5",
+      "sha256": "46107fd1468f78668187e8cc8096b4ce3979b997f159c75751f0169f2ceb157f",
       "all_x_labels": [
         0,
         2,
@@ -71,7 +71,7 @@
         2700,
         3480
       ],
-      "sha256": "9cbbd9f387a17c735ac22b2ee15f60807a3cde8654a32794e279cd9627cefe78",
+      "sha256": "543cba891804d5c9af9764713c7c74f4366ee7d8903d36b5133e65505c19cdb1",
       "all_x_labels": [
         0,
         2,
@@ -102,5 +102,6 @@
     "right_column_side": "right",
     "font_size_pt": 4.0,
     "connector_lines": false
-  }
+  },
+  "top_formula_displayed": false
 }
