@@ -68,6 +68,14 @@
         2160
       ],
       "sha256": "74ed5e09f1b1b762e9c0231891278e9e624420a67a7991c81f5fabf864c992d9"
+    },
+    {
+      "path": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top15_up_to_500.png",
+      "pixels": [
+        3840,
+        2160
+      ],
+      "sha256": "1ea3e06d42a03142f3bb164d5b9f12910f7dac1f24c6f71400a7ccd0b29ec8c5"
     }
   ],
   "checkpoints": [
@@ -254,6 +262,6 @@
       "nonnegative_factors": true
     }
   ],
-  "finished": 1793052095.921234,
-  "image_policy": "Only one Adventure comparison retained per user request: Top-15, Top-25 and Top-35, all injection sizes through 3500."
+  "finished": 1793053488.6707582,
+  "image_policy": "Two Adventure images retained by explicit request: the grouped Top-15/25/35 comparison through 3500 and the Thriller-style Top-15 comparison through 500."
 }

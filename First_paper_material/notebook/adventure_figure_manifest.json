@@ -17,8 +17,51 @@
     3500
   ],
   "figures": [
-    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top15_top25_top35_powerpoint.png"
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top15_top25_top35_powerpoint.png",
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top15_up_to_500.png"
   ],
-  "completed": 1793052072.005996,
-  "replaced_previous_figures": true
+  "completed": 1793053485.8829908,
+  "replaced_previous_figures": true,
+  "figure_ranges": {
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/comparision - Adventure_top15_top25_top35_powerpoint.png": {
+      "topk": [
+        15,
+        25,
+        35
+      ],
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500,
+        1000,
+        2000,
+        2500,
+        3000,
+        3500
+      ]
+    },
+    "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/result/final_results/Adventure_bars_top15_up_to_500.png": {
+      "topk": [
+        15
+      ],
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ]
+    }
+  },
+  "image_policy": "Two Adventure images retained by explicit request: the grouped Top-15/25/35 comparison through 3500 and the Thriller-style Top-15 comparison through 500."
 }
