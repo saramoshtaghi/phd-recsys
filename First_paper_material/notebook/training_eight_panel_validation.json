@@ -1,0 +1,74 @@
+{
+  "source_sha256": {
+    "training_score_components.csv": "5797e54f11bed010ad9d45d7db4dc2b6977f8baeb3684dbdb216d0f56db4fd14",
+    "training_all_users_mae.csv": "9f2af2934d5727aa8a537c3931f5d67fc914c77eb4a39cdc78fbd230cbc0a4cb"
+  },
+  "panels": [
+    {
+      "panel": "a",
+      "view": "all_training",
+      "group": "target",
+      "model": "svd",
+      "n_points": 9
+    },
+    {
+      "panel": "b",
+      "view": "all_training",
+      "group": "target",
+      "model": "nmf",
+      "n_points": 9
+    },
+    {
+      "panel": "c",
+      "view": "all_training",
+      "group": "non_target",
+      "model": "svd",
+      "n_points": 9
+    },
+    {
+      "panel": "d",
+      "view": "all_training",
+      "group": "non_target",
+      "model": "nmf",
+      "n_points": 9
+    },
+    {
+      "panel": "e",
+      "view": "synthetic_training",
+      "group": "target",
+      "model": "svd",
+      "n_points": 8
+    },
+    {
+      "panel": "f",
+      "view": "synthetic_training",
+      "group": "target",
+      "model": "nmf",
+      "n_points": 8
+    },
+    {
+      "panel": "g",
+      "view": "synthetic_training",
+      "group": "non_target",
+      "model": "svd",
+      "n_points": 8
+    },
+    {
+      "panel": "h",
+      "view": "synthetic_training",
+      "group": "non_target",
+      "model": "nmf",
+      "n_points": 8
+    }
+  ],
+  "n_panels": 8,
+  "prediction_identity_checked": true,
+  "mae_finite_nonnegative": true,
+  "no_retraining": true,
+  "size_inches": [
+    7.1,
+    8.6
+  ],
+  "dpi": 600,
+  "output": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/training_thriller_all_and_synthetic_8panel_paper.png"
+}
