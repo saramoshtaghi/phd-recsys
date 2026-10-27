@@ -82,4 +82,48 @@ The NMF dot products shown as 0.000 are small positive values, rounded here. Pan
 \end{enumerate}
 \end{minipage}
 
+
+\clearpage
+\begin{center}
+{\Large\bfseries Prediction for real users: connecting scores to recommendations}
+\end{center}
+\noindent\begin{minipage}[t]{0.47\textwidth}\vspace{0pt}\centering
+\IfFileExists{first_reviewer/thriller/prediction_real_users_thriller_non_thriller_4panel.png}{%
+\includegraphics[width=\linewidth,height=.85\textheight,keepaspectratio]{first_reviewer/thriller/prediction_real_users_thriller_non_thriller_4panel.png}}{%
+\includegraphics[width=\linewidth,height=.85\textheight,keepaspectratio]{figures/first_reviewer/thriller/prediction_real_users_thriller_non_thriller_4panel.png}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.51\textwidth}\vspace{0pt}\small
+\textbf{The same trained models, now used for recommendation.} No parameters are updated here. We score books that each of the 53,424 real users has not rated, rank them, and select the Top-15. Panels B--E average scores over all unrated books within each group for each user, then across users. There are no recorded ratings for these pairs, so no training MAE or fixed targets of 5 and 1 are shown.
+
+\textbf{The measured predictions at $n=500$.} Using the same order, $\mu+b_u+b_i+\mathbf p_u^{\mathsf T}\mathbf q_i$:
+\begin{align*}
+\text{SVD, Thriller:}\quad &2.918+0.390+0.429-0.173\approx3.563,\\
+\text{NMF, Thriller:}\quad &2.918-0.703+1.981+0.071\approx4.267,\\
+\text{SVD, non-Thriller:}\quad &2.918+0.390+0.133+0.222\approx3.663,\\
+\text{NMF, non-Thriller:}\quad &2.918-0.703-1.114+2.706\approx3.807.
+\end{align*}
+\textbf{The same NMF compensation pattern appears here.} Book biases favor Thriller, while dot products favor non-Thriller and offset part of that advantage. In this prediction view, SVD's dot-product difference also favors non-Thriller, unlike the all-users training averages. The groups of user--book pairs being measured have changed.
+
+\textbf{What determines the ranking?} For the same user, $\mu$ and $b_u$ are identical across candidate books. The effective ranking score is therefore
+\[
+s_{ui}=b_i+\mathbf p_u^{\mathsf T}\mathbf q_i.
+\]
+Let $\Delta$ mean the mean for unrated Thriller books minus the mean for unrated non-Thriller books, calculated within each user and then averaged across users. Thus
+\[
+\Delta\overline{\hat r}=\Delta\overline{b_i}
++\Delta\overline{\mathbf p_u^{\mathsf T}\mathbf q_i}.
+\]
+At $n=500$, the mean score gaps are
+\begin{align*}
+\text{NMF:}\quad &\underbrace{3.096}_{\text{book bias}}-\underbrace{2.635}_{\text{dot product}}\approx\underbrace{+0.461}_{\text{final gap}},\\
+\text{SVD:}\quad &\underbrace{0.296}_{\text{book bias}}-\underbrace{0.396}_{\text{dot product}}\approx\underbrace{-0.100}_{\text{final gap}}.
+\end{align*}
+\textbf{Three results.}
+\begin{enumerate}[leftmargin=*,itemsep=3pt,topsep=3pt]
+\item \textbf{NMF retains a mean score advantage for Thriller.} Its book-bias advantage is large enough that the opposing dot-product contribution does not cancel it. In SVD, the smaller book-bias advantage is outweighed by the opposing dot-product difference.
+\item \textbf{Top-15 recommendations show the exposure change directly.} In panel A, NMF's mean Thriller count increases from 1.730 at baseline to 10.839 at $n=500$; SVD's increases from 1.577 to 2.280. These counts come from ranking each user's candidates, not from converting the group-mean score gap into a count.
+\item \textbf{Training fit and recommendation exposure are different outcomes.} SVD fits the recorded training ratings more closely, while NMF recommends more Thriller books to real users. The score decomposition shows the large NMF book-bias separation and its partial compensation by vectors alongside this recommendation outcome.
+\end{enumerate}
+\end{minipage}
+
 \end{document}
