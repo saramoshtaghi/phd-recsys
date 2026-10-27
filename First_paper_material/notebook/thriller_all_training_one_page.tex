@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=20mm]{geometry}
+\usepackage{amsmath}
+\usepackage{enumitem}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+% Figure discussed: training_thriller_all_users_overview_4panel.png
+% Keep existing figure files; the author will upload the updated figures.
+\begin{document}
+\begin{center}
+{\Large\bfseries What happens during each training number}
+\end{center}
+
+This page explains the \textbf{all-users training figure for Thriller}. The numerical examples use $n=500$ synthetic users, added to 53,424 real users. Each synthetic user rates all Thriller books 5 and all other books 1. Each point on the horizontal axis is a separately trained model at a different injection count, not a training epoch. The values below average over recorded real and synthetic training ratings within each book group, with equal weight per rating.
+
+\textbf{The prediction formula.}
+For user $u$ and book $i$, both models calculate
+\[
+\hat r_{ui}=\mu+b_u+b_i+\mathbf p_u^{\mathsf T}\mathbf q_i.
+\]
+Here, $\hat r_{ui}$ is the predicted rating; $\mu$ is the global mean of the augmented training ratings; $b_u$ is the learned user bias; and $b_i$ is the learned book bias. The vectors $\mathbf p_u$ and $\mathbf q_i$ are learned lists of numbers representing the user and book. Their dot product multiplies matching entries and adds the results. During training, the difference $e_{ui}=r_{ui}-\hat r_{ui}$ between the recorded rating $r_{ui}$ and the prediction is used to update the parameters.
+
+\textbf{Putting the measured components together at $n=500$.}
+The same addition holds for group means. The numbers in each line follow the order $\mu$, $b_u$, $b_i$, and $\mathbf p_u^{\mathsf T}\mathbf q_i$:
+\begin{align*}
+\text{SVD, Thriller:}\quad &2.918+0.210+0.457+0.839\approx4.425,\\
+\text{NMF, Thriller:}\quad &2.918-0.890+2.216+0.062\approx4.305,\\
+\text{SVD, non-Thriller:}\quad &2.918+0.211+0.150-0.648\approx2.631,\\
+\text{NMF, non-Thriller:}\quad &2.918-0.861-1.404+1.721\approx2.374.
+\end{align*}
+The mean recorded ratings are 4.436 for Thriller and 2.640 for non-Thriller. They are not 5 and 1 because this figure includes real ratings as well as synthetic ratings. Panel E compares these recorded means with the mean predictions.
+
+\textbf{Three results.}
+\begin{enumerate}[leftmargin=*,itemsep=5pt,topsep=3pt]
+\item \textbf{SVD reconstructs the training ratings more accurately.} In panel A at $n=500$, SVD's mean absolute error (MAE) is 0.277 for Thriller and 0.323 for non-Thriller; NMF's is 1.076 and 0.507. MAE averages $|r_{ui}-\hat r_{ui}|$ for individual ratings, rather than taking the difference between two group means.
+\item \textbf{The models allocate scores differently.} In SVD, the book-bias and dot-product components both favor Thriller over non-Thriller. In NMF, book biases strongly separate the groups: $2.216$ versus $-1.404$. The dot products act in the opposite direction: $0.062$ versus $1.721$, partially offsetting that separation. Panel D also shows positive mean user biases in SVD and negative means in NMF.
+\item \textbf{Similar prediction patterns can come from different component combinations.} Relative to baseline, both models raise the mean Thriller prediction and lower the non-Thriller prediction. SVD uses signed dot products alongside book biases; NMF combines a large book-bias separation with opposing, non-negative dot products. These are training-fit results. As $n$ increases, both fitted parameters and the proportion of synthetic ratings in the reported averages change.
+\end{enumerate}
+\end{document}
