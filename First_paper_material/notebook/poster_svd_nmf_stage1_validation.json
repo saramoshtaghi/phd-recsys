@@ -1,235 +1,517 @@
 {
-  "poster_size_inches": [
-    48,
-    36
-  ],
-  "scope": "stage one; exposure and learned item biases",
-  "book_baseline_and_n500": [
-    {
-      "dataset": "Books",
-      "target": "Thriller",
-      "model": "NMF",
-      "k": 15,
-      "n_fake": 0,
-      "n_real_users": 53424,
-      "mean_target_count": 1.7298592392932015,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
-      "source_precision": "full CSV precision"
-    },
-    {
-      "dataset": "Books",
-      "target": "Thriller",
-      "model": "NMF",
-      "k": 15,
-      "n_fake": 500,
-      "n_real_users": 53424,
-      "mean_target_count": 10.839248277927522,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
-      "source_precision": "full CSV precision"
-    },
-    {
-      "dataset": "Books",
-      "target": "Thriller",
-      "model": "SVD",
-      "k": 15,
-      "n_fake": 0,
-      "n_real_users": 53424,
-      "mean_target_count": 1.5765573525007488,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
-      "source_precision": "full CSV precision"
-    },
-    {
-      "dataset": "Books",
-      "target": "Thriller",
-      "model": "SVD",
-      "k": 15,
-      "n_fake": 500,
-      "n_real_users": 53424,
-      "mean_target_count": 2.279556004791854,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
-      "source_precision": "full CSV precision"
-    }
-  ],
-  "dataset_counts": {
-    "Books": {
-      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
-      "source_size_bytes": 474765722,
-      "users": 53424,
-      "items": 9415,
-      "observed_ratings": 5815569,
-      "global_mean": 3.9181110223264484,
-      "rating_counts": {
-        "1": 120964,
-        "2": 350205,
-        "3": 1336839,
-        "4": 2083651,
-        "5": 1923910
-      }
-    },
-    "Movies": {
-      "source": "/home/moshtasa/Research/phd-recsys/Movie /archive/preprocessing/df_final.csv",
-      "source_size_bytes": 1679149,
-      "users": 943,
-      "items": 1682,
-      "observed_ratings": 100000,
-      "global_mean": 3.52986,
-      "rating_counts": {
-        "1": 6110,
-        "2": 11370,
-        "3": 27145,
-        "4": 34174,
-        "5": 21201
-      }
-    },
-    "Mobile apps": {
-      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0316_Single/data/data/mobilerec_final.csv",
-      "source_size_bytes": 4416654250,
-      "users": 700111,
-      "items": 10173,
-      "observed_ratings": 19297019,
-      "global_mean": 3.280593080205808,
-      "rating_counts": {
-        "1": 4068183,
-        "2": 2441008,
-        "3": 2919802,
-        "4": 3744068,
-        "5": 6123958
-      }
-    }
+  "layout": "four columns, red section bars, original reference header and portraits",
+  "department": "Department of Computer Science, University of Cincinnati",
+  "results_scope": "all saved Top-15 doses",
+  "dose_ranges": {
+    "Books": [
+      0,
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500,
+      1000,
+      2000,
+      2500,
+      3000
+    ],
+    "Mobile apps": [
+      0,
+      30,
+      60,
+      300,
+      500,
+      2000,
+      7000
+    ],
+    "Movies": [
+      0,
+      2,
+      6,
+      10,
+      50
+    ]
   },
-  "bias_equal_weight_per_item": [
+  "results": [
     {
-      "model": "SVD",
-      "n_fake": 0,
-      "target": -0.11910573542139556,
-      "non_target": -0.09596171662696266,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz"
-    },
-    {
-      "model": "SVD",
-      "n_fake": 2,
-      "target": -0.10989130533468347,
-      "non_target": -0.0990713896225526,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_2.npz"
-    },
-    {
-      "model": "SVD",
-      "n_fake": 4,
-      "target": -0.11043461797815633,
-      "non_target": -0.10506803533725632,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_4.npz"
-    },
-    {
-      "model": "SVD",
-      "n_fake": 6,
-      "target": -0.12149478231409327,
-      "non_target": -0.10474995132961544,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_6.npz"
-    },
-    {
-      "model": "SVD",
-      "n_fake": 25,
-      "target": -0.08074365796013108,
-      "non_target": -0.0660293530448048,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_25.npz"
-    },
-    {
-      "model": "SVD",
-      "n_fake": 50,
-      "target": -0.03053978857304001,
-      "non_target": -0.03323235854404389,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_50.npz"
-    },
-    {
-      "model": "SVD",
-      "n_fake": 100,
-      "target": 0.055620627374239485,
-      "non_target": 0.015758165883587794,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_100.npz"
-    },
-    {
-      "model": "SVD",
-      "n_fake": 200,
-      "target": 0.19258525262779794,
-      "non_target": 0.07674193860278856,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_200.npz"
-    },
-    {
-      "model": "SVD",
-      "n_fake": 500,
-      "target": 0.42906687804568144,
-      "non_target": 0.13320637321866133,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_500.npz"
-    },
-    {
+      "dataset": "Books",
       "model": "NMF",
       "n_fake": 0,
-      "target": -0.6047871769900522,
-      "non_target": -0.5465664221121358,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz"
+      "mean": 1.7298592392932015,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
     },
     {
+      "dataset": "Books",
       "model": "NMF",
       "n_fake": 2,
-      "target": -0.5752305636792127,
-      "non_target": -0.5475213838631703,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_2.npz"
+      "mean": 1.7415955375861036,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
     },
     {
+      "dataset": "Books",
       "model": "NMF",
       "n_fake": 4,
-      "target": -0.5436068349589412,
-      "non_target": -0.5494327566807569,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_4.npz"
+      "mean": 1.7370657382449834,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
     },
     {
+      "dataset": "Books",
       "model": "NMF",
       "n_fake": 6,
-      "target": -0.5141055588877944,
-      "non_target": -0.5518673412679761,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_6.npz"
+      "mean": 1.7431117100928422,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
     },
     {
+      "dataset": "Books",
       "model": "NMF",
       "n_fake": 25,
-      "target": -0.21328381381070188,
-      "non_target": -0.5818450003983642,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_25.npz"
+      "mean": 2.3804844264749927,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
     },
     {
+      "dataset": "Books",
       "model": "NMF",
       "n_fake": 50,
-      "target": 0.10470294316127968,
-      "non_target": -0.6180107132488594,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_50.npz"
+      "mean": 3.725029949086553,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
     },
     {
+      "dataset": "Books",
       "model": "NMF",
       "n_fake": 100,
-      "target": 0.5559958649078584,
-      "non_target": -0.6879562642254275,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_100.npz"
+      "mean": 7.023903114705002,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
     },
     {
+      "dataset": "Books",
       "model": "NMF",
       "n_fake": 200,
-      "target": 1.123576679857395,
-      "non_target": -0.8585393178708348,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_200.npz"
+      "mean": 10.422132374962564,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
     },
     {
+      "dataset": "Books",
       "model": "NMF",
       "n_fake": 500,
-      "target": 1.985607002793373,
-      "non_target": -1.1205184633866196,
-      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_500.npz"
+      "mean": 10.839248277927522,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "NMF",
+      "n_fake": 1000,
+      "mean": 6.983752620545073,
+      "sign_ok": false,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "NMF",
+      "n_fake": 2000,
+      "mean": 8.164495357891584,
+      "sign_ok": false,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "NMF",
+      "n_fake": 2500,
+      "mean": 3.7901317759808326,
+      "sign_ok": false,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "NMF",
+      "n_fake": 3000,
+      "mean": 14.413428421683138,
+      "sign_ok": false,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 0,
+      "mean": 1.5765573525007488,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 2,
+      "mean": 1.5657943995208146,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 4,
+      "mean": 1.8326033243486075,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 6,
+      "mean": 2.4357779275232105,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 25,
+      "mean": 2.4736822401916743,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 50,
+      "mean": 2.469919886193471,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 100,
+      "mean": 2.350235849056604,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 200,
+      "mean": 2.307651991614256,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 500,
+      "mean": 2.279556004791854,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 1000,
+      "mean": 2.3321166516921235,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 2000,
+      "mean": 2.599936358191075,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 2500,
+      "mean": 2.6256738544474394,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": 3000,
+      "mean": 2.633441898772088,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/topk_target_union/summary.csv"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "SVD",
+      "n_fake": 0,
+      "mean": 0.3262,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "SVD",
+      "n_fake": 30,
+      "mean": 0.629,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "SVD",
+      "n_fake": 60,
+      "mean": 1.2369,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "SVD",
+      "n_fake": 300,
+      "mean": 3.5656,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "SVD",
+      "n_fake": 500,
+      "mean": 3.9056,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "SVD",
+      "n_fake": 2000,
+      "mean": 2.7032,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "SVD",
+      "n_fake": 7000,
+      "mean": 1.2845,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "NMF",
+      "n_fake": 0,
+      "mean": 0.1902,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "NMF",
+      "n_fake": 30,
+      "mean": 0.133,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "NMF",
+      "n_fake": 60,
+      "mean": 0.1998,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "NMF",
+      "n_fake": 300,
+      "mean": 0.9002,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "NMF",
+      "n_fake": 500,
+      "mean": 0.0298,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "NMF",
+      "n_fake": 2000,
+      "mean": 8.0515,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt"
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "NMF",
+      "n_fake": 7000,
+      "mean": 7.6275,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "SVD",
+      "n_fake": 0,
+      "mean": 9.983,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "SVD",
+      "n_fake": 2,
+      "mean": 10.0297,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "SVD",
+      "n_fake": 6,
+      "mean": 10.5302,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "SVD",
+      "n_fake": 10,
+      "mean": 10.9925,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "SVD",
+      "n_fake": 50,
+      "mean": 13.3415,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "NMF",
+      "n_fake": 0,
+      "mean": 11.4836,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "NMF",
+      "n_fake": 2,
+      "mean": 12.1755,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "NMF",
+      "n_fake": 6,
+      "mean": 13.018,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "NMF",
+      "n_fake": 10,
+      "mean": 13.2121,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt"
+    },
+    {
+      "dataset": "Movies",
+      "model": "NMF",
+      "n_fake": 50,
+      "mean": 15.0,
+      "sign_ok": true,
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt"
     }
   ],
-  "no_new_training": true,
-  "book_values_crosschecked_against_current_topk_summary": true,
-  "mobile_movie_values_crosschecked_against_original_outputs": true,
-  "claim_of_accuracy_improvement": false,
+  "n500_training_components": [
+    {
+      "genre": "Thriller",
+      "model": "svd",
+      "n_fake": 500,
+      "group": "target",
+      "view": "all_training",
+      "n_pairs": 1626555,
+      "mu": 2.917926794930262,
+      "mean_bu": 0.2101898875912706,
+      "mean_bi": 0.4573673964418521,
+      "mean_interaction": 0.8393539998799809,
+      "mean_prediction": 4.424838078843366,
+      "mae": 0.2769675506283056,
+      "mean_recorded_rating": 4.435515552809465,
+      "n_users": NaN
+    },
+    {
+      "genre": "Thriller",
+      "model": "nmf",
+      "n_fake": 500,
+      "group": "target",
+      "view": "all_training",
+      "n_pairs": 1626555,
+      "mu": 2.917926794930262,
+      "mean_bu": -0.889880018668829,
+      "mean_bi": 2.215841973707862,
+      "mean_interaction": 0.061524994745509,
+      "mean_prediction": 4.305413744714802,
+      "mae": 1.076204215722832,
+      "mean_recorded_rating": 4.435515552809465,
+      "n_users": NaN
+    },
+    {
+      "genre": "Thriller",
+      "model": "svd",
+      "n_fake": 500,
+      "group": "non_target",
+      "view": "all_training",
+      "n_pairs": 8896514,
+      "mu": 2.917926794930262,
+      "mean_bu": 0.2111074110028424,
+      "mean_bi": 0.1501506895806439,
+      "mean_interaction": -0.6483947307070368,
+      "mean_prediction": 2.630790164806712,
+      "mae": 0.3233855280916364,
+      "mean_recorded_rating": 2.6404651304994293,
+      "n_users": NaN
+    },
+    {
+      "genre": "Thriller",
+      "model": "nmf",
+      "n_fake": 500,
+      "group": "non_target",
+      "view": "all_training",
+      "n_pairs": 8896514,
+      "mu": 2.917926794930262,
+      "mean_bu": -0.861149763322315,
+      "mean_bi": -1.4038461909781168,
+      "mean_interaction": 1.720829805100887,
+      "mean_prediction": 2.373760645730717,
+      "mae": 0.5070608243630912,
+      "mean_recorded_rating": 2.6404651304994293,
+      "n_users": NaN
+    }
+  ],
+  "flagged_book_nmf_doses": [
+    1000,
+    2000,
+    2500,
+    3000
+  ],
+  "n500_only_used_for_explanation": true,
+  "synthetic_only_is_subset_of_same_models": true,
+  "no_retraining": true,
   "pdf": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/poster_svd_nmf_stage1.pdf",
-  "png": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/poster_svd_nmf_stage1.png",
-  "source_table_sha256": "d124c2d01ad2ce347ede499cd6fbaa0872cb030bc519c576ec582725062b0a1d"
+  "png": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/poster_svd_nmf_stage1.png"
 }
