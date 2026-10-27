@@ -1,0 +1,475 @@
+{
+  "source_image": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/recommendation_exposure_top15.png",
+  "source_image_sha256": "d332c8945bdb70534b2ee3db499e9747866c53a20d2b62b870e6117bfdade74b",
+  "source_table": "/home/moshtasa/Research/phd-recsys/First_paper_material/data/recommendation_exposure_top15.csv",
+  "source_table_sha256": "d124c2d01ad2ce347ede499cd6fbaa0872cb030bc519c576ec582725062b0a1d",
+  "no_new_training": true,
+  "same_values_and_ranges_as_source": true,
+  "outputs": [
+    {
+      "dataset": "Books",
+      "file": "/home/moshtasa/Research/phd-recsys/state of the art/poster_presentation/books_thriller_top15_poster.png",
+      "counts": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ],
+      "models_top_to_bottom": [
+        "NMF",
+        "SVD"
+      ],
+      "colors": {
+        "NMF": "#0072B2",
+        "SVD": "#D55E00"
+      },
+      "baseline_color": "#AAB2BA",
+      "data": [
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 0,
+          "n_real_users": 53424,
+          "mean_target_count": 1.7298592392932015,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 2,
+          "n_real_users": 53424,
+          "mean_target_count": 1.7415955375861036,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 4,
+          "n_real_users": 53424,
+          "mean_target_count": 1.7370657382449834,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 6,
+          "n_real_users": 53424,
+          "mean_target_count": 1.7431117100928422,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 25,
+          "n_real_users": 53424,
+          "mean_target_count": 2.3804844264749927,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 50,
+          "n_real_users": 53424,
+          "mean_target_count": 3.725029949086553,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 100,
+          "n_real_users": 53424,
+          "mean_target_count": 7.023903114705002,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 200,
+          "n_real_users": 53424,
+          "mean_target_count": 10.422132374962564,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 500,
+          "n_real_users": 53424,
+          "mean_target_count": 10.839248277927522,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 0,
+          "n_real_users": 53424,
+          "mean_target_count": 1.5765573525007488,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 2,
+          "n_real_users": 53424,
+          "mean_target_count": 1.5657943995208146,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 4,
+          "n_real_users": 53424,
+          "mean_target_count": 1.8326033243486075,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 6,
+          "n_real_users": 53424,
+          "mean_target_count": 2.4357779275232105,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 25,
+          "n_real_users": 53424,
+          "mean_target_count": 2.4736822401916743,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 50,
+          "n_real_users": 53424,
+          "mean_target_count": 2.469919886193471,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 100,
+          "n_real_users": 53424,
+          "mean_target_count": 2.350235849056604,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 200,
+          "n_real_users": 53424,
+          "mean_target_count": 2.307651991614256,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        },
+        {
+          "dataset": "Books",
+          "target": "Thriller",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 500,
+          "n_real_users": 53424,
+          "mean_target_count": 2.279556004791854,
+          "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+          "source_precision": "full CSV precision"
+        }
+      ]
+    },
+    {
+      "dataset": "Mobile apps",
+      "file": "/home/moshtasa/Research/phd-recsys/state of the art/poster_presentation/mobile_shopping_top15_poster.png",
+      "counts": [
+        0,
+        30,
+        60,
+        300
+      ],
+      "models_top_to_bottom": [
+        "NMF",
+        "SVD"
+      ],
+      "colors": {
+        "NMF": "#0072B2",
+        "SVD": "#D55E00"
+      },
+      "baseline_color": "#AAB2BA",
+      "data": [
+        {
+          "dataset": "Mobile apps",
+          "target": "Shopping",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 0,
+          "n_real_users": 700111,
+          "mean_target_count": 0.1902,
+          "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Mobile apps",
+          "target": "Shopping",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 30,
+          "n_real_users": 700111,
+          "mean_target_count": 0.133,
+          "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Mobile apps",
+          "target": "Shopping",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 60,
+          "n_real_users": 700111,
+          "mean_target_count": 0.1998,
+          "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Mobile apps",
+          "target": "Shopping",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 300,
+          "n_real_users": 700111,
+          "mean_target_count": 0.9002,
+          "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_NMF/result/NMF_bar_figures/nmf_shopping_analysis/NMF - Shopping.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Mobile apps",
+          "target": "Shopping",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 0,
+          "n_real_users": 700111,
+          "mean_target_count": 0.3262,
+          "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Mobile apps",
+          "target": "Shopping",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 30,
+          "n_real_users": 700111,
+          "mean_target_count": 0.629,
+          "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Mobile apps",
+          "target": "Shopping",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 60,
+          "n_real_users": 700111,
+          "mean_target_count": 1.2369,
+          "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Mobile apps",
+          "target": "Shopping",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 300,
+          "n_real_users": 700111,
+          "mean_target_count": 3.5656,
+          "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0405/0405_SVD/result/SVD_bar_figures/svd_shopping_analysis/SVD - Shopping.txt",
+          "source_precision": "four decimals in original analysis output"
+        }
+      ]
+    },
+    {
+      "dataset": "Movies",
+      "file": "/home/moshtasa/Research/phd-recsys/state of the art/poster_presentation/movies_1990s_top15_poster.png",
+      "counts": [
+        0,
+        2,
+        6,
+        10,
+        50
+      ],
+      "models_top_to_bottom": [
+        "NMF",
+        "SVD"
+      ],
+      "colors": {
+        "NMF": "#0072B2",
+        "SVD": "#D55E00"
+      },
+      "baseline_color": "#AAB2BA",
+      "data": [
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 0,
+          "n_real_users": 943,
+          "mean_target_count": 11.4836,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 2,
+          "n_real_users": 943,
+          "mean_target_count": 12.1755,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 6,
+          "n_real_users": 943,
+          "mean_target_count": 13.018,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 10,
+          "n_real_users": 943,
+          "mean_target_count": 13.2121,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "NMF",
+          "k": 15,
+          "n_fake": 50,
+          "n_real_users": 943,
+          "mean_target_count": 15.0,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/NMF_0519/result/0519_NMF_bar_figures/nmf_decade_1990_analysis/NMF - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 0,
+          "n_real_users": 943,
+          "mean_target_count": 9.983,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 2,
+          "n_real_users": 943,
+          "mean_target_count": 10.0297,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 6,
+          "n_real_users": 943,
+          "mean_target_count": 10.5302,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 10,
+          "n_real_users": 943,
+          "mean_target_count": 10.9925,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        },
+        {
+          "dataset": "Movies",
+          "target": "1990s",
+          "model": "SVD",
+          "k": 15,
+          "n_fake": 50,
+          "n_real_users": 943,
+          "mean_target_count": 13.3415,
+          "source": "/home/moshtasa/Research/phd-recsys/Movie /current/0519/SVD_0519/result/0519_SVD_bar_figures/svd_decade_1990_analysis/SVD - Decade 1990.txt",
+          "source_precision": "four decimals in original analysis output"
+        }
+      ]
+    }
+  ]
+}
