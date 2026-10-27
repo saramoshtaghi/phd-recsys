@@ -54,160 +54,131 @@ for model in ['svd','nmf']:
 bias=pd.DataFrame(bias)
 
 W,H=48,36
-NAVY='#172B3A'; RED='#C8102E'; BG='#F4F6F8'; MUTED='#51616D'; GRID='#DFE6EB'
-BLUE='#0072B2'; ORANGE='#D55E00'; TEAL='#007C78'
-C={'SVD':BLUE,'NMF':ORANGE}
+NAVY='#142C3A'; RED='#C8102E'; BG='#F1F4F6'; MUTED='#526571'; GRID='#DBE4E9'
+BLUE='#0072B2'; ORANGE='#D55E00'; TEAL='#007B77'; C={'SVD':BLUE,'NMF':ORANGE}
 plt.rcParams.update({'font.family':'DejaVu Sans','text.color':NAVY,'axes.labelcolor':MUTED,'xtick.color':MUTED,'ytick.color':MUTED,'axes.spines.top':False,'axes.spines.right':False,'pdf.fonttype':42,'ps.fonttype':42})
 fig=plt.figure(figsize=(W,H),dpi=100,facecolor=BG)
-base=fig.add_axes([0,0,1,1]);base.set_xlim(0,W);base.set_ylim(H,0);base.axis('off')
-texts=[]
-def rect(x,y,w,h,color='white',radius=.16,edge=None):
-    p=FancyBboxPatch((x,y),w,h,boxstyle=f'round,pad=0,rounding_size={radius}',facecolor=color,edgecolor=edge or color,lw=.8)
-    base.add_patch(p);return p
+base=fig.add_axes([0,0,1,1]);base.set_xlim(0,W);base.set_ylim(H,0);base.axis('off');texts=[]
+def rect(x,y,w,h,color='white',radius=.2,edge=None):
+    p=FancyBboxPatch((x,y),w,h,boxstyle=f'round,pad=0,rounding_size={radius}',facecolor=color,edgecolor=edge or color,lw=1);base.add_patch(p);return p
 def text(x,y,s,size=24,color=NAVY,weight='normal',ha='left',va='top',**kw):
-    t=base.text(x,y,s,fontsize=size,color=color,fontweight=weight,ha=ha,va=va,linespacing=1.2,**kw);texts.append(t);return t
-fig.canvas.draw(); renderer=fig.canvas.get_renderer()
-def para(x,y,s,w,size=24,color=NAVY,weight='normal',leading=1.30):
-    prop=FontProperties(family='DejaVu Sans',size=size,weight=weight)
-    lines=[]
+    t=base.text(x,y,s,fontsize=size,color=color,fontweight=weight,ha=ha,va=va,linespacing=1.15,**kw);texts.append(t);return t
+fig.canvas.draw();renderer=fig.canvas.get_renderer()
+def para(x,y,s,w,size=24,color=NAVY,weight='normal',leading=1.28):
+    prop=FontProperties(family='DejaVu Sans',size=size,weight=weight);lines=[]
     for block in s.split('\n'):
-        words=block.split();line=''
-        for word in words:
-            candidate=(line+' '+word).strip()
-            if line and renderer.get_text_width_height_descent(candidate,prop,False)[0] > w*fig.dpi:
-                lines.append(line);line=word
-            else:line=candidate
+        line=''
+        for word in block.split():
+            new=(line+' '+word).strip()
+            if line and renderer.get_text_width_height_descent(new,prop,False)[0]>w*fig.dpi:lines.append(line);line=word
+            else:line=new
         lines.append(line)
-    text(x,y,'\n'.join(lines),size,color,weight)
-    return y+len(lines)*size/72*leading
-def heading(x,y,n,title,w):
-    text(x,y,n,22,RED,'bold');text(x+.65,y-.04,title,31,NAVY,'bold')
-    base.plot([x,x+w],[y+.64,y+.64],color=GRID,lw=1.4)
-    return y+.95
+    text(x,y,'\n'.join(lines),size,color,weight);return y+len(lines)*size/72*leading
 def axis(x,y,w,h):return fig.add_axes([x/W,(H-y-h)/H,w/W,h/H],facecolor='white')
+def tidy(ax):
+    ax.grid(axis='y',color=GRID,lw=1.1);ax.set_axisbelow(True);ax.spines['left'].set_visible(False);ax.spines['bottom'].set_color(GRID);ax.tick_params(length=0,pad=10,labelsize=23)
+def arrow(x1,y1,x2,y2,color=MUTED):base.add_patch(FancyArrowPatch((x1,y1),(x2,y2),arrowstyle='-|>',mutation_scale=26,lw=2.5,color=color))
 
-# Identity and a short, evidence-led message.
-base.add_patch(Rectangle((0,0),W,.22,color=RED))
-text(1,.72,'Synthetic Ratings,\nDifferent Recommendations',78,NAVY,'bold')
-text(1,3.19,'Comparing SVD and NMF under controlled category-level injection',31,MUTED)
-text(1,3.91,'Sara Moshtaghi Largani  |  Raj Bhatnagar  |  Vikram Ravindra',27,NAVY,'bold')
-text(1,4.44,'Department of Computer Science, CEAS, University of Cincinnati',23,MUTED)
-text(46.9,1.12,'UNIVERSITY OF',25,RED,'bold',ha='right')
-text(46.9,1.69,'CINCINNATI',44,RED,'bold',ha='right')
-text(46.9,2.48,'Recommender systems research',21,MUTED,ha='right')
-rect(1,5.30,46,2.16,NAVY)
-text(1.60,5.65,'Same injected profiles. Different model responses.',35,'white','bold')
-text(1.60,6.31,'Books / Thriller / 500 synthetic users / Top-15',25,'#CFD9E0')
-text(31.30,5.54,'NMF',23,'#FFB98F','bold')
-text(31.30,6.00,'10.84',52,'white','bold')
-text(37.7,5.54,'SVD',23,'#89CEEF','bold')
-text(37.7,6.00,'2.28',52,'white','bold')
-text(43.00,5.92,'Thriller books\nper list',22,'#CFD9E0')
+# A large headline; all supporting copy serves the measured result.
+base.add_patch(Rectangle((0,0),48,4.60,color=NAVY))
+base.add_patch(Rectangle((0,0),.26,4.60,color=RED))
+text(1,.48,'CONTROLLED BIAS IN RECOMMENDER SYSTEMS',21,'#92BDCB','bold')
+text(1,1.07,'Fake ratings change\nreal recommendations',73,'white','bold')
+text(1,3.34,'Sara Moshtaghi Largani  |  Raj Bhatnagar  |  Vikram Ravindra',26,'white','bold')
+text(1,3.92,'Computer Science, CEAS, University of Cincinnati',23,'#CAD8DF')
+text(46.90,.65,'UNIVERSITY OF',23,'#CAD8DF','bold',ha='right')
+text(46.90,1.14,'CINCINNATI',40,'white','bold',ha='right')
+text(46.90,2.74,'Same synthetic profiles.\nDifferent SVD and NMF responses.',27,'white',ha='right')
 
-LX,LW=1,11.85; CX,CW=13.45,20.55; RX,RW=34.60,12.40
-# Left column: question, exact dataset counts and intervention.
-rect(LX,8.05,LW,4.02)
-y=heading(LX+.42,8.42,'01','Research question',LW-.84)
-para(LX+.42,y,'How does the same repeated rating pattern change what SVD and NMF recommend to real users?',LW-.84,28,weight='bold')
-para(LX+.42,10.65,'We measure category exposure: how many target-category items appear in each user\'s Top-15 list.',LW-.84,24)
+# A visually explicit count out of fifteen, rather than a large paragraph.
+text(1,5.14,'THE BOOK RESULT',20,RED,'bold')
+text(1,5.71,'At 500 fake profiles, NMF recommends far more Thriller.',36,NAVY,'bold')
+text(1,6.44,'Mean target books in each real user\'s Top-15 list',25,MUTED)
+for x,model,value in [(26.35,'SVD',2.279556004791854),(37.0,'NMF',10.839248277927522)]:
+    rect(x,5.10,9.95,2.22,'white')
+    text(x+.35,5.35,model,23,C[model],'bold')
+    text(x+9.55,5.32,f'{value:.2f} / 15',40,C[model],'bold',ha='right')
+    bx=x+.35;by=6.35;ww=9.20
+    base.add_patch(Rectangle((bx,by),ww,.34,facecolor='#E4EBEF',edgecolor='none'))
+    base.add_patch(Rectangle((bx,by),ww*value/15,.34,facecolor=C[model],edgecolor='none'))
+    text(x+.35,6.91,f'{100*value/15:.1f}% of recommendation slots',18,MUTED)
 
-rect(LX,12.48,LW,8.26)
-y=heading(LX+.42,12.85,'02','Three real datasets',LW-.84)
-cards=[('BOOKS','53,424 users','9,415 books  |  5,815,569 ratings','13 assigned genres; overlapping labels.'),('MOVIES','943 users','1,682 movies  |  100,000 ratings','MovieLens 100K; target: 1990s releases.'),('MOBILE APPS','700,111 users','10,173 apps  |  19,297,019 ratings','48 original categories; target: Shopping.')]
-for j,(name,users,detail,note) in enumerate(cards):
-    yy=14.15+j*1.94
-    text(LX+.45,yy,name,20,TEAL,'bold')
-    text(LX+.45,yy+.40,users,30,NAVY,'bold')
-    text(LX+.45,yy+.98,detail,21)
-    text(LX+.45,yy+1.40,note,19,MUTED)
-    if j<2:base.plot([LX+.45,LX+LW-.45],[yy+1.78]*2,color=GRID,lw=.8)
+# Dataset facts form a single band, not a separate mini-essay.
+cards=[(1,'BOOKS','53,424','9,415','5,815,569','13 assigned genres'),(16.5,'MOVIES','943','1,682','100,000','Release-decade categories'),(32,'MOBILE APPS','700,111','10,173','19,297,019','48 original categories')]
+for x,label,users,items,ratings,note in cards:
+    rect(x,7.88,15,2.30,'white')
+    text(x+.38,8.13,label,21,TEAL,'bold')
+    text(x+.38,8.65,users,34,NAVY,'bold');text(x+5.70,8.79,'real users',21,MUTED)
+    text(x+.38,9.34,f'{items} items  |  {ratings} ratings',22,NAVY)
+    text(x+14.60,8.20,note,17,MUTED,ha='right')
 
-rect(LX,21.16,LW,12.48)
-y=heading(LX+.42,21.53,'03','Controlled injection',LW-.84)
-para(LX+.42,y,'Every fake user rates the existing catalog using the same rule:',LW-.84,24)
-rect(LX+.45,23.78,5.15,1.42,'#FFF0E6')
-text(LX+.70,24.02,'TARGET BOOKS',19,ORANGE,'bold');text(LX+.70,24.43,'rating 5',32,ORANGE,'bold')
-rect(LX+5.90,23.78,5.50,1.42,'#EAF3F8')
-text(LX+6.15,24.02,'ALL OTHER BOOKS',19,BLUE,'bold');text(LX+6.15,24.43,'rating 1',32,BLUE,'bold')
-text(LX+.45,25.64,'Thriller example: rating rule (schematic)',21,NAVY,'bold')
-mx= LX+.45; my=26.25;cellw=1.27
-for j in range(8):
-    is_target=j<3
-    rect(mx+j*cellw,my,1.12,.80,'#FFE0CC' if is_target else '#D6EAF5',radius=.06)
-    text(mx+j*cellw+.56,my+.13,'5' if is_target else '1',30,ORANGE if is_target else BLUE,'bold',ha='center')
-text(LX+.45,27.32,'1,606 Thriller + 7,809 non-Thriller = 9,415 ratings',20,MUTED)
-para(LX+.45,28.10,'500 fake users add 4,707,500 ratings: 80.9% of the original book rating count.',LW-.9,25,NAVY,'bold')
-para(LX+.45,29.72,'Original users, ratings and books stay unchanged. Fake users enter training only; recommendations are evaluated for real users.',LW-.9,23)
-text(LX+.45,31.55,'SHARED TRAINING SETTINGS',19,TEAL,'bold')
-para(LX+.45,32.02,'8 latent factors  |  180 epochs\nBiased Surprise implementations; seed 42.',LW-.9,21)
+# A four-step diagram replaces most of the method prose.
+rect(1,10.73,46,3.55,'white')
+text(1.45,11.03,'HOW THE EXPERIMENT WORKS',21,RED,'bold')
+stages=[(1.50,'01','Create fake profiles','Target items = 5\nAll other items = 1'),(13.2,'02','Append their ratings','Keep real users, ratings\nand the catalog unchanged'),(24.9,'03','Train both models','Biased Surprise SVD / NMF\n8 factors; 180 epochs; seed 42'),(36.60,'04','Measure real-user output','Rank unseen items\nCount target items in Top-15')]
+for x,n,title,body in stages:
+    text(x,11.69,n,22,RED,'bold');text(x+.75,11.67,title,26,NAVY,'bold')
+    text(x+.75,12.30,body,23,MUTED)
+for x in [12.45,24.15,35.85]:arrow(x-.38,12.48,x+.32,12.48)
+text(1.50,13.51,'Dense profiles: 500 fake book users add 4,707,500 ratings - 80.9% of the original book rating count.',22,NAVY,'bold')
 
-# Centre column: three comparable recommendation-count charts.
-rect(CX,8.05,CW,25.59)
-y=heading(CX+.47,8.42,'04','What changes in Top-15?',CW-.94)
-text(CX+.50,9.52,'Mean target-category items per recommendation list',24,MUTED)
-fig.legend(handles=[Line2D([0],[0],color=BLUE,lw=8,label='SVD'),Line2D([0],[0],color=ORANGE,lw=8,label='NMF')],loc='upper right',bbox_to_anchor=(33.3/W,1-9.32/H),frameon=False,ncol=2,fontsize=23,handlelength=1.2,columnspacing=1.5)
-configs=[('Books','Thriller',500,10.95),('Mobile apps','Shopping',300,18.30),('Movies','1990s',50,25.65)]
-for idx,(domain,targetname,limit,top) in enumerate(configs):
-    labels=sorted(exposure[exposure.dataset.eq(domain)].n_fake.unique())
-    title=f'{chr(65+idx)}  {domain}: {targetname}'
-    text(CX+.53,top-.18,title,28,NAVY,'bold')
-    ax=axis(CX+1.15,top+.55,CW-1.95,4.60)
-    xx=np.arange(len(labels))
+# The book trajectory is the main evidence and gets most of the visual space.
+rect(1,14.88,29.85,9.17,'white')
+text(1.48,15.28,'01  BOOKS / THRILLER',29,NAVY,'bold')
+text(1.48,15.93,'The response diverges as more identical profiles are injected.',24,MUTED)
+ax=axis(2.05,17.18,26.75,5.38)
+doses=sorted(book.n_fake.unique());xx=np.arange(len(doses))
+for model in ['SVD','NMF']:
+    d=book[book.model.eq(model)].set_index('n_fake').loc[doses]
+    ax.plot(xx,d.mean_target_count,color=C[model],lw=5,marker='o',ms=12,label=model)
+    v=d.mean_target_count.iloc[-1]
+    ax.annotate(f'{v:.2f}',(xx[-1],v),xytext=(12,2),textcoords='offset points',fontsize=27,fontweight='bold',color=C[model],va='center')
+ax.set_xlim(-.12,len(doses)-.50);ax.set_ylim(0,15);ax.set_yticks([0,5,10,15]);ax.set_xticks(xx,[str(n) for n in doses]);ax.set_xlabel('Injected users (0 = baseline)',fontsize=24,labelpad=14);ax.set_ylabel('Mean Thriller books / Top-15',fontsize=24,labelpad=16);tidy(ax)
+ax.legend(loc='upper left',ncol=2,frameon=False,fontsize=24,handlelength=2)
+text(1.48,23.22,'Baseline: NMF 1.73 / 15   |   SVD 1.58 / 15',23,MUTED)
+
+# Cross-domain checks make clear that there is no universal model ranking.
+for x,domain,targetname,num in [(1,'Mobile apps','Shopping','02'),(16.30,'Movies','1990s','03')]:
+    rect(x,24.63,14.55,7.36,'white')
+    text(x+.43,25.02,f'{num}  {domain.upper()} / {targetname.upper()}',25,NAVY,'bold')
+    ax=axis(x+1.05,26.03,12.45,4.27)
+    doses=sorted(exposure[exposure.dataset.eq(domain)].n_fake.unique());xx=np.arange(len(doses))
     for j,model in enumerate(['SVD','NMF']):
-        d=exposure[(exposure.dataset.eq(domain)) & exposure.model.eq(model)].set_index('n_fake').loc[labels]
-        values=d.mean_target_count.to_numpy();offset=-.19 if j==0 else .19
-        ax.bar(xx+offset,values,width=.36,color=C[model],zorder=3)
-        for k,v in enumerate(values):
-            ax.text(k+offset,v+.20,f'{v:.2f}',ha='center',va='bottom',fontsize=18.5,color=C[model],fontweight='bold' if k==len(values)-1 else 'normal')
-    ax.set_ylim(0,16.5);ax.set_yticks([0,5,10,15]);ax.set_xticks(xx,[str(n) for n in labels]);ax.tick_params(length=0,labelsize=22,pad=9)
-    ax.set_ylabel('Mean items',fontsize=22,labelpad=11)
-    ax.set_xlabel('Injected users (0 = baseline)',fontsize=22,labelpad=11)
-    ax.grid(axis='y',color=GRID,lw=1);ax.set_axisbelow(True);ax.spines['left'].set_visible(False);ax.spines['bottom'].set_color(GRID)
-text(CX+.55,32.40,'All panels count items out of 15. Injection counts are categorical.',20,MUTED)
-text(CX+.55,32.88,'Counts and rating budgets differ across datasets.',20,MUTED)
-text(CX+.55,33.29,'The movie target already has high baseline exposure.',18,MUTED)
+        d=exposure[exposure.dataset.eq(domain)&exposure.model.eq(model)].set_index('n_fake').loc[doses]
+        off=-.19 if j==0 else .19
+        ax.bar(xx+off,d.mean_target_count,width=.36,color=C[model])
+        for k,v in enumerate(d.mean_target_count):ax.text(k+off,v+.20,f'{v:.2f}',ha='center',fontsize=18,color=C[model],fontweight='bold' if k==len(d)-1 else 'normal')
+    ax.set_ylim(0,16.7);ax.set_yticks([0,5,10,15]);ax.set_xticks(xx,[str(n) for n in doses]);tidy(ax);ax.tick_params(labelsize=21)
+    ax.set_xlabel('Injected users',fontsize=22,labelpad=10);ax.set_ylabel('Target items / Top-15',fontsize=21,labelpad=10)
 
-# Right column: shared prediction and an interpretable stage-one parameter plot.
-rect(RX,8.05,RW,7.36)
-y=heading(RX+.43,8.42,'05','Two factorization models',RW-.86)
-text(RX+.48,9.70,r'$\hat r_{ui}=\mu+b_u+b_i+p_u^\top q_i$',34,NAVY)
-para(RX+.48,10.64,'Predicted rating = global mean + user bias + item bias + user-item dot product.',RW-.96,23)
-text(RX+.48,12.16,'SVD',26,BLUE,'bold')
-para(RX+2.02,12.18,'Signed user and item factors; additive gradient updates.',RW-2.50,23)
-text(RX+.48,13.44,'NMF',26,ORANGE,'bold')
-para(RX+2.02,13.46,'Non-negative factors; multiplicative factor updates. Biases can be negative.',RW-2.50,23)
-
-rect(RX,15.82,RW,9.49)
-y=heading(RX+.43,16.20,'06','A closer look at item bias',RW-.86)
-text(RX+.48,17.32,r'Books / Thriller injection / learned $b_i$',22,MUTED)
-ax=axis(RX+1.05,18.05,RW-1.80,4.40)
-xx=np.arange(len(counts))
+# The parameter plot is secondary evidence, clearly labelled as such.
+rect(31.45,14.88,15.55,6.78,'white')
+text(31.93,15.28,'SAME PREDICTION FORMULA',23,RED,'bold')
+text(31.93,16.03,r'$\hat r_{ui}=\mu+b_u+b_i+p_u^\top q_i$',39,NAVY)
+para(31.93,17.04,'Global mean + user bias + book bias + user-item dot product.',14.50,24,MUTED)
+text(31.93,18.25,'SVD',26,BLUE,'bold');para(34.07,18.29,'Signed latent factors; additive gradient updates.',12.20,24)
+text(31.93,19.45,'NMF',26,ORANGE,'bold');para(34.07,19.49,'Non-negative factors; multiplicative factor updates. Biases can be negative.',12.20,24)
+rect(31.45,22.24,15.55,9.75,'white')
+text(31.93,22.65,'WHAT CHANGES IN BOOK BIAS?',25,NAVY,'bold')
+text(31.93,23.21,'Thriller injection; equal weight per book in this mean',20,MUTED)
+ax=axis(32.55,24.30,13.30,4.70);xx=np.arange(len(counts))
 for model in ['SVD','NMF']:
     d=bias[bias.model.eq(model)].set_index('n_fake').loc[counts]
-    for key,ls,marker in [('target','-','o'),('non_target','--','s')]:
-        ax.plot(xx,d[key],color=C[model],ls=ls,marker=marker,ms=7,lw=3.5)
-ax.axhline(0,color='#A1AFB8',lw=1)
-ax.set_xticks(xx,[str(n) for n in counts]);ax.tick_params(labelsize=18,length=0,pad=8)
-ax.set_ylabel('Mean item bias',fontsize=22,labelpad=8);ax.set_xlabel('Injected users',fontsize=21,labelpad=9)
-ax.grid(axis='y',color=GRID,lw=1);ax.set_axisbelow(True);ax.spines['left'].set_visible(False);ax.spines['bottom'].set_color(GRID)
-ax.legend(handles=[Line2D([0],[0],color=MUTED,lw=3,label='Thriller'),Line2D([0],[0],color=MUTED,lw=3,ls='--',label='Non-Thriller')],loc='upper left',frameon=False,fontsize=18)
-para(RX+.48,23.32,'NMF shows a larger target / non-target item-bias separation. This accompanies its stronger Thriller exposure.',RW-.96,23)
-text(RX+.48,24.71,'Each book has equal weight in this bias panel.',18,MUTED)
+    for key,ls in [('target','-'),('non_target','--')]:ax.plot(xx,d[key],ls=ls,color=C[model],lw=3.8,marker='o' if key=='target' else 's',ms=7)
+ax.axhline(0,color='#A1AFB8',lw=1);ax.set_xticks(xx,[str(n) for n in counts]);ax.set_ylabel(r'Mean $b_i$',fontsize=23,labelpad=10);ax.set_xlabel('Injected users',fontsize=22,labelpad=10);tidy(ax);ax.tick_params(labelsize=19)
+ax.legend(handles=[Line2D([0],[0],color=MUTED,lw=3,label='Thriller'),Line2D([0],[0],color=MUTED,lw=3,ls='--',label='Non-Thriller')],frameon=False,fontsize=20,loc='upper left')
+para(31.93,30.15,'NMF develops a larger book-bias separation between target and non-target books, alongside stronger Thriller exposure.',14.50,24,NAVY,'bold')
 
-rect(RX,25.72,RW,7.92)
-y=heading(RX+.43,26.10,'07','What we learn',RW-.86)
-items=[('Exposure changes.','Repeated synthetic ratings reshape the recommendations received by real users.'),('The model matters.','NMF amplifies Thriller more; SVD has higher Shopping exposure in the displayed mobile range.'),('The result is diagnostic.','These runs measure exposure and fitted parameters, not held-out accuracy or a validated defense.')]
-yy=27.34
-for title,body in items:
-    text(RX+.48,yy,title,25,NAVY,'bold');yy=para(RX+.48,yy+.53,body,RW-.96,22)+.45
-
-# Provenance and scope, with no unsupported claims about improved quality.
-base.plot([1,47],[34.15,34.15],color='#BFCBD3',lw=1.2)
-text(1,34.48,'DATA: Goodbooks-10K  |  MovieLens 100K  |  MobileRec',20,NAVY,'bold')
-text(1,35.03,'Book genres: GPT-3.5-assigned labels; exposure is conditional on these labels. Baseline = no synthetic users.',18,MUTED)
-text(47,34.48,'CONTACT',18,RED,'bold',ha='right')
-text(47,34.96,'moshtasa@mail.uc.edu',23,NAVY,ha='right')
-text(47,35.48,'48 x 36 in  |  Stage-one results',16,MUTED,ha='right')
+# A single final message, with tightly scoped interpretation.
+rect(1,32.58,46,1.65,NAVY)
+text(1.50,32.91,'TAKEAWAY',21,'#92BDCB','bold')
+text(7.00,32.86,'Identical synthetic ratings can produce very different exposure shifts.',31,'white','bold')
+text(7.00,33.46,'The response depends on the model, target category and injection budget.',23,'#D5E0E7')
+text(1,34.69,'SCOPE',18,RED,'bold')
+para(2.35,34.66,'Exposure and fitted parameters, not held-out accuracy. Movie target has high baseline exposure; user counts and rating budgets differ across domains.',32,18,MUTED)
+text(1,35.46,'DATA: Goodbooks-10K  |  MovieLens 100K  |  MobileRec. Book genre labels assigned with GPT-3.5.',17,MUTED)
+text(47,34.70,'moshtasa@mail.uc.edu',24,NAVY,'bold',ha='right')
+text(47,35.40,'University of Cincinnati  |  Stage-one study',17,MUTED,ha='right')
 
 # Validate the final summary and the bounds of poster-level text.
 book_end=book[book.n_fake.eq(500)].set_index('model').mean_target_count
