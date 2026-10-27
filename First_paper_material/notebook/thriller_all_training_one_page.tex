@@ -1,10 +1,10 @@
-\documentclass[11pt]{article}
-\usepackage[a4paper,margin=20mm]{geometry}
-\usepackage{amsmath}
+\documentclass[10pt]{article}
+\usepackage[a4paper,landscape,margin=12mm]{geometry}
+\usepackage{amsmath,graphicx}
 \usepackage{enumitem}
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{5pt}
+\setlength{\parskip}{3pt}
 \setlength{\abovedisplayskip}{6pt}
 \setlength{\belowdisplayskip}{6pt}
 % Figure discussed: training_thriller_all_users_overview_4panel.png
@@ -14,6 +14,12 @@
 {\Large\bfseries What happens during each training number}
 \end{center}
 
+\noindent\begin{minipage}[t]{0.47\textwidth}\vspace{0pt}\centering
+\IfFileExists{first_reviewer/thriller/training_thriller_all_users_overview_4panel.png}{%
+\includegraphics[width=\linewidth,height=.85\textheight,keepaspectratio]{first_reviewer/thriller/training_thriller_all_users_overview_4panel.png}}{%
+\includegraphics[width=\linewidth,height=.85\textheight,keepaspectratio]{figures/first_reviewer/thriller/training_thriller_all_users_overview_4panel.png}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.51\textwidth}\vspace{0pt}\small
 This page explains the \textbf{all-users training figure for Thriller}. The numerical examples use $n=500$ synthetic users, added to 53,424 real users. Each synthetic user rates all Thriller books 5 and all other books 1. Each point on the horizontal axis is a separately trained model at a different injection count, not a training epoch. The values below average over recorded real and synthetic training ratings within each book group, with equal weight per rating.
 
 \textbf{The prediction formula.}
@@ -34,9 +40,10 @@ The same addition holds for group means. The numbers in each line follow the ord
 The mean recorded ratings are 4.436 for Thriller and 2.640 for non-Thriller. They are not 5 and 1 because this figure includes real ratings as well as synthetic ratings. Panel E compares these recorded means with the mean predictions.
 
 \textbf{Three results.}
-\begin{enumerate}[leftmargin=*,itemsep=5pt,topsep=3pt]
+\begin{enumerate}[leftmargin=*,itemsep=3pt,topsep=3pt]
 \item \textbf{SVD reconstructs the training ratings more accurately.} In panel A at $n=500$, SVD's mean absolute error (MAE) is 0.277 for Thriller and 0.323 for non-Thriller; NMF's is 1.076 and 0.507. MAE averages $|r_{ui}-\hat r_{ui}|$ for individual ratings, rather than taking the difference between two group means.
 \item \textbf{The models allocate scores differently.} In SVD, the book-bias and dot-product components both favor Thriller over non-Thriller. In NMF, book biases strongly separate the groups: $2.216$ versus $-1.404$. The dot products act in the opposite direction: $0.062$ versus $1.721$, partially offsetting that separation. Panel D also shows positive mean user biases in SVD and negative means in NMF.
 \item \textbf{Similar prediction patterns can come from different component combinations.} Relative to baseline, both models raise the mean Thriller prediction and lower the non-Thriller prediction. SVD uses signed dot products alongside book biases; NMF combines a large book-bias separation with opposing, non-negative dot products. These are training-fit results. As $n$ increases, both fitted parameters and the proportion of synthetic ratings in the reported averages change.
 \end{enumerate}
+\end{minipage}
 \end{document}
