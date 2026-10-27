@@ -46,4 +46,40 @@ The mean recorded ratings are 4.436 for Thriller and 2.640 for non-Thriller. The
 \item \textbf{Similar prediction patterns can come from different component combinations.} Relative to baseline, both models raise the mean Thriller prediction and lower the non-Thriller prediction. SVD uses signed dot products alongside book biases; NMF combines a large book-bias separation with opposing, non-negative dot products. These are training-fit results. As $n$ increases, both fitted parameters and the proportion of synthetic ratings in the reported averages change.
 \end{enumerate}
 \end{minipage}
+
+\clearpage
+\begin{center}
+{\Large\bfseries Training fit for synthetic users only}
+\end{center}
+\noindent\begin{minipage}[t]{0.47\textwidth}\vspace{0pt}\centering
+\IfFileExists{first_reviewer/thriller/training_thriller_synthetic_only_overview_5panel.png}{%
+\includegraphics[width=\linewidth,height=.85\textheight,keepaspectratio]{first_reviewer/thriller/training_thriller_synthetic_only_overview_5panel.png}}{%
+\includegraphics[width=\linewidth,height=.85\textheight,keepaspectratio]{figures/first_reviewer/thriller/training_thriller_synthetic_only_overview_5panel.png}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.51\textwidth}\vspace{0pt}\small
+\textbf{This is a subset of the all-users analysis.} The models are exactly the same as on the previous page: they were trained on real and synthetic ratings together. Here, we select only the synthetic users' recorded ratings when calculating the plotted means and errors. Real ratings still influence the fitted book biases and book vectors.
+
+These are deliberately constructed fake profiles. Every synthetic user rates every Thriller book \textbf{exactly 5} and every non-Thriller book \textbf{exactly 1}. Therefore, the desired predictions for these particular training pairs are 5 and 1, rather than the mixed real-and-synthetic means on the previous page. There is no point at $n=0$ because there are no synthetic users to measure.
+
+\textbf{The same formula, evaluated on synthetic ratings.}
+\[
+\hat r_{ui}=\mu+b_u+b_i+\mathbf p_u^{\mathsf T}\mathbf q_i.
+\]
+At $n=500$, the measured components are added in that order:
+\begin{align*}
+\text{SVD, Thriller:}\quad &2.918+0.004+0.429+1.648\approx4.999,\\
+\text{NMF, Thriller:}\quad &2.918-1.039+1.986+0.000\approx3.864,\\
+\text{SVD, non-Thriller:}\quad &2.918+0.004+0.133-2.061\approx0.995,\\
+\text{NMF, non-Thriller:}\quad &2.918-1.039-1.121+0.000\approx0.758.
+\end{align*}
+The NMF dot products shown as 0.000 are small positive values, rounded here. Panel E shows these mean predictions against the fixed recorded ratings of 5 and 1. Panel A averages the individual absolute errors, $|r_{ui}-\hat r_{ui}|$.
+
+\textbf{Three results.}
+\begin{enumerate}[leftmargin=*,itemsep=3pt,topsep=3pt]
+\item \textbf{SVD fits the synthetic 5-star ratings more closely.} At $n=500$, its mean Thriller prediction is 4.999 with MAE 0.012. NMF predicts 3.864 with MAE 1.136. Across the displayed injection counts, the mean Thriller predictions move toward 5, with SVD approaching it at smaller injection counts.
+\item \textbf{SVD also fits the synthetic 1-star ratings more closely at $n=500$.} Its non-Thriller prediction is 0.995 with MAE 0.006; NMF predicts 0.758 with MAE 0.244. NMF's mean is below 1, so a lower prediction here does not mean a better fit.
+\item \textbf{The score components explain the different fits.} SVD adds a positive dot product for Thriller and a negative one for non-Thriller. NMF's dot products are almost zero in both groups, so its predictions come mainly from $\mu+b_u+b_i$. Its book biases separate the groups, while its negative synthetic-user bias lowers both. Each synthetic user has one $b_u$ shared across all books; consequently, the two group means in panel D coincide.
+\end{enumerate}
+\end{minipage}
+
 \end{document}
