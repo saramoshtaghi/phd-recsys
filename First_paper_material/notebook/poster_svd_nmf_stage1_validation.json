@@ -1,0 +1,235 @@
+{
+  "poster_size_inches": [
+    48,
+    36
+  ],
+  "scope": "stage one; exposure and learned item biases",
+  "book_baseline_and_n500": [
+    {
+      "dataset": "Books",
+      "target": "Thriller",
+      "model": "NMF",
+      "k": 15,
+      "n_fake": 0,
+      "n_real_users": 53424,
+      "mean_target_count": 1.7298592392932015,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+      "source_precision": "full CSV precision"
+    },
+    {
+      "dataset": "Books",
+      "target": "Thriller",
+      "model": "NMF",
+      "k": 15,
+      "n_fake": 500,
+      "n_real_users": 53424,
+      "mean_target_count": 10.839248277927522,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+      "source_precision": "full CSV precision"
+    },
+    {
+      "dataset": "Books",
+      "target": "Thriller",
+      "model": "SVD",
+      "k": 15,
+      "n_fake": 0,
+      "n_real_users": 53424,
+      "mean_target_count": 1.5765573525007488,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+      "source_precision": "full CSV precision"
+    },
+    {
+      "dataset": "Books",
+      "target": "Thriller",
+      "model": "SVD",
+      "k": 15,
+      "n_fake": 500,
+      "n_real_users": 53424,
+      "mean_target_count": 2.279556004791854,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer1/tables/controlled_thriller_top15.csv",
+      "source_precision": "full CSV precision"
+    }
+  ],
+  "dataset_counts": {
+    "Books": {
+      "source": "/home/moshtasa/Research/phd-recsys/Book/Archive/data/genre_clean.csv",
+      "source_size_bytes": 474765722,
+      "users": 53424,
+      "items": 9415,
+      "observed_ratings": 5815569,
+      "global_mean": 3.9181110223264484,
+      "rating_counts": {
+        "1": 120964,
+        "2": 350205,
+        "3": 1336839,
+        "4": 2083651,
+        "5": 1923910
+      }
+    },
+    "Movies": {
+      "source": "/home/moshtasa/Research/phd-recsys/Movie /archive/preprocessing/df_final.csv",
+      "source_size_bytes": 1679149,
+      "users": 943,
+      "items": 1682,
+      "observed_ratings": 100000,
+      "global_mean": 3.52986,
+      "rating_counts": {
+        "1": 6110,
+        "2": 11370,
+        "3": 27145,
+        "4": 34174,
+        "5": 21201
+      }
+    },
+    "Mobile apps": {
+      "source": "/home/moshtasa/Research/phd-recsys/Mobile/archive/0316_Single/data/data/mobilerec_final.csv",
+      "source_size_bytes": 4416654250,
+      "users": 700111,
+      "items": 10173,
+      "observed_ratings": 19297019,
+      "global_mean": 3.280593080205808,
+      "rating_counts": {
+        "1": 4068183,
+        "2": 2441008,
+        "3": 2919802,
+        "4": 3744068,
+        "5": 6123958
+      }
+    }
+  },
+  "bias_equal_weight_per_item": [
+    {
+      "model": "SVD",
+      "n_fake": 0,
+      "target": -0.11910573542139556,
+      "non_target": -0.09596171662696266,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/svd_baseline_a.npz"
+    },
+    {
+      "model": "SVD",
+      "n_fake": 2,
+      "target": -0.10989130533468347,
+      "non_target": -0.0990713896225526,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_2.npz"
+    },
+    {
+      "model": "SVD",
+      "n_fake": 4,
+      "target": -0.11043461797815633,
+      "non_target": -0.10506803533725632,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_4.npz"
+    },
+    {
+      "model": "SVD",
+      "n_fake": 6,
+      "target": -0.12149478231409327,
+      "non_target": -0.10474995132961544,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_6.npz"
+    },
+    {
+      "model": "SVD",
+      "n_fake": 25,
+      "target": -0.08074365796013108,
+      "non_target": -0.0660293530448048,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_25.npz"
+    },
+    {
+      "model": "SVD",
+      "n_fake": 50,
+      "target": -0.03053978857304001,
+      "non_target": -0.03323235854404389,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_50.npz"
+    },
+    {
+      "model": "SVD",
+      "n_fake": 100,
+      "target": 0.055620627374239485,
+      "non_target": 0.015758165883587794,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_100.npz"
+    },
+    {
+      "model": "SVD",
+      "n_fake": 200,
+      "target": 0.19258525262779794,
+      "non_target": 0.07674193860278856,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_200.npz"
+    },
+    {
+      "model": "SVD",
+      "n_fake": 500,
+      "target": 0.42906687804568144,
+      "non_target": 0.13320637321866133,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/svd/thriller/svd_thriller_500.npz"
+    },
+    {
+      "model": "NMF",
+      "n_fake": 0,
+      "target": -0.6047871769900522,
+      "non_target": -0.5465664221121358,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/pilot/nmf_baseline_a.npz"
+    },
+    {
+      "model": "NMF",
+      "n_fake": 2,
+      "target": -0.5752305636792127,
+      "non_target": -0.5475213838631703,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_2.npz"
+    },
+    {
+      "model": "NMF",
+      "n_fake": 4,
+      "target": -0.5436068349589412,
+      "non_target": -0.5494327566807569,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_4.npz"
+    },
+    {
+      "model": "NMF",
+      "n_fake": 6,
+      "target": -0.5141055588877944,
+      "non_target": -0.5518673412679761,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_6.npz"
+    },
+    {
+      "model": "NMF",
+      "n_fake": 25,
+      "target": -0.21328381381070188,
+      "non_target": -0.5818450003983642,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_25.npz"
+    },
+    {
+      "model": "NMF",
+      "n_fake": 50,
+      "target": 0.10470294316127968,
+      "non_target": -0.6180107132488594,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_50.npz"
+    },
+    {
+      "model": "NMF",
+      "n_fake": 100,
+      "target": 0.5559958649078584,
+      "non_target": -0.6879562642254275,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_100.npz"
+    },
+    {
+      "model": "NMF",
+      "n_fake": 200,
+      "target": 1.123576679857395,
+      "non_target": -0.8585393178708348,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_200.npz"
+    },
+    {
+      "model": "NMF",
+      "n_fake": 500,
+      "target": 1.985607002793373,
+      "non_target": -1.1205184633866196,
+      "source": "/home/moshtasa/Research/phd-recsys/Book/current/PerturbRec/svd_nmf/layer2/embeddings/controlled/nmf/thriller/nmf_thriller_500.npz"
+    }
+  ],
+  "no_new_training": true,
+  "book_values_crosschecked_against_current_topk_summary": true,
+  "mobile_movie_values_crosschecked_against_original_outputs": true,
+  "claim_of_accuracy_improvement": false,
+  "pdf": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/poster_svd_nmf_stage1.pdf",
+  "png": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/poster_svd_nmf_stage1.png",
+  "source_table_sha256": "d124c2d01ad2ce347ede499cd6fbaa0872cb030bc519c576ec582725062b0a1d"
+}
