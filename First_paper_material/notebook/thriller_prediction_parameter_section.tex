@@ -1,0 +1,69 @@
+\subsubsection{Recommendations and Score Components for Original Users}
+\label{sec:real-user-prediction}
+
+Figure~\ref{fig:prediction_real_users} moves from reconstructing observed training ratings to scoring books that original users have not rated. The models are the same as in Figures~\ref{fig:training_components} and~\ref{fig:training_synthetic_components}; no parameters are updated during this prediction step. Panel (A) reports the number of Thriller books actually selected into Top-15 lists. Panels (B--E) summarize the corresponding fitted score components over all eligible unread books, rather than only the selected recommendations.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\manuscriptfigure[width=\fulllength]{figures/current/prediction_real_users_thriller_5panel_paper.png}
+\end{adjustwidth}
+\caption{Recommendations and raw predicted-score components for the 53,424 original users under Thriller-targeted injection: (A) mean Thriller count in Top-15 recommendations, (B) book bias $b_i$, (C) vector dot product $\mathbf p_u^\top\mathbf q_i$, (D) user bias $b_u$, and (E) predicted rating $\hat r_{ui}$. Blue denotes SVD and orange NMF. Solid lines and circles denote Thriller; dashed lines and squares denote non-Thriller in (B--E). Components are first averaged over each user's unrated books within the group and then equally over original users. Each injection count denotes a separate completed training run; 0 is the baseline.}
+\label{fig:prediction_real_users}
+\end{figure}
+
+\paragraph{Recommendation response: panel (A).}
+At baseline, the mean Thriller counts are 1.577 for SVD and 1.730 for NMF. At 6 injected users, SVD reaches 2.436 while NMF remains at 1.743. At 25 users, SVD still has a slightly larger count, 2.474 versus 2.380. The ordering reverses at the next displayed injection level, 50 users: NMF reaches 3.725 while SVD is at 2.470. NMF then rises to 7.024 at 100 users, 10.422 at 200, and 10.839 at 500. SVD gradually declines after its displayed maximum at 25, reaching 2.351, 2.308, and 2.280 at 100, 200, and 500, respectively. Thus, between baseline and 500 profiles, Thriller exposure increases by approximately 0.703 books per Top-15 list in SVD and 9.109 in NMF. Both models respond to injection, but NMF shows the much larger response at the higher displayed counts. The change in ordering is observed between 25 and 50; intermediate counts were not measured here.
+
+\paragraph{How the prediction components are averaged.}
+Let $I_g(u)$ be the fixed set of books in group $g\in\{T,N\}$ that original user $u$ has not rated. For a score component $x$, panels (B--E) use the equal-user mean
+\begin{equation}
+\label{eq:prediction_component_average}
+\overline{x}_g^{(t)}=
+\frac{1}{|U_0|}\sum_{u\in U_0}
+\frac{1}{|I_g(u)|}\sum_{i\in I_g(u)}x_{ui}^{(t)}.
+\end{equation}
+All 53,424 original users have eligible books in both groups. Their histories and candidate sets remain unchanged across injection levels. These averages differ from the observed-rating-pair weighting in the training figures. The prediction decomposition remains exact before rounding:
+\begin{equation}
+\label{eq:prediction_mean_decomposition}
+\overline{\hat r}_g^{(t)}
+=\mu_t+\overline{b_u}^{(t)}+\overline{b_i}_g^{(t)}+\overline{s}_g^{(t)}.
+\end{equation}
+Here $\overline{b_u}^{(t)}$ has no group subscript because every original user receives equal weight in both groups.
+
+\paragraph{Book bias: panel (B).}
+For NMF, mean Thriller book bias increases from $-0.605$ at baseline to $-0.215$ at 25 profiles, becomes positive at 50 ($0.102$), and reaches $1.981$ at 500. Mean non-Thriller book bias decreases from $-0.547$ to $-1.114$. Thus the book-bias component increasingly favours Thriller relative to the remaining candidates. SVD also increases Thriller book bias, from $-0.119$ to $0.429$, but its non-Thriller mean increases too, from $-0.096$ to $0.133$. The Thriller-directed separation in this component is therefore much larger in NMF. These biases are learned jointly from original and synthetic ratings and are reused when scoring unread books.
+
+\paragraph{User--book vector contribution: panel (C).}
+The vector term partly opposes NMF's book-bias changes: its mean falls from $1.023$ to $0.071$ for Thriller, while increasing from $1.006$ to $2.706$ for non-Thriller. A larger Thriller book bias therefore does not translate unchanged into a larger final score. In SVD, the mean Thriller vector contribution becomes more negative, from $-0.051$ to $-0.173$, while the non-Thriller contribution moves from $-0.036$ to $0.222$. At 500 profiles this component offsets the mean Thriller book-bias advantage in SVD. These measurements concern original users and unread books: they need not match the positive/negative SVD pattern, or near-zero NMF values, measured specifically on synthetic training pairs.
+
+\paragraph{User bias and the common mean: panel (D).}
+The original-user mean bias increases from $-0.060$ to $0.390$ in SVD. NMF's mean becomes less negative through 50 profiles, from $-0.497$ to $-0.447$, then decreases to $-0.703$ at 500. In both models, the common global mean falls from $3.918$ to $2.918$ over the same injection range. These components contribute to absolute predicted ratings. For a fixed user and a fixed trained model, however, $\mu_t$ and $b_u^{(t)}$ are identical for every candidate book. Consequently, ordering that user's raw candidate scores depends on
+\begin{equation}
+\label{eq:prediction_ranking_score}
+z_{ui}^{(t)}=b_i^{(t)}+\bigl(\mathbf p_u^{(t)}\bigr)^\top\mathbf q_i^{(t)},
+\qquad
+\hat r_{ui}^{(t)}=(\mu_t+b_u^{(t)})+z_{ui}^{(t)}.
+\end{equation}
+The shared offset is constant across books for that user; it can still change between training runs and, for user bias, between users.
+
+\paragraph{Putting the components together: panel (E).}
+At 500 synthetic users, the group means are reconstructed as
+\begin{equation}
+\label{eq:prediction_numeric_components}
+\begin{aligned}
+\text{SVD, }T:&\quad 2.918+0.390+0.429-0.173\approx3.563,\\
+\text{SVD, }N:&\quad 2.918+0.390+0.133+0.222\approx3.663,\\
+\text{NMF, }T:&\quad 2.918-0.703+1.981+0.071\approx4.267,\\
+\text{NMF, }N:&\quad 2.918-0.703-1.114+2.706\approx3.807.
+\end{aligned}
+\end{equation}
+The displayed inputs are rounded; results use the unrounded components. In NMF, mean Thriller predictions rise from 3.839 to 4.267, while non-Thriller predictions decrease from 3.880 to 3.807. At 25 profiles, the Thriller mean first exceeds the non-Thriller mean among the displayed runs (3.913 versus 3.877). This group-mean crossing differs from the cross-model Top-15 ordering, which reverses between 25 and 50 in panel (A). In SVD, both group means decrease, from 3.688 to 3.563 for Thriller and from 3.727 to 3.663 for non-Thriller. Its Thriller recommendation count nevertheless remains above baseline. This is possible because Top-15 selection depends on each user's highest-ranked individual books, rather than on an entire genre's mean score. No recorded rating is available for these unread pairs, so this figure does not report prediction error against a known target of 5 or 1.
+
+\paragraph{Why NMF shows the larger injection response.}
+The measured explanation lies in the combined book-bias and vector contributions used for ranking. In NMF, the mean Thriller book bias gains approximately 2.586 between baseline and 500 profiles, while its vector contribution decreases by 0.951. Their sum therefore still increases by about 1.635. For non-Thriller candidates, the corresponding combined increase is smaller, about 1.132. In SVD, the combined Thriller contribution increases by about 0.425, compared with 0.487 for non-Thriller. The strong Thriller-directed book-bias adjustment in NMF thus survives the opposing vector adjustment, whereas SVD exhibits no comparable mean shift towards Thriller in these combined components. Panel (A) directly establishes the resulting exposure response: an increase of 9.109 Thriller books per list in NMF versus 0.703 in SVD.
+
+This connects the recommendation response to the score allocation observed in the training figures. NMF's stronger exposure response is accompanied by a much larger learned Thriller book-bias advantage, not by uniformly larger vector dot products. Non-negativity restricts the available vector corrections, while the fitted biases and vectors together determine the scores. These measurements provide a numerical account of the tested models' response; they do not isolate non-negativity from the optimizer as an independent causal factor. Group-mean component changes explain the observed direction of score allocation, while the Top-15 counts require the individual recommendation lists and are measured separately.
+
+\saracomment{Added the uploaded five-panel original-user prediction figure. Verified all displayed doses against the source recommendation table: SVD remains slightly ahead at 25 profiles, and NMF is ahead from the next measured level, 50, through 500. Explained every panel, equal-user averaging, fixed within-user offsets and the complete 500-profile score decomposition. The larger NMF response is interpreted using the combined fitted bias and vector changes, with recommendation counts measured directly rather than inferred from genre means.}
+
