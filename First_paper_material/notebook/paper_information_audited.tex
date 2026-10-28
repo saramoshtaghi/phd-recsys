@@ -1,0 +1,686 @@
+% Sara: Converted from the author-supplied ACM/CIKM source on 16 October 2026.
+% Journal: Information (MDPI); Article; initial submission, not an accepted proof.
+% Special Issue: 2nd Edition of Modern Recommender Systems: Approaches, Challenges and Applications
+% https://www.mdpi.com/journal/information/special_issues/4UC6YN490Y
+% Official template: https://mdpi-res.com/data/MDPI_template.zip
+% Author instructions: https://www.mdpi.com/journal/information/instructions
+\documentclass[information,article,submit,pdftex,moreauthors]{Definitions/mdpi}
+\setlength{\headheight}{26pt} % Sara: accommodate the MDPI submission header.
+
+% Sara: Do not load subcaption: the official class already loads subfig/caption.
+\newif\ifrevisionnotes
+\revisionnotestrue % Set true to display the preserved orange Sara revision notes.
+\newcommand{\saracomment}[1]{\ifrevisionnotes\par\smallskip\noindent\textcolor{orange}{\textbf{Sara:} #1}\par\smallskip\fi}
+\newcommand{\authortodo}[1]{\textcolor{orange!80!black}{\textbf{AUTHOR INPUT REQUIRED:} #1}}
+% Visible draft boxes prevent absent or outdated images from being presented as new evidence.
+% Add the correct image at the stated path; it will replace its box automatically.
+\newcommand{\manuscriptfigure}[2][]{%
+  \IfFileExists{#2}{\includegraphics[#1]{#2}}{%
+    \fbox{\parbox[c][28mm][c]{0.94\linewidth}{\centering\small
+      \textbf{Updated figure required before submission}\\[3pt]
+      \texttt{\detokenize{#2}}\\[3pt]
+      Use the checkpoint and injection range matching the text.}}}}
+
+% Official template editorial placeholders; the journal assigns final publication metadata.
+\firstpage{1}
+\makeatletter
+\setcounter{page}{\@firstpage}
+\makeatother
+\pubvolume{1}
+\issuenum{1}
+\articlenumber{0}
+\pubyear{2026}
+\copyrightyear{2026}
+\datereceived{ }
+\daterevised{ }
+\dateaccepted{ }
+\datepublished{ }
+\hreflink{https://doi.org/}
+
+\Title{Training Recommender Systems with Biasing Data: A Comparison of Singular Value Decomposition and Non-Negative Matrix Factorization}
+\TitleCitation{Training Recommender Systems with Biasing Data: A Comparison of Singular Value Decomposition and Non-Negative Matrix Factorization}
+% Sara: Author names, order, affiliation and corresponding author supplied by the author.
+\Author{Sara Moshtaghi Largani $^{1,*}$, Raj Bhatnagar $^{1}$ and Vikram Ravindra $^{1}$}
+\AuthorNames{Sara Moshtaghi Largani, Raj Bhatnagar and Vikram Ravindra}
+\AuthorCitation{Moshtaghi Largani, S.; Bhatnagar, R.; Ravindra, V.}
+\address[1]{Department of Computer Science, College of Engineering and Applied Science (CEAS), University of Cincinnati, Cincinnati, OH 45221, USA; moshtasa@mail.uc.edu (S.M.L.); bhatnark@ucmail.uc.edu (R.B.); ravindvm@ucmail.uc.edu (V.R.)}
+\corres{Correspondence: moshtasa@mail.uc.edu (Sara Moshtaghi Largani)}
+
+\abstract{How do matrix-factorization recommenders respond to repeated, category-directed ratings? We compare biased Surprise singular value decomposition (SVD) and non-negative matrix factorization (NMF) on book, movie and mobile-application datasets. Each synthetic user rates every target-category item 5 and every other item 1. This dense intervention serves as a controlled diagnostic probe. We measure category exposure in original users' top-K recommendations and decompose fitted scores into the global mean, user bias, item bias and vector dot product. In the controlled Thriller experiment, 500 synthetic users increase the mean Thriller count per Top-15 list from 1.73 to 10.84 in NMF and from 1.58 to 2.28 in SVD. SVD reconstructs the synthetic training ratings more closely, while NMF shows the larger recommendation-exposure shift. In NMF, the Thriller item-bias increase exceeds the opposing change in the vector contribution. SVD exhibits a different allocation between biases and signed dot products. The mobile example also shows that the ordering of model responses depends on the domain and injection level. The findings explain the fitted score allocation in the tested configurations; they do not isolate non-negativity from optimization as an independent cause or establish a universal robustness ranking.}
+
+\keyword{recommender systems; matrix factorization; synthetic users; bias injection; singular value decomposition; non-negative matrix factorization; recommendation exposure}
+
+\begin{document}
+\saracomment{Converted ACM front matter, conference/copyright fields, keywords, bibliography and figure containers to the official MDPI Information article template. Preserved the manuscript's scientific values and previous Sara comments. Reorganized the article into Introduction, Related Work, Materials and Methods, Results, Discussion and Conclusions. Author declarations must be completed before submission.}
+\ifrevisionnotes
+\par\smallskip\noindent
+\textcolor{green!50!black}{\textbf{Prof. Raj}}\quad
+\textcolor{blue}{\textbf{Dr. Ravindra}}
+\par\smallskip
+\fi
+\section{Introduction}
+\label{sec:introduction}
+Recommender systems have become essential infrastructures for personalized information access across e-commerce platforms, streaming services, online advertising, and social media ecosystems. By learning from historical user–item interactions, these systems influence content exposure, user engagement, and long-term behavioral patterns. Collaborative filtering remains one of the most widely adopted recommendation paradigms, with matrix factorization methods such as Singular Value Decomposition (SVD) and Non-negative Matrix Factorization (NMF) continuing to serve as strong baselines in both research and production environments, particularly when datasets are relatively sparse or moderate in scale~\cite{Isinkaye29092023}.
+
+Despite their widespread adoption, recommender systems remain vulnerable to biased and manipulated training data. Interaction data can exhibit popularity and exposure biases, while feedback from recommendations can affect subsequent ratings~\cite{klimashevskaia2024survey,zhou2024longitudinal}. Recommendation systems can also be deliberately manipulated through synthetic profiles that promote or suppress items~\cite{li2016data,nguyen2024manipulating,wang2024poisoning}.
+
+These issues motivate examining changes in recommendation exposure alongside the parameters that produce the scores. Exposure, training fit and fairness are distinct evaluation questions; changes in one do not establish changes in the others~\cite{raj2022measuring,JIN2023101906}.
+
+Prior research investigates fairness-aware recommendation~\cite{JIN2023101906,wang2024counterfactual} and poisoning attacks and defenses~\cite{wang2024poisoning}.
+
+Our question is comparative: how do the tested SVD and NMF implementations respond when the same rating perturbation is applied? Profile-injection and data-poisoning methods for collaborative filtering are established topics~\cite{li2016data,nguyen2024manipulating,wang2024poisoning}. We do not propose a new attack or claim to outperform those methods. We instead examine recommendation exposure, training fit and the allocation of predicted scores among bias and vector components under a transparent, fixed perturbation policy.
+
+For each target category, synthetic users rate all target items 5 and all other items 1. The rule is held fixed within each dataset while the number of synthetic users varies. This deliberately removes variation in synthetic profile construction from the comparison. It does not remove differences in the optimizers, initialization distributions, or other model-specific settings.
+
+The experiments cover three domains, with user-based injection proportions ranging from approximately $0.004\%$ to $5.30\%$. We examine the target-category counts in top-$K$ recommendations and the associated changes in learned parameters. The purpose is to characterize sensitivity under the specified intervention. Training MAE describes reconstruction of observed ratings; it is not a held-out estimate of prediction accuracy.
+
+\saracomment{Revised the positioning and contributions: this is an exposure and parameter-response comparison, not a new poisoning attack. The empirical findings are separated from hypotheses about their cause.}
+
+\paragraph{Contributions}
+\begin{enumerate}
+\item A comparative exposure analysis of biased Surprise SVD and NMF under the same deterministic category-level injection rule, using three datasets spanning 943 to approximately 700K original users.
+\item A score-component analysis of the global mean, user bias, item bias and vector dot product, distinguishing all observed training ratings, synthetic ratings only, and original users\textquotesingle\ unrated candidates.
+\item A discussion of the sign constraint on NMF interaction scores as a possible contributor to the observed response, with an explicit distinction between an algebraic property and an empirically established causal mechanism.
+\end{enumerate}
+
+
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Collaborative Filtering and Matrix Factorization}
+
+Collaborative filtering predicts user preferences based on latent user and item representations learned from interaction histories. Matrix factorization techniques decompose the sparse user–item rating matrix $R \in \mathbb{R}^{m \times n}$ into lower-rank factors, enabling predictions even from sparse training data~\cite{ZHOU2015717, bahrkazemi2022optimal}. SVD and its variants are established factorization methods~\cite{repec:spr:elcore:v:23:y:2023:i:2:d:10.1007_s10660-021-09488-7}. NMF uses non-negative factors to form additive representations~\cite{NMF}. Extensions include hybrid approaches combining factorization with neighborhood-based methods~\cite{hssina2021recommendation}, temporal dynamics~\cite{behera2023collaborative}, and deep learning variants~\cite{li2023deep}. Hybrid systems also combine SVD, NMF and attention-based networks~\cite{haque2025hybrid}. These extensions differ in their factor constraints, side information and optimization procedures. 
+
+\saracomment{Revised the related-work framing and acknowledged established profile-injection research. No superiority over existing attack methods is claimed.}
+
+\subsection{Bias, Robustness, and Controlled Perturbations}
+
+Recommender systems are vulnerable to multiple forms of bias during training. Popularity bias causes frequent items to be over-promoted~\cite{klimashevskaia2024survey}, while exposure bias reflects asymmetric user access to items. More directly relevant, \emph{shilling attacks} (profile injection attacks) introduce fake user profiles to manipulate recommendations~\cite{liu2025novel, nawara2024shilling, zayed2023experimental}. Push attacks promote target items; nuke attacks suppress them.
+
+Prior work studies attack construction, detection, and defenses~\cite{li2016data,wang2024poisoning,nguyen2024manipulating}. Our study has a different evaluation objective: it measures how two factorization implementations respond to a fixed category-level rating perturbation. We do not provide an attack-performance comparison or establish novelty for the injection rule itself. The scope is the comparative exposure and bias-parameter response of the tested models.
+
+\saracomment{Added the rationale for using two established models and clarified the contribution relative to poisoning research. The contribution is the comparative category-exposure and fitted-parameter analysis, not a new recommender or injection algorithm.}
+
+\paragraph{Why SVD and NMF?}
+The two models provide a focused comparison within matrix-factorization recommendation. Both represent users and items with latent vectors and, in the biased versions studied here, use the same prediction components: a global mean, user bias, item bias, and user--item interaction. They differ in factor sign constraints and update rules. Studying this pair makes the comparison interpretable while holding the rating intervention and reported shared settings fixed. This choice does not imply that they represent all contemporary recommender architectures.
+
+\paragraph{Contribution relative to existing injection studies.}
+Demonstrating that fabricated profiles can change recommendations is not, by itself, our novelty. We examine category-level exposure trajectories across three domains and provide a detailed score-component analysis of the controlled Thriller experiment. The contribution is an empirical characterization of differential response, with parameter-level interpretation; it is not a new attack, a new factorization method, or an evaluated defense. Cross-model differences motivate mechanistic hypotheses, but do not by themselves isolate the effect of non-negativity from the optimizer.
+
+
+\section{Materials and Methods}
+\label{sec:materials-methods}
+\label{sec:methodology}
+\subsection{Datasets}
+\label{sec:datasets}
+
+We evaluate our methodology using three publicly available recommendation datasets that differ substantially in size, domain, sparsity, and semantic structure. Collectively, these datasets enable analysis across small, medium, and large recommendation environments while also allowing evaluation under different forms of item metadata and item distributions. Figure~\ref{fig:datasets_bars} summarizes the item-category distributions of all datasets used in our evaluations.
+
+\subsubsection{MovieLens Dataset}
+
+The MovieLens 100K dataset~\cite{harper2015movielens}\footnote{\url{https://grouplens.org/datasets/movielens/100k/}} contains 943 users, 1,682 movies and 100,000 explicit ratings on a 1--5 scale. Release decades are available for 1,681 movies in the category summary; this metadata count differs from the full catalog count.
+Due to its comparatively small size and long-standing use in recommender-system research, it serves as an effective baseline for validating the behaviour of both SVD and NMF under synthetic bias injection perturbations.
+
+For this dataset, the primary item attribute that we have chosen to use is the \textit{decade of movie release}. Movies are grouped according to release decade (e.g., 1990s, 1940s, 1950s), enabling temporal-category analysis rather than genre-based analysis. Throughout the experimental discussion, the \textbf{1990s decade category}  is used as the representative MovieLens example to illustrate how recommendation exposure changes under controlled injection conditions. 
+
+\saracomment{Removed the unsupported assertion that the book dataset is sparser than MovieLens. Clarified that inspecting genre-label distributions does not independently validate label accuracy.}
+
+\subsubsection{Book Dataset}
+
+Our cleaned, genre-labelled subset of Goodbooks-10K\footnote{\url{https://github.com/zygmuntz/goodbooks-10k}} contains 53,424 users, 9,415 books and 5,815,569 explicit 1--5 ratings. These are the counts used in the reported book runs, rather than the original release's nominal 10,000-book catalog.
+
+The original release provides community tags and shelves, but not the fixed 13-category annotation used here. We used GPT-3.5 to assign up to two labels from this vocabulary to each retained book, following the broader use of language models for annotation~\cite{zhang-etal-2023-llmaaa,zhang2023llmmetadata}. A book belongs to the target category if either assigned label matches it. Inspection of label frequencies does not independently validate semantic accuracy; the exposure measurements are conditional on these labels.
+
+To preserve the semantic richness of books spanning multiple genres, we retained multi-label representations rather than enforcing exclusive category assignments. This decision also supports future set-based and overlapping-category extensions in which books may simultaneously contribute to multiple recommendation subspaces.
+The \textbf{Thriller} label defines the running book example and the detailed parameter analysis. Of the 9,415 retained books, 1,606 carry this label. 
+\label{sec:thriller-example}
+
+\subsubsection{Mobile Application Dataset}
+
+The analyzed MobileRec data\footnote{\url{https://huggingface.co/datasets/recmeapp/mobilerec}} contain 700,111 users, 10,173 applications and 19,297,019 explicit ratings on a 1--5 scale. This is the largest dataset in the study.
+
+The source has 48 application categories. For visualization, an explicit saved category-to-domain mapping groups 9,751 apps into nine broader domains. The 422 Medical apps are unmapped in that display and are not included in its domain bars. The full dataset statistics still cover all 10,173 apps. This descriptive grouping is not a fitted clustering or tree-learning algorithm. The recommendation experiment targets the original Shopping category, not the broader Shopping \& Food display domain.
+
+The \textbf{Shopping} category is the representative mobile example used to measure the recommendation response to synthetic ratings.
+
+Throughout the remainder of this paper, three representative categories are used repeatedly to illustrate model behavior across datasets: \textbf{Thriller} from the Goodbooks dataset, \textbf{Shopping} from the mobile application dataset, and \textbf{the 1990s decade} from the MovieLens dataset.
+
+The experimental design considers the item categories in each dataset. The plots presented here illustrate three representative cases; they should not be interpreted as proving identical trajectories for every category. For illustration in this paper, these three example categories are used because they exhibit distinct category sizes, interaction distributions, and semantic structures, meaning that the datasets organize and relate items in very different ways. For example, MovieLens uses defined movie decades, Goodbooks contains literary genres, and the mobile visualization groups application categories into broader domains, thereby providing complementary perspectives on recommendation bias propagation. Figure~\ref{fig:datasets_pink} illustrates the distribution of attributes and category frequencies across the three datasets.
+
+
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\manuscriptfigure[width=\fulllength]{figures/current/dataset_categories.png}
+\end{adjustwidth}
+\caption{Dataset characteristics: (a) user and item counts, (b) rating distributions, and item counts by (c) book genre, (d) movie release decade, and (e) mobile application domain. Mobile domain bars summarize 9,751 apps using a saved mapping from the original 48 categories; 422 Medical apps are unmapped in this display. Books may have multiple genre labels. The decade bars cover 1,681 movies, while the full-catalog statistics cover 1,682.}
+\label{fig:datasets_bars}
+\label{fig:datasets_pink}
+\end{figure}
+
+
+\saracomment{Clarified that Surprise SVD is a learned Funk-style factorization recommender, not a direct truncated matrix SVD. Corrected the indexed regularization expression and distinguished additive SVD updates from multiplicative NMF factor updates.}
+
+\subsection{Matrix Factorization Models}
+\label{subsec:matrix_factorization_models}
+
+We consider the biased Surprise SVD recommender (a Funk-style learned factorization, not a direct truncated matrix SVD) and biased Non-Negative Matrix Factorisation (NMF)~\cite{SVD,NMF}, using the Surprise library~\cite{hug2020surprise}.\footnote{\url{https://surprise.readthedocs.io/en/stable/matrix_factorization.html}} The experiments used Python on an Ubuntu 22.04 server with dual AMD EPYC 7763 processors. The factorization routines use Surprise's CPU implementation.
+
+
+
+
+
+Both methods use the following formulation to estimate the predicted rating $\hat{r}_{ui}$ for user $u$ and item $i$:
+\begin{equation}
+  \hat{r}_{ui} = \mu + b_u + b_i + \mathbf{q}_i^\top \mathbf{p}_u
+  \label{eq:prediction}
+\end{equation}
+where the terms have the following intuitive meanings:
+\begin{itemize}
+  \item $\mu \in \mathbb{R}$ is the \textbf{global mean} of all observed ratings—the average rating across the entire dataset, serving as a baseline.
+  \item $b_u \in \mathbb{R}$ is the \textbf{user bias}—a learned user-specific offset, fitted jointly with the item biases and latent vectors.
+  \item $b_i \in \mathbb{R}$ is the \textbf{item bias}—a learned item-specific offset shared across users, fitted jointly with all other score components; it is not the arithmetic mean of that item's ratings.
+  \item $\mathbf{p}_u \in \mathbb{R}^d$ is the \textbf{user latent factor vector}—a learned representation of user $u$'s preferences across $d$ hidden dimensions.
+  \item $\mathbf{q}_i \in \mathbb{R}^d$ is the \textbf{item latent factor vector}—a learned representation of item $i$'s characteristics across $d$ dimensions.
+  \item $\mathbf{q}_i^\top \mathbf{p}_u$ is the \textbf{dot product} (interaction term) between user and item factors—it captures the affinity between the user's preferences and the item's properties.
+\end{itemize}
+
+Here, $d$ denotes the \textbf{dimensionality} of the latent factor space.
+
+The SVD implementation minimizes a regularized squared-error objective over observed ratings. To make the parameter indices and per-group penalties explicit, we write it as:
+
+\begin{equation}
+\label{eq:svd_objective}
+\min_{\{\mathbf{p}_u,\mathbf{q}_i,b_u,b_i\}}
+\sum_{(u,i)\in R}
+\left[(r_{ui}-\hat r_{ui})^2+\Omega_{ui}\right],
+\end{equation}
+where
+\begin{equation}
+\Omega_{ui}=\lambda_{p_u}\|\mathbf{p}_u\|^2+
+\lambda_{q_i}\|\mathbf{q}_i\|^2+
+\lambda_{b_u}b_u^2+\lambda_{b_i}b_i^2.
+\end{equation}
+
+The optimisation is carried out with respect to user/item latent vectors $\mathbf{p}_u,\mathbf{q}_i$ and user/item biases $b_u,b_i$. The objective consists of two parts: the first term is the \textbf{squared prediction error} summed over all observed ratings $R$, penalising large deviations between predicted and actual ratings; the second term is the \textbf{$L_2$ regularisation}, controlled by the per-parameter coefficients in $\Omega_{ui}$, which penalise parameter magnitudes. Letting $e_{ui}=r_{ui}-\hat{r}_{ui}$ denote the prediction error for a single rating, the SGD updates are:
+\begin{equation}
+\label{eq:svd_updates}
+\begin{aligned}
+b_u &\leftarrow b_u + \gamma_{b_u}\bigl(e_{ui} - \lambda_{b_u} b_u\bigr),\\
+b_i &\leftarrow b_i + \gamma_{b_i}\bigl(e_{ui} - \lambda_{b_i} b_i\bigr),\\
+\mathbf{p}_u &\leftarrow \mathbf{p}_u + \gamma_{p_u}\bigl(e_{ui}\mathbf{q}_i - \lambda_{p_u}\mathbf{p}_u\bigr),\\
+\mathbf{q}_i &\leftarrow \mathbf{q}_i + \gamma_{q_i}\bigl(e_{ui}\mathbf{p}_u - \lambda_{q_i}\mathbf{q}_i\bigr).
+\end{aligned}
+\end{equation}
+
+Within a rating update, $e_{ui}$ and the vector values on the right-hand sides are computed before that update; the two vector updates therefore use the stored pre-update factor values. Biases start at zero for a new fit. The global mean is computed from the training observations and held fixed during that fit, whereas the vectors start from random initial values and are optimized.
+
+Here, each update has two hyperparameters: the \textbf{learning rate} $\gamma$ controls the step size in the direction opposite to the gradient (how aggressively parameters are adjusted), and the \textbf{regularisation} $\lambda$ controls the penalty on parameter magnitude (how strongly large values are discouraged). Surprise allows these to differ per parameter group (user vs.\ item biases, user vs.\ item factors).
+
+\paragraph{NMF}
+
+NMF imposes the element-wise factor constraints $\mathbf p_u\ge0$ and $\mathbf q_i\ge0$. Each latent dimension then contributes a non-negative product to the interaction score. This additive structure does not by itself identify a dimension with a particular genre or guarantee greater accuracy or larger vector norms.
+
+In its default (unbiased) form, NMF omits the global mean and bias terms:
+\begin{equation}
+\hat{r}_{ui} = \mathbf{q}_i^\top \mathbf{p}_u.
+\end{equation}
+Surprise rescales factors multiplicatively. For the unbiased positive-rating setting, non-negative factors and strictly positive update denominators preserve non-negativity. For each factor $f=1,\ldots,d$, the update ratios are:
+\begin{equation}
+\label{eq:nmf_updates}
+\begin{aligned}
+p_{uf}
+&\leftarrow
+p_{uf}\cdot
+\frac{
+\sum_{i \in I_u} q_{if}\, r_{ui}
+}{
+\sum_{i \in I_u} q_{if}\, \hat{r}_{ui}
++
+\lambda_u \lvert I_u \rvert p_{uf}
+},
+\\[8pt]
+q_{if}
+&\leftarrow
+q_{if}\cdot
+\frac{
+\sum_{u \in U_i} p_{uf}\, r_{ui}
+}{
+\sum_{u \in U_i} p_{uf}\, \hat{r}_{ui}
++
+\lambda_i \lvert U_i \rvert q_{if}
+}.
+\end{aligned}
+\end{equation}
+Here $I_u$ contains items rated by user $u$ and $U_i$ contains users who rated item $i$; $\lambda_u=\lambda_{p_u}$ and $\lambda_i=\lambda_{q_i}$. The implementation accumulates the numerators and denominators over an epoch and then rescales the user and item factors. It does not update these factors after every single rating in the same manner as SVD. The numerator uses observed ratings; the denominator uses the model's current raw estimates and regularization.
+
+In the biased NMF variant of Surprise (\texttt{biased=True}), the prediction reverts to the full form of Eq.~\eqref{eq:prediction}:
+\begin{equation}
+\hat{r}_{ui} = \mu + b_u + b_i + \mathbf{q}_i^\top \mathbf{p}_u.
+\end{equation}
+The factor ratios retain the structure of Eq.~\eqref{eq:nmf_updates}, with the full raw estimate in their denominators. During each rating pass, the estimate is computed before the corresponding bias update and is used in the accumulators. Since biased estimates include signed offsets, positive initialization alone is not a sufficient algebraic guarantee that every denominator is positive. The reported controlled book checkpoints from baseline through 500 profiles were checked for finite, non-negative factors; the sign-based interpretation below applies to these checked results.
+The bias terms $b_u,b_i$ are not subject to the non-negativity constraint and are therefore updated via the same additive SGD scheme as in SVD:
+\begin{equation}
+\label{eq:nmf_bias_updates}
+\begin{aligned}
+b_u &\leftarrow b_u + \gamma_{b_u}\bigl(e_{ui} - \lambda_{b_u} b_u\bigr),\\
+b_i &\leftarrow b_i + \gamma_{b_i}\bigl(e_{ui} - \lambda_{b_i} b_i\bigr),
+\end{aligned}
+\end{equation}
+where $e_{ui}=r_{ui}-\hat{r}_{ui}$ and $\hat{r}_{ui}$ follows Eq.~\eqref{eq:prediction}. SVD therefore uses per-rating additive updates for biases and factors; biased NMF uses per-rating additive bias updates and epoch-level multiplicative factor rescaling. These are both factor-constraint and optimization differences. We do not attribute their response difference exclusively to either one.
+
+\saracomment{Checked the update equations against Surprise documentation and source code. Clarified stored pre-update SVD factors, epoch-level NMF accumulators, signed bias terms and the conditions for multiplicative sign preservation. Non-negative factors are verified for the reported controlled book checkpoints rather than assumed for every possible biased-NMF run.}
+
+\saracomment{Preserved the original injection exactly: every synthetic user rates every target item 5 and every other item 1. Replaced the unproved worst-case upper-bound claim with the controlled-probe rationale.}
+
+\subsection{Bias Injection Protocol}
+\label{sec:bias-injection}
+
+We use dense, deterministic synthetic profiles as a controlled diagnostic probe. Each added user follows the same category-level rule: all target items receive 5 and all other items receive 1. The policy is kept fixed between models within a dataset. It is intentionally not intended to reproduce the heterogeneous rating histories of real users, and we make no claim that it is a mathematical upper bound on all possible perturbations.
+
+\saracomment{Replaced the genre-ordering example with book-and-rating profile counts. Verified that real book users rated 18--198 distinct books; 4--20 is explicitly a hypothetical sparse-profile illustration. Fixed genre annotations are not counted as independent choices. The hypothetical collection example uses 500 profiles, consistent with the maximum book injection count reported in this manuscript. Sampling realistic profiles remains possible.}
+
+\paragraph{Why use a fixed profile?}
+Real users have heterogeneous rating histories. Our cleaned book dataset contains 53,424 users and 9,415 books, with each user rating between 18 and 198 distinct books. Books have up to two genre labels, so individual histories can also span overlapping categories.
+
+To illustrate the number of possible profiles, consider a deliberately simplified hypothetical setting in which each synthetic user rates only 4--20 distinct books. This is an illustrative restriction, not the observed range of real-user histories. Even for one user rating exactly 15 books, choosing those books from the catalog and assigning each a rating from 1 to 5 gives
+\[
+\binom{9415}{15}5^{15}\approx 9.34\times10^{57}
+\]
+possible book-and-rating assignments. Genre annotations are fixed properties of the books and are therefore not counted as additional independent choices.
+
+Allowing profile lengths from 4 to 20 gives
+\[
+H=\sum_{\ell=4}^{20}\binom{9415}{\ell}5^\ell\approx 1.15\times10^{75}.
+\]
+For just two separately identified synthetic users, allowing their profiles to coincide, there are already
+\[
+H^2\approx 1.32\times10^{150}
+\]
+possible profile pairs. With 500 synthetic users, the corresponding number of profile collections is $H^{500}$. These counts exclude reading order and do not imply that every assignment represents realistic behavior.
+
+Exhaustively evaluating heterogeneous profiles is therefore impractical. Sampling realistic profiles remains possible, but would introduce additional choices about profile length, item selection, and rating distributions. We instead use one transparent, fixed rating rule and vary the number of synthetic users, enabling a controlled comparison of SVD and NMF under the same intervention.
+
+\saracomment{Corrected MovieLens user percentages: 2/943 is approximately 0.212 percent and 50/943 is approximately 5.302 percent. Updated the overall maximum proportion. Added rating-budget measures because equal user percentages do not imply equal perturbation strength.}
+
+\subsubsection{Injection Intensity and Scale}
+
+To examine how matrix factorization models react to bias injections at varying intensities, we progressively vary the number of injected synthetic users while maintaining a consistent injection procedure across all datasets. This experimental design allows us to evaluate the sensitivity and robustness of SVD and NMF under increasing levels of externally introduced bias in the training data.
+
+Because the datasets differ substantially in size, injection intensity is expressed here as a percentage of the original user population. This normalization describes the proportion of added users, but does not equate rating budgets or loss contributions across datasets. Let $m$ be the original user count, $n$ the number of items rated by each synthetic profile, and $|R_0|$ the original observed-rating count. Adding $t$ profiles gives user proportion $100t/m$, injected-rating ratio $100tn/|R_0|$, and injected share of augmented observations $100tn/(|R_0|+tn)$. The latter two quantities distinguish profile density from user count.
+
+\begin{itemize}
+    \item \textbf{Movie dataset (943 original users)}: injection ranges from 2 users (0.212\%) to 50 users (5.302\%).
+    
+    \item \textbf{Book dataset (53,424 original users)}: injection ranges from 2 users (0.004\%) to 500 users (0.94\%).
+    
+    \item \textbf{Mobile dataset (700,111 original users)}: injection ranges from 30 users (0.004\%) to 7,000 users (1.00\%).
+
+    
+\end{itemize}
+
+We evaluate multiple injection levels to observe recommendation behavior across different magnitudes of biasing influence. Throughout this manuscript, the reported book analyses are restricted to the no-injection baseline and at most 500 synthetic users; the movie and mobile analyses retain their dataset-specific ranges stated above. 
+
+\saracomment{Audited the manuscript for book injection counts. The reported book range is 2--500 synthetic users (up to approximately 0.94 percent), with the no-injection baseline retained. The profile-collection illustration and the training-figure caption now use the same maximum. Movie and mobile ranges and examples are unchanged.}
+
+\subsubsection{Design of Biasing Users' Ratings Vector}
+
+Each synthetic biasing user is designed to strongly prefer all items of a single category, genre, or decade and discourage items from all other categories. It is accomplished as follows.
+
+\begin{itemize}
+\item All items belonging to the selected target category receive a rating of $=5$ from this user, indicating maximal preference.
+\item All remaining items receive a rating of $=1$ for this user, indicating minimal preference.
+\end{itemize}
+
+Our test runs are repeated with the training dataset injected with biased users who favor one category at a time. 
+A number of injected biasing users simultaneously reinforce the target category while suppressing all remaining categories. 
+
+\saracomment{Clarified that the intervention both promotes target items and assigns low ratings elsewhere. Effects on other categories cannot be described as purely indirect spillover. Removed the unverified exact count of 143 generated datasets pending run-log verification.}
+
+\subsubsection{Controlled Rating Pattern}
+
+To illustrate the injection methodology concretely, we use here the \textbf{Thriller} genre from the book dataset as an example. Although the numerical values and category distributions differ across datasets, the underlying injection procedure and experimental framework remain identical for all experiments conducted in the MovieLens, Goodbooks, and Mobile Application datasets.
+
+For the Thriller experiment:
+\begin{itemize}
+    \item $n_{\text{target}} = 1606$ Thriller books,
+    
+    \item $n = 9415$ total books,
+    
+    \item $n - n_{\text{target}} = 7809$ non-Thriller books.
+\end{itemize}
+
+Thus, every injected biasing user rates:
+
+\begin{itemize}
+    \item all 1,606 Thriller books with rating $5$
+    \item all remaining 7,809 non-Thriller books with rating $1$
+\end{itemize}
+
+Consequently, each injected user contributes
+\(1606 + 7809 = 9415\)
+ratings to the augmented training set. The Thriller category constitutes approximately $(1606/9415)\times100\approx17.06\%$ of the analyzed book catalog. This dense probe simultaneously reinforces target items and lowers the observed ratings of non-target items. Changes in other categories therefore reflect both components of the intervention, rather than a purely indirect effect of target promotion. 
+
+For example, when the thriller is the preferred category, injecting $t=2$ synthetic users adds  $2\times1606=3212$  highest (=5) Thriller ratings and
+ $2\times7809=15618$  lowest ratings (=1) for all non-thriller categories.
+At 500 synthetic users, the added rating count is $500\times9415=4,707,500$: approximately 80.95\% of the original 5,815,569 observations and 44.74\% of the 10,523,069 augmented observations. Thus a 0.94\% user-based injection is a substantial intervention in the training ratings. The vocabulary has 13 labels; the detailed controlled analyses reported here concern Thriller rather than a complete controlled comparison across all 13 labels. The same 5/1 rule is used for the representative movie and mobile targets.
+
+For each injected dataset, both SVD and NMF models were trained independently using the stated shared configuration, enabling a descriptive comparison of their top-$k$ recommendations for each real user.
+
+
+\subsection{Model Configuration and Training Protocol}
+
+Both models use Surprise~\cite{hug2020surprise} and train on the complete original or augmented rating set. No train--test split is used because the primary outcome is the change in recommendations after a controlled intervention. Reported MAEs describe observed training ratings and do not estimate generalization to held-out ratings. Recommendations exclude previously rated items and are generated only for original users, with $K\in\{15,25,35\}$. Synthetic users participate in fitting and in the explicitly labelled synthetic-training analysis, but never in the recommendation-exposure averages.
+
+All reported configurations share eight latent factors, 180 epochs, enabled biases, factor penalties $\lambda_{p_u}=0$ and $\lambda_{q_i}=0.002$, and initialization seed 42. Model-specific bias penalties, learning rates and initialization distributions must also be distinguished. In the controlled book and archived movie scripts, SVD uses its default learning rate 0.005 and bias penalties 0.02. Biased NMF uses bias learning rates 0.005 and bias penalties 0.02. In the archived mobile SVD script, the default-group learning rate is explicitly 0.012, the item-bias learning rate is 0.030, and both bias penalties are 0.002. The mobile NMF script retains its default bias learning rates and penalties. Consequently, the cross-domain comparison does not hold all optimization parameters identical.
+
+SVD factors use a normal initialization with mean 0 and standard deviation 0.1; NMF factors use a uniform initialization on $[0,1)$. Both bias arrays start at zero. For the updated controlled book runs, original users' and books' initial factors are reused across injection levels within each model. Added users' factors use a separate fixed stream with seed 20260921, preserving prefixes across injection counts. These controls do not equate SVD and NMF initial vectors or imply warm-starting from already trained baseline factors.
+
+Paired baseline book fits with the same data order, settings and seed produced identical saved arrays. The source data and catalog remain unchanged as synthetic profiles are added. This verifies deterministic repeatability under that setup; cross-seed uncertainty is not quantified in the reported figures. Equal factor dimension and epoch count do not establish equal convergence or independently optimized performance. We characterize the tested implementations and settings rather than an optimization-independent architecture effect.
+
+\saracomment{Reconciled the method with the saved run scripts: the mobile SVD uses learning rates 0.012/0.030 and bias regularization 0.002, unlike the controlled book and movie defaults. Documented within-model shared initialization and the separate synthetic-user stream. Replaced unspecified stability language with the concrete paired-baseline repeatability check; cross-seed uncertainty remains unquantified.}
+
+\subsection{Evaluation Metrics}
+\label{subsec:eval_metrics}
+
+The evaluation framework consists of two complementary stages. The first stage examines recommendation-level behavior by analyzing the  frequency of target-category items appearing in the top-k recommendations for all users. The second stage describes internal parameter changes associated with those exposure shifts.
+
+
+
+For every model configuration and injection condition, we generate top-$K$ recommendation lists for all original users using the learned latent representations, where $K \in \{15,25,35\}$. The primary objective is to quantify how strongly the injected preference signal propagates into the final recommendation space.
+
+Let $g$ be a target category, $U_0$ the original users, and $\mathcal C(i)$ the set of category labels assigned to item $i$. Let $L_K^{(t,g)}(u)$ denote the $K$-item recommendation list for user $u$ from the model trained with $t$ synthetic profiles targeting $g$. We measure
+\begin{equation}
+\label{eq:target_count}
+C_g^{(t)}@K=\frac{1}{|U_0|}\sum_{u\in U_0}
+\sum_{i\in L_K^{(t,g)}(u)}\mathbf{1}\{g\in\mathcal C(i)\}.
+\end{equation}
+This is a mean count of target-category items per list, between 0 and $K$. Its corresponding mean exposure percentage is $100C_g^{(t)}@K/K$. To distinguish exposure from its change, the baseline-referenced count difference is $\Delta C_g^{(t)}@K=C_g^{(t)}@K-C_g^{(0)}@K$, with percentage-point difference $100\Delta C_g^{(t)}@K/K$. These are definitions for interpreting the existing count plots, not additional experimental results. In the controlled book calculations, raw ranking scores use $b_i+\mathbf p_u^\top\mathbf q_i$, previously rated books are excluded, and equal-score ties use ascending raw book ID. Saved movie and mobile summaries retain their original four-decimal precision; book means are calculated from the unrounded counts.
+
+An item with multiple labels can contribute to more than one category count, so category percentages need not sum to 100. A high absolute target count does not establish a large injection effect without comparison to the no-injection baseline. These measurements describe recommendation exposure, not a demonstrated change in users' underlying preferences or held-out prediction accuracy.
+
+
+\section{Results}
+\label{sec:experiments}
+\subsection{Target-Category Exposure}
+Three representative categories are used repeatedly throughout the analysis in order to illustrate model behaviour across datasets. These are the \textbf{Thriller} category from the Goodbooks dataset, the \textbf{Shopping} category from the Mobile application dataset, and the \textbf{1990s decade} category from the MovieLens dataset.
+
+Figure~\ref{fig:merged_comparison_singlecol} shows the mean target-category counts in original users' Top-15 recommendations as injection changes. The displayed lists have $K=15$, with book injections through 500, mobile injections through 300 and movie injections through 50. The axes use dataset-specific categorical injection counts. 
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\manuscriptfigure[width=\fulllength]{figures/current/recommendation_exposure_top15.png}
+\end{adjustwidth}
+\caption{Mean number of target-category items in the top-15 recommendations for original users: (a) Thriller books, (b) Shopping applications, and (c) movies released in the 1990s. NMF and SVD are shown in the top and bottom rows, respectively. Book injections extend to 500 users, mobile injections to 300 users, and movie injections to 50 users. Baseline denotes training without synthetic users.}
+\label{fig:merged_comparison_singlecol}
+\end{figure}
+
+The following observations summarize these three cases:
+
+{\bf Observation 1 - Effectiveness of Bias Injections:}
+The dense injection changes target-category exposure in the representative experiments for both tested models. In the updated controlled book experiment (Thriller; Figure~\ref{fig:merged_comparison_singlecol}), the Top-15 baseline mean is approximately 1.73 for NMF and 1.58 for SVD. With 500 synthetic users, these means become 10.84 and 2.28, respectively. The corresponding target exposure rises from approximately 11.53\% to 72.26\% for NMF and from 10.51\% to 15.20\% for SVD. Percentages are calculated from the unrounded mean counts in the source results table.
+
+\saracomment{Updated the book example to 500 synthetic users using the verified PerturbRec summary table. Observation 1 now uses Top-15, matching the displayed exposure figure: NMF 1.73 to 10.84 and SVD 1.58 to 2.28. Exposure percentages are calculated before rounding.}
+
+For mobile Shopping at $K=15$, SVD increases from 0.3262 at baseline to 0.6290, 1.2369 and 3.5656 at 30, 60 and 300 synthetic users. NMF changes from 0.1902 to 0.1330, 0.1998 and 0.9002 at the same levels. Thus both exceed baseline at 300, while the lowest displayed NMF dose reduces exposure. An increase is not guaranteed at every injection level.
+
+In MovieLens, the Top-15 mean for 1990s movies rises from 9.9830 to 13.3415 in SVD and from 11.4836 to 15.0000 in NMF at 50 synthetic users. The higher baseline also leaves less room for further increase in NMF. These examples demonstrate exposure changes under the stated policy, with magnitudes and model ordering depending on the domain and injection level.
+
+{\bf Observation 2 - Large Difference Between NMF and SVD Models:}
+NMF and SVD exhibit different response trajectories as the proportion of injected users increases. For books (Thriller), both models respond at small injection levels, but their trajectories diverge as the number of profiles increases. In the displayed mobile Shopping experiment, SVD remains above NMF at all shown Top-15 injection levels; at 300 users the respective counts are 3.5656 and 0.9002.
+
+In the book experiment, 500 synthetic users correspond to approximately 0.94\% of the original user population. At this injection level, NMF reaches 23.29 versus SVD's 5.34 for Top-35. For Top-25, the corresponding baseline and injected means are 2.89 and 17.07 for NMF, and 2.76 and 3.82 for SVD; for Top-15, they are 1.73 and 10.84 for NMF, and 1.58 and 2.28 for SVD. The displayed Top-15 comparisons therefore do not yield a domain-independent ordering of model sensitivity.
+
+The representative results illustrate larger NMF amplification at some injection levels for the tested configuration. They do not establish that NMF is inherently more sensitive for every category, hyperparameter setting, or injection policy.
+
+\saracomment{Retained Observations 1 and 2 and verified that all book examples use 500 synthetic users for the three list lengths. Moved the non-monotonic dose-response observation to Future Work. Mobile injection counts remain dataset-specific.}
+
+
+\subsection{Parameter Responses and Interpretation}
+\label{sec:bi-mechanism}
+
+\subsubsection{Score Components and Measurement Sets}
+
+We examine how the fitted score is divided among the terms of Eq.~\eqref{eq:prediction}. For a model trained with $t$ synthetic users, the raw predicted rating is
+\begin{equation}
+\label{eq:training_score_components}
+\hat r_{ui}^{(t)}=\mu_t+b_u^{(t)}+b_i^{(t)}+
+\underbrace{\bigl(\mathbf p_u^{(t)}\bigr)^\top\mathbf q_i^{(t)}}_{s_{ui}^{(t)}}.
+\end{equation}
+Here, $\mu_t$ is the mean of the augmented training ratings; $b_u^{(t)}$ and $b_i^{(t)}$ are learned adjustments for a user and a book, respectively; and $s_{ui}^{(t)}$ is the dot product of their learned vectors. Book bias is a fitted parameter, rather than the book's arithmetic mean rating. The dot product provides a user--book contribution to the score. All reported components and errors in this section use raw scores before clipping to the rating scale.
+
+Let $R_t$ contain all observed training pairs, including original and synthetic users, and let $S_t\subset R_t$ contain only the synthetic users' pairs. We divide either measurement set into Thriller ($T$) and non-Thriller ($N$) pairs according to book membership. For a measurement set $\mathcal A\in\{R_t,S_t\}$ and group $g\in\{T,N\}$, define
+\begin{equation}
+\label{eq:training_component_average}
+\begin{aligned}
+\langle x\rangle_{\mathcal A,g}
+&=\frac{1}{|\mathcal A_g|}\sum_{(u,i)\in\mathcal A_g}x_{ui},\\
+\langle\hat r\rangle_{\mathcal A,g}
+&=\mu_t+\langle b_u\rangle_{\mathcal A,g}
++\langle b_i\rangle_{\mathcal A,g}+\langle s\rangle_{\mathcal A,g}.
+\end{aligned}
+\end{equation}
+The injection superscript is omitted inside the averages for readability. Each observed rating pair receives equal weight. Thus, a frequently rated book contributes its bias repeatedly to the all-ratings average. The synthetic-only average weights books equally within each group because every synthetic user rates every book. Different group means across the two figures therefore do not imply different fitted parameters for the same book.
+
+Panel (A) measures the mean absolute error (MAE), whereas panel (E) compares mean predictions with mean recorded ratings:
+\begin{equation}
+\label{eq:training_group_mae}
+\operatorname{MAE}_{\mathcal A,g}^{(t)}
+=\frac{1}{|\mathcal A_g|}\sum_{(u,i)\in\mathcal A_g}
+\left|r_{ui}-\hat r_{ui}^{(t)}\right|.
+\end{equation}
+MAE averages individual absolute errors; it is not the absolute difference between the two group means. Each horizontal-axis value denotes a separate completed training run at that injection level, rather than an epoch or an intermediate training step.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\noindent
+\begin{minipage}[t]{0.49\fulllength}
+\vspace{0pt}
+\centering
+\manuscriptfigure[width=\linewidth]{figures/current/training_thriller_all_users_5panel_paper.png}
+\caption{Measurements over all observed training ratings from original and synthetic users under Thriller-targeted injection: (A) raw-score MAE, (B) book bias $b_i$, (C) vector dot product $\mathbf p_u^\top\mathbf q_i$, (D) user bias $b_u$, and (E) predicted rating $\hat r_{ui}$. Blue denotes SVD and orange NMF. Solid lines and circles denote Thriller; dashed lines and squares denote non-Thriller. Grey lines in (E) show mean recorded ratings. All means weight observed rating pairs equally. Each point follows a completed training run; 0 is the no-injection baseline.}
+\label{fig:training_components}
+\label{fig:bi}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\fulllength}
+\vspace{0pt}
+\centering
+\manuscriptfigure[width=\linewidth]{figures/current/training_thriller_synthetic_only_5panel_paper.png}
+\caption{Measurements restricted to synthetic users' observed ratings from the same jointly trained models: (A) raw-score MAE, (B) book bias, (C) vector dot product, (D) user bias, and (E) predicted rating. Colours and line styles match Figure~\ref{fig:training_components}. Synthetic users assign 5 to every Thriller book and 1 to every other book; grey lines in (E) mark these recorded values. Each point follows a completed training run with the indicated injection count. No synthetic-only baseline exists at 0.}
+\label{fig:training_synthetic_components}
+\end{minipage}
+\end{adjustwidth}
+\end{figure}
+
+\subsubsection{All Observed Training Ratings}
+
+Figure~\ref{fig:training_components} summarizes $R_t$, so the recorded-rating reference is not uniformly 5 for Thriller or 1 for non-Thriller. Original users retain their observed ratings, while synthetic users add the fixed 5/1 pattern. At $t=500$, the reference means are 4.436 for Thriller and 2.640 for non-Thriller. The measurement groups contain 1,626,555 and 8,896,514 rating pairs, respectively. The common global mean decreases from $\mu_0=3.918$ to $\mu_{500}=2.918$. In general,
+\begin{equation}
+\label{eq:training_augmented_mean}
+\mu_t=\frac{|R_0|\mu_0+tn\bar r_{\mathrm{synth}}}{|R_0|+tn},
+\qquad
+\bar r_{\mathrm{synth}}=1+4\frac{n_T}{n},
+\end{equation}
+where $n=9415$ and $n_T=1606$. This mean depends on the ratings, so it is identical for SVD and NMF trained on the same augmented data.
+
+\paragraph{Book bias and vector contributions: panels (B) and (C).}
+In NMF, mean Thriller book bias rises from $-0.560$ at baseline to $2.216$ at 500 profiles, while mean non-Thriller bias falls from $-0.507$ to $-1.404$. The dot products move in the opposite directions: from $1.026$ to $0.062$ for Thriller and from $1.016$ to $1.721$ for non-Thriller. These components therefore partly offset one another in the final score. In SVD, mean book bias rises from $-0.085$ to $0.457$ for Thriller and from $-0.063$ to $0.150$ for non-Thriller. Its mean dot product increases from $0.104$ to $0.839$ for Thriller but decreases from $0.138$ to $-0.648$ for non-Thriller. SVD thus uses a negative vector contribution for the latter group at 500 profiles.
+
+\paragraph{User bias and reconstructed ratings: panels (D) and (E).}
+At 500 profiles, the all-ratings mean user biases are approximately $0.210/0.211$ for SVD and $-0.890/-0.861$ for NMF, with Thriller/non-Thriller listed in that order. A given user still has one bias shared by all books; the two group averages can differ because users contribute different numbers of observed ratings to each group. Combining all components gives
+\begin{equation}
+\label{eq:training_all_numeric}
+\begin{aligned}
+\text{SVD, }T:&\quad 2.918+0.210+0.457+0.839\approx4.425,\\
+\text{SVD, }N:&\quad 2.918+0.211+0.150-0.648\approx2.631,\\
+\text{NMF, }T:&\quad 2.918-0.890+2.216+0.062\approx4.305,\\
+\text{NMF, }N:&\quad 2.918-0.861-1.404+1.721\approx2.374.
+\end{aligned}
+\end{equation}
+Values are rounded for display. Relative to baseline, mean Thriller predictions increase from 3.890 to 4.425 in SVD and from 3.902 to 4.305 in NMF. Mean non-Thriller predictions decrease from 3.922 to 2.631 and from 3.928 to 2.374, respectively. Similar directions of change therefore arise from different allocations among score components.
+
+\paragraph{Training error: panel (A).}
+At 500 profiles, SVD's Thriller/non-Thriller MAEs are $0.277/0.323$, compared with NMF's $1.076/0.507$. NMF's Thriller MAE increases from its baseline value of 0.574. At 500 profiles, its mean prediction of 4.305 differs from the recorded-rating mean of 4.436 by only about 0.130, despite an individual-pair MAE of 1.076. This illustrates why closeness of group means does not imply small individual errors. These are training-fit measurements, not held-out recommendation accuracy. Across injection levels, changes in all-ratings averages also reflect the growing proportion of synthetic observations, as well as changes in fitted parameters.
+
+\subsubsection{Synthetic Users Only}
+
+Figure~\ref{fig:training_synthetic_components} restricts measurement to $S_t$ without training a separate model. Original users continue to influence the fitted book parameters and vectors through joint training. The synthetic subset makes the desired values explicit: $r_{ui}=5$ for every Thriller pair and $r_{ui}=1$ otherwise. At $t=500$, this subset contains 803,000 Thriller ratings and 3,904,500 non-Thriller ratings.
+
+\paragraph{Synthetic-user bias and book bias: panels (B) and (D).}
+Within either book group, every synthetic user contributes the same number of ratings: 1,606 Thriller ratings per user and 7,809 non-Thriller ratings per user. Both group averages therefore weight the synthetic users equally. Consequently, the mean synthetic-user bias is identical across the Thriller and non-Thriller measurements: approximately 0.004 in SVD and $-1.039$ in NMF at 500 profiles. The corresponding mean book biases are $0.429/0.133$ in SVD and $1.986/-1.121$ in NMF. These are the same fitted book biases used in the all-ratings figure, averaged with the synthetic subset's different weighting.
+
+\paragraph{Vector contribution and fitted ratings: panels (C) and (E).}
+At 500 profiles, SVD's mean dot products are 1.648 for Thriller and $-2.060$ for non-Thriller. In NMF, both are close to zero: approximately $2.09\times10^{-6}$ and $7.50\times10^{-5}$, respectively. The fitted ratings therefore decompose as
+\begin{equation}
+\label{eq:training_synthetic_numeric}
+\begin{aligned}
+\text{SVD, }T:&\quad 2.918+0.004+0.429+1.648\approx4.999,\\
+\text{SVD, }N:&\quad 2.918+0.004+0.133-2.060\approx0.995,\\
+\text{NMF, }T:&\quad 2.918-1.039+1.986+0.000\approx3.864,\\
+\text{NMF, }N:&\quad 2.918-1.039-1.121+0.000\approx0.758.
+\end{aligned}
+\end{equation}
+SVD combines the bias terms with positive and negative dot products to approach 5 and 1. NMF's synthetic-user predictions at this injection level are supplied almost entirely by $\mu_t+b_u+b_i$, because the vector contribution is negligible. Its signed biases permit predictions below $\mu_t$ even though its dot products are non-negative.
+
+\paragraph{Fit to the known synthetic ratings: panel (A).}
+At 500 profiles, SVD reaches Thriller/non-Thriller MAEs of $0.012/0.006$, compared with $1.136/0.244$ for NMF. Thus SVD reconstructs both synthetic rating values more closely in this run. NMF's non-Thriller mean prediction of 0.758 also shows that the model can move below the desired value of 1. The MAEs come from individual rating pairs and cannot in general be recovered by subtracting group means.
+
+\subsubsection{Interpretation of the Two Training Views}
+
+The figures identify different fitted score allocations under the same injected rating rule. SVD uses signed dot products to help separate the synthetic ratings of 5 and 1. In NMF, these dot products approach zero for the synthetic profiles at 500 users, while book biases provide most of the separation. The broader all-ratings measurements show a larger Thriller/non-Thriller book-bias separation in NMF, accompanied by opposing changes in its vector contribution.
+
+Non-negativity explains why NMF cannot use a negative dot product. It does not imply that every positive dot product must exceed SVD's, or that all downward correction must enter book bias: a positive dot product can decrease, and user bias and the global mean also contribute to the score. The observed allocation is consistent with the sign constraint acting together with the model's update dynamics. Isolating their independent causal effects requires an additional controlled intervention. These training measurements establish how the observed ratings are reconstructed; the analysis of predictions for original users' unrated books is a separate step.
+
+\saracomment{Replaced the earlier parameter discussion with separate explanations of the all-ratings and synthetic-only five-panel figures. Defined rating-pair weighting, raw-score decomposition and MAE; verified baseline and 500-profile values against the source component table. Explained why group averages can differ despite shared fitted parameters. The training views are distinguished from the unread-book prediction analysis that follows.}
+
+
+\subsubsection{Recommendations and Score Components for Original Users}
+\label{sec:real-user-prediction}
+
+Figure~\ref{fig:prediction_real_users} moves from reconstructing observed training ratings to scoring books that original users have not rated. The models are the same as in Figures~\ref{fig:training_components} and~\ref{fig:training_synthetic_components}; no parameters are updated during this prediction step. Panel (A) reports the number of Thriller books actually selected into Top-15 lists. Panels (B--E) summarize the corresponding fitted score components over all eligible unread books, rather than only the selected recommendations.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\centering
+\manuscriptfigure[width=\fulllength]{figures/current/prediction_real_users_thriller_5panel_paper.png}
+\end{adjustwidth}
+\caption{Recommendations and raw predicted-score components for the 53,424 original users under Thriller-targeted injection: (A) mean Thriller count in Top-15 recommendations, (B) book bias $b_i$, (C) vector dot product $\mathbf p_u^\top\mathbf q_i$, (D) user bias $b_u$, and (E) predicted rating $\hat r_{ui}$. Blue denotes SVD and orange NMF. Solid lines and circles denote Thriller; dashed lines and squares denote non-Thriller in (B--E). Components are first averaged over each user's unrated books within the group and then equally over original users. Each injection count denotes a separate completed training run; 0 is the baseline.}
+\label{fig:prediction_real_users}
+\end{figure}
+
+\paragraph{Recommendation response: panel (A).}
+At baseline, the mean Thriller counts are 1.577 for SVD and 1.730 for NMF. At 6 injected users, SVD reaches 2.436 while NMF remains at 1.743. At 25 users, SVD still has a slightly larger count, 2.474 versus 2.380. The ordering reverses at the next displayed injection level, 50 users: NMF reaches 3.725 while SVD is at 2.470. NMF then rises to 7.024 at 100 users, 10.422 at 200, and 10.839 at 500. SVD gradually declines after its displayed maximum at 25, reaching 2.351, 2.308, and 2.280 at 100, 200, and 500, respectively. Thus, between baseline and 500 profiles, Thriller exposure increases by approximately 0.703 books per Top-15 list in SVD and 9.109 in NMF. Both models respond to injection, but NMF shows the much larger response at the higher displayed counts. The change in ordering is observed between 25 and 50; intermediate counts were not measured here.
+
+\paragraph{How the prediction components are averaged.}
+Let $I_g(u)$ be the fixed set of books in group $g\in\{T,N\}$ that original user $u$ has not rated. For a score component $x$, panels (B--E) use the equal-user mean
+\begin{equation}
+\label{eq:prediction_component_average}
+\overline{x}_g^{(t)}=
+\frac{1}{|U_0|}\sum_{u\in U_0}
+\frac{1}{|I_g(u)|}\sum_{i\in I_g(u)}x_{ui}^{(t)}.
+\end{equation}
+All 53,424 original users have eligible books in both groups. Their histories and candidate sets remain unchanged across injection levels. These averages differ from the observed-rating-pair weighting in the training figures. The prediction decomposition remains exact before rounding:
+\begin{equation}
+\label{eq:prediction_mean_decomposition}
+\overline{\hat r}_g^{(t)}
+=\mu_t+\overline{b_u}^{(t)}+\overline{b_i}_g^{(t)}+\overline{s}_g^{(t)}.
+\end{equation}
+Here $\overline{b_u}^{(t)}$ has no group subscript because every original user receives equal weight in both groups.
+
+\paragraph{Book bias: panel (B).}
+For NMF, mean Thriller book bias increases from $-0.605$ at baseline to $-0.215$ at 25 profiles, becomes positive at 50 ($0.102$), and reaches $1.981$ at 500. Mean non-Thriller book bias decreases from $-0.547$ to $-1.114$. Thus the book-bias component increasingly favours Thriller relative to the remaining candidates. SVD also increases Thriller book bias, from $-0.119$ to $0.429$, but its non-Thriller mean increases too, from $-0.096$ to $0.133$. The Thriller-directed separation in this component is therefore much larger in NMF. These biases are learned jointly from original and synthetic ratings and are reused when scoring unread books.
+
+\paragraph{User--book vector contribution: panel (C).}
+The vector term partly opposes NMF's book-bias changes: its mean falls from $1.023$ to $0.071$ for Thriller, while increasing from $1.006$ to $2.706$ for non-Thriller. A larger Thriller book bias therefore does not translate unchanged into a larger final score. In SVD, the mean Thriller vector contribution becomes more negative, from $-0.051$ to $-0.173$, while the non-Thriller contribution moves from $-0.036$ to $0.222$. At 500 profiles this component offsets the mean Thriller book-bias advantage in SVD. These measurements concern original users and unread books: they need not match the positive/negative SVD pattern, or near-zero NMF values, measured specifically on synthetic training pairs.
+
+\paragraph{User bias and the common mean: panel (D).}
+The original-user mean bias increases from $-0.060$ to $0.390$ in SVD. NMF's mean becomes less negative through 50 profiles, from $-0.497$ to $-0.447$, then decreases to $-0.703$ at 500. In both models, the common global mean falls from $3.918$ to $2.918$ over the same injection range. These components contribute to absolute predicted ratings. For a fixed user and a fixed trained model, however, $\mu_t$ and $b_u^{(t)}$ are identical for every candidate book. Consequently, ordering that user's raw candidate scores depends on
+\begin{equation}
+\label{eq:prediction_ranking_score}
+z_{ui}^{(t)}=b_i^{(t)}+\bigl(\mathbf p_u^{(t)}\bigr)^\top\mathbf q_i^{(t)},
+\qquad
+\hat r_{ui}^{(t)}=(\mu_t+b_u^{(t)})+z_{ui}^{(t)}.
+\end{equation}
+The shared offset is constant across books for that user; it can still change between training runs and, for user bias, between users.
+
+\paragraph{Putting the components together: panel (E).}
+At 500 synthetic users, the group means are reconstructed as
+\begin{equation}
+\label{eq:prediction_numeric_components}
+\begin{aligned}
+\text{SVD, }T:&\quad 2.918+0.390+0.429-0.173\approx3.563,\\
+\text{SVD, }N:&\quad 2.918+0.390+0.133+0.222\approx3.663,\\
+\text{NMF, }T:&\quad 2.918-0.703+1.981+0.071\approx4.267,\\
+\text{NMF, }N:&\quad 2.918-0.703-1.114+2.706\approx3.807.
+\end{aligned}
+\end{equation}
+The displayed inputs are rounded; results use the unrounded components. In NMF, mean Thriller predictions rise from 3.839 to 4.267, while non-Thriller predictions decrease from 3.880 to 3.807. At 25 profiles, the Thriller mean first exceeds the non-Thriller mean among the displayed runs (3.913 versus 3.877). This group-mean crossing differs from the cross-model Top-15 ordering, which reverses between 25 and 50 in panel (A). In SVD, both group means decrease, from 3.688 to 3.563 for Thriller and from 3.727 to 3.663 for non-Thriller. Its Thriller recommendation count nevertheless remains above baseline. This is possible because Top-15 selection depends on each user's highest-ranked individual books, rather than on an entire genre's mean score. No recorded rating is available for these unread pairs, so this figure does not report prediction error against a known target of 5 or 1.
+
+\paragraph{Why NMF shows the larger injection response.}
+The measured explanation lies in the combined book-bias and vector contributions used for ranking. In NMF, the mean Thriller book bias gains approximately 2.586 between baseline and 500 profiles, while its vector contribution decreases by 0.951. Their sum therefore still increases by about 1.635. For non-Thriller candidates, the corresponding combined increase is smaller, about 1.132. In SVD, the combined Thriller contribution increases by about 0.425, compared with 0.487 for non-Thriller. The strong Thriller-directed book-bias adjustment in NMF thus survives the opposing vector adjustment, whereas SVD exhibits no comparable mean shift towards Thriller in these combined components. Panel (A) directly establishes the resulting exposure response: an increase of 9.109 Thriller books per list in NMF versus 0.703 in SVD.
+
+This connects the recommendation response to the score allocation observed in the training figures. NMF's stronger exposure response is accompanied by a much larger learned Thriller book-bias advantage, not by uniformly larger vector dot products. Non-negativity restricts the available vector corrections, while the fitted biases and vectors together determine the scores. These measurements provide a numerical account of the tested models' response; they do not isolate non-negativity from the optimizer as an independent causal factor. Group-mean component changes explain the observed direction of score allocation, while the Top-15 counts require the individual recommendation lists and are measured separately.
+
+\saracomment{Added the uploaded five-panel original-user prediction figure. Verified all displayed doses against the source recommendation table: SVD remains slightly ahead at 25 profiles, and NMF is ahead from the next measured level, 50, through 500. Explained every panel, equal-user averaging, fixed within-user offsets and the complete 500-profile score decomposition. The larger NMF response is interpreted using the combined fitted bias and vector changes, with recommendation counts measured directly rather than inferred from genre means.}
+
+
+\section{Discussion}
+\label{sec:discussion}
+\label{sec:cross-domain}
+
+The same 5/1 injection policy produces different recommendation responses in the tested factorization implementations. In the controlled book experiment, SVD remains slightly ahead at 25 profiles, while NMF is ahead from the next measured level, 50, through 500. The mobile Top-15 example has the opposite cross-model ordering over its displayed range. Category exposure, dataset composition and model-specific optimization settings must therefore accompany any statement that one model is more affected.
+
+The Thriller score decomposition provides a numerical explanation of the fitted response. In NMF, the original-user mean Thriller book-bias increase is larger than the opposing decrease in its vector contribution. SVD distributes the fitted score differently and uses signed vector contributions. At 500 profiles, SVD also reconstructs the synthetic 5/1 ratings more closely, even though NMF recommends far more Thriller books to original users. Training fit and target-category recommendation exposure are therefore distinct outcomes.
+
+The two training views and the unread-book view must be interpreted separately. The first two weight observed training pairs, whereas the prediction view gives original users equal weight after averaging their eligible books. The global mean and user bias contribute to absolute scores but are shared across all candidates for one user. Changes in group means consequently describe score allocation; the recommendation counts still require each user's individual Top-15 ranking. We do not infer the count increase from a genre-mean score alone.
+
+\paragraph{Practical interpretation.}
+The intervention is small in user count but dense in ratings: 500 book profiles add 4,707,500 observations, or about 80.95\% of the original rating count. User percentages alone can therefore understate the rating budget. The practical contribution is a diagnostic comparison that connects exposure measurements to fitted score components. Item-bias separation is an observed pattern, not an evaluated detector or mitigation method.
+
+\paragraph{Limitations.}
+Dense, identical profiles deliberately remove profile-construction variation, but do not represent typical users or establish an upper bound on attack strength. Sparse and heterogeneous profiles, held-out recommendation quality, and comparisons against optimized attack methods are not evaluated. The three domains differ in target-category size, metadata and optimization settings; the detailed parameter explanation is established for the controlled Thriller case and should not be transferred to all other categories without measurement.
+
+The reported runs use one initialization setup. Paired-baseline equality verifies repeatability, but confidence intervals and sensitivity across training seeds and hyperparameter regimes are not quantified here. Non-negativity restricts allowable interaction scores in the verified book checkpoints; the present comparisons do not isolate that restriction from the optimizer, regularization or other model-specific choices. A joint bias/vector decomposition is an accounting identity for fitted scores, rather than a component-ablation experiment.
+
+Book-category accuracy has not been independently validated, despite inspection of label frequencies. The mobile category display leaves 422 Medical apps unmapped and uses broader groups than the original Shopping target. Reproducibility also requires the exact cleaning rules, annotation prompts, category mapping and software environment, alongside the saved checkpoints and recommendation lists.
+
+\paragraph{Future work.}
+The dose response need not be monotonic. For example, the archived mobile NMF Top-35 summary decreases from 19.7166 at 2,000 injected profiles to 17.7366 at 7,000; these counts are outside the mobile Top-15 range displayed in Figure~\ref{fig:merged_comparison_singlecol}. Follow-up work will examine how fitted user and item vectors move and how each original user's nearest-real-user neighborhood changes as injection increases. Component interventions, repeated seeds, sparse-profile experiments and held-out evaluations can further separate the contribution of factor constraints from optimization and assess whether greater exposure comes at a recommendation-quality cost.
+
+\saracomment{Updated Discussion and Conclusions to reflect the new all-ratings, synthetic-only and unread-book analyses. Distinguished training fit from exposure, a score accounting from a causal ablation, and repeatability from cross-seed uncertainty. Retained the higher-dose mobile non-monotonic example explicitly as an archived result outside the main displayed range. The planned vector-space and neighbor analyses remain future work.}
+
+\section{Conclusions}
+\label{sec:conclusion}
+
+We compare biased Surprise SVD and NMF under a fixed category-level rating intervention across book, movie and mobile datasets. Both models show target-exposure increases at the representative endpoints, but their ordering depends on the domain and injection level. In the controlled Thriller experiment, 500 synthetic users raise the mean Thriller count in Top-15 lists from 1.73 to 10.84 in NMF and from 1.58 to 2.28 in SVD.
+
+Separating the fitted score components shows how the tested models allocate this response. SVD reconstructs the synthetic training ratings more closely, using signed dot products alongside biases. NMF develops a larger Thriller book-bias adjustment that is only partly offset by the vector contribution when scoring original users' unread books. This provides parameter-level evidence accompanying the recommendation shift, rather than an explanation based solely on non-negative or larger vectors. The results characterize the stated configurations and dense policy; causal separation of factor constraints and optimization, broader robustness comparisons and evaluated defenses remain future work.
+
+
+
+% Sara: MDPI back matter. Unknown declarations remain explicit, not invented.
+\authorcontributions{\authortodo{Confirm each author's CRediT roles and initials: conceptualization; methodology; software; validation; formal analysis; investigation; resources; data curation; writing---original draft; writing---review and editing; visualization; supervision; project administration; funding acquisition. All-author approval must be obtained before submission.}}
+\funding{\authortodo{Provide funder names and grant numbers, or confirm that this research received no external funding.}}
+\institutionalreview{\authortodo{Confirm the appropriate institutional-review statement for this secondary analysis of public rating datasets; do not claim an approval or exemption without verification.}}
+\informedconsent{\authortodo{Confirm whether this statement is not applicable to the secondary public-data analysis and explain any dataset-specific requirements.}}
+\dataavailability{The source datasets are publicly available: MovieLens 100K at \url{https://grouplens.org/datasets/movielens/100k/}, Goodbooks-10K at \url{https://github.com/zygmuntz/goodbooks-10k}, and MobileRec at \url{https://huggingface.co/datasets/recmeapp/mobilerec}. \authortodo{Add the archived version, persistent link and access conditions for the cleaned data, assigned labels, injection-generation code and experimental outputs actually supporting this manuscript.}}
+\acknowledgments{GPT-3.5 was used for book-genre annotation, as described in Materials and Methods. OpenAI Codex assisted with manuscript editing, LaTeX formatting and numerical consistency checks. \authortodo{Confirm the exact tool/model versions, annotation prompts and dates; complete the description of any additional AI-assisted drafting or analysis, acknowledge other support, and confirm author review and responsibility for the final text.}}
+\conflictsofinterest{\authortodo{Declare any competing interests, or confirm that the authors declare no conflicts of interest; disclose any relevant funder role.}}
+
+\abbreviations{Abbreviations}{
+\noindent
+\begin{tabular}{@{}ll}
+SVD & Singular value decomposition\\
+NMF & Non-negative matrix factorization\\
+SGD & Stochastic gradient descent\\
+GPT & Generative pre-trained transformer
+\end{tabular}}
+
+\begin{adjustwidth}{-\extralength}{0cm}
+\reftitle{References}
+% Sara: The official class selects Definitions/mdpi.bst (numbered ACS-style references).
+\bibliography{references}
+\PublishersNote{}
+\end{adjustwidth}
+\end{document}

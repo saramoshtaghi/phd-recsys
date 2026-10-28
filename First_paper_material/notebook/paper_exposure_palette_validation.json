@@ -1,0 +1,133 @@
+{
+  "source": "/home/moshtasa/Research/phd-recsys/First_paper_material/data/recommendation_exposure_top15.csv",
+  "source_sha256": "d124c2d01ad2ce347ede499cd6fbaa0872cb030bc519c576ec582725062b0a1d",
+  "output": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/recommendation_exposure_top15.png",
+  "palette": {
+    "SVD": "#0072B2",
+    "NMF": "#D55E00"
+  },
+  "no_new_experiment": true,
+  "source_values_unchanged": true,
+  "series": [
+    {
+      "dataset": "Books",
+      "model": "NMF",
+      "n_fake": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ],
+      "values": [
+        1.7298592392932015,
+        1.7415955375861036,
+        1.7370657382449834,
+        1.7431117100928422,
+        2.3804844264749927,
+        3.725029949086553,
+        7.023903114705002,
+        10.422132374962564,
+        10.839248277927522
+      ]
+    },
+    {
+      "dataset": "Books",
+      "model": "SVD",
+      "n_fake": [
+        0,
+        2,
+        4,
+        6,
+        25,
+        50,
+        100,
+        200,
+        500
+      ],
+      "values": [
+        1.5765573525007488,
+        1.5657943995208146,
+        1.8326033243486075,
+        2.4357779275232105,
+        2.4736822401916743,
+        2.469919886193471,
+        2.350235849056604,
+        2.307651991614256,
+        2.279556004791854
+      ]
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "NMF",
+      "n_fake": [
+        0,
+        30,
+        60,
+        300
+      ],
+      "values": [
+        0.1902,
+        0.133,
+        0.1998,
+        0.9002
+      ]
+    },
+    {
+      "dataset": "Mobile apps",
+      "model": "SVD",
+      "n_fake": [
+        0,
+        30,
+        60,
+        300
+      ],
+      "values": [
+        0.3262,
+        0.629,
+        1.2369,
+        3.5656
+      ]
+    },
+    {
+      "dataset": "Movies",
+      "model": "NMF",
+      "n_fake": [
+        0,
+        2,
+        6,
+        10,
+        50
+      ],
+      "values": [
+        11.4836,
+        12.1755,
+        13.018,
+        13.2121,
+        15.0
+      ]
+    },
+    {
+      "dataset": "Movies",
+      "model": "SVD",
+      "n_fake": [
+        0,
+        2,
+        6,
+        10,
+        50
+      ],
+      "values": [
+        9.983,
+        10.0297,
+        10.5302,
+        10.9925,
+        13.3415
+      ]
+    }
+  ]
+}
