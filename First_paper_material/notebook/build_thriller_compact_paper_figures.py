@@ -1,6 +1,6 @@
 """Compact five-panel Thriller figures from the audited source tables."""
 from pathlib import Path
-import os,json,hashlib
+import os,json,hashlib,sys
 os.environ['MPLBACKEND']='Agg'
 import numpy as np
 import pandas as pd
@@ -22,6 +22,7 @@ for view,name in [
  ('all_training','training_thriller_all_users_5panel_paper.png'),
  ('synthetic_training','training_thriller_synthetic_only_5panel_paper.png'),
  ('real_unseen_prediction','prediction_real_users_thriller_5panel_paper.png')]:
+ if '--prediction-only' in sys.argv and view!='real_unseen_prediction':continue
  ns=([2,4,6,25,50,100,200,500] if view=='synthetic_training' else [0,2,4,6,25,50,100,200,500])
  x=np.arange(len(ns));f=source[(source.genre=='Thriller')&(source.view==view)]
  fig=plt.figure(figsize=(7.2,3.75))
@@ -31,13 +32,17 @@ for view,name in [
  rows=[]
  for pi,(ax,(key,title,ylabel)) in enumerate(zip(axs,panels)):
   if view=='real_unseen_prediction' and pi==0:
-   rec=recs[(recs.genre=='Thriller')&(recs.k==15)]
-   for j,model in enumerate(['svd','nmf']):
-    d=rec[rec.model==model].set_index('n_fake').loc[ns]
-    assert len(d)==len(ns) and (d.n_users==53424).all()
-    vals=d.mean_target_count.to_numpy();ax.bar(x+(-.19 if j==0 else .19),vals,width=.36,color=COLORS[model],zorder=3)
-    rows.append(dict(panel='A',model=model,group='target',quantity='mean_target_count',values=vals.tolist()))
-   title='(A) Thriller in Top-15';ylabel='Mean Thriller books';ax.set_ylim(0,15);ax.set_yticks([0,5,10,15])
+   key='mean_prediction'
+   for model in ['svd','nmf']:
+    for group,style,marker in [('target','-','o'),('non_target','--','s')]:
+     d=f[(f.model==model)&(f.group==group)].set_index('n_fake').loc[ns]
+     assert len(d)==len(ns) and np.isfinite(d[key]).all()
+     assert np.allclose(d.mean_prediction,d.mu+d.mean_bu+d.mean_bi+d.mean_interaction,atol=1e-10)
+     vals=d[key].to_numpy()
+     ax.plot(x,vals,color=COLORS[model],ls=style,marker=marker,ms=2.3,lw=1.65,zorder=4)
+     rows.append(dict(panel='A',model=model,group=group,quantity=key,values=vals.tolist()))
+   title=r'(A) Mean predicted rating';ylabel='Mean predicted rating'
+   ax.yaxis.set_major_locator(MaxNLocator(nbins=4))
   else:
    for model in ['svd','nmf']:
     for group,style,marker in [('target','-','o'),('non_target','--','s')]:
@@ -74,4 +79,8 @@ for view,name in [
  im=Image.open(path);assert im.size==(4320,2250)
  validation.append(dict(file=str(path),view=view,pixel_size=im.size,figure_inches=[7.2,3.75],panels=5,n_fake=ns,main_title=False,footer_caption=False,plotted_series=rows,sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
  print(path,flush=True)
-(NB/'thriller_compact_paper_figures_validation.json').write_text(json.dumps(dict(source_table=str(DATA),source_sha256=hashlib.sha256(DATA.read_bytes()).hexdigest(),recommendation_table=str(REC),figures=validation),indent=2))
+validation_path=NB/'thriller_compact_paper_figures_validation.json'
+if '--prediction-only' in sys.argv and validation_path.exists():
+ previous=json.loads(validation_path.read_text())['figures']
+ validation=[v for v in previous if v['view']!='real_unseen_prediction']+validation
+validation_path.write_text(json.dumps(dict(source_table=str(DATA),source_sha256=hashlib.sha256(DATA.read_bytes()).hexdigest(),recommendation_table=str(REC),figures=validation),indent=2))
