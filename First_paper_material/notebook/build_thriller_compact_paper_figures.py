@@ -26,9 +26,14 @@ for view,name in [
  ns=([2,4,6,25,50,100,200,500] if view=='synthetic_training' else [0,2,4,6,25,50,100,200,500])
  x=np.arange(len(ns));f=source[(source.genre=='Thriller')&(source.view==view)]
  fig=plt.figure(figsize=(7.2,3.75))
- grid=fig.add_gridspec(2,6)
- axs=[fig.add_subplot(grid[0,0:2]),fig.add_subplot(grid[0,2:4]),fig.add_subplot(grid[0,4:6]),fig.add_subplot(grid[1,1:3]),fig.add_subplot(grid[1,3:5])]
- panels=[('mae','(A) Training MAE','Mean absolute error'),('mean_bi',r'(B) Book bias $b_i$','Mean component'),('mean_interaction',r'(C) Dot product $p_u^\top q_i$','Mean component'),('mean_bu',r'(D) User bias $b_u$','Mean component'),('mean_prediction',r'(E) Prediction $\hat r_{ui}$','Mean predicted rating')]
+ if view=='real_unseen_prediction':
+  grid=fig.add_gridspec(2,2)
+  axs=[fig.add_subplot(grid[0,0]),fig.add_subplot(grid[0,1]),fig.add_subplot(grid[1,0]),fig.add_subplot(grid[1,1])]
+  panels=[('mean_prediction','(A) Mean predicted rating','Mean predicted rating'),('mean_bi',r'(B) Book bias $b_i$','Mean component'),('mean_interaction',r'(C) Dot product $p_u^\top q_i$','Mean component'),('mean_bu',r'(D) User bias $b_u$','Mean component')]
+ else:
+  grid=fig.add_gridspec(2,6)
+  axs=[fig.add_subplot(grid[0,0:2]),fig.add_subplot(grid[0,2:4]),fig.add_subplot(grid[0,4:6]),fig.add_subplot(grid[1,1:3]),fig.add_subplot(grid[1,3:5])]
+  panels=[('mae','(A) Training MAE','Mean absolute error'),('mean_bi',r'(B) Book bias $b_i$','Mean component'),('mean_interaction',r'(C) Dot product $p_u^\top q_i$','Mean component'),('mean_bu',r'(D) User bias $b_u$','Mean component'),('mean_prediction',r'(E) Prediction $\hat r_{ui}$','Mean predicted rating')]
  rows=[]
  for pi,(ax,(key,title,ylabel)) in enumerate(zip(axs,panels)):
   if view=='real_unseen_prediction' and pi==0:
@@ -69,7 +74,7 @@ for view,name in [
  handles=[Line2D([0],[0],color=COLORS['svd'],lw=1.6,label='SVD'),Line2D([0],[0],color=COLORS['nmf'],lw=1.6,label='NMF'),Line2D([0],[0],color='#536471',lw=1.1,marker='o',ms=2.5,label='Thriller'),Line2D([0],[0],color='#536471',lw=1.1,ls='--',marker='s',ms=2.5,label='Non-Thriller')]
  if view!='real_unseen_prediction':handles.append(Line2D([0],[0],color='#777777',lw=.9,label='Recorded rating (E)'))
  fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.5,.995),ncol=len(handles),frameon=False,fontsize=7.5,columnspacing=1.3,handlelength=2.0,handletextpad=.5)
- fig.subplots_adjust(left=.078,right=.99,bottom=.105,top=.85,hspace=.95,wspace=1.05)
+ fig.subplots_adjust(left=.09,right=.98,bottom=.105,top=.85,hspace=.95,wspace=.30 if view=='real_unseen_prediction' else 1.05)
  # No figure title or explanatory footer: manuscript captions carry context.
  fig.canvas.draw();renderer=fig.canvas.get_renderer()
  for ax in axs:
@@ -77,7 +82,7 @@ for view,name in [
   assert box.x0>=-1 and box.y0>=-1 and box.x1<=fig.bbox.width+1 and box.y1<=fig.bbox.height+1,(name,box.bounds)
  path=OUT/name;fig.savefig(path,dpi=600);plt.close(fig)
  im=Image.open(path);assert im.size==(4320,2250)
- validation.append(dict(file=str(path),view=view,pixel_size=im.size,figure_inches=[7.2,3.75],panels=5,n_fake=ns,main_title=False,footer_caption=False,plotted_series=rows,sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
+ validation.append(dict(file=str(path),view=view,pixel_size=im.size,figure_inches=[7.2,3.75],panels=len(axs),n_fake=ns,main_title=False,footer_caption=False,plotted_series=rows,sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
  print(path,flush=True)
 validation_path=NB/'thriller_compact_paper_figures_validation.json'
 if '--prediction-only' in sys.argv and validation_path.exists():
