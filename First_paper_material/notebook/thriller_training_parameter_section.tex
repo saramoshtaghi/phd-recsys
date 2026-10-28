@@ -1,0 +1,117 @@
+\subsection{Parameter Responses and Interpretation}
+\label{sec:bi-mechanism}
+
+\subsubsection{Score Components and Measurement Sets}
+
+We examine how the fitted score is divided among the terms of Eq.~\eqref{eq:prediction}. For a model trained with $t$ synthetic users, the raw predicted rating is
+\begin{equation}
+\label{eq:training_score_components}
+\hat r_{ui}^{(t)}=\mu_t+b_u^{(t)}+b_i^{(t)}+
+\underbrace{\bigl(\mathbf p_u^{(t)}\bigr)^\top\mathbf q_i^{(t)}}_{s_{ui}^{(t)}}.
+\end{equation}
+Here, $\mu_t$ is the mean of the augmented training ratings; $b_u^{(t)}$ and $b_i^{(t)}$ are learned adjustments for a user and a book, respectively; and $s_{ui}^{(t)}$ is the dot product of their learned vectors. Book bias is a fitted parameter, rather than the book's arithmetic mean rating. The dot product provides a user--book contribution to the score. All reported components and errors in this section use raw scores before clipping to the rating scale.
+
+Let $R_t$ contain all observed training pairs, including original and synthetic users, and let $S_t\subset R_t$ contain only the synthetic users' pairs. We divide either measurement set into Thriller ($T$) and non-Thriller ($N$) pairs according to book membership. For a measurement set $\mathcal A\in\{R_t,S_t\}$ and group $g\in\{T,N\}$, define
+\begin{equation}
+\label{eq:training_component_average}
+\begin{aligned}
+\langle x\rangle_{\mathcal A,g}
+&=\frac{1}{|\mathcal A_g|}\sum_{(u,i)\in\mathcal A_g}x_{ui},\\
+\langle\hat r\rangle_{\mathcal A,g}
+&=\mu_t+\langle b_u\rangle_{\mathcal A,g}
++\langle b_i\rangle_{\mathcal A,g}+\langle s\rangle_{\mathcal A,g}.
+\end{aligned}
+\end{equation}
+The injection superscript is omitted inside the averages for readability. Each observed rating pair receives equal weight. Thus, a frequently rated book contributes its bias repeatedly to the all-ratings average. The synthetic-only average weights books equally within each group because every synthetic user rates every book. Different group means across the two figures therefore do not imply different fitted parameters for the same book.
+
+Panel (A) measures the mean absolute error (MAE), whereas panel (E) compares mean predictions with mean recorded ratings:
+\begin{equation}
+\label{eq:training_group_mae}
+\operatorname{MAE}_{\mathcal A,g}^{(t)}
+=\frac{1}{|\mathcal A_g|}\sum_{(u,i)\in\mathcal A_g}
+\left|r_{ui}-\hat r_{ui}^{(t)}\right|.
+\end{equation}
+MAE averages individual absolute errors; it is not the absolute difference between the two group means. Each horizontal-axis value denotes a separate completed training run at that injection level, rather than an epoch or an intermediate training step.
+
+\begin{figure}[htbp]
+\begin{adjustwidth}{-\extralength}{0cm}
+\noindent
+\begin{minipage}[t]{0.49\fulllength}
+\vspace{0pt}
+\centering
+\manuscriptfigure[width=\linewidth]{figures/current/training_thriller_all_users_5panel_paper.png}
+\caption{Measurements over all observed training ratings from original and synthetic users under Thriller-targeted injection: (A) raw-score MAE, (B) book bias $b_i$, (C) vector dot product $\mathbf p_u^\top\mathbf q_i$, (D) user bias $b_u$, and (E) predicted rating $\hat r_{ui}$. Blue denotes SVD and orange NMF. Solid lines and circles denote Thriller; dashed lines and squares denote non-Thriller. Grey lines in (E) show mean recorded ratings. All means weight observed rating pairs equally. Each point follows a completed training run; 0 is the no-injection baseline.}
+\label{fig:training_components}
+\label{fig:bi}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\fulllength}
+\vspace{0pt}
+\centering
+\manuscriptfigure[width=\linewidth]{figures/current/training_thriller_synthetic_only_5panel_paper.png}
+\caption{Measurements restricted to synthetic users' observed ratings from the same jointly trained models: (A) raw-score MAE, (B) book bias, (C) vector dot product, (D) user bias, and (E) predicted rating. Colours and line styles match Figure~\ref{fig:training_components}. Synthetic users assign 5 to every Thriller book and 1 to every other book; grey lines in (E) mark these recorded values. Each point follows a completed training run with the indicated injection count. No synthetic-only baseline exists at 0.}
+\label{fig:training_synthetic_components}
+\end{minipage}
+\end{adjustwidth}
+\end{figure}
+
+\subsubsection{All Observed Training Ratings}
+
+Figure~\ref{fig:training_components} summarizes $R_t$, so the recorded-rating reference is not uniformly 5 for Thriller or 1 for non-Thriller. Original users retain their observed ratings, while synthetic users add the fixed 5/1 pattern. At $t=500$, the reference means are 4.436 for Thriller and 2.640 for non-Thriller. The measurement groups contain 1,626,555 and 8,896,514 rating pairs, respectively. The common global mean decreases from $\mu_0=3.918$ to $\mu_{500}=2.918$. In general,
+\begin{equation}
+\label{eq:training_augmented_mean}
+\mu_t=\frac{|R_0|\mu_0+tn\bar r_{\mathrm{synth}}}{|R_0|+tn},
+\qquad
+\bar r_{\mathrm{synth}}=1+4\frac{n_T}{n},
+\end{equation}
+where $n=9415$ and $n_T=1606$. This mean depends on the ratings, so it is identical for SVD and NMF trained on the same augmented data.
+
+\paragraph{Book bias and vector contributions: panels (B) and (C).}
+In NMF, mean Thriller book bias rises from $-0.560$ at baseline to $2.216$ at 500 profiles, while mean non-Thriller bias falls from $-0.507$ to $-1.404$. The dot products move in the opposite directions: from $1.026$ to $0.062$ for Thriller and from $1.016$ to $1.721$ for non-Thriller. These components therefore partly offset one another in the final score. In SVD, mean book bias rises from $-0.085$ to $0.457$ for Thriller and from $-0.063$ to $0.150$ for non-Thriller. Its mean dot product increases from $0.104$ to $0.839$ for Thriller but decreases from $0.138$ to $-0.648$ for non-Thriller. SVD thus uses a negative vector contribution for the latter group at 500 profiles.
+
+\paragraph{User bias and reconstructed ratings: panels (D) and (E).}
+At 500 profiles, the all-ratings mean user biases are approximately $0.210/0.211$ for SVD and $-0.890/-0.861$ for NMF, with Thriller/non-Thriller listed in that order. A given user still has one bias shared by all books; the two group averages can differ because users contribute different numbers of observed ratings to each group. Combining all components gives
+\begin{equation}
+\label{eq:training_all_numeric}
+\begin{aligned}
+\text{SVD, }T:&\quad 2.918+0.210+0.457+0.839\approx4.425,\\
+\text{SVD, }N:&\quad 2.918+0.211+0.150-0.648\approx2.631,\\
+\text{NMF, }T:&\quad 2.918-0.890+2.216+0.062\approx4.305,\\
+\text{NMF, }N:&\quad 2.918-0.861-1.404+1.721\approx2.374.
+\end{aligned}
+\end{equation}
+Values are rounded for display. Relative to baseline, mean Thriller predictions increase from 3.890 to 4.425 in SVD and from 3.902 to 4.305 in NMF. Mean non-Thriller predictions decrease from 3.922 to 2.631 and from 3.928 to 2.374, respectively. Similar directions of change therefore arise from different allocations among score components.
+
+\paragraph{Training error: panel (A).}
+At 500 profiles, SVD's Thriller/non-Thriller MAEs are $0.277/0.323$, compared with NMF's $1.076/0.507$. NMF's Thriller MAE increases from its baseline value of 0.574. At 500 profiles, its mean prediction of 4.305 differs from the recorded-rating mean of 4.436 by only about 0.130, despite an individual-pair MAE of 1.076. This illustrates why closeness of group means does not imply small individual errors. These are training-fit measurements, not held-out recommendation accuracy. Across injection levels, changes in all-ratings averages also reflect the growing proportion of synthetic observations, as well as changes in fitted parameters.
+
+\subsubsection{Synthetic Users Only}
+
+Figure~\ref{fig:training_synthetic_components} restricts measurement to $S_t$ without training a separate model. Original users continue to influence the fitted book parameters and vectors through joint training. The synthetic subset makes the desired values explicit: $r_{ui}=5$ for every Thriller pair and $r_{ui}=1$ otherwise. At $t=500$, this subset contains 803,000 Thriller ratings and 3,904,500 non-Thriller ratings.
+
+\paragraph{Synthetic-user bias and book bias: panels (B) and (D).}
+Within either book group, every synthetic user contributes the same number of ratings: 1,606 Thriller ratings per user and 7,809 non-Thriller ratings per user. Both group averages therefore weight the synthetic users equally. Consequently, the mean synthetic-user bias is identical across the Thriller and non-Thriller measurements: approximately 0.004 in SVD and $-1.039$ in NMF at 500 profiles. The corresponding mean book biases are $0.429/0.133$ in SVD and $1.986/-1.121$ in NMF. These are the same fitted book biases used in the all-ratings figure, averaged with the synthetic subset's different weighting.
+
+\paragraph{Vector contribution and fitted ratings: panels (C) and (E).}
+At 500 profiles, SVD's mean dot products are 1.648 for Thriller and $-2.060$ for non-Thriller. In NMF, both are close to zero: approximately $2.09\times10^{-6}$ and $7.50\times10^{-5}$, respectively. The fitted ratings therefore decompose as
+\begin{equation}
+\label{eq:training_synthetic_numeric}
+\begin{aligned}
+\text{SVD, }T:&\quad 2.918+0.004+0.429+1.648\approx4.999,\\
+\text{SVD, }N:&\quad 2.918+0.004+0.133-2.060\approx0.995,\\
+\text{NMF, }T:&\quad 2.918-1.039+1.986+0.000\approx3.864,\\
+\text{NMF, }N:&\quad 2.918-1.039-1.121+0.000\approx0.758.
+\end{aligned}
+\end{equation}
+SVD combines the bias terms with positive and negative dot products to approach 5 and 1. NMF's synthetic-user predictions at this injection level are supplied almost entirely by $\mu_t+b_u+b_i$, because the vector contribution is negligible. Its signed biases permit predictions below $\mu_t$ even though its dot products are non-negative.
+
+\paragraph{Fit to the known synthetic ratings: panel (A).}
+At 500 profiles, SVD reaches Thriller/non-Thriller MAEs of $0.012/0.006$, compared with $1.136/0.244$ for NMF. Thus SVD reconstructs both synthetic rating values more closely in this run. NMF's non-Thriller mean prediction of 0.758 also shows that the model can move below the desired value of 1. The MAEs come from individual rating pairs and cannot in general be recovered by subtracting group means.
+
+\subsubsection{Interpretation of the Two Training Views}
+
+The figures identify different fitted score allocations under the same injected rating rule. SVD uses signed dot products to help separate the synthetic ratings of 5 and 1. In NMF, these dot products approach zero for the synthetic profiles at 500 users, while book biases provide most of the separation. The broader all-ratings measurements show a larger Thriller/non-Thriller book-bias separation in NMF, accompanied by opposing changes in its vector contribution.
+
+Non-negativity explains why NMF cannot use a negative dot product. It does not imply that every positive dot product must exceed SVD's, or that all downward correction must enter book bias: a positive dot product can decrease, and user bias and the global mean also contribute to the score. The observed allocation is consistent with the sign constraint acting together with the model's update dynamics. Isolating their independent causal effects requires an additional controlled intervention. These training measurements establish how the observed ratings are reconstructed; the analysis of predictions for original users' unrated books is a separate step.
+
+\saracomment{Replaced the earlier parameter discussion with separate explanations of the all-ratings and synthetic-only five-panel figures. Defined rating-pair weighting, raw-score decomposition and MAE; verified baseline and 500-profile values against the source component table. Explained why group averages can differ despite shared fitted parameters. The prediction figure and its recommendation-level interpretation are reserved for the next revision.}
+
