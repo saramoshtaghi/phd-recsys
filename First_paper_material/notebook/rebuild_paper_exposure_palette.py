@@ -12,6 +12,13 @@ source=R/'data/recommendation_exposure_top15.csv'
 dest=R/'figures/recommendation_exposure_top15.png'
 df=pd.read_csv(source)
 assert len(df)==36 and set(df.k)=={15}
+stage=json.loads((R/'notebook/poster_svd_nmf_stage1_validation.json').read_text())
+mobile=pd.DataFrame([{'dataset':'Mobile apps','target':'Shopping','model':r['model'],'n_fake':r['n_fake'],'n_real_users':700111,'mean_target_count':r['mean']} for r in stage['results'] if r['dataset']=='Mobile apps'])
+assert set(mobile.n_fake)=={0,30,60,300,500,2000,7000}
+base_mobile=df[df.dataset=='Mobile apps']
+shared=mobile[mobile.n_fake<=300].merge(base_mobile,on=['dataset','model','n_fake'],suffixes=('_stage','_paper'))
+assert len(shared)==8 and all(abs(shared.mean_target_count_stage-shared.mean_target_count_paper)<1e-10)
+df=pd.concat([df[df.dataset!='Mobile apps'],mobile],ignore_index=True)
 colors={'SVD':'#0072B2','NMF':'#D55E00'}
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8,'axes.titlesize':9,'axes.titleweight':'bold','axes.labelsize':8,'xtick.labelsize':7,'ytick.labelsize':7,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.linewidth':.5,'figure.facecolor':'white','savefig.facecolor':'white'})
 fig,axs=plt.subplots(2,3,figsize=(7.1,4.2),sharey=True)
@@ -40,5 +47,5 @@ fig.suptitle('Top-15 Recommendation Exposure',fontsize=10,fontweight='bold',colo
 fig.supylabel('Mean target items in Top-15',x=.014,fontsize=9,color='#172B3A')
 fig.subplots_adjust(left=.075,right=.99,top=.86,bottom=.15,wspace=.16,hspace=.45)
 fig.savefig(dest,dpi=600);plt.close(fig)
-(R/'notebook/paper_exposure_palette_validation.json').write_text(json.dumps({'source':str(source),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'output':str(dest),'palette':colors,'no_new_experiment':True,'source_values_unchanged':True,'series':series},indent=2))
+(R/'notebook/paper_exposure_palette_validation.json').write_text(json.dumps({'source':str(source),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'output':str(dest),'palette':colors,'no_new_experiment':True,'source_values_unchanged':True,'mobile_extended_from_stage1_manifest':True,'mobile_counts':sorted(mobile.n_fake.unique().tolist()),'series':series},indent=2))
 print(dest)
