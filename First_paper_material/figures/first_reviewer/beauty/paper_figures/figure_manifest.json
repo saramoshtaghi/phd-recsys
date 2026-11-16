@@ -1,0 +1,17 @@
+{
+  "category": "Beauty",
+  "source": "beauty_reviewer_components.csv",
+  "figures": [
+    "training_beauty_all_users_overview_4panel.png",
+    "training_beauty_synthetic_only_overview_5panel.png",
+    "prediction_real_users_beauty_non_beauty_4panel.png",
+    "training_beauty_all_and_synthetic_8panel_paper.png",
+    "paper_figures/training_beauty_all_users_5panel_paper.png",
+    "paper_figures/training_beauty_synthetic_only_5panel_paper.png",
+    "paper_figures/prediction_real_users_beauty_5panel_paper.png"
+  ],
+  "training_panels": 5,
+  "prediction_panels": 4,
+  "combined_training_panels": 8,
+  "note": "Legacy filenames retained; panel counts documented here."
+}

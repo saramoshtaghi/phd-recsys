@@ -1,0 +1,17 @@
+{
+  "category": "Casual",
+  "source": "casual_reviewer_components.csv",
+  "figures": [
+    "training_casual_all_users_overview_4panel.png",
+    "training_casual_synthetic_only_overview_5panel.png",
+    "prediction_real_users_casual_non_casual_4panel.png",
+    "training_casual_all_and_synthetic_8panel_paper.png",
+    "paper_figures/training_casual_all_users_5panel_paper.png",
+    "paper_figures/training_casual_synthetic_only_5panel_paper.png",
+    "paper_figures/prediction_real_users_casual_5panel_paper.png"
+  ],
+  "training_panels": 5,
+  "prediction_panels": 4,
+  "combined_training_panels": 8,
+  "note": "Legacy filenames retained; panel counts documented here."
+}

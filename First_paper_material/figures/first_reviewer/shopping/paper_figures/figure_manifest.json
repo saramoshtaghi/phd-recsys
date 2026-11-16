@@ -1,0 +1,17 @@
+{
+  "category": "Shopping",
+  "source": "shopping_reviewer_components.csv",
+  "figures": [
+    "training_shopping_all_users_overview_4panel.png",
+    "training_shopping_synthetic_only_overview_5panel.png",
+    "prediction_real_users_shopping_non_shopping_4panel.png",
+    "training_shopping_all_and_synthetic_8panel_paper.png",
+    "paper_figures/training_shopping_all_users_5panel_paper.png",
+    "paper_figures/training_shopping_synthetic_only_5panel_paper.png",
+    "paper_figures/prediction_real_users_shopping_5panel_paper.png"
+  ],
+  "training_panels": 5,
+  "prediction_panels": 4,
+  "combined_training_panels": 8,
+  "note": "Legacy filenames retained; panel counts documented here."
+}
