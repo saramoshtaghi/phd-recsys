@@ -1,0 +1,26 @@
+{
+  "figure": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/recommendation_mobile_shopping.png",
+  "layout": "3 rows (Books, Movies, Applications) x 3 category panels",
+  "book_categories": [
+    "Thriller",
+    "Drama",
+    "Adventure"
+  ],
+  "movie_decades": [
+    "1990s",
+    "1950s",
+    "1920s"
+  ],
+  "application_categories": [
+    "Shopping",
+    "Casual",
+    "Beauty"
+  ],
+  "application_panels": "intentionally blank; results pending",
+  "metric": "mean count of target-category items in original users' Top-15",
+  "models": {
+    "NMF": "#0072B2",
+    "SVD": "#D55E00"
+  },
+  "1920s_counts_recomputed_from_saved_factors": "/home/moshtasa/Research/phd-recsys/First_paper_material/notebook/movies_1920_top15_diagnostic_counts.csv"
+}
