@@ -26,7 +26,7 @@ for view,name in [
  ns=([2,4,6,25,50,100,200,500] if view=='synthetic_training' else [0,2,4,6,25,50,100,200,500])
  x=np.arange(len(ns));f=source[(source.genre=='Thriller')&(source.view==view)]
  fig=plt.figure(figsize=(7.2,3.75))
- figure_title={'all_training':'Training Fit: All Users','synthetic_training':'Training Fit: Synthetic Users','real_unseen_prediction':'Recommendations for Real Users'}[view]
+ figure_title={'all_training':'Training Fit: All Users — Thriller','synthetic_training':'Training Fit: Synthetic Users — Thriller','real_unseen_prediction':'Recommendations for Real Users — Thriller'}[view]
  fig.suptitle(figure_title,fontsize=9.4,fontweight='bold',color='#182E3C',y=.995)
  if view=='real_unseen_prediction':
   grid=fig.add_gridspec(2,2)

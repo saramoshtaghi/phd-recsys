@@ -27,7 +27,7 @@
         500
       ],
       "main_title": true,
-      "title": "Training Fit: All Users",
+      "title": "Training Fit: All Users \u2014 Thriller",
       "footer_caption": false,
       "plotted_series": [
         {
@@ -405,7 +405,7 @@
           ]
         }
       ],
-      "sha256": "edb7e81f67a74531904df0b38159ce022936e2e2bc570e426d1250e747709481"
+      "sha256": "5996b6b16f575f175d11948a75ddc5567a5a6a341e9071fb719e2bcd838607dd"
     },
     {
       "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/thriller/paper_figures/training_thriller_synthetic_only_5panel_paper.png",
@@ -430,7 +430,7 @@
         500
       ],
       "main_title": true,
-      "title": "Training Fit: Synthetic Users",
+      "title": "Training Fit: Synthetic Users \u2014 Thriller",
       "footer_caption": false,
       "plotted_series": [
         {
@@ -786,7 +786,7 @@
           ]
         }
       ],
-      "sha256": "b739ab0a5b0fa636ce277233455ebe464b39da722e26fecd7c50d0158ffd0d75"
+      "sha256": "edcfd990af897e25f91130f6a63da6885cb9cf507563980bf3acd416bca67a8c"
     },
     {
       "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/thriller/paper_figures/prediction_real_users_thriller_5panel_paper.png",
@@ -812,7 +812,7 @@
         500
       ],
       "main_title": true,
-      "title": "Recommendations for Real Users",
+      "title": "Recommendations for Real Users \u2014 Thriller",
       "footer_caption": false,
       "plotted_series": [
         {
@@ -1088,7 +1088,7 @@
           ]
         }
       ],
-      "sha256": "454d93db601f86ae35c97f808e61340b75d0f3374ec142185e11066341e42f70"
+      "sha256": "95d7e89c033595504b7c4d0a605f1303bb0846d785511874c6b32f8c6ea19929"
     }
   ]
 }
