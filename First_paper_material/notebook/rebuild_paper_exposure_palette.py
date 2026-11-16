@@ -16,7 +16,7 @@ colors={'SVD':'#0072B2','NMF':'#D55E00'}
 plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8,'axes.titlesize':9,'axes.titleweight':'bold','axes.labelsize':8,'xtick.labelsize':7,'ytick.labelsize':7,'axes.spines.top':False,'axes.spines.right':False,'axes.spines.left':False,'axes.linewidth':.5,'figure.facecolor':'white','savefig.facecolor':'white'})
 fig,axs=plt.subplots(2,3,figsize=(7.1,4.2),sharey=True)
 series=[]
-for col,(dataset,target) in enumerate([('Books','Thriller'),('Mobile apps','Shopping'),('Movies','1990s')]):
+for col,(dataset,target) in enumerate([('Books','Thriller'),('Movies','1990s'),('Mobile apps','Shopping')]):
     for row,model in enumerate(['NMF','SVD']):
         ax=axs[row,col]
         d=df[(df.dataset==dataset)&(df.model==model)].sort_values('n_fake')
@@ -36,8 +36,9 @@ for col,(dataset,target) in enumerate([('Books','Thriller'),('Mobile apps','Shop
         if row==0:ax.set_title(f'({chr(97+col)}) {dataset}: {target}',loc='left',pad=11,color='#172B3A')
         else:ax.set_xlabel('Injected users',labelpad=4,color='#4E5B65')
         series.append({'dataset':dataset,'model':model,'n_fake':d.n_fake.tolist(),'values':v.tolist()})
+fig.suptitle('Top-15 Recommendation Exposure',fontsize=10,fontweight='bold',color='#172B3A',y=.99)
 fig.supylabel('Mean target items in Top-15',x=.014,fontsize=9,color='#172B3A')
-fig.subplots_adjust(left=.075,right=.99,top=.89,bottom=.15,wspace=.16,hspace=.45)
+fig.subplots_adjust(left=.075,right=.99,top=.86,bottom=.15,wspace=.16,hspace=.45)
 fig.savefig(dest,dpi=600);plt.close(fig)
 (R/'notebook/paper_exposure_palette_validation.json').write_text(json.dumps({'source':str(source),'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'output':str(dest),'palette':colors,'no_new_experiment':True,'source_values_unchanged':True,'series':series},indent=2))
 print(dest)
