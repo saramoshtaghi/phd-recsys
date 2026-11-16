@@ -1,0 +1,64 @@
+[
+  {
+    "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/paper_figures/training_adventure_all_users_5panel_paper.png",
+    "genre": "Adventure",
+    "view": "all_training",
+    "n_fake": [
+      0,
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500
+    ],
+    "pixels": [
+      4320,
+      2250
+    ],
+    "sha256": "759e1bcaa12108cdcb118eda0fa0da020a6163bb8a0ba8f50bdd754ac0fd084b"
+  },
+  {
+    "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/paper_figures/training_adventure_synthetic_only_5panel_paper.png",
+    "genre": "Adventure",
+    "view": "synthetic_training",
+    "n_fake": [
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500
+    ],
+    "pixels": [
+      4320,
+      2250
+    ],
+    "sha256": "e7bdae08f28195586cd75b8dd80fda279427bdaad63bf720c6cc053c35eb4570"
+  },
+  {
+    "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/advanture/paper_figures/prediction_real_users_adventure_5panel_paper.png",
+    "genre": "Adventure",
+    "view": "real_unseen_prediction",
+    "n_fake": [
+      0,
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500
+    ],
+    "pixels": [
+      4320,
+      2250
+    ],
+    "sha256": "c25b0e6f568a58ff2fc95d45ec8b929f78074dff9997c169433fa3aa196aa5c3"
+  }
+]

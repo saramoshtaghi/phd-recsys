@@ -1,0 +1,64 @@
+[
+  {
+    "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama/paper_figures/training_drama_all_users_5panel_paper.png",
+    "genre": "Drama",
+    "view": "all_training",
+    "n_fake": [
+      0,
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500
+    ],
+    "pixels": [
+      4320,
+      2250
+    ],
+    "sha256": "a0d97ea5e75b52f0bec99fb99c6a1e9df6d80ad926ad931b9262c3f5ec332f61"
+  },
+  {
+    "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama/paper_figures/training_drama_synthetic_only_5panel_paper.png",
+    "genre": "Drama",
+    "view": "synthetic_training",
+    "n_fake": [
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500
+    ],
+    "pixels": [
+      4320,
+      2250
+    ],
+    "sha256": "c38bc5a81f4f865e379aa0cf3fc6108ccb0b7cea41b1380e6286820113bba2af"
+  },
+  {
+    "file": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/first_reviewer/drama/paper_figures/prediction_real_users_drama_5panel_paper.png",
+    "genre": "Drama",
+    "view": "real_unseen_prediction",
+    "n_fake": [
+      0,
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500
+    ],
+    "pixels": [
+      4320,
+      2250
+    ],
+    "sha256": "a33cd7ada63e5f1d4d7713c9cf90e1b6d8497a2e22a5af2e366407ed6dd1eaab"
+  }
+]
