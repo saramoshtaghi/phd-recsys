@@ -8,7 +8,7 @@ from matplotlib.lines import Line2D
 
 ROOT=Path('/home/moshtasa/Research/phd-recsys/First_paper_material')
 NB=ROOT/'notebook'
-OUT=ROOT/'figures/first_reviewer'
+OUT=ROOT/'figures'
 OUT.mkdir(parents=True,exist_ok=True)
 
 # Nine established representative categories, grouped by dataset.
@@ -62,7 +62,8 @@ def load_row(row,view):
 
 def draw(view,panels,filename,title):
  ncols=len(panels)
- fig,axs=plt.subplots(9,ncols,figsize=(16.5 if ncols==5 else 14.2,10.2),squeeze=False)
+ # Shorten each horizontal plotting area while retaining the nine-row height.
+ fig,axs=plt.subplots(9,ncols,figsize=(12.5 if ncols==5 else 10.6,10.2),squeeze=False)
  for ri,row in enumerate(rows):
   d,ns=load_row(row,view)
   x=np.arange(len(ns))
