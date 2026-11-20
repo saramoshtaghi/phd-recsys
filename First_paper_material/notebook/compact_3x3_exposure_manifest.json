@@ -19,13 +19,23 @@
   "application_panels": "Completed; both models at n = 0, 30, 60, 300, 500, 2000, 7000",
   "metric": "mean count of target-category items in original users' Top-15",
   "models": {
-    "NMF": "#0072B2",
-    "SVD": "#D55E00"
+    "SVD": "#0072B2",
+    "NMF": "#D55E00"
   },
   "1920s_counts_recomputed_from_saved_factors": "/home/moshtasa/Research/phd-recsys/First_paper_material/notebook/movies_1920_top15_diagnostic_counts.csv",
   "application_sources": [
     "/home/moshtasa/Research/phd-recsys/First_paper_material/notebook/shopping_top15_diagnostic_counts.csv",
     "/home/moshtasa/Research/phd-recsys/First_paper_material/notebook/casual_top15_diagnostic_counts.csv",
     "/home/moshtasa/Research/phd-recsys/First_paper_material/notebook/beauty_top15_diagnostic_counts.csv"
-  ]
+  ],
+  "model_order": [
+    "SVD",
+    "NMF"
+  ],
+  "figure_inches": [
+    6,
+    6
+  ],
+  "panel_box_aspect": 1,
+  "bar_width": 0.23
 }
