@@ -1,0 +1,136 @@
+{
+  "figure": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/prediction_real_users_all_9_categories.png",
+  "stats_csv": "/home/moshtasa/Research/phd-recsys/First_paper_material/notebook/prediction_real_users_all_9_categories_violin_stats.csv",
+  "categories": {
+    "Books": [
+      "Thriller",
+      "Drama",
+      "Adventure"
+    ],
+    "Movies": [
+      "1990s",
+      "1950s",
+      "1920s"
+    ],
+    "Mobile apps": [
+      "Shopping",
+      "Casual",
+      "Beauty"
+    ]
+  },
+  "dose_steps": {
+    "Books/Thriller": [
+      0,
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500,
+      1000,
+      2000,
+      2500,
+      3000
+    ],
+    "Books/Drama": [
+      0,
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500,
+      1000,
+      2000,
+      2500,
+      3000
+    ],
+    "Books/Adventure": [
+      0,
+      2,
+      4,
+      6,
+      25,
+      50,
+      100,
+      200,
+      500,
+      1000,
+      2000,
+      2500,
+      3000,
+      3500
+    ],
+    "Movies/1990s": [
+      0,
+      2,
+      6,
+      10,
+      50
+    ],
+    "Movies/1950s": [
+      0,
+      2,
+      6,
+      10,
+      50
+    ],
+    "Movies/1920s": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      10
+    ],
+    "Mobile apps/Shopping": [
+      0,
+      30,
+      60,
+      300,
+      500,
+      2000,
+      7000
+    ],
+    "Mobile apps/Casual": [
+      0,
+      30,
+      60,
+      300,
+      500,
+      2000,
+      7000
+    ],
+    "Mobile apps/Beauty": [
+      0,
+      30,
+      60,
+      300,
+      500,
+      2000,
+      7000
+    ]
+  },
+  "series_per_dose": [
+    "SVD target",
+    "SVD non-target",
+    "NMF target",
+    "NMF non-target"
+  ],
+  "view": "real_unseen_prediction",
+  "per_user_score": "mean predicted score over items in the category group that the user has not rated",
+  "mean_validated_against_existing_component_tables": "where aggregate reference rows exist",
+  "reference_rows_validated": 256,
+  "reference_rows_unavailable": 52,
+  "density_sample_max_per_violin": 2500,
+  "density_range": [
+    -2.0,
+    7.0
+  ],
+  "outside_values_are_clipped_in_png_but_reported_in_csv": true,
+  "books_baseline_checkpoint": "pilot/{model}_baseline_a.npz"
+}
