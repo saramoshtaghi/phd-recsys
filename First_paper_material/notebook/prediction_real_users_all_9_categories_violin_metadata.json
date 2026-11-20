@@ -1,5 +1,5 @@
 {
-  "figure": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/prediction_real_users_all_9_categories.png",
+  "figure": "/home/moshtasa/Research/phd-recsys/First_paper_material/figures/prediction_real_users_all_9_categories_violin.png",
   "stats_csv": "/home/moshtasa/Research/phd-recsys/First_paper_material/notebook/prediction_real_users_all_9_categories_violin_stats.csv",
   "categories": {
     "Books": [
