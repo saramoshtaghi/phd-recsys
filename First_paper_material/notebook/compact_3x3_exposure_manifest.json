@@ -34,9 +34,9 @@
   ],
   "figure_inches": [
     6,
-    6
+    4.8
   ],
-  "panel_box_aspect": 1,
+  "panel_box_aspect": 0.72,
   "bar_width": 0.23,
   "y_axis_limits": [
     0,
