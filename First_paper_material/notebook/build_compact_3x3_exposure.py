@@ -33,7 +33,7 @@ for row,(domain,categories) in enumerate(layout):
    w=.23
    ax.bar(x+(-w/2 if j==0 else w/2),vals,w,color=colors[model],edgecolor="white",linewidth=.35,zorder=3)
   ax.set_title(cat,loc="left",color="#183247",pad=4)
-  ax.set_ylim(0,15);ax.set_yticks([0,5,10,15])
+  ax.set_ylim(0,25);ax.set_yticks([0,5,10,15,20,25])
   ax.set_xticks(x,["Base" if n==0 else str(n) for n in ns],rotation=40,ha="right")
   ax.tick_params(axis="both",length=0,pad=2,colors="#52616B")
   ax.grid(axis="y",color="#E3E9ED",linewidth=.45,zorder=0);ax.set_axisbelow(True)
