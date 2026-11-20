@@ -63,7 +63,7 @@ def load_row(row,view):
 def draw(view,panels,filename,title):
  ncols=len(panels)
  # Shorten each horizontal plotting area while retaining the nine-row height.
- fig,axs=plt.subplots(9,ncols,figsize=(12.5 if ncols==5 else 10.6,10.2),squeeze=False)
+ fig,axs=plt.subplots(9,ncols,figsize=(10.4 if ncols==5 else 8.8,10.2),squeeze=False)
  for ri,row in enumerate(rows):
   d,ns=load_row(row,view)
   x=np.arange(len(ns))
@@ -133,7 +133,7 @@ def draw(view,panels,filename,title):
  handles.append(Line2D([],[],color='#7A263A',marker='^',ls='none',ms=4,label='Off-scale divergence (>10⁶)'))
  fig.legend(handles=handles,loc='upper center',bbox_to_anchor=(.52,.978),ncol=len(handles),frameon=False,fontsize=6.8,handlelength=1.7,columnspacing=1.2)
  fig.text(.5,.012,'Off-scale markers denote extreme values (>10⁶); the plotted values remain in the source data.',ha='center',fontsize=6,color='#7A263A')
- fig.subplots_adjust(left=.12,right=.995,top=.946,bottom=.065,hspace=.56,wspace=.34)
+ fig.subplots_adjust(left=.12,right=.995,top=.946,bottom=.065,hspace=.56,wspace=.16)
  path=OUT/filename
  fig.savefig(path,dpi=500,bbox_inches='tight')
  plt.close(fig)
